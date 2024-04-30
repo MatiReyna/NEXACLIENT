@@ -12,7 +12,7 @@ const store = useStore();
       <HelloWorld msg="You did it!" />
 
       <nav>
-        <button>{{ store.state.prueba }}</button>
+        <button class= "text-5xl">{{ store.state.prueba }}</button>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
       </nav>
