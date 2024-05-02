@@ -9,7 +9,7 @@ const loginUser = (online) => {
     userLoggedIn.value = online;
     sessionStorage.setItem('user', JSON.stringify({ loggedIn: online }));
 };
-
+console.log(userLoggedIn.value);
 onMounted(() => {
     userLoggedIn.value = sessionStorage.getItem('user') || false
 });
