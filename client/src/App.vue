@@ -1,6 +1,7 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router';
 import { useStore } from 'vuex';
+import Footer from './components/Footer.vue';
 
 const store = useStore();
 </script>
@@ -20,6 +21,7 @@ const store = useStore();
   </header>
 
   <RouterView />
+  <Footer />
 </template>
 
 <style scoped>
