@@ -4,12 +4,12 @@ import Dashboard from './Dashboard/Dashboard.vue';
 import { ref, onMounted } from 'vue';
 
 const userLoggedIn = ref(false);
-
 const loginUser = (online) => {
     userLoggedIn.value = online;
     sessionStorage.setItem('user', JSON.stringify({ loggedIn: online }));
+    window.location.reload();
 };
-console.log(userLoggedIn.value);
+
 onMounted(() => {
     userLoggedIn.value = sessionStorage.getItem('user') || false
 });
