@@ -1,5 +1,5 @@
 <script setup>
-import { defineEmits, ref } from 'vue';
+import { ref } from 'vue';
 import axios from 'axios';
 import { BASE_URL } from '@/store/store';
 
