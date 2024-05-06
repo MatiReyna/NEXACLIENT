@@ -48,5 +48,7 @@ const handleLogin = async () => {
     <p class=" text-red-500" v-if="errors.password">{{ errors.password }}</p>
 
     <button type="submit">Iniciar sesion</button>
+    <a-button type="primary" @click="handleLogin">Primary Button</a-button>
   </form>
+  
 </template>
