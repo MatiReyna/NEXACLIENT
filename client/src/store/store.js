@@ -1,11 +1,13 @@
 import { createStore } from 'vuex';
 
+export const BASE_URL = "http://localhost:3001/"
 const store = createStore({
     state: {
-        prueba: 'prueba'
     },
-    mutations: {},
-    actions: {},
+    mutations: {
+    },
+    actions: {
+    },
     getters: {}
 }); 
 

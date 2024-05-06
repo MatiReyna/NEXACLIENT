@@ -10,8 +10,6 @@ const store = useStore();
   <header>
 
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
       <nav>
         <button class= "text-5xl">{{ store.state.prueba }}</button>
         <RouterLink to="/">Home</RouterLink>
