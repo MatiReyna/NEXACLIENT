@@ -4,128 +4,46 @@
 
 //* Esto es equivlente al return y lo que va abajo.
 <template>
-    <footer class='footerContainer'>
-        <div class='footerWrapper'>
-            <div class='footerSection'>
-                <div class='footerSubscribe'>
-                    <h2>
-                        Subscribe to the Nexa Contructora® newslatter to say
-                        up-to-date with the latest releases.
-                    </h2>
-                    <div class='box'>
-                        <!-- <label for="email">Email Address</label> -->
-                        <input type='email' placeholder='Email Address' />
-                        <button>Suscribite</button>
-                    </div>
-                </div>
+  <footer class='bg-purple-400 py-14 px-8 md:px-0'>
+    <div class='max-w-7xl mx-auto'>
+      <div class='flex flex-wrap justify-center gap-8'>
+        <div class='max-w-md'>
+          <div class='text-white'>
+            <h2 class='text-lg md:text-xl mb-6'>
+              Subscribe to the Nexa Constructora® newsletter to stay up-to-date with the latest releases.
+            </h2>
+            <div class='flex items-center space-x-4'>
+              <label for='email' class='sr-only'>Email Address</label>
+              <input id='email' type='email' placeholder='Email Address' class='flex-grow py-3 px-4 bg-purple-800 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'>
+              <button class='bg-purple-500 text-white px-6 py-3 rounded-md hover:bg-purple-700 transition duration-300'>Subscribe</button>
             </div>
-            <nav class='footerNav'>
-                <div>
-                    <h3>Company</h3>
-                    <ul>
-                        <li><a>About</a></li>
-                        <li><a>Contact Us</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Connect</h3>
-                    <ul>
-                        <li>Facebook</li>
-                        <li>Instagram</li>
-                        <li>LinkedIn</li>
-                    </ul>
-                </div>
-            </nav>
-            <div class='footerCopyright '>
-                <p>© 2024 Nexa Constructora. Todos los derechos reservados.</p>
-                <p>Privacy Policy.</p>
-                <p>Terms of Use.</p>
-            </div>
+          </div>
         </div>
-    </footer>
+        <nav class='flex flex-wrap gap-8 md:gap-16'>
+          <div>
+            <h3 class='text-white text-lg mb-4'>Company</h3>
+            <ul class='text-white'>
+              <li><a href='#' class='hover:opacity-70 transition duration-300'>About</a></li>
+              <li><a href='#' class='hover:opacity-70 transition duration-300'>Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class='text-white text-lg mb-4'>Connect</h3>
+            <ul class='text-white'>
+              <li>LinkedIn</li>
+              <li>LinkedIn</li>
+              <li>LinkedIn</li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class='flex flex-wrap justify-between mt-10 text-sm text-white'>
+        <p>© 2024 Nexa Constructora. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
 </template>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
-.footerContainer {
-    width: 100%;
-    background-color: #7364d2;
-    padding: 3.5rem;
-    min-height: 20rem;
-    font-family: 'DM Sans', sans-serif;
-    color: #242422;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    border-radius: 10px;
-}
 
-.footerWrapper {
-    max-width: 90rem;
-    margin: 0 auto;
-    margin-bottom: 3rem;
-}
-
-.footerSection {
-    display: flex;
-    align-items: flex-start;
-    /* justify-content: space-between; */
-    /* flex-wrap: wrap; */
-    gap: 3rem;
-}
-
-.footerSubscribe {
-  max-width: clamp(20rem, 33vw, 33rem);
-}
-
-.footerSubscribe > h2 {
-  font-size: clamp(1.5rem, 2.3vw, 2.25rem);
-}
-
-.box {
-  display: flex;
-  max-width: 100%;
-  padding-block: 1rem;
-  margin-top: 3rem;
-}
-
-.box > input {
-  flex-grow: 1;
-  background-color: #7364d2;
-}
-
-.footerNav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: clamp(3rem, 4vw, 7rem);
-}
-
-.footerNav > div > h3 {
-  font-size: 1rem;
-}
-
-.footerNav > div > ul {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  margin-top: 2rem;
-  cursor: pointer;
-}
-
-.footerNav > div li {
-  font-size: 1.125rem;
-  font-weight: 700;
-  transition: opacity 200ms ease;
-}
-
-.footerNav > div li:hover {
-  opacity: 0.5;
-}
-
-.footerCopyright {
-  display: flex;
-  flex-wrap: wrap;
-  font-size: 0.875rem;
-  margin-top: 5rem;
-}
 </style>
