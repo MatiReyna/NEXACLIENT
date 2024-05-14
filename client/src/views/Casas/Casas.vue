@@ -18,6 +18,6 @@ onMounted(
 
 <template>
     <div>
-        <Card v-for="(casa, index) in store.state.casas" :key="index" :casa="casa" />
+        <Card v-for="(casa, index) in store.state.casas" :key="index" :casa="casa" :order="index" />
     </div>
 </template>
