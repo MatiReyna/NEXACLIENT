@@ -16,10 +16,10 @@ const handleSearch = ()=>{
 </script>
 
 <template>
-    <div class=" flex items-center">
-        <input class=" border border-black px-2 py-0.5"  type="text" v-model="search" @keydown.enter="handleSearch">
+    <div class=" flex items-center gap-1 ">
+        <a-input class=" border border-buttons placeholder:italic " placeholder="Busque su casa..."  type="text" v-model:value="search" @pressEnter="handleSearch"/>
         <a-tooltip title="search">
-        <a-button class=" text-center bg-buttons rounded-l-none py-0.5" type="primary" @click="handleSearch" :icon="h(SearchOutlined)"/> 
+        <a-button class=" flex justify-center items-center bg-buttons " type="primary" @click="handleSearch" :icon="h(SearchOutlined)"/> 
       </a-tooltip>
     </div>
 </template>
