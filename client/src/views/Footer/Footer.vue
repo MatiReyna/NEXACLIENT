@@ -15,7 +15,7 @@
             <div class='flex items-center space-x-4'>
               <label for='email' class='sr-only'>Email Address</label>
               <input id='email' type='email' placeholder='Email Address' class='flex-grow py-3 px-4 bg-purple-800 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'>
-              <button class='bg-purple-500 text-white px-6 py-3 rounded-md hover:bg-purple-700 transition duration-300'>Subscribe</button>
+              <button class='bg-buttons text-white px-6 py-3 rounded-md hover:bg-purple-700 transition duration-300'>Subscribe</button>
             </div>
           </div>
         </div>
