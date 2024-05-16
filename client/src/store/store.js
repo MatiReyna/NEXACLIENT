@@ -7,24 +7,29 @@ const store = createStore({
         casas: [],
         searchedCasa: "",
         totalPages: null,
-        curretPage: 1, 
+        curretPage: 1,
+        edit: {},
     },
     mutations: {  // Hace referencia al reducer.
         setCasas(state, payload) {
             state.casas = payload;
         },
-        setAllPages(state, payload){
+        setAllPages(state, payload) {
             state.totalPages = payload;
         },
-        setCurrentPage(state, payload){
+        setCurrentPage(state, payload) {
             state.curretPage = payload;
         },
-        setSearchedCasa(state,payload){
+        setSearchedCasa(state, payload) {
             state.searchedCasa = payload;
-        }
+        },
+        setEdit(state, payload) {
+            state.edit = payload
+        },
+
     },
     actions: {
-        async getAllCasas ({ commit }) {
+        async getAllCasas({ commit }) {
             try {
                 const { data } = await axios.get(`${BASE_URL}casas?page=${this.state.curretPage}&name=${this.state.searchedCasa}`);
                 commit('setCasas', data.docs);
@@ -33,15 +38,27 @@ const store = createStore({
                 console.error(error);
             }
         },
-        changeCurrentpage({commit}, page){
+        async getEdit({ commit }, { type, id }) {
+            try {
+                const { data } = await axios.get(`${BASE_URL}${type}/${id}`);
+
+                commit('setEdit', data);
+            } catch (error) {
+                console.error(error);
+            }
+        },
+        cancelEdit({commit}){
+            commit('setEdit', {});
+        },
+        changeCurrentpage({ commit }, page) {
             commit('setCurrentPage', page);
         },
-        searchCasa({commit}, casa){
+        searchCasa({ commit }, casa) {
             commit('setSearchedCasa', casa);
         },
 
     },
     getters: {}
-}); 
+});
 
 export default store;

@@ -1,17 +1,20 @@
 <script setup>
-import axios from 'axops':
-
 import { useStore } from 'vuex';
 
 const { dispatch } = useStore();
 
-const handleClick = () => {
+const props = defineProps({
+    id: String,
+    type: String,
+})
 
+const handleClick = () => {
+    dispatch('getEdit', { type: props.type, id: props.id })
 }; 
 </script>
 
 <template>
     <div>
-        <button>Editar</button>
+        <button @click="handleClick">Editar</button>
     </div>
 </template>

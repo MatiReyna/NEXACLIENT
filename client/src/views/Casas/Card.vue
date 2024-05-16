@@ -1,5 +1,6 @@
 <script setup>
 import DeleteButton from '../Admin/Dashboard/Buttons/DeleteButton.vue';
+import EditButton from '../Admin/Dashboard/Buttons/EditButton.vue';
 
 
 const props = defineProps({
@@ -55,6 +56,7 @@ const props = defineProps({
           <button class="bg-buttons text-white px-6 py-3 rounded-md hover:bg-purple-700 transition duration-300">Button 2</button>
           <button class="bg-buttons text-white px-6 py-3 rounded-md hover:bg-purple-700 transition duration-300">Detail</button>
           <DeleteButton :id="casa._id" :type="'casas'" :name="casa.nameModel"/>
+          <EditButton :id="casa._id" :type="'casas'"/>
         </div>
 
       </div>
