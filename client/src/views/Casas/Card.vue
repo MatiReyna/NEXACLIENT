@@ -1,13 +1,16 @@
 <script setup>
 import DeleteButton from '../Admin/Dashboard/Buttons/DeleteButton.vue';
 import EditButton from '../Admin/Dashboard/Buttons/EditButton.vue';
-import { RouterLink } from 'vue-router';
+import { RouterLink, useRoute } from 'vue-router';
 
 
 const props = defineProps({
   casa: Object,
   order: Number
-})
+});
+
+const route = useRoute();
+
 </script>
 
 <template>
@@ -39,10 +42,13 @@ const props = defineProps({
           <button
             class="bg-buttons text-white px-6 py-3 rounded-md hover:bg-purple-700 transition duration-300">Detail</button>
         </RouterLink>
-        <DeleteButton :id="casa._id" :type="'casas'" :name="casa.nameModel" />
-        <EditButton :id="casa._id" :type="'casas'" />
+
 
       </div>
+      <section v-if="route.fullPath ==='/admin'" class="flex mt-4 space-x-4">
+        <DeleteButton :id="casa._id" :type="'casas'" :name="casa.nameModel" />
+        <EditButton :id="casa._id" :type="'casas'" />
+      </section>
 
     </div>
     <div>
