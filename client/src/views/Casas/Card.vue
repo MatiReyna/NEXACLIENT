@@ -1,5 +1,8 @@
 <script setup>
+import DeleteButton from '../Admin/Dashboard/Buttons/DeleteButton.vue';
+import EditButton from '../Admin/Dashboard/Buttons/EditButton.vue';
 import { RouterLink } from 'vue-router';
+
 
 const props = defineProps({
     casa: Object,
@@ -8,7 +11,7 @@ const props = defineProps({
 </script>
 
 <template>
-    <div class="bg-white shadow-md rounded-lg p-6 mb-8 flex" :class="{'flex-row-reverse': order % 2 === 0}">
+    <div class="bg-white shadow-md rounded-lg p-6 mb-8 flex flex-col-reverse md:flex-row" :class="{'  md:flex-row-reverse': order % 2 === 0}">
       <div class="flex-grow">
         <h2 class="text-xl font-bold mb-2">{{ casa.nameModel }}</h2>
         <div class="grid grid-cols-2 gap-4">
@@ -28,10 +31,15 @@ const props = defineProps({
         <div class="flex mt-4 space-x-4">
           <button class="bg-buttons text-white px-6 py-3 rounded-md hover:bg-purple-700 transition duration-300">Button 1</button>
           <button class="bg-buttons text-white px-6 py-3 rounded-md hover:bg-purple-700 transition duration-300">Button 2</button>
-          <RouterLink :to="`/detail/${casa._id}`">
-            <button class="bg-buttons text-white px-6 py-3 rounded-md hover:bg-purple-700 transition duration-300">Detail</button>
-          </RouterLink>
+
+ <RouterLink :to="`/detail/${casa._id}`">
+          <button class="bg-buttons text-white px-6 py-3 rounded-md hover:bg-purple-700 transition duration-300">Detail</button>
+          <DeleteButton :id="casa._id" :type="'casas'" :name="casa.nameModel"/>
+          <EditButton :id="casa._id" :type="'casas'"/>
+                    </RouterLink>
+
         </div>
+
       </div>
       <div>
         <img :src="casa.offside[0]" :alt="casa.nameModel" class="w-80 h-80 object-cover rounded-md" />

@@ -21,7 +21,7 @@ const handleChange = (page) => {
 <template>
     <div class=" flex flex-col justify-center items-center gap-y-2 my-4">
         <SbarCasas/>
-        <Card v-for="(casa, index) in store.state.casas" :key="index" :casa="casa" />
+        <Card v-for="(casa, index) in store.state.casas" :key="index" :casa="casa" :order="index" />
         <a-pagination :current="store.state.currentPage" :total="store.state.totalPages * 10" :showSizeChanger="false"
             @change="handleChange" show-less-items />
     </div>
