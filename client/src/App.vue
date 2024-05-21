@@ -6,10 +6,10 @@ import NavBar from './views/NavBar/NavBar.vue';
 </script>
 
 <template>
-  <header class=" m-3 ">
+  <header>
       <NavBar/>
   </header>
-  <body>
+  <body class="mt-20">
     <RouterView />
   </body>
   <footer>
