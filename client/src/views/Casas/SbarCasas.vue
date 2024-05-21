@@ -4,12 +4,12 @@ import { ref, h } from 'vue';
 import { useStore } from 'vuex';
 
 const search = ref("");
-const store = useStore();
+const { dispatch } = useStore();
 
-const handleSearch = ()=>{
-    store.dispatch('searchCasa',search.value);
-    store.dispatch('changeCurrentpage', 1)
-    store.dispatch('getAllCasas');
+const handleSearch = () => {
+    dispatch('searchCasa', search.value);
+    dispatch('changeCurrentpage', 1)
+    dispatch('getAllCasas');
     search.value = "";
 };
 
@@ -17,9 +17,11 @@ const handleSearch = ()=>{
 
 <template>
     <div class=" flex items-center gap-1 ">
-        <a-input class=" border border-buttons placeholder:italic " placeholder="Busque su casa..."  type="text" v-model:value="search" @pressEnter="handleSearch"/>
+        <a-input class=" border border-buttons placeholder:italic " placeholder="Busque su casa..." type="text"
+            v-model:value="search" @pressEnter="handleSearch" />
         <a-tooltip title="search">
-        <a-button class=" flex justify-center items-center bg-buttons " type="primary" @click="handleSearch" :icon="h(SearchOutlined)"/> 
-      </a-tooltip>
+            <a-button class=" flex justify-center items-center bg-buttons " type="primary" @click="handleSearch"
+                :icon="h(SearchOutlined)" />
+        </a-tooltip>
     </div>
 </template>

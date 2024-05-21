@@ -9,6 +9,7 @@ const store = createStore({
         totalPages: null,
         curretPage: 1,
         edit: {},
+        promos: [],
     },
     mutations: {  // Hace referencia al reducer.
         setCasas(state, payload) {
@@ -24,9 +25,11 @@ const store = createStore({
             state.searchedCasa = payload;
         },
         setEdit(state, payload) {
-            state.edit = payload
+            state.edit = payload;
         },
-
+        setPromos(state, payload){
+            state.promos = payload;
+        },
     },
     actions: {
         async getAllCasas({ commit }) {
@@ -43,6 +46,15 @@ const store = createStore({
                 const { data } = await axios.get(`${BASE_URL}${type}/${id}`);
 
                 commit('setEdit', data);
+            } catch (error) {
+                console.error(error);
+            }
+        },
+        async getPromos ({commit}){
+            try {
+                const {data} = await axios.get(`${BASE_URL}promos/`)
+                commit('setPromos', data.allPromos);
+                console.log(this.state.promos);
             } catch (error) {
                 console.error(error);
             }

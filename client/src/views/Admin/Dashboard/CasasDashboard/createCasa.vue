@@ -19,9 +19,6 @@ const newCasa = ref({
     offside: []
 });
 
-
-const imageUrls = ref([]);
-
 const handleBeforeUpload = file => {
     const isJpgOrPng = file.type === 'image/jpeg' || file.type === 'image/png';
     if (!isJpgOrPng) {
@@ -50,11 +47,12 @@ const handleCustomRequest = async ({ file }, type) => {
 
 const removeImage = async (index) => {
     const imgToDelete = newCasa.value.blueprints[index];
-    newCasa.value.blueprints.splice(index, 1);
     const loadingMessage = message.loading('Eliminando imagen...', 0);
     try {
         await axios.delete(`${BASE_URL}images/`, { data: { imageUrl: imgToDelete } });
         message.success('Imagen eliminada exitosamente!');
+        newCasa.value.blueprints.splice(index, 1);
+
     } catch (error) {
         message.error('Error al eliminar la imagen');
         console.error(error)
@@ -104,8 +102,7 @@ const handleSubmit = () => {
 
         <section class="flex flex-wrap gap-3 border  border-slate-400 rounded-md p-2"
             :class="{ ' border-none': !newCasa.blueprints.length }">
-            <span class=" grid gap-y-1 border border-slate-400 rounded-md p-1"
-                v-for="(img, index) in newCasa.blueprints" :key="index">
+            <span class=" grid gap-y-1  rounded-md p-1" v-for="(img, index) in newCasa.blueprints" :key="index">
                 <a-button class="full-width-button" type="primary" danger :icon="h(DeleteOutlined)"
                     @click="removeImage(index)" />
                 <img class=" h-64 rounded-md" :src="img" :alt="`imagen ${index}`">
