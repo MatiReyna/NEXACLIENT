@@ -1,6 +1,8 @@
 <script setup>
 import DeleteButton from '../Admin/Dashboard/AdminElements/DeleteButton.vue';
 import EditButton from '../Admin/Dashboard/AdminElements/EditButton.vue';
+import WhatsappButton from './WhatsappButton.vue'
+
 import { RouterLink, useRoute } from 'vue-router';
 
 
@@ -32,22 +34,26 @@ const route = useRoute();
           <p>{{ casa.dimensions }}</p>
         </div>
       </div>
-      <div class="flex mt-4 space-x-4">
+      
+      <section class="flex mt-4 space-x-4">
         <button class="bg-buttons text-white px-6 py-3 rounded-md hover:bg-purple-700 transition duration-300">Button
           1</button>
-        <button class="bg-buttons text-white px-6 py-3 rounded-md hover:bg-purple-700 transition duration-300">Button
-          2</button>
 
+        <WhatsappButton/>
+        
         <RouterLink :to="`/detail/${casa._id}`">
           <button
             class="bg-buttons text-white px-6 py-3 rounded-md hover:bg-purple-700 transition duration-300">Detail</button>
         </RouterLink>
+      </section>
 
-
-      </div>
-      <section v-if="route.fullPath ==='/admin'" class="flex mt-4 space-x-4">
-        <DeleteButton :id="casa._id" :type="'casas'" :name="casa.nameModel" />
-        <EditButton :id="casa._id" :type="'casas'" />
+      <section v-if="route.fullPath === '/admin'" class="flex mt-4 gap-1 w-full">
+        <span class="w-1/2 flex justify-center">
+          <DeleteButton :id="casa._id" :type="'casas'" :name="casa.nameModel" />
+        </span>
+        <span class="w-1/2 flex justify-center">
+          <EditButton :id="casa._id" :type="'casas'" />
+        </span>
       </section>
 
     </div>

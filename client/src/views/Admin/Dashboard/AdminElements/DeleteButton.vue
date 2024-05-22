@@ -35,8 +35,14 @@ const handleClick = async () => {
 </script>
 
 <template>
-    <a-popconfirm title="¿Seguro que quieres eliminarlo?" ok-text="Si" cancel-text="No"
-        @confirm="handleClick">
-        <a-button class=" flex justify-center items-center" type="primary" danger :icon="h(DeleteOutlined)" />
-    </a-popconfirm>
+        <a-popconfirm  title="¿Seguro que quieres eliminarlo?" ok-text="Si" cancel-text="No"
+            @confirm="handleClick">
+            <a-button class=" full-width-button flex justify-center items-center" type="primary" danger :icon="h(DeleteOutlined)" />
+        </a-popconfirm>
 </template>
+
+<style scoped>
+.full-width-button {
+    width: 100%;
+}
+</style>
