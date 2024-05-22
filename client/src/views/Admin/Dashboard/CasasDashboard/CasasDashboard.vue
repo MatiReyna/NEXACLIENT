@@ -9,20 +9,15 @@ import Casas from '@/views/Casas/Casas.vue';
 const addCasa = ref(false);
 const { state } = useStore();
 
-const handlercreate = () => {
-    addCasa.value = !addCasa.value
-};
-
-
 </script>
 
 <template>
     <div>
-        <button v-if="!state.edit.nameModel" @click="handlercreate">
+        <button v-if="!state.edit.nameModel" @click="addCasa = !addCasa">
             <span v-if="!addCasa"> Añadir Casa</span>
             <span v-else> Cancelar </span>
         </button>
-        <createCasa v-if="addCasa" />
+        <createCasa v-if="addCasa" @handleCreate="addCasa = !addCasa" />
         <editcasa v-if="state.edit.nameModel"/>
         <Casas v-if="!addCasa  && !state.edit.nameModel" />
     </div>

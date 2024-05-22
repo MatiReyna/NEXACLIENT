@@ -5,24 +5,24 @@ import { useStore } from 'vuex';
 import SbarCasas from './SbarCasas.vue'
 import Card from './Card.vue';
 
-const store = useStore();
+const { dispatch, state } = useStore();
 
 onMounted(() => {
-    store.dispatch('getAllCasas')
+    dispatch('getAllCasas')
 });
 
 const handleChange = (page) => {
-    store.dispatch('changeCurrentpage', page)
-    store.dispatch('getAllCasas')
+    dispatch('changeCurrentpage', page)
+    dispatch('getAllCasas')
 };
 
 </script>
 
 <template>
     <div class=" flex flex-col justify-center items-center gap-y-2 my-4">
-        <SbarCasas/>
-        <Card v-for="(casa, index) in store.state.casas" :key="index" :casa="casa" :order="index" />
-        <a-pagination :current="store.state.currentPage" :total="store.state.totalPages * 10" :showSizeChanger="false"
+        <SbarCasas />
+        <Card v-for="(casa, index) in state.casas" :key="index" :casa="casa" :order="index" />
+        <a-pagination :current="state.currentPage" :total="state.totalPages * 10" :showSizeChanger="false"
             @change="handleChange" show-less-items />
     </div>
 </template>
