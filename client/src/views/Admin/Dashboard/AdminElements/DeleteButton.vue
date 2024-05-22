@@ -27,6 +27,9 @@ const handleClick = async () => {
         message.success(`El modelo "${props.name}" fue eliminado con exito`);
     } catch (error) {
         console.error(error)
+    } finally{
+        const loadingMessage = message.loading('Eliminando elemento...', 0);
+        loadingMessage();
     }
 }
 </script>
