@@ -14,6 +14,8 @@ onMounted(() => {
 
 <template>
     <div class=" flex flex-wrap justify-center gap-5 p-5">
-        <cardPromAdm v-for="(p, index) in state.promos" :promo="p" :key="index"/>
+        <a-image-preview-group>
+            <cardPromAdm v-for="(p, index) in state.promos" :promo="p" :key="index" />
+        </a-image-preview-group>
     </div>
 </template>

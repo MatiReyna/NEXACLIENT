@@ -1,6 +1,6 @@
 <script setup>
-import DeleteButton from '../Admin/Dashboard/Buttons/DeleteButton.vue';
-import EditButton from '../Admin/Dashboard/Buttons/EditButton.vue';
+import DeleteButton from '../Admin/Dashboard/AdminElements/DeleteButton.vue';
+import EditButton from '../Admin/Dashboard/AdminElements/EditButton.vue';
 import { RouterLink, useRoute } from 'vue-router';
 
 

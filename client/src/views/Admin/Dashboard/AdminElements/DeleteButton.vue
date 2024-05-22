@@ -18,6 +18,7 @@ const handleClick = async () => {
     try {
         await axios.delete(`${BASE_URL}${props.type}/${props.id}`);
         if (props.type === 'casas') {
+            dispatch('changeCurrentpage',1);
             dispatch('getAllCasas');
         }
         else { 
@@ -33,6 +34,6 @@ const handleClick = async () => {
 <template>
     <a-popconfirm title="¿Seguro que quieres eliminarlo?" ok-text="Si" cancel-text="No"
         @confirm="handleClick">
-        <a-button type="primary" danger :icon="h(DeleteOutlined)" />
+        <a-button class=" flex justify-center items-center" type="primary" danger :icon="h(DeleteOutlined)" />
     </a-popconfirm>
 </template>

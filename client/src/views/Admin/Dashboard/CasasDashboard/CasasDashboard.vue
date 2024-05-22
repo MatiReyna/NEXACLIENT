@@ -17,7 +17,7 @@ const { state } = useStore();
             <span v-if="!addCasa"> Añadir Casa</span>
             <span v-else> Cancelar </span>
         </button>
-        <createCasa v-if="addCasa" />
+        <createCasa v-if="addCasa" @handleCreate="addCasa = !addCasa" />
         <editcasa v-if="state.edit.nameModel"/>
         <Casas v-if="!addCasa  && !state.edit.nameModel" />
     </div>

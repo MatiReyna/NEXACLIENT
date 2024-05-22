@@ -8,7 +8,10 @@ export default {
     extend: {
       colors:{
         buttons: "#7364d2",
-      }
+      },
+      boxShadow: {
+        'custom': '0px 4px 10px rgba(0, 0, 0, 0.5)',
+    },
     },
   },
   plugins: [],

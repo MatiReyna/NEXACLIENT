@@ -5,15 +5,15 @@ import { BASE_URL } from '@/store/store';
 
 import axios from 'axios';
 
-const editCasa = ref({    nameModel: "",
+const editCasa = ref({nameModel: "",
     description: "",
     price: 0,
     rooms: 0,
     bathroom: 0,
     dimensions: 0,
-    blueprints: [""],
-    inside: [""],
-    offside: [""]});
+    blueprints: [],
+    inside: [],
+    offside: []});
 
 const { state, dispatch } = useStore();
 

@@ -2,7 +2,7 @@
 import { ref, h } from 'vue';
 import { BASE_URL } from '@/store/store';
 import { message } from 'ant-design-vue';
-import { DeleteOutlined } from '@ant-design/icons-vue'
+import { DeleteOutlined, InboxOutlined } from '@ant-design/icons-vue'
 import { useStore } from 'vuex';
 
 import axios from 'axios';
@@ -59,9 +59,9 @@ const removeImage = async () => {
 const handleSubmit = async () => {
     try {
         await axios.post(`${BASE_URL}promos`, newPromo.value);
-        message.success(`La promo "${newPromo.name}" fue creado con exito`);
+        message.success(`La promo "${newPromo.value.name}" fue creado con exito`);
         dispatch('getPromos');
-        emit('handleCreate')
+        emit('handleCreate');
     } catch (error) {
         message.error('Error al cargar la promo');
         console.error(error)
@@ -75,31 +75,33 @@ const handleSubmit = async () => {
 <template>
     <form class="grid justify-center gap-y-2 m-2" @keydown.enter.prevent @submit.prevent="handleSubmit">
         <label>Nombre: </label>
-        <input class="border border-slate-400 px-2 py-1 rounded-md" type="text" name="nameModel"
-            v-model="newPromo.name">
+        <input class="border border-slate-400 px-2 py-1 rounded-md placeholder:italic" placeholder="ejemplo: promo 1"
+            type="text" name="nameModel" v-model="newPromo.name">
 
-        <a-upload v-if="newPromo.url.trim() === ''" class="full-width-button" :before-upload="handleBeforeUpload"
-            :show-upload-list="false" :custom-request="handleCustomRequest">
-            <a-button class="full-width-button-dashed">
-                Click aquí para subir tu imágen
-            </a-button>
-        </a-upload>
-        <section v-else class=" grid justify-center gap-3 p-2">
+        <label>Imagen promocional: </label>
+        
+        <a-upload-dragger v-if="newPromo.url.trim() === ''" class=" p-5 -mt-2"
+            :before-upload="handleBeforeUpload" :show-upload-list="false" :custom-request="handleCustomRequest">
+            <p class="ant-upload-drag-icon">
+                <InboxOutlined style="color: #7364d2" />
+            </p>
+            <p class="ant-upload-text">Haz clic o arrastra el archivo a esta área para subirlo</p>
+            <p class="ant-upload-hint">
+                Soporte para una carga individual. Solo se admiten archivos PNG o JPG.
+            </p>
+        </a-upload-dragger>
+
+        <section v-else class=" grid justify-center gap-3 shadow-custom rounded-md p-4">
             <a-button class="full-width-button" type="primary" danger :icon="h(DeleteOutlined)"
                 @click="removeImage()" />
-            <img class="max-h-96 rounded-md" :src="newPromo.url" :alt="newPromo.url">
+            <a-image class="max-h-96 rounded-md " :src="newPromo.url" :alt="newPromo.url" />
         </section>
-        <button type="submit">Submit</button>
+        <a-button type="primary" html-type="submit">Submit</a-button>
     </form>
 </template>
 
 <style scoped>
 .full-width-button {
     width: 100%;
-}
-
-.full-width-button-dashed {
-    width: 100%;
-    border-style: dashed;
 }
 </style>
