@@ -1,8 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import HomePage from '@/views/HomePage/roots/HomePage.vue';
-import Admin from '@/views/Admin/Admin.vue';
 import Detail from '@/views/Casas/Detail.vue';
 import Casas from '@/views/Casas/Casas.vue';
+import Admin from '@/views/Admin/Admin.vue';
 
 
 const router = createRouter({
