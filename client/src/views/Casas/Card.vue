@@ -1,8 +1,10 @@
 <script setup>
 import DeleteButton from '../Admin/Dashboard/AdminElements/DeleteButton.vue';
 import EditButton from '../Admin/Dashboard/AdminElements/EditButton.vue';
-import WhatsappButton from './WhatsappButton.vue'
+import WhatsappButton from './Buttons/WhatsappButton.vue'
+import ShareButton from './Buttons/ShareButton.vue'
 
+import { onMounted, ref } from 'vue';
 import { RouterLink, useRoute } from 'vue-router';
 
 
@@ -12,6 +14,16 @@ const props = defineProps({
 });
 
 const route = useRoute();
+
+const cardUrl = ref("");
+
+onMounted(() => {
+
+  const protocol = window.location.protocol;
+  const host = window.location.host;
+  
+  cardUrl.value = `${protocol}//${host}/detail/${props.casa._id}`
+})
 
 </script>
 
@@ -36,10 +48,9 @@ const route = useRoute();
       </div>
       
       <section class="flex mt-4 space-x-4">
-        <button class="bg-buttons text-white px-6 py-3 rounded-md hover:bg-purple-700 transition duration-300">Button
-          1</button>
+        <ShareButton :url="cardUrl" :modelName="casa.nameModel"/>
 
-        <WhatsappButton/>
+        <WhatsappButton :url="cardUrl"/>
         
         <RouterLink :to="`/detail/${casa._id}`">
           <button
