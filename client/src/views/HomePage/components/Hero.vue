@@ -14,7 +14,7 @@ import { RouterLink } from 'vue-router';
         Nobis doloremque illum distinctio facilis aperiam iusto est obcaecati voluptatum nostrum animi!
       </p>
       <RouterLink to="/casas">
-        <button class="bg-[#fffcf2] text-[#212121] px-6 py-3 text-base rounded-full cursor-pointer border-0 outline-0 inline-flex items-center justify-center transition duration-300 hover:bg-[#ff9f1c] hover:text-white" aria-label="Sacar turno">
+        <button class="bg-[#fffcf2] text-[#212121] px-6 py-3 text-base rounded-full cursor-pointer border-0 outline-0 inline-flex items-center justify-center transition duration-300 hover:bg-[#3d348b] hover:text-white">
           Mira nuestras casas <HomeOutlined class="w-5 ml-2" />
         </button>
       </RouterLink>

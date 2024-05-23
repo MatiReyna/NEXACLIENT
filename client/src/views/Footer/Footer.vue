@@ -1,46 +1,69 @@
 <script setup>  // Haciendo esto lo estoy exportando al componente.
-
+import { InstagramOutlined, LinkedinOutlined } from '@ant-design/icons-vue';
 </script>
 
 //* Esto es equivlente al return y lo que va abajo.
 <template>
-  <footer class='bg-purple-400 py-14 px-8 md:px-0'>
-    <div class='max-w-7xl mx-auto'>
-      <div class='flex flex-wrap justify-center gap-8'>
-        <div class='max-w-md'>
-          <div class='text-white'>
-            <h2 class='text-lg md:text-xl mb-6'>
-              Subscribe to the Nexa Constructora® newsletter to stay up-to-date with the latest releases.
-            </h2>
-            <div class='flex items-center space-x-4'>
-              <label for='email' class='sr-only'>Email Address</label>
-              <input id='email' type='email' placeholder='Email Address' class='flex-grow py-3 px-4 bg-purple-800 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'>
-              <button class='bg-buttons text-white px-6 py-3 rounded-md hover:bg-purple-700 transition duration-300'>Subscribe</button>
-            </div>
+  <footer class="w-full bg-[#3d348b] text-white relative bottom-0">
+    <!-- Footer Content -->
+    <section class="bg-black py-10 px-4">
+      <div class="max-w-7xl mx-auto flex flex-wrap justify-between gap-4">
+        <!-- Main Info -->
+        <article class="text-center md:text-left mb-4 md:mb-0">
+          <img src="/stock-4.webp" alt="logoFooter" class="w-16 h-16 mb-2 mx-auto md:mx-0 rounded-full cursor-pointer transition-transform transform hover:scale-110">
+          <h2 class="text-2xl">Nexa Constructora</h2>
+          <p class="text-sm">Ayudandote a crecer, síguenos en nuestras redes.</p>
+          <div class="flex justify-center md:justify-start mt-2 gap-2">
+            <a href="#" class="w-8 h-8 flex items-center justify-center bg-[#3d348b] rounded-full transition-opacity hover:opacity-70">
+              <InstagramOutlined class="text-lg" />
+            </a>
+            <a href="#" class="w-8 h-8 flex items-center justify-center bg-[#3d348b] rounded-full transition-opacity hover:opacity-70">
+              <LinkedinOutlined class="text-lg" />
+            </a>
+            <a href="#" class="w-8 h-8 flex items-center justify-center bg-[#3d348b] rounded-full transition-opacity hover:opacity-70">
+              
+            </a>
+            <a href="#" class="w-8 h-8 flex items-center justify-center bg-[#3d348b] rounded-full transition-opacity hover:opacity-70">
+              
+            </a>
           </div>
-        </div>
-        <nav class='flex flex-wrap gap-8 md:gap-16'>
-          <div>
-            <h3 class='text-white text-lg mb-4'>Company</h3>
-            <ul class='text-white'>
-              <li><a href='#' class='hover:opacity-70 transition duration-300'>About</a></li>
-              <li><a href='#' class='hover:opacity-70 transition duration-300'>Contact</a></li>
-            </ul>
-          </div>
-          <div>
-            <h3 class='text-white text-lg mb-4'>Connect</h3>
-            <ul class='text-white'>
-              <li>LinkedIn</li>
-              <li>LinkedIn</li>
-              <li>LinkedIn</li>
-            </ul>
-          </div>
-        </nav>
+        </article>
+
+        <!-- Links -->
+        <article class="text-center md:text-left mb-4 md:mb-0">
+          <p class="text-lg font-semibold mb-2">Information</p>
+          <ul class="space-y-1">
+            <li><a href="#" class="transition-colors hover:text-[#3d348b]">Our Company</a></li>
+            <li><a href="#" class="transition-colors hover:text-[#3d348b]">About Us</a></li>
+            <li><a href="#" class="transition-colors hover:text-[#3d348b]">Blog</a></li>
+          </ul>
+        </article>
+        <article class="text-center md:text-left mb-4 md:mb-0">
+          <p class="text-lg font-semibold mb-2">Helpful Links</p>
+          <ul class="space-y-1">
+            <li><a href="#" class="transition-colors hover:text-[#3d348b]">Service</a></li>
+            <li><a href="#" class="transition-colors hover:text-[#3d348b]">Contact</a></li>
+            <li><a href="#" class="transition-colors hover:text-[#3d348b]">Terms & Condition</a></li>
+          </ul>
+        </article>
+        <article class="text-center md:text-left mb-4 md:mb-0">
+          <p class="text-lg font-semibold mb-2">Navigation</p>
+          <ul class="space-y-1">
+            <li><RouterLink to="/" class="transition-colors hover:text-[#3d348b]">Home</RouterLink></li>
+            <li><a href="#" class="transition-colors hover:text-[#3d348b]">Sobre Nosotros</a></li>
+          </ul>
+        </article>
       </div>
-      <div class='flex flex-wrap justify-between mt-10 text-sm text-white'>
-        <p>© 2024 Nexa Constructora. Todos los derechos reservados.</p>
+
+      <!-- Footer Bottom -->
+      <div class="mt-6 border-t border-gray-700 pt-4 text-center text-sm">
+        <p>Copyright © 2024 Nexa Constructora, Inc.</p>
+        <ul class="flex justify-center space-x-2 mt-2">
+          <li><a href="#" class="transition-colors hover:text-[#f7b801]">Terms of Service</a></li>
+          <li><a href="#" class="transition-colors hover:text-[#f7b801]">Privacy Policy</a></li>
+        </ul>
       </div>
-    </div>
+    </section>
   </footer>
 </template>
 
