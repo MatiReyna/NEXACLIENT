@@ -1,6 +1,7 @@
 <script setup>
 import Hero from '../components/Hero.vue';
 import About from '../components/About.vue';
+import Sponsors from '../components/Sponsors.vue';
 import Galery from '../components/Galery.vue';
 import Title from '../components/Title.vue';
 </script>
@@ -10,6 +11,8 @@ import Title from '../components/Title.vue';
     <div>
         <Title :subTitle="'Te mostramos nuestras instalaciones'" :title="'Sobre Nosotros'" />
         <About id="about" />
+        <Title :subTitle="'SPONSORS'" :title="'Las marcas que confian en nosotros'" />
+        <Sponsors />
         <Title :subTitle="'GALLERY'" :title="'Algunas muestras'" />
         <Galery />
     </div>
