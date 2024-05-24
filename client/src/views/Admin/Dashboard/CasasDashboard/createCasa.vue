@@ -32,8 +32,8 @@ const handleDeleteImage = (tipo, index) => {
 
 const handleSubmit = async () => {
     try {
-        message.success(`El modelo "${newCasa.value.nameModel}" fue creado con exito`);
         await axios.post(`${BASE_URL}casas`, newCasa.value);
+        message.success(`El modelo "${newCasa.value.nameModel}" fue creado con exito`);
         dispatch('getAllCasas');
         emit('handleCreate');
     } catch (error) {
@@ -47,7 +47,7 @@ const handleSubmit = async () => {
 </script>
 
 <template>
-    <form class="grid justify-center gap-y-2 m-2" @keydown.enter.prevent @submit.prevent="handleSubmit">
+    <form class="grid justify-center gap-y-2 mt-5 mb-9" @keydown.enter.prevent @submit.prevent="handleSubmit">
         <label>Nombre: </label>
         <input class="border border-slate-400 px-2 py-1 rounded-md" type="text" name="nameModel"
             v-model="newCasa.nameModel">
@@ -84,6 +84,6 @@ const handleSubmit = async () => {
         <UploadImages @handleEmit="handleEmit" @handleDeleteImage="handleDeleteImage" :images="newCasa.blueprints"
             :tipo="'blueprints'" />
 
-        <button type="submit">submit</button>
+        <a-button type="primary" html-type="submit">Submit</a-button>
     </form>
 </template>
