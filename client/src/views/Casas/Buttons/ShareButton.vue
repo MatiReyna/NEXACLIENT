@@ -1,18 +1,24 @@
 <script setup>
-import { h } from 'vue';
+import { h, computed } from 'vue';
 import { message } from 'ant-design-vue';
 import { ShareAltOutlined } from '@ant-design/icons-vue';
 import Clipboard from 'clipboard';
 
 const props = defineProps({
-    url : String,
+    id : String,
     modelName: String,
 });
 
+const url = computed(() => {
+    const protocol = window.location.protocol;
+    const host = window.location.host;
+
+    return `${protocol}//${host}/detail/${props.id}`
+});
 
 const copyURL = () => {
   const clipboard = new Clipboard('.ant-btn', {
-    text: () => props.url
+    text: () => url.value
   });
 
   clipboard.on('success', () => {
@@ -29,5 +35,5 @@ const copyURL = () => {
 </script>
 
 <template>
-         <a-button class=" flex justify-center items-center bg-blue-500" @click="copyURL" type="primary" :icon="h(ShareAltOutlined)"> Compartir </a-button>
+         <a-button class=" flex justify-center items-center bg-blue-500" @click="copyURL" type="primary" :icon="h(ShareAltOutlined)"/>
 </template>
