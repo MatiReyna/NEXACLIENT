@@ -6,6 +6,7 @@ import { DeleteOutlined, InboxOutlined } from '@ant-design/icons-vue'
 import { useStore } from 'vuex';
 
 import axios from 'axios';
+import validates from '../Validations/Validations';
 
 const { dispatch } = useStore();
 const emit = defineEmits(['handleCreate']);
@@ -14,6 +15,8 @@ const newPromo = ref({
     name: "",
     url: "",
 });
+
+const errors = ref({});
 
 const handleBeforeUpload = file => {
     const isJpgOrPng = file.type === 'image/jpeg' || file.type === 'image/png';
@@ -57,17 +60,23 @@ const removeImage = async () => {
 };
 
 const handleSubmit = async () => {
-    try {
-        await axios.post(`${BASE_URL}promos`, newPromo.value);
-        message.success(`La promo "${newPromo.value.name}" fue creado con exito`);
-        dispatch('getPromos');
-        emit('handleCreate');
-    } catch (error) {
-        message.error('Error al cargar la promo');
-        console.error(error)
-    } finally {
-        const loadingMessage = message.loading('Subiendo promocion...', 0);
-        loadingMessage();
+    errors.value = validates(newPromo.value, 'promos');
+    if (Object.keys(errors.value).length !== 0) {
+        console.log(errors.value);
+    }
+    else {
+        try {
+            await axios.post(`${BASE_URL}promos`, newPromo.value);
+            message.success(`La promo "${newPromo.value.name}" fue creado con exito`);
+            dispatch('getPromos');
+            emit('handleCreate');
+        } catch (error) {
+            message.error('Error al cargar la promo');
+            console.error(error)
+        } finally {
+            const loadingMessage = message.loading('Subiendo promocion...', 0);
+            loadingMessage();
+        }
     }
 }
 </script>
@@ -77,11 +86,13 @@ const handleSubmit = async () => {
         <label>Nombre: </label>
         <input class="border border-slate-400 px-2 py-1 rounded-md placeholder:italic" placeholder="ejemplo: promo 1"
             type="text" name="nameModel" v-model="newPromo.name">
+            <a-alert class=" rounded-md py-1 text-red-600 " v-if="errors.name" type="error" :message="errors.name" banner />
 
         <label>Imagen promocional: </label>
-        
-        <a-upload-dragger v-if="newPromo.url.trim() === ''" class=" p-5 -mt-2"
-            :before-upload="handleBeforeUpload" :show-upload-list="false" :custom-request="handleCustomRequest">
+        <a-alert class=" rounded-md py-1 text-red-600 " v-if="errors.url" type="error" :message="errors.url" banner />
+
+        <a-upload-dragger v-if="newPromo.url.trim() === ''" class=" p-5 -mt-2" :before-upload="handleBeforeUpload"
+            :show-upload-list="false" :custom-request="handleCustomRequest">
             <p class="ant-upload-drag-icon">
                 <InboxOutlined style="color: #7364d2" />
             </p>

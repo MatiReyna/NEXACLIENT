@@ -1,5 +1,7 @@
 <script setup>
+import { EditOutlined } from '@ant-design/icons-vue'
 import { useStore } from 'vuex';
+import { h } from 'vue';
 
 const { dispatch } = useStore();
 
@@ -14,7 +16,11 @@ const handleClick = () => {
 </script>
 
 <template>
-    <div>
-        <button @click="handleClick">Editar</button>
-    </div>
+        <a-button class=" full-width-button flex justify-center items-center" type="primary" @click="handleClick" :icon="h(EditOutlined)"/>
 </template>
+
+<style scoped>
+.full-width-button {
+    width: 100%;
+}
+</style>

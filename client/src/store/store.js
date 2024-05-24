@@ -1,7 +1,9 @@
 import { createStore } from 'vuex';
 import axios from 'axios';
 
-export const BASE_URL = "http://localhost:3001/"
+
+export const BASE_URL = "http://localhost:3001/";
+
 const store = createStore({
     state: {
         casas: [],
@@ -36,7 +38,7 @@ const store = createStore({
             try {
                 const { data } = await axios.get(`${BASE_URL}casas?page=${this.state.curretPage}&name=${this.state.searchedCasa}`);
                 commit('setCasas', data.docs);
-                commit('setAllPages', data.totalPages)
+                commit('setAllPages', data.totalPages);
             } catch (error) {
                 console.error(error);
             }
@@ -52,9 +54,9 @@ const store = createStore({
         },
         async getPromos ({commit}){
             try {
-                const {data} = await axios.get(`${BASE_URL}promos/`)
+                const {data} = await axios.get(`${BASE_URL}promos/`);
+
                 commit('setPromos', data.allPromos);
-                console.log(this.state.promos);
             } catch (error) {
                 console.error(error);
             }

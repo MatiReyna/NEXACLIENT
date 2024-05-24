@@ -34,12 +34,12 @@ const handleLogin = async () => {
     <label>Email:</label>
     <input class=" border-2 border-slate-500 rounded-md px-2 placeholder:italic" :class="{ ' border-red-400': errors.email }" type="text"
       name="email" placeholder="ejemplo@gmail.com" v-model="session.email">
-    <a-alert class=" rounded-md py-1 " v-if="errors.email" type="error" :message="errors.email" banner />
+    <a-alert class=" rounded-md py-1 text-red-600 " v-if="errors.email" type="error" :message="errors.email" banner />
 
     <label>Contraseña:</label>
     <input class=" border-2 border-slate-500 rounded-md px-2 placeholder:italic" :class="{ '  border-red-400': errors.password }"
       type="password" name="password" placeholder="contraseña..." v-model="session.password">
-    <a-alert class=" rounded-md py-1 " v-if="errors.password" type="error" :message="errors.password" banner />
+    <a-alert class=" rounded-md py-1 text-red-600 " v-if="errors.password" type="error" :message="errors.password" banner />
 
     <a-button class=" bg-buttons" type="primary" @click="handleLogin">LogIn</a-button>
     

@@ -12,8 +12,11 @@ onMounted(() => {
 });
 
 const handleChange = (page) => {
-    dispatch('changeCurrentpage', page)
-    dispatch('getAllCasas')
+    window.scrollTo({
+        top 
+      });
+    dispatch('changeCurrentpage', page);
+    dispatch('getAllCasas');
 };
 
 </script>
