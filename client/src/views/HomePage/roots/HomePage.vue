@@ -9,10 +9,10 @@ import Title from '../components/Title.vue';
 <template class="containerHomePage">
     <Hero />
     <div>
-        <Title :subTitle="'Te mostramos nuestras instalaciones'" :title="'Sobre Nosotros'" />
-        <About id="about" />
         <Title :subTitle="'SPONSORS'" :title="'Las marcas que confian en nosotros'" />
         <Sponsors />
+        <Title :subTitle="'Te mostramos nuestras instalaciones'" :title="'Sobre Nosotros'" />
+        <About id="about" />
         <Title :subTitle="'GALLERY'" :title="'Algunas muestras'" />
         <Galery />
     </div>
