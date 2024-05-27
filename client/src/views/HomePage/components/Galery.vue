@@ -51,7 +51,7 @@ onBeforeUnmount(() => {
         
         <!-- Botón para ver más modelos -->
         <RouterLink to="/casas">
-            <button class="bg-[#272145] text-[#fffcf2] px-6 py-3 text-base rounded-full cursor-pointer border-0 outline-0 inline-flex items-center justify-center transition duration-300 hover:bg-[#7364d2] hover:text-white transform hover:scale-105">
+            <button class="bg-buttons text-[#fffcf2] px-6 py-3 text-base rounded-full cursor-pointer border-0 outline-0 inline-flex items-center justify-center transition duration-300 hover:bg-[#7364d2] hover:text-white transform hover:scale-105">
                 Nuestros modelos <FireOutlined class="w-5 ml-2" />
             </button>
         </RouterLink>

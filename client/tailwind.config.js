@@ -7,11 +7,16 @@ export default {
   theme: {
     extend: {
       colors:{
-        buttons: "#7364d2",
+        buttons: "#4c4093",
+        titulos: "#9192e8",
+        subtitulos: "#272145"
       },
       boxShadow: {
         'custom': '0px 4px 10px rgba(0, 0, 0, 0.5)',
-    },
+      },
+      fontFamily: {
+        "Rubik": ["Rubik", "cursive"]
+      }
     },
   },
   plugins: [],
