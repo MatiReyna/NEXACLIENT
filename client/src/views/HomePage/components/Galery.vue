@@ -43,19 +43,40 @@ onBeforeUnmount(() => {
 <template>
     <div class="my-20 mx-auto w-full flex flex-col items-center justify-center">
         <!-- Carrusel de imágenes -->
-        <div class="flex items-center justify-between mb-10">
-            <div class="flex items-center space-x-4">
-                <div v-for="index in 2" :key="startIndex + index - 1" class="rounded-lg overflow-hidden border border-gray-300 shadow-lg">
-                    <img :src="images[startIndex + index - 1].src" :alt="'Image ' + images[startIndex + index - 1].id" class="w-64 h-64 object-cover">
-                </div>
+        <div class="flex items-center justify-center mb-10 space-x-4">
+            <div v-for="index in 2" :key="startIndex + index - 1" class="rounded-lg overflow-hidden border border-gray-300 shadow-lg">
+                <img :src="images[startIndex + index - 1].src" :alt="'Image ' + images[startIndex + index - 1].id" class="w-80 h-80 object-cover">
             </div>
         </div>
         
         <!-- Botón para ver más modelos -->
         <RouterLink to="/casas">
-            <button class="bg-[#212121] text-[#fffcf2] px-6 py-3 text-base rounded-full cursor-pointer border-0 outline-0 inline-flex items-center justify-center transition duration-300 hover:bg-[#3d348b] hover:text-white">
+            <button class="bg-buttons text-[#fffcf2] px-6 py-3 text-base rounded-full cursor-pointer border-0 outline-0 inline-flex items-center justify-center transition duration-300 hover:bg-[#7364d2] hover:text-white transform hover:scale-105">
                 Nuestros modelos <FireOutlined class="w-5 ml-2" />
             </button>
         </RouterLink>
     </div>
 </template>
+
+<style scoped>
+/* Ajustes para el contenedor del carrusel */
+.my-20 {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+/* Espaciado entre las imágenes y el botón */
+.mb-10 {
+    margin-bottom: 2.5rem;
+}
+
+/* Espaciado entre las imágenes en el carrusel */
+.space-x-4 > :not([hidden]) ~ :not([hidden]) {
+    margin-left: 1rem;
+}
+
+/* Transición suave y escala para el botón */
+.hover\\:scale-105 {
+    transition: transform 0.3s;
+}
+</style>

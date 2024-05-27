@@ -38,8 +38,4 @@
   display: flex;
   animation: scroll 20s linear infinite;
 }
-
-/* .filter {
-    filter: grayscale(80%);
-} */
 </style>
