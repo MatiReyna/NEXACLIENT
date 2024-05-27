@@ -8,13 +8,20 @@ import Title from '../components/Title.vue';
 
 <template class="containerHomePage">
     <Hero />
-    <div>
-        <Title :subTitle="'SPONSORS'" :title="'Las marcas que confian en nosotros'" />
-        <Sponsors />
-        <Title :subTitle="'Te mostramos nuestras instalaciones'" :title="'Sobre Nosotros'" />
-        <About id="about" />
-        <Title :subTitle="'GALLERY'" :title="'Algunas muestras'" />
-        <Galery />
+    <div class="space-y-32">
+        <div>
+            <Title :subTitle="'Sponsors & marcas'" :title="'Las marcas que confian en nosotros'" />
+            <Sponsors />
+        </div>
+        <span id="about" />
+        <div>
+            <Title :subTitle="'Te mostramos nuestras instalaciones'" :title="'Sobre Nosotros'" />
+            <About />
+        </div>
+        <div>
+            <Title :subTitle="'Entregas y promociones'" :title="'Algunas muestras'" />
+            <Galery />
+        </div>
     </div>
 </template>
 
@@ -22,5 +29,7 @@ import Title from '../components/Title.vue';
 .containerHomePage {
     padding-left: 10%;
     padding-right: 10%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 </style>
