@@ -62,7 +62,7 @@ const removeImage = async () => {
 const handleSubmit = async () => {
     errors.value = validates(newPromo.value, 'promos');
     if (Object.keys(errors.value).length !== 0) {
-        console.log(errors.value);
+        message.warn('Existen campos incorrectos o incompletos');
     }
     else {
         try {

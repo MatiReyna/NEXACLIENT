@@ -1,5 +1,5 @@
 <script setup>
-import { computed, h } from 'vue';
+import { computed } from 'vue';
 import { WhatsAppOutlined } from '@ant-design/icons-vue';
 
 const props = defineProps({
@@ -15,7 +15,7 @@ const url = computed(() => {
     return `${protocol}//${host}/detail/${props.id}`
 })
 
-let mensajeWhatsApp = computed(() =>`¡Hola!
+let mensajeWhatsApp = computed(() => `¡Hola!
 
 Me llamó mucho la atención el modelo ${url.value} 
 
@@ -33,8 +33,10 @@ const handleClick = () => {
 </script>
 
 <template>
-    <div class="px-6 py-3 rounded-md">
-        <a-button class=" flex justify-center items-center bg-green-400 " type="primary" :icon="h(WhatsAppOutlined)"
-            @click="handleClick" />
-    </div>
+
+    <button
+        class=" flex justify-center items-center text-sm md:text-base gap-1 bg-green-400 text-white size-full px-6 py-4 rounded-md hover:bg-purple-700 transition duration-300"
+        @click="handleClick">
+        <WhatsAppOutlined />Hablanos
+    </button>
 </template>

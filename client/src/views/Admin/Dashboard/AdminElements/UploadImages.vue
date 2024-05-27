@@ -1,6 +1,6 @@
 <script setup>
 import { DeleteOutlined, InboxOutlined } from '@ant-design/icons-vue'
-import { ref, h } from 'vue';
+import { h } from 'vue';
 import { BASE_URL } from '@/store/store';
 import { message } from 'ant-design-vue';
 

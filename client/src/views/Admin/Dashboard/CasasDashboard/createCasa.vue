@@ -36,7 +36,7 @@ const handleDeleteImage = (tipo, index) => {
 const handleSubmit = async () => {
     errors.value = validates(newCasa.value);
     if (Object.keys(errors.value).length !== 0) {
-        console.log(errors.value.nameModel);
+        message.warn('Existen campos incorrectos o incompletos');
     }
     else {
         try {

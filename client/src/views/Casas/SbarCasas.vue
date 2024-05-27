@@ -16,12 +16,12 @@ const handleSearch = () => {
 </script>
 
 <template>
-    <div class=" flex items-center gap-1 ">
+    <div class=" flex gap-1 w-[80%] md:w-1/2 p-3  ">
         <a-input class=" border border-buttons placeholder:italic " placeholder="Busque su casa..." type="text"
             v-model:value="search" @pressEnter="handleSearch" />
         <a-tooltip title="search">
             <a-button class=" flex justify-center items-center bg-buttons " type="primary" @click="handleSearch"
-                :icon="h(SearchOutlined)" />
+            ><SearchOutlined/></a-button>
         </a-tooltip>
     </div>
 </template>
