@@ -6,7 +6,7 @@ import { InstagramOutlined, LinkedinOutlined } from '@ant-design/icons-vue';
 <template>
   <footer class="w-full bg-[#7364d2] text-white relative bottom-0">
     <section class="py-10 px-4">
-      <div class="max-w-7xl mx-auto flex flex-wrap justify-between gap-8">
+      <div class="max-w-7xl mx-auto flex flex-wrap justify-center md:justify-between gap-8">
         <article class="text-center md:text-left mb-6 md:mb-0">
           <img src="/stock-4.webp" alt="logoFooter" class="w-16 h-16 mb-4 mx-auto md:mx-0 rounded-full cursor-pointer transition-transform transform hover:scale-110">
           <h2 class="text-2xl">Nexa Constructora</h2>

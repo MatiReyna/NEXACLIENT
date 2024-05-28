@@ -56,14 +56,14 @@ const handleSubmit = async () => {
 </script>
 
 <template>
-    <form class="grid justify-center gap-y-2 mt-5 mb-9" @keydown.enter.prevent @submit.prevent="handleSubmit">
+    <form class="grid w-[80%] gap-y-2 mt-5 mb-9 mx-auto" @keydown.enter.prevent @submit.prevent="handleSubmit">
         <label>Nombre: </label>
         <input class="border border-slate-400 px-2 py-1 rounded-md" type="text" name="nameModel"
             v-model="newCasa.nameModel">
         <a-alert class=" rounded-md py-1 text-red-600 " v-if="errors.nameModel" type="error" :message="errors.nameModel"
             banner />
 
-        <label>Precio</label>
+        <label>Precio: </label>
         <input class="border border-slate-400 px-2 py-1 rounded-md" type="number" step="any" name="price" min="0"
             v-model="newCasa.price">
         <a-alert class=" rounded-md py-1 text-red-600 " v-if="errors.price" type="error" :message="errors.price"
@@ -75,19 +75,19 @@ const handleSubmit = async () => {
         <UploadImages @handleEmit="handleEmit" @handleDeleteImage="handleDeleteImage" :images="newCasa.offside"
             :tipo="'offside'" />
 
-        <label>Descripcion</label>
+        <label>Descripción: </label>
         <textarea name="description" class="border border-slate-400 px-2 py-1 rounded-md w-full" type="text"
             v-model="newCasa.description" cols="200" rows="5" @keydown.enter.prevent="false"></textarea>
         <a-alert class=" rounded-md py-1 text-red-600" v-if="errors.description" type="error"
             :message="errors.description" banner />
 
-        <label>Habitaciones</label>
+        <label>Habitaciones: </label>
         <input class="border border-slate-400 px-2 py-1 rounded-md" type="number" step="any" name="price" min="0"
             v-model="newCasa.rooms">
         <a-alert class=" rounded-md py-1 text-red-600 " v-if="errors.rooms" type="error" :message="errors.rooms"
             banner />
 
-        <label>Baños</label>
+        <label>Baños: </label>
         <input class="border border-slate-400 px-2 py-1 rounded-md" type="number" step="any" name="price" min="0"
             v-model="newCasa.bathroom">
         <a-alert class=" rounded-md py-1 text-red-600" v-if="errors.bathroom" type="error" :message="errors.bathroom"
@@ -99,7 +99,7 @@ const handleSubmit = async () => {
         <UploadImages @handleEmit="handleEmit" @handleDeleteImage="handleDeleteImage" :images="newCasa.inside"
             :tipo="'inside'" />
 
-        <label>Dimensiones</label>
+        <label>Dimensiones m²: </label>
         <input class="border border-slate-400 px-2 py-1 rounded-md" type="number" step="any" name="price" min="0"
             v-model="newCasa.dimensions">
         <a-alert class=" rounded-md py-1 text-red-600 " v-if="errors.dimensions" type="error"
