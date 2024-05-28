@@ -12,10 +12,10 @@ import { InstagramOutlined, LinkedinOutlined } from '@ant-design/icons-vue';
           <h2 class="text-2xl">Nexa Constructora</h2>
           <p class="text-sm mt-2">Ayudandote a crecer, síguenos en nuestras redes.</p>
           <div class="flex justify-center md:justify-start mt-4 gap-4">
-            <a href="#" class="w-8 h-8 flex items-center justify-center bg-[#9192e8 rounded-full transition-opacity hover:opacity-70">
+            <a href="#" class="w-10 h-10 flex items-center justify-center bg-[#9192e8 rounded-full transition-opacity hover:opacity-70">
               <InstagramOutlined class="text-lg" />
             </a>
-            <a href="#" class="w-8 h-8 flex items-center justify-center bg-[#9192e8 rounded-full transition-opacity hover:opacity-70">
+            <a href="#" class="w-10 h-10 flex items-center justify-center bg-[#9192e8 rounded-full transition-opacity hover:opacity-70">
               <LinkedinOutlined class="text-lg" />
             </a>
           </div>
