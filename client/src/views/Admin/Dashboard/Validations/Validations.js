@@ -38,7 +38,7 @@ export default function validates(objeto, type) {
             errors.rooms = "Minimo debe haber una habitacion"
         };
         if (objeto.bathroom < 1){
-            errors.bathroom = "Minimo debe haber una habitacion"
+            errors.bathroom = "Minimo debe haber una baño"
         };
         if (objeto.dimensions < 1){
             errors.dimensions = "Las dimensiones del modelo no pueden ser cero"

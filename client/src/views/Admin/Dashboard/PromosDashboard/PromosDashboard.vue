@@ -10,7 +10,7 @@
 
 <template>
     <div>
-        <button @click="addPromo = !addPromo">
+        <button class="flex justify-end mt-4 mr-4 right-0" @click="addPromo = !addPromo">
             <span v-if="!addPromo"> Añadir promo</span>
             <span v-else> Cancelar </span>
         </button>

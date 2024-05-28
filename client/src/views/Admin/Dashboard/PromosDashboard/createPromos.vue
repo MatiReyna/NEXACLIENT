@@ -62,7 +62,7 @@ const removeImage = async () => {
 const handleSubmit = async () => {
     errors.value = validates(newPromo.value, 'promos');
     if (Object.keys(errors.value).length !== 0) {
-        console.log(errors.value);
+        message.warn('Existen campos incorrectos o incompletos');
     }
     else {
         try {
@@ -82,7 +82,7 @@ const handleSubmit = async () => {
 </script>
 
 <template>
-    <form class="grid justify-center gap-y-2 m-2" @keydown.enter.prevent @submit.prevent="handleSubmit">
+    <form class="grid w-[80%] gap-y-2 mx-auto m-2" @keydown.enter.prevent @submit.prevent="handleSubmit">
         <label>Nombre: </label>
         <input class="border border-slate-400 px-2 py-1 rounded-md placeholder:italic" placeholder="ejemplo: promo 1"
             type="text" name="nameModel" v-model="newPromo.name">

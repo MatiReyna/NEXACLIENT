@@ -22,5 +22,6 @@ const handleClick = () => {
 <style scoped>
 .full-width-button {
     width: 100%;
+    height: 120%;
 }
 </style>

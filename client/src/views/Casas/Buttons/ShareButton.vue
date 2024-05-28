@@ -1,19 +1,19 @@
 <script setup>
-import { h, computed } from 'vue';
+import { computed } from 'vue';
 import { message } from 'ant-design-vue';
 import { ShareAltOutlined } from '@ant-design/icons-vue';
 import Clipboard from 'clipboard';
 
 const props = defineProps({
-    id : String,
-    modelName: String,
+  id: String,
+  modelName: String,
 });
 
 const url = computed(() => {
-    const protocol = window.location.protocol;
-    const host = window.location.host;
+  const protocol = window.location.protocol;
+  const host = window.location.host;
 
-    return `${protocol}//${host}/detail/${props.id}`
+  return `${protocol}//${host}/detail/${props.id}`
 });
 
 const copyURL = () => {
@@ -35,5 +35,7 @@ const copyURL = () => {
 </script>
 
 <template>
-         <a-button class=" flex justify-center items-center bg-blue-500" @click="copyURL" type="primary" :icon="h(ShareAltOutlined)"/>
+    <a-button class=" flex justify-center items-center bg-blue-500 size-full px-6 py-4 rounded-md hover:bg-purple-700 transition duration-300" @click="copyURL" type="primary">
+      <ShareAltOutlined class="text-sm md:text-xl " />
+    </a-button>
 </template>
