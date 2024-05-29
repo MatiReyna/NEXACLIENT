@@ -21,7 +21,7 @@ const route = useRoute();
     <div :class="['bg-white card shadow-custom rounded-lg gap-5 w-[93%] p-6 my-3 flex flex-col-reverse md:flex-row md:w-[70%]',
       { 'md:flex-row-reverse animate-fadeleft': order % 2 === 0, 'animate-fadeRight': order % 2 !== 0 }]">
 
-      <section class="flex flex-col justify-around w-full md:w-1/2 ">
+      <section class="flex flex-col justify-around w-full md:w-1/2">
 
         <section class=" space-y-3 ">
           <h2 class="text-xl md:text-2xl font-bold text-titulos">{{ casa.nameModel }}</h2>
