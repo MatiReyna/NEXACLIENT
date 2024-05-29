@@ -4,6 +4,13 @@ import About from '../components/About.vue';
 import Sponsors from '../components/Sponsors.vue';
 import Galery from '../components/Galery.vue';
 import Title from '../components/Title.vue';
+import { onMounted } from 'vue';
+
+onMounted(()=>{
+    window.scrollTo({
+        top
+    });
+})
 </script>
 
 <template class="containerHomePage">
