@@ -6,7 +6,7 @@ const props = defineProps({
     id: String,
 });
 
-const phone = "+5491155689815";
+const phone = import.meta.env.VITE_NUMBER_PHONE;
 
 const url = computed(() => {
     const protocol = window.location.protocol;
