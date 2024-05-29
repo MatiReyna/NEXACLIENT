@@ -3,34 +3,41 @@ import { useRoute, useRouter } from 'vue-router';
 import { ref, onMounted } from 'vue';
 import { BASE_URL } from '@/store/store';
 import axios from 'axios';
+import WhatsappButton from './Buttons/WhatsappButton.vue';
 import { HomeOutlined, ArrowLeftOutlined } from '@ant-design/icons-vue';
 
 const casaDetail = ref({});
 const isLoading = ref(true);
 const error = ref(false);
+const carrousel = ref([]);
 const router = useRouter();
 
 onMounted(async () => {
-    const route = useRoute();
-    const id = route.params.id;
+  const route = useRoute();
+  const id = route.params.id;
+  
+  window.scrollTo({
+        top
+    });
 
-    try {
-        const { data } = await axios.get(`${BASE_URL}casas/${id}`);
-        casaDetail.value = data;
-    } catch (err) {
-        console.error(err);
-        error.value = 'Error al cargar los detalles de la casa';
-    } finally {
-        isLoading.value = false;
-    }
+  try {
+    const { data } = await axios.get(`${BASE_URL}casas/${id}`);
+    casaDetail.value = data;
+    carrousel.value = [...data.offside, ...data.inside, ...data.blueprints]
+  } catch (err) {
+    console.error(err);
+    error.value = 'Error al cargar los detalles de la casa';
+  } finally {
+    isLoading.value = false;
+  }
 });
 
 const navigateToCasas = () => {
-    router.push('/casas');
+  router.push('/casas');
 };
 
 const navigateToHome = () => {
-    router.push('/');
+  router.push('/');
 };
 </script>
 
@@ -49,7 +56,7 @@ const navigateToHome = () => {
       </header>
       <!-- Todas sus características y carousel -->
       <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <aside class="flex flex-col space-y-4 md:col-span-1">
+        <aside class="flex flex-col justify-center space-y-4 md:col-span-1 ">
           <div class="flex flex-wrap justify-between space-x-2">
             <div class="bg-white p-2 rounded-lg shadow-lg text-center flex-1 min-w-[120px]">
               <i class="fa fa-dollar-sign text-3xl text-[#272145] mb-2"></i>
@@ -70,27 +77,31 @@ const navigateToHome = () => {
               <p class="text-base font-semibold text-gray-700">{{ casaDetail.dimensions }} m²</p>
             </div>
           </div>
-          <div class="bg-white p-4 rounded-lg shadow-lg">
-            <p class="text-lg text-gray-700">{{ casaDetail.description }}</p>
+          <div class="bg-white p-4 rounded-lg shadow-lg max-h-[390px] overflow-y-auto">
+            <p class="text-lg text-gray-700 break-words whitespace-pre-wrap">{{ casaDetail.description }}</p>
           </div>
         </aside>
         <aside class="md:col-span-2">
           <!-- Este es el carousel -->
           <div class="carousel-container">
-            <a-carousel dots class="max-w-full mx-auto">
-              <figure v-for="(image, index) in casaDetail.offside.concat(casaDetail.inside, casaDetail.blueprints)" :key="index" class="carousel-item">
-                <img :src="image" :alt="'Image ' + (index + 1)" loading="lazy" class="w-full h-auto rounded-lg shadow-lg mx-auto transition-transform transform hover:scale-105" />
+            <a-carousel dots class="max-w-full mx-auto" autoplay>
+              <figure v-for="(image, index) in carrousel" :key="index" class="carousel-item">
+                <img :src="image" :alt="'Image ' + (index + 1)" loading="lazy"
+                  class="w-full h-auto rounded-lg shadow-lg mx-auto transition-transform transform hover:scale-105" />
               </figure>
             </a-carousel>
           </div>
         </aside>
       </section>
-      
+
       <footer class="mt-8 flex gap-4 justify-center">
-        <button @click="navigateToCasas" class="flex items-center px-6 py-3 bg-[#272145] text-white rounded-lg shadow-md hover:bg-[#19145a] transition-colors">
+        <button @click="navigateToCasas"
+          class="flex items-center px-6 py-3 bg-[#272145] text-white rounded-lg shadow-md hover:bg-[#19145a] transition-colors">
           <ArrowLeftOutlined class="mr-2" /> Volver a Casas
         </button>
-        <button @click="navigateToHome" class="flex items-center px-6 py-3 bg-[#272145] text-white rounded-lg shadow-md hover:bg-[#19145a] transition-colors">
+        <WhatsappButton class="w-[25%] py-7 md:w-[15%] md:p-4" :id="casaDetail._id" />
+        <button @click="navigateToHome"
+          class="flex items-center px-6 py-3 bg-[#272145] text-white rounded-lg shadow-md hover:bg-[#19145a] transition-colors">
           <HomeOutlined class="mr-2" /> Volver a Inicio
         </button>
       </footer>
@@ -105,7 +116,8 @@ const navigateToHome = () => {
 }
 
 .carousel-item img {
-  max-height: 500px; /* Ajustar el tamaño máximo del carrusel */
+  max-height: 500px;
+  /* Ajustar el tamaño máximo del carrusel */
   object-fit: cover;
 }
 </style>

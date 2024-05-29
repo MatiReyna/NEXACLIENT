@@ -12,6 +12,9 @@ const loginUser = (online) => {
 
 onMounted(() => {
     userLoggedIn.value = sessionStorage.getItem('user') || false
+    window.scrollTo({
+        top
+    });
 });
 
 </script>

@@ -8,7 +8,10 @@ import Card from './Card.vue';
 const { dispatch, state } = useStore();
 
 onMounted(() => {
-    dispatch('getAllCasas')
+    dispatch('getAllCasas');
+    window.scrollTo({
+        top
+    });
 });
 
 const handleChange = (page) => {

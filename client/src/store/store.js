@@ -12,6 +12,7 @@ const store = createStore({
         curretPage: 1,
         edit: {},
         promos: [],
+        maxPromos: 0,
     },
     mutations: {  // Hace referencia al reducer.
         setCasas(state, payload) {
@@ -31,6 +32,9 @@ const store = createStore({
         },
         setPromos(state, payload){
             state.promos = payload;
+        },
+        setMaxPromos(state, payload){
+            state.maxPromos = payload;
         },
     },
     actions: {
@@ -57,6 +61,7 @@ const store = createStore({
                 const {data} = await axios.get(`${BASE_URL}promos/`);
 
                 commit('setPromos', data.allPromos);
+                commit('setMaxPromos', data.totalPromos)
             } catch (error) {
                 console.error(error);
             }

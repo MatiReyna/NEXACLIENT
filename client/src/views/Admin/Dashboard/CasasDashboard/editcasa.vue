@@ -60,7 +60,11 @@ onMounted(() => {
 </script>
 
 <template>
-    <button @click="dispatch('cancelEdit')">Cancelar</button>
+    <section class="flex justify-center md:justify-end m-3 md:mr-5">
+        <button @click="dispatch('cancelEdit')"
+            class=" border border-red-500 rounded-md px-4 py-2 text-buttons hover:text-white hover:bg-red-500 ">Cancelar</button>
+    </section>
+
     <form class="grid justify-center gap-y-2 m-2" @submit.prevent="handleSubmit">
         <label>Nombre: </label>
         <input class="border border-slate-400 px-2 py-1 rounded-md" type="text" name="nameModel"
