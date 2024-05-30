@@ -50,9 +50,9 @@ onUnmounted(() => {
         </RouterLink>
       </li>
       <li>
-        <a href="#about" :class="['transition-colors duration-300', route.hash === '#about' ? 'text-[#272145]' : 'hover:text-[#272145]']">
+        <RouterLink to="/#about" :class="['transition-colors duration-300', route.path === '/admin' ? 'text-[#272145]' : 'hover:text-[#272145]']">
           Sobre Nosotros
-        </a>
+        </RouterLink>
       </li>
       <li v-if="userLoggedIn">
         <RouterLink to="/admin" :class="['transition-colors duration-300', route.path === '/admin' ? 'text-[#272145]' : 'hover:text-[#272145]']">
