@@ -1,15 +1,10 @@
 <script setup>
-import { ref, onMounted, onBeforeUnmount } from 'vue';
+import { ref, onMounted, onBeforeUnmount, computed } from 'vue';
 import { RouterLink } from 'vue-router';
 import { FireOutlined } from '@ant-design/icons-vue';
+import { useStore } from 'vuex';
 
-// Imágenes del carrusel
-const images = ref([
-    { id: 1, src: '/stock-1.webp' },
-    { id: 2, src: '/stock-2.webp' },
-    { id: 3, src: '/stock-3.webp' },
-    { id: 4, src: '/stock-4.webp' }
-]);
+const { state, dispatch } = useStore();
 
 // Índice de la imagen actual
 const startIndex = ref(0);
@@ -19,24 +14,36 @@ let intervalId;
 
 // Función para cambiar a la siguiente imagen
 const nextImages = () => {
-    startIndex.value = (startIndex.value + 2) % images.value.length;
+    if (state.promos.length > 0) {
+        startIndex.value = (startIndex.value + 2) % state.promos.length;
+    }
 };
 
 // Función para cambiar automáticamente las imágenes
 const startAutoChange = () => {
     intervalId = setInterval(() => {
         nextImages();
-    }, 3000); // Cambiar cada 5 segundos
+    }, 3000); // Cambiar cada 3 segundos
 };
 
 // Iniciar el cambio automático al montar el componente
 onMounted(() => {
-    startAutoChange();
+    dispatch("getPromos").then(() => {
+        startAutoChange();
+        image.value = state.promos;
+    });
 });
+
+const image = ref([]);
 
 // Detener el cambio automático al desmontar el componente
 onBeforeUnmount(() => {
     clearInterval(intervalId);
+});
+
+// Computed para manejar la lista de imágenes en el carrusel
+const displayedImages = computed(() => {
+    return image.value.slice(startIndex.value, startIndex.value + 2);
 });
 </script>
 
@@ -44,8 +51,8 @@ onBeforeUnmount(() => {
     <div class="my-20 mx-auto w-full flex flex-col items-center justify-center">
         <!-- Carrusel de imágenes -->
         <div class="flex items-center justify-center mb-10 space-x-4">
-            <div v-for="index in 2" :key="startIndex + index - 1" class="rounded-lg overflow-hidden border border-gray-300 shadow-lg">
-                <img :src="images[startIndex + index - 1].src" :alt="'Image ' + images[startIndex + index - 1].id" class="w-80 h-80 object-cover">
+            <div v-for="img in displayedImages" :key="img._id" class="rounded-lg overflow-hidden border border-gray-300 shadow-lg">
+                <img :src="img.url" :alt="'Image' + img._id" class="w-80 h-80 object-cover">
             </div>
         </div>
         
