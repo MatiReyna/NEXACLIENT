@@ -5,7 +5,7 @@
   <div class="aboutContainer mx-auto my-10 md:my-24 flex flex-col md:flex-row items-center justify-between w-full px-4 md:px-0 md:w-11/12">
     <div class="aboutLeft relative flex-[0_0_100%] md:flex-[0_0_40%]">
       <video ref="videoPlayer" class="aboutImg w-full md:rounded-lg" controls preload="metadata" autoplay>
-        <source src="/video-about.mp4" type="video/mp4">
+        <source src="https://res.cloudinary.com/dla8ovzrw/video/upload/v1717011129/video-about_wvlnqf.mp4" type="video/mp4">
       </video>
     </div>
     <div class="aboutRight flex-[0_0_100%] md:flex-[0_0_56%] mt-6 md:mt-0 md:ml-8">
