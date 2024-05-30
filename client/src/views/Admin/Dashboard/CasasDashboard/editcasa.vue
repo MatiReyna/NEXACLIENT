@@ -8,6 +8,7 @@ import UploadImages from '../AdminElements/UploadImages.vue';
 import validates from '../Validations/Validations';
 import axios from 'axios';
 
+
 const editCasa = ref({
     nameModel: "",
     description: "",
@@ -40,7 +41,7 @@ const handleSubmit = async () => {
     else {
         try {
             await axios.put(`${BASE_URL}casas/${editCasa.value._id}`, editCasa.value);
-            message.success(`El modelo "${editCasa.value.nameModel}" fue creado con exito`);
+            message.success(`El modelo "${editCasa.value.nameModel}" fue actualizado con exito`);
             dispatch('cancelEdit')
             dispatch('getAllCasas');
         } catch (error) {
@@ -65,10 +66,10 @@ onMounted(() => {
             class=" border border-red-500 rounded-md px-4 py-2 text-buttons hover:text-white hover:bg-red-500 ">Cancelar</button>
     </section>
 
-    <form class="grid justify-center gap-y-2 m-2" @submit.prevent="handleSubmit">
+    <form class="grid w-[80%] gap-y-2 mt-5 mb-9 mx-auto" @submit.prevent="handleSubmit">
         <label>Nombre: </label>
         <input class="border border-slate-400 px-2 py-1 rounded-md" type="text" name="nameModel"
-            v-model="editCasa.nameModel" @keydown.enter.prevent>
+            v-model.lazy="editCasa.nameModel" @keydown.enter.prevent>
         <a-alert class=" rounded-md py-1 text-red-600 " v-if="errors.nameModel" type="error" :message="errors.nameModel"
             banner />
 
