@@ -8,7 +8,7 @@ import { InstagramOutlined, LinkedinOutlined } from '@ant-design/icons-vue';
     <section class="py-10 px-4">
       <div class="max-w-7xl mx-auto flex flex-wrap justify-center md:justify-between gap-8">
         <article class="text-center md:text-left mb-6 md:mb-0">
-          <img src="/stock-4.webp" alt="logoFooter" class="w-16 h-16 mb-4 mx-auto md:mx-0 rounded-full cursor-pointer transition-transform transform hover:scale-110">
+          <img src="https://res.cloudinary.com/dnnigh3iz/image/upload/v1716837702/vkl4cbujq4t2gtynhtwt.webp" alt="logoFooter" class="w-16 h-16 mb-4 mx-auto md:mx-0 rounded-full cursor-pointer transition-transform transform hover:scale-110">
           <h2 class="text-2xl">Nexa Constructora</h2>
           <p class="text-sm mt-2">Ayudandote a crecer, síguenos en nuestras redes.</p>
           <div class="flex justify-center md:justify-start mt-4 gap-4">
