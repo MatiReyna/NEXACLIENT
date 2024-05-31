@@ -1,7 +1,6 @@
 import { createStore } from 'vuex';
 import axios from 'axios';
 
-
 export const BASE_URL = import.meta.env.VITE_URL;
 
 const store = createStore({
@@ -14,7 +13,7 @@ const store = createStore({
         promos: [],
         maxPromos: 0,
     },
-    mutations: {  // Hace referencia al reducer.
+    mutations: {
         setCasas(state, payload) {
             state.casas = payload;
         },
@@ -30,17 +29,17 @@ const store = createStore({
         setEdit(state, payload) {
             state.edit = payload;
         },
-        setPromos(state, payload){
+        setPromos(state, payload) {
             state.promos = payload;
         },
-        setMaxPromos(state, payload){
+        setMaxPromos(state, payload) {
             state.maxPromos = payload;
         },
     },
     actions: {
-        async getAllCasas({ commit }) {
+        async getAllCasas({ commit, state }) {
             try {
-                const { data } = await axios.get(`${BASE_URL}casas?page=${this.state.curretPage}&name=${this.state.searchedCasa}`);
+                const { data } = await axios.get(`${BASE_URL}casas?page=${state.curretPage}&name=${state.searchedCasa}`);
                 commit('setCasas', data.docs);
                 commit('setAllPages', data.totalPages);
             } catch (error) {
@@ -50,23 +49,21 @@ const store = createStore({
         async getEdit({ commit }, { type, id }) {
             try {
                 const { data } = await axios.get(`${BASE_URL}${type}/${id}`);
-
                 commit('setEdit', data);
             } catch (error) {
                 console.error(error);
             }
         },
-        async getPromos ({commit}){
+        async getPromos({ commit }) {
             try {
-                const {data} = await axios.get(`${BASE_URL}promos/`);
-
+                const { data } = await axios.get(`${BASE_URL}promos/`);
                 commit('setPromos', data.allPromos);
-                commit('setMaxPromos', data.totalPromos)
+                commit('setMaxPromos', data.totalPromos);
             } catch (error) {
                 console.error(error);
             }
         },
-        cancelEdit({commit}){
+        cancelEdit({ commit }) {
             commit('setEdit', {});
         },
         changeCurrentpage({ commit }, page) {
@@ -75,7 +72,6 @@ const store = createStore({
         searchCasa({ commit }, casa) {
             commit('setSearchedCasa', casa);
         },
-
     },
     getters: {}
 });
