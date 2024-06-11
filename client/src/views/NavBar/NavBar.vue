@@ -34,9 +34,9 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <nav :class="['w-full fixed top-0 left-0 flex items-center justify-between  px-20 py-2 text-white shadow-lg z-10 transition duration-300', isSticky || isActiveRoute ? 'bg-gradient-to-r from-[#7364d2] to-[#7364d2] via-[#7364d2]/70' : 'bg-transparent']">
+  <nav :class="['w-full fixed top-0 left-0 flex items-center md:justify-between justify-center  md:px-20 md:py-2 py-6 text-white shadow-lg z-10 transition duration-300', isSticky || isActiveRoute ? 'bg-gradient-to-r from-[#7364d2] to-[#7364d2] via-[#7364d2]/70' : 'bg-transparent']">
     <RouterLink to="/">
-      <img src="https://res.cloudinary.com/dnnigh3iz/image/upload/v1716837702/vkl4cbujq4t2gtynhtwt.webp" alt="LogoHeader" class="w-12 h-12 mb-2 mx-auto md:mx-0 rounded-full cursor-pointer transition-transform transform hover:scale-110" :class="{'hidden  md:block': userLoggedIn}" />
+      <img src="https://res.cloudinary.com/dnnigh3iz/image/upload/v1716837702/vkl4cbujq4t2gtynhtwt.webp" alt="LogoHeader" class=" hidden md:block w-12 h-12 mb-2 mx-auto md:mx-0 rounded-full cursor-pointer transition-transform transform hover:scale-110" :class="{'hidden  md:block': userLoggedIn}" />
     </RouterLink>
     <ul class="flex space-x-6">
       <li>
@@ -50,7 +50,7 @@ onUnmounted(() => {
         </RouterLink>
       </li>
       <li>
-        <RouterLink to="/#about" :class="['transition-colors duration-300', route.path === '/admin' ? 'text-[#272145]' : 'hover:text-[#272145]']">
+        <RouterLink to="/#about" :class="['transition-colors duration-300', route.path === '/#about' ? 'text-[#272145]' : 'hover:text-[#272145]']">
           Sobre Nosotros
         </RouterLink>
       </li>
