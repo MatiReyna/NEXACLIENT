@@ -1,4 +1,5 @@
 import { ArrowRight, ChevronRight } from 'lucide-react';
+import Button from "../ui/button";
 
 const ProcessSection = () => {
 
@@ -53,13 +54,19 @@ const ProcessSection = () => {
                     }
                 </div>
                 <div className="flex justify-center">
-                    <a
+                    <Button size="lg">
+                        <a href="#contacto" className="flex items-center">
+                        Solicitar Información
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                        </a>
+                    </Button>
+                    {/* <a
                         href="#contacto"
                         className="inline-flex items-center justify-center whitespace-nowrap rounded-xl bg-primary text-primary-foreground hover:bg-primary/90 h-11 px-8 text-sm font-medium transition-colors"
                     >
                         Solicitar Información
                         <ArrowRight className="ml-2 h-4 w-4" />
-                    </a>
+                    </a> */}
                 </div>
             </div>
         </section>
