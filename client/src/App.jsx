@@ -1,3 +1,4 @@
+import HeroSection from "./components/sections/hero-section";
 import MarcasSection from "./components/sections/marcas-section";
 import ProcessSection from "./components/sections/process-section";
 import CtaSection from "./components/sections/cta-section";
@@ -7,6 +8,7 @@ const App = () => {
   return (
     <div className="flex min-h-screen flex-col">
       <main className="flex-1">
+        <HeroSection />
         <MarcasSection />
         <ProcessSection />
         <CtaSection />
