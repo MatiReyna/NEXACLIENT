@@ -1,6 +1,7 @@
 import HeroSection from "./components/sections/hero-section";
 import MarcasSection from "./components/sections/marcas-section";
 import ProcessSection from "./components/sections/process-section";
+import ContactSection from "./components/sections/contact-section";
 import CtaSection from "./components/sections/cta-section";
 import Footer from "./components/layout/footer";
 
@@ -11,6 +12,7 @@ const App = () => {
         <HeroSection />
         <MarcasSection />
         <ProcessSection />
+        <ContactSection />
         <CtaSection />
       </main>
       <Footer />
