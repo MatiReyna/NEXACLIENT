@@ -7,14 +7,14 @@ const MarcasCarousel = ({ className }) => {
     const [ isHovered, setIsHovered ] = useState(false);
 
     const marcas = [
-        { nombre: "TechBuild", logo: "/placeholder.svg?height=80&width=160&text=TechBuild" },
-        { nombre: "EcoMaterials", logo: "/placeholder.svg?height=80&width=160&text=EcoMaterials" },
-        { nombre: "ModernHomes", logo: "/placeholder.svg?height=80&width=160&text=ModernHomes" },
-        { nombre: "GreenConstruct", logo: "/placeholder.svg?height=80&width=160&text=GreenConstruct" },
-        { nombre: "InnoArch", logo: "/placeholder.svg?height=80&width=160&text=InnoArch" },
-        { nombre: "SmartHouse", logo: "/placeholder.svg?height=80&width=160&text=SmartHouse" },
-        { nombre: "SustainBuild", logo: "/placeholder.svg?height=80&width=160&text=SustainBuild" },
-        { nombre: "PremiumStruct", logo: "/placeholder.svg?height=80&width=160&text=PremiumStruct" }
+        { nombre: "TechBuild", logo: "/src/assets/logos/marca1.svg" },
+        { nombre: "EcoMaterials", logo: "/src/assets/logos/marca3.svg" },
+        { nombre: "ModernHomes", logo: "/src/assets/logos/marca2.svg" },
+        { nombre: "GreenConstruct", logo: "/src/assets/logos/marca4.svg" },
+        { nombre: "InnoArch", logo: "/src/assets/logos/marca6.svg" },
+        { nombre: "SmartHouse", logo: "/src/assets/logos/marca5.svg" },
+        { nombre: "SustainBuild", logo: "/src/assets/logos/marca7.svg" },
+        { nombre: "PremiumStruct", logo: "/src/assets/logos/marca8.svg" }
     ];
 
     const allMarcas = [ ...marcas, ...marcas ];  // Duplicamos las marcas para crear el efecto infinito.
