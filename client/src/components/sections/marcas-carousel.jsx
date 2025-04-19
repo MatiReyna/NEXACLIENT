@@ -1,5 +1,5 @@
-import { useEffect, useRef, useState } from "react";
-import { cn } from "@/lib/utils";
+import { useEffect, useRef, useState } from 'react';
+import { cn } from '../../lib/utils';
 
 const MarcasCarousel = ({ className }) => {
 
@@ -7,14 +7,14 @@ const MarcasCarousel = ({ className }) => {
     const [ isHovered, setIsHovered ] = useState(false);
 
     const marcas = [
-        { nombre: "TechBuild", logo: "/src/assets/logos/marca1.svg" },
-        { nombre: "EcoMaterials", logo: "/src/assets/logos/marca3.svg" },
-        { nombre: "ModernHomes", logo: "/src/assets/logos/marca2.svg" },
-        { nombre: "GreenConstruct", logo: "/src/assets/logos/marca4.svg" },
-        { nombre: "InnoArch", logo: "/src/assets/logos/marca6.svg" },
-        { nombre: "SmartHouse", logo: "/src/assets/logos/marca5.svg" },
-        { nombre: "SustainBuild", logo: "/src/assets/logos/marca7.svg" },
-        { nombre: "PremiumStruct", logo: "/src/assets/logos/marca8.svg" }
+        { nombre: 'TechBuild', logo: '/src/assets/logos/marca1.svg' },
+        { nombre: 'EcoMaterials', logo: '/src/assets/logos/marca3.svg' },
+        { nombre: 'ModernHomes', logo: '/src/assets/logos/marca2.svg' },
+        { nombre: 'GreenConstruct', logo: '/src/assets/logos/marca4.svg' },
+        { nombre: InnoArch, logo: '/src/assets/logos/marca6.svg' },
+        { nombre: 'SmartHouse', logo: '/src/assets/logos/marca5.svg' },
+        { nombre: 'SustainBuild', logo: '/src/assets/logos/marca7.svg' },
+        { nombre: 'PremiumStruct', logo: '/src/assets/logos/marca8.svg' }
     ];
 
     const allMarcas = [ ...marcas, ...marcas ];  // Duplicamos las marcas para crear el efecto infinito.
@@ -29,42 +29,42 @@ const MarcasCarousel = ({ className }) => {
         const animate = () => {
             position -= 0.5
 
-            if (position <= -(marcas.length *180)) {
+            if (position <= -(marcas.length * 180)) {
                 position = 0
-            
+
             }
 
             if (container) {
-                container.style.transform = `translateX(${position}px)`;
+                container.style.transform = `translateX(${ position }px)`;
             }
             animationId = requestAnimationFrame(animate);
         }
         animationId = requestAnimationFrame(animate);
         return () => cancelAnimationFrame(animationId);
-    }, [ isHovered, marcas.length ]);
+    }, [isHovered, marcas.length]);
 
     return (
         <div
-        className={cn("relative w-full overflow-hidden py-8", className)}
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
+            className={ cn("relative w-full overflow-hidden py-8", className) }
+            onMouseEnter={ () => setIsHovered(true) }
+            onMouseLeave={ () => setIsHovered(false) }
         >
             <div
-            ref={containerRef}
-            className="flex transition-transform duration-300 ease-linear"
-            style={{ width: `${allMarcas.length * 180}px` }}
+                ref={ containerRef }
+                className="flex transition-transform duration-300 ease-linear"
+                style={{ width: `${ allMarcas.length * 180 }px` }}
             >
                 {
                     allMarcas.map((marca, index) => (
                         <div
-                        key={`${marca.nombre}-${index}`}
-                        className="flex-shrink-0 w-[180px] px-4 transform transition-transform duration-300 hover:scale-105"
+                            key={ `${marca.nombre}-${index}` }
+                            className="flex-shrink-0 w-[180px] px-4 transform transition-transform duration-300 hover:scale-105"
                         >
                             <div className="h-20 bg-white rounded-xl shadow-sm p-3 flex items-center justify-center border border-gray-100">
                                 <img
-                                src={marca.logo || "/placeholder.svg"}
-                                alt={marca.nombre}
-                                className="max-h-14 w-auto object-contain"
+                                    src={ marca.logo || '/placeholder.svg' }
+                                    alt={ marca.nombre }
+                                    className="max-h-14 w-auto object-contain"
                                 />
                             </div>
                         </div>
