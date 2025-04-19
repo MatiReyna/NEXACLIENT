@@ -1,9 +1,9 @@
 import Header from './components/layout/header';
 import HeroSection from './components/sections/hero-section';
-import MarcasSection from './components/sections/marcas-section';
 import BenefitsSection from './components/sections/benefits-section';
-import ProcessSection from './components/sections/process-section';
+import MarcasSection from './components/sections/marcas-section';
 import ModelsSection from './components/sections/models-section';
+import ProcessSection from './components/sections/process-section';
 import TestimonialsSection from './components/sections/testimonials-section';
 import ContactSection from './components/sections/contact-section';
 import CtaSection from './components/sections/cta-section';
@@ -15,10 +15,10 @@ const App = () => {
       <Header />
       <main className="flex-1">
         <HeroSection />
-        <MarcasSection />
         <BenefitsSection />
-        <ProcessSection />
+        <MarcasSection />
         <ModelsSection />
+        <ProcessSection />
         <TestimonialsSection />
         <ContactSection />
         <CtaSection />

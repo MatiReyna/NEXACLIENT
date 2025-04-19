@@ -20,54 +20,54 @@ const Footer = () => {
                         <h3 className="mb-4 text-lg font-semibold">Enlaces</h3>
                         <ul className="space-y-2 text-sm">
                             <li>
-                                <Link
+                                <a
                                 href="#inicio"
                                 className="text-muted-foreground
                                 hover:text-foreground transition-colors
                                 duration-300"
                                 >
                                     Inicio
-                                </Link>
+                                </a>
                             </li>
                             <li>
-                                <Link
+                                <a
                                 href="#modelos"
                                 className="text-muted-foreground
                                 hover:text-foreground transition-colors
                                 duration-300"
                                 >
                                     Modelos
-                                </Link>
+                                </a>
                             </li>
                             <li>
-                                <Link
+                                <a
                                 href="#beneficios"
                                 className="text-muted-foreground
                                 hover:text-foreground transition-colors
                                 duration-300"
                                 >
                                     Beneficios
-                                </Link>
+                                </a>
                             </li>
                             <li>
-                                <Link
+                                <a
                                 href="#proceso"
                                 className="text-muted-foreground
                                 hover:text-foreground transition-colors
                                 duration-300"
                                 >
                                     Proceso
-                                </Link>
+                                </a>
                             </li>
                             <li>
-                                <Link
+                                <a
                                 href="#contacto"
                                 className="text-muted-foreground
                                 hover:text-foreground transition-colors
                                 duration-300"
                                 >
                                     Contacto
-                                </Link>
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -136,7 +136,7 @@ const Footer = () => {
                             <Link
                             href="#"
                             className="text-muted-foreground
-                            hover:text-foregroundtransition-transform
+                            hover:text-foreground transition-transform
                             duration-300 hover:scale-110"
                             >
                                 <svg
