@@ -1,5 +1,5 @@
 import { ArrowRight, ChevronRight } from 'lucide-react';
-import Button from "../ui/button";
+import Button from '../ui/button';
 
 const ProcessSection = () => {
 
@@ -32,13 +32,13 @@ const ProcessSection = () => {
                 <div className="space-y-4 text-center">
                     <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Nuestro Proceso</h2>
                     <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-                    Conoce cómo trabajamos para hacer realidad tu proyecto.
+                        Conoce cómo trabajamos para hacer realidad tu proyecto.
                     </p>
                 </div>
                 <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
                     {
                         steps.map((item) => (
-                            <div key={item.step} className="relative flex flex-col items-center space-y-4 p-6">
+                            <div key={ item.step } className="relative flex flex-col items-center space-y-4 p-6">
                                 <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#592e83] text-2xl font-bold text-white shadow-md transform transition-transform duration-300 hover:scale-110 hover:shadow-lg">
                                     { item.step }
                                 </div>
@@ -56,17 +56,10 @@ const ProcessSection = () => {
                 <div className="flex justify-center">
                     <Button size="lg">
                         <a href="#contacto" className="flex items-center">
-                        Solicitar Información
-                        <ArrowRight className="ml-2 h-4 w-4" />
+                            Solicitar Información
+                            <ArrowRight className="ml-2 h-4 w-4" />
                         </a>
                     </Button>
-                    {/* <a
-                        href="#contacto"
-                        className="inline-flex items-center justify-center whitespace-nowrap rounded-xl bg-primary text-primary-foreground hover:bg-primary/90 h-11 px-8 text-sm font-medium transition-colors"
-                    >
-                        Solicitar Información
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                    </a> */}
                 </div>
             </div>
         </section>

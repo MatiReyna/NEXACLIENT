@@ -1,10 +1,16 @@
+import { useState } from "react";
 import Button from "../ui/button";
 import { Card, CardContent } from "../ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
 import { ArrowRight } from "lucide-react";
+import ModelDetails from "./model-details";
 
 const ModelCard = ({ title, description, area, rooms, imageSrc, imageAlt }) => {
+
+    const [showDetails, setShowDetails] = useState(false);
+
     return (
+        <>
         <Card className="overflow-hidden rounded-xl shadow-md transition-all duration-300 hover:shadow-lg">
             <div className="aspect-video w-full overflow-hidden rounded-t-xl">
                 <img
@@ -20,7 +26,7 @@ const ModelCard = ({ title, description, area, rooms, imageSrc, imageAlt }) => {
             <span>Desde { area }</span>
             <span>{ rooms }</span>
             </div>
-            <Button className="mt-4 w-full" variant="outline">
+            <Button className="mt-4 w-full" variant="outline" onClick= { () => setShowDetails(true) }>
                 <span className="flex items-center">
                 Ver Detalles
                 <ArrowRight className="ml-2 h-4 w-4" />
@@ -28,6 +34,13 @@ const ModelCard = ({ title, description, area, rooms, imageSrc, imageAlt }) => {
             </Button>
             </CardContent>
         </Card>
+
+        <ModelDetails
+        isOpen={ showDetails }
+        onClose={ () => setShowDetails(false) }
+        model={{ title, description, area, rooms, imageSrc, imageAlt }}
+        />
+        </>
     )
 };
 

@@ -1,5 +1,5 @@
-import { forwardRef } from "react";
-import { cn } from "../../lib/utils";
+import { forwardRef } from 'react';
+import { cn } from '../../lib/utils';
 
 const buttonVariants = {
     variant: {
@@ -19,7 +19,7 @@ const buttonVariants = {
     }
 };
 
-const Button = forwardRef(({ className, variant = "default", size = "default", asChild = false, ...props }, ref) => {
+const Button = forwardRef(({ className, variant = 'default', size = 'default', asChild = false, ...props }, ref) => {
 
     const variantClasses = buttonVariants.variant[variant] || buttonVariants.variant.default;
     const sizeClasses = buttonVariants.size[size] || buttonVariants.size.default;
@@ -27,14 +27,14 @@ const Button = forwardRef(({ className, variant = "default", size = "default", a
 
     return (
         <button
-        className={cn(baseClasses, variantClasses, sizeClasses, className)}
-        ref={ref}
-        {...props}
+            className={ cn(baseClasses, variantClasses, sizeClasses, className) }
+            ref={ ref }
+            { ...props }
         />
     )
 });
 
-Button.displayName = "Button";
+Button.displayName = 'Button';
 
 export default Button;
 export { buttonVariants };

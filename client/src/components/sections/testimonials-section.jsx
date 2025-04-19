@@ -1,4 +1,4 @@
-import { Card, CardContent } from "../ui/card";
+import { Card, CardContent } from '../ui/card';
 
 const TestimonialsSection = () => {
 
@@ -26,43 +26,43 @@ const TestimonialsSection = () => {
                 <div className="space-y-4 text-center">
                     <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Lo Que Dicen Nuestros Clientes</h2>
                     <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-                    Experiencias reales de quienes ya disfrutan de su casa prefabricada.
+                        Experiencias reales de quienes ya disfrutan de su casa prefabricada.
                     </p>
                 </div>
                 <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
                     {
                         testimonials.map((testimonial, i) => (
                             <Card
-                            key={i}
-                            className="overflow-hidden rounded-xl shadow-md transform transition-all duration-300 hover:translate-y-[-8px] hover:shadow-lg"
+                                key={ i }
+                                className="overflow-hidden rounded-xl shadow-md transform transition-all duration-300 hover:translate-y-[-8px] hover:shadow-lg"
                             >
                                 <CardContent className="p-6">
                                     <div className="flex flex-col space-y-4">
                                         <div className="flex items-center space-x-4">
                                             <div className="h-12 w-12 rounded-full bg-muted"></div>
                                             <div>
-                                            <h3 className="font-bold">{testimonial.name}</h3>
-                                            <p className="text-sm text-muted-foreground">{testimonial.location}</p>
+                                                <h3 className="font-bold">{ testimonial.name }</h3>
+                                                <p className="text-sm text-muted-foreground">{ testimonial.location }</p>
                                             </div>
                                         </div>
-                                        <p className="text-muted-foreground">"{testimonial.text}"</p>
+                                        <p className="text-muted-foreground">"{ testimonial.text }"</p>
                                         <div className="flex">
                                             {
                                                 Array(5)
-                                                .fill(0)
-                                                .map((_, i) => (
-                                                    <svg
-                                                    key={i}
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    width="20"
-                                                    height="20"
-                                                    viewBox="0 0 24 24"
-                                                    fill="currentColor"
-                                                    className="text-yellow-500"
-                                                    >
-                                                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                                                    </svg>
-                                                ))
+                                                    .fill(0)
+                                                    .map((_, i) => (
+                                                        <svg
+                                                            key={ i }
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            width="20"
+                                                            height="20"
+                                                            viewBox="0 0 24 24"
+                                                            fill="currentColor"
+                                                            className="text-yellow-500"
+                                                        >
+                                                            <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                                                        </svg>
+                                                    ))
                                             }
                                         </div>
                                     </div>
