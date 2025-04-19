@@ -22,9 +22,9 @@ const HeroSection = () => {
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
                     <Button size="lg">
-                        <a href="#modelos" className="flex items-center">
+                        <a href="#modelos" className="flex items-center group">
                             Ver Modelos
-                            <ArrowRight className="ml-2 h-4 w-4" />
+                            <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                         </a>
                     </Button>
                     <Button variant="white-outline" size="lg">

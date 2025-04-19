@@ -14,36 +14,36 @@ const BenefitsSection = () => {
                     </p>
                 </div>
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-                    <Card className="rounded-xl shadow-md overflow-hidden transform transition-all duration-300 hover:translate-y-[-8px] hover:shadow-lg">
+                <Card className="group rounded-xl shadow-md overflow-hidden transform transition-all duration-300 hover:translate-y-[-8px] hover:shadow-lg">
                         <CardContent className="flex flex-col items-center space-y-4 p-6">
-                            <Clock className="h-12 w-12 text-[#592e83]" />
+                        <Clock className="h-12 w-12 text-primary transition-transform duration-300 group-hover:rotate-6 group-hover:scale-110" />
                             <h3 className="text-xl font-bold">Construcción Rápida</h3>
                             <p className="text-center text-muted-foreground">
                                 Reducimos el tiempo de construcción hasta en un 70% comparado con métodos tradicionales.
                             </p>
                         </CardContent>
                     </Card>
-                    <Card className="rounded-xl shadow-md overflow-hidden transform transition-all duration-300 hover:translate-y-[-8px] hover:shadow-lg">
+                    <Card className="group rounded-xl shadow-md overflow-hidden transform transition-all duration-300 hover:translate-y-[-8px] hover:shadow-lg">
                         <CardContent className="flex flex-col items-center space-y-4 p-6">
-                            <Leaf className="h-12 w-12 text-[#592e83]" />
+                        <Leaf className="h-12 w-12 text-primary transition-transform duration-300 group-hover:rotate-6 group-hover:scale-110" />
                             <h3 className="text-xl font-bold">Ecológicas</h3>
                             <p className="text-center text-muted-foreground">
                                 Materiales sostenibles y procesos que reducen el impacto ambiental.
                             </p>
                         </CardContent>
                     </Card>
-                    <Card className="rounded-xl shadow-md overflow-hidden transform transition-all duration-300 hover:translate-y-[-8px] hover:shadow-lg">
+                    <Card className="group rounded-xl shadow-md overflow-hidden transform transition-all duration-300 hover:translate-y-[-8px] hover:shadow-lg">
                         <CardContent className="flex flex-col items-center space-y-4 p-6">
-                            <Shield className="h-12 w-12 text-[#592e83]" />
+                        <Shield className="h-12 w-12 text-primary transition-transform duration-300 group-hover:rotate-6 group-hover:scale-110" />
                             <h3 className="text-xl font-bold">Alta Calidad</h3>
                             <p className="text-center text-muted-foreground">
                                 Control de calidad riguroso en fábrica que garantiza excelentes acabados.
                             </p>
                         </CardContent>
                     </Card>
-                    <Card className="rounded-xl shadow-md overflow-hidden transform transition-all duration-300 hover:translate-y-[-8px] hover:shadow-lg">
+                    <Card className="group rounded-xl shadow-md overflow-hidden transform transition-all duration-300 hover:translate-y-[-8px] hover:shadow-lg">
                         <CardContent className="flex flex-col items-center space-y-4 p-6">
-                            <CheckCircle className="h-12 w-12 text-[#592e83]" />
+                        <CheckCircle className="h-12 w-12 text-primary transition-transform duration-300 group-hover:rotate-6 group-hover:scale-110" />
                             <h3 className="text-xl font-bold">Personalización</h3>
                             <p className="text-center text-muted-foreground">
                                 Adaptamos cada proyecto a tus necesidades y preferencias específicas.

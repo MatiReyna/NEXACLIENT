@@ -1,7 +1,11 @@
 import { Phone, Mail, MapPin, ArrowRight } from 'lucide-react';
+import { useState } from 'react';
 import Button from '../ui/button';
 
 const ContactSection = () => {
+
+    const [ showConfirmation, setShowConfirmation ] = useState(false);
+    
     return (
         <section id="contacto" className="bg-muted py-16 md:py-24 rounded-t-3xl">
             <div className="container">
@@ -37,7 +41,10 @@ const ContactSection = () => {
                     </div>
                     <div className="rounded-2xl border bg-background p-6 shadow-sm transform transition-all duration-300 hover:shadow-lg">
                         <h3 className="mb-4 text-xl font-bold">Solicita Información</h3>
-                        <form className="space-y-4">
+                        <form className="space-y-4" onSubmit={(e) => {
+                            e.preventDefault();
+                            setShowConfirmation(true)
+                        }}>
                             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                                 <div className="space-y-2">
                                     <label
@@ -144,6 +151,21 @@ const ContactSection = () => {
                     </div>
                 </div>
             </div>
+            {
+                showConfirmation && (
+                    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm">
+                        <div className="bg-background p-6 rounded-2xl shadow-lg max-w-md w-full text-center space-y-4">
+                            <h4 className="text-lg font-semibold text-primary">¡Solicitud enviada!</h4>
+                            <p className="text-sm text-muted-foreground">
+                                Gracias por contactarnos. Un asesor de NEXA Constructora se comunicará con vos a la brevedad
+                            </p>
+                            <Button onClick={() => setShowConfirmation(false)} className="mt-2 w-full">
+                                Cerrar
+                            </Button>
+                        </div>
+                    </div>
+                )
+            }
         </section>
     )
 };

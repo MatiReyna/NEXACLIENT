@@ -14,17 +14,17 @@ const CtaSection = () => {
                     <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
                         <a
                             href="#contacto"
-                            className="inline-flex items-center justify-center whitespace-nowrap rounded-xl bg-secondary text-secondary-foreground hover:bg-secondary/80 h-11 px-8 text-sm font-medium transition-colors"
+                            className="inline-flex items-center justify-center whitespace-nowrap rounded-xl bg-secondary text-secondary-foreground hover:bg-secondary/80 h-11 px-8 text-sm font-medium transition-colors group"
                         >
                             Solicitar Presupuesto
-                            <ArrowRight className="ml-2 h-4 w-4" />
+                            <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                         </a>
                         <a
                             href="#modelos"
-                            className="inline-flex items-center justify-center whitespace-nowrap rounded-xl btn-white-outline h-11 px-8 text-sm font-medium"
+                            className="inline-flex items-center justify-center whitespace-nowrap rounded-xl btn-white-outline h-11 px-8 text-sm font-medium group"
                         >
                             Ver Modelos
-                            <ArrowRight className="ml-2 h-4 w-4" />
+                            <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                         </a>
                     </div>
                 </div>
