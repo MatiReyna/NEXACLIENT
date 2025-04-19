@@ -11,7 +11,7 @@ const MarcasCarousel = ({ className }) => {
         { nombre: 'EcoMaterials', logo: '/src/assets/logos/marca3.svg' },
         { nombre: 'ModernHomes', logo: '/src/assets/logos/marca2.svg' },
         { nombre: 'GreenConstruct', logo: '/src/assets/logos/marca4.svg' },
-        { nombre: InnoArch, logo: '/src/assets/logos/marca6.svg' },
+        { nombre: 'InnoArch', logo: '/src/assets/logos/marca6.svg' },
         { nombre: 'SmartHouse', logo: '/src/assets/logos/marca5.svg' },
         { nombre: 'SustainBuild', logo: '/src/assets/logos/marca7.svg' },
         { nombre: 'PremiumStruct', logo: '/src/assets/logos/marca8.svg' }

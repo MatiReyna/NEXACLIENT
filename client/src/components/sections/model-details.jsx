@@ -1,7 +1,7 @@
-import { useState } from "react";
-import Modal from "../ui/modal";
-import Button from "../ui/button";
-import { Check, ArrowRight, ArrowLeft, Home, Maximize2, Leaf, Zap, Droplets } from "lucide-react";
+import { useState } from 'react';
+import Modal from '../ui/modal';
+import Button from '../ui/button';
+import { Check, ArrowRight, ArrowLeft, Home, Maximize2, Leaf, Zap, Droplets } from 'lucide-react';
 
 const ModelDetails = ({ isOpen, onClose, model }) => {
 
@@ -50,67 +50,71 @@ const ModelDetails = ({ isOpen, onClose, model }) => {
     };
 
     return (
-        <Modal isOpen={isOpen} onClose={onClose} className="p-0 overflow-hidden">
+        <Modal isOpen={ isOpen } onClose={ onClose } className="p-0 overflow-hidden">
             <div className="flex flex-col lg:flex-row h-full">
                 {/* Sección de imágenes */}
                 <div className="relative lg:w-1/2">
                     <div className="aspect-video w-full overflow-hidden bg-gray-100">
                         <img
-                            src={images[activeImage] || "/placeholder.svg"}
-                            alt={`${model.title} - Vista ${activeImage + 1}`}
+                            src={ images[activeImage] || '/placeholder.svg' }
+                            alt={ `${ model.title } - Vista ${ activeImage + 1 }` }
                             className="w-full h-full object-cover"
                         />
                         <button
-                            onClick={prevImage}
+                            onClick={ prevImage }
                             className="absolute left-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/80 text-gray-800 hover:bg-white transition-colors"
                             aria-label="Imagen anterior"
                         >
                             <ArrowLeft className="h-5 w-5" />
                         </button>
                         <button
-                            onClick={nextImage}
+                            onClick={ nextImage }
                             className="absolute right-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/80 text-gray-800 hover:bg-white transition-colors"
                             aria-label="Imagen siguiente"
                         >
                             <ArrowRight className="h-5 w-5" />
                         </button>
                         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
-                            {images.map((_, index) => (
-                                <button
-                                    key={index}
-                                    onClick={() => setActiveImage(index)}
-                                    className={`w-2.5 h-2.5 rounded-full transition-colors ${index === activeImage ? 'bg-white' : 'bg-white/50'}`}
-                                    aria-label={`Ver imagen ${index + 1}`}
-                                />
-                            ))}
+                            {
+                                images.map((_, index) => (
+                                    <button
+                                        key={ index }
+                                        onClick={ () => setActiveImage(index) }
+                                        className={ `w-2.5 h-2.5 rounded-full transition-colors ${ index === activeImage ? 'bg-white' : 'bg-white/50' }` }
+                                        aria-label={ `Ver imagen ${ index + 1 }` }
+                                    />
+                                ))
+                            }
                         </div>
                     </div>
                     <div className="flex p-2 gap-2 bg-gray-50">
-                        {images.map((img, index) => (
-                            <button
-                                key={index}
-                                onClick={() => setActiveImage(index)}
-                                className={`w-16 h-16 rounded-lg overflow-hidden border-2 transition-colors ${index === activeImage ? 'border-[#592e83]' : 'border-transparent'}`}
-                            >
-                                <img
-                                    src={img || "/placeholder.svg"}
-                                    alt={`Miniatura ${index + 1}`}
-                                    className="w-full h-full object-cover"
-                                />
-                            </button>
-                        ))}
+                        {
+                            images.map((img, index) => (
+                                <button
+                                    key={ index }
+                                    onClick={ () => setActiveImage(index) }
+                                    className={ `w-16 h-16 rounded-lg overflow-hidden border-2 transition-colors ${ index === activeImage ? 'border-[#592e83]' : 'border-transparent' }` }
+                                >
+                                    <img
+                                        src={ img || '/placeholder.svg' }
+                                        alt={ `Miniatura ${ index + 1 }` }
+                                        className="w-full h-full object-cover"
+                                    />
+                                </button>
+                            ))
+                        }
                     </div>
                 </div>
 
                 {/* Sección de información */}
                 <div className="lg:w-1/2 p-6 overflow-y-auto max-h-[70vh] lg:max-h-[90vh]">
-                    <h2 className="text-2xl font-bold text-gray-900">{model.title}</h2>
-                    <p className="text-sm text-gray-500 mt-1">Ref: NEXA-{model.title.replace(/\s+/g, '').toLowerCase()}-{Math.floor(Math.random() * 1000)}</p>
+                    <h2 className="text-2xl font-bold text-gray-900">{ model.title }</h2>
+                    <p className="text-sm text-gray-500 mt-1">Ref: NEXA-{ model.title.replace(/\s+/g, '').toLowerCase() }-{ Math.floor(Math.random() * 1000) }</p>
 
                     <div className="mt-6">
                         <h3 className="text-lg font-semibold text-gray-900">Descripción</h3>
                         <p className="mt-2 text-gray-600">
-                            {model.description} Diseñada para maximizar la comodidad y funcionalidad,
+                            { model.description } Diseñada para maximizar la comodidad y funcionalidad,
                             esta casa prefabricada ofrece un equilibrio perfecto entre estética y practicidad.
                             Construida con materiales de primera calidad y acabados premium.
                         </p>
@@ -121,15 +125,15 @@ const ModelDetails = ({ isOpen, onClose, model }) => {
                         <div className="mt-2 grid grid-cols-2 gap-4">
                             <div className="flex flex-col">
                                 <span className="text-sm text-gray-500">Superficie</span>
-                                <span className="font-medium">{model.area}</span>
+                                <span className="font-medium">{ model.area }</span>
                             </div>
                             <div className="flex flex-col">
                                 <span className="text-sm text-gray-500">Habitaciones</span>
-                                <span className="font-medium">{model.rooms}</span>
+                                <span className="font-medium">{ model.rooms }</span>
                             </div>
                             <div className="flex flex-col">
                                 <span className="text-sm text-gray-500">Baños</span>
-                                <span className="font-medium">{model.rooms.split('-')[0]} completos</span>
+                                <span className="font-medium">{ model.rooms.split('-')[0] } completos</span>
                             </div>
                             <div className="flex flex-col">
                                 <span className="text-sm text-gray-500">Tiempo de construcción</span>
@@ -141,12 +145,14 @@ const ModelDetails = ({ isOpen, onClose, model }) => {
                     <div className="mt-6">
                         <h3 className="text-lg font-semibold text-gray-900">Características</h3>
                         <div className="mt-2 grid grid-cols-1 sm:grid-cols-2 gap-3">
-                            {getFeatures().map((feature, index) => (
-                                <div key={index} className="flex items-center gap-2">
-                                    {feature.icon}
-                                    <span className="text-gray-600">{feature.text}</span>
-                                </div>
-                            ))}
+                            {
+                                getFeatures().map((feature, index) => (
+                                    <div key={ index } className="flex items-center gap-2">
+                                        { feature.icon }
+                                        <span className="text-gray-600">{ feature.text }</span>
+                                    </div>
+                                ))
+                            }
                         </div>
                     </div>
 
