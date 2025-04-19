@@ -6,17 +6,20 @@ const TestimonialsSection = () => {
         {
             name: 'María García',
             location: 'Arguello',
-            text: 'Nunca pensé que construir una casa podría ser tan rápido y sin complicaciones. El resultado final superó todas mis expectativas.'
+            text: 'Nunca pensé que construir una casa podría ser tan rápido y sin complicaciones. El resultado final superó todas mis expectativas.',
+            image: '/src/assets/testimonials/human1.jpg'
         },
         {
             name: 'Juan Perez',
             location: 'Carlos Paz',
-            text: 'El trabajo de la NEXA me ha llevado a construir una casa perfecta en mi barrio. La calidad de los materiales y el trabajo en equipo fuen los mejores que he experimentado en mi vida.'
+            text: 'El trabajo de la NEXA me ha llevado a construir una casa perfecta en mi barrio. La calidad de los materiales y el trabajo en equipo fuen los mejores que he experimentado en mi vida.',
+            image: '/src/assets/testimonials/human2.jpg'
         },
         {
             name: 'Alfredo Rodríguez',
             location: 'Cordoba',
-            text: 'El equipo de NEXA nos acompañó en todo el proceso. Su profesionalidad y atención al detalle hicieron que todo fuera perfecto.'
+            text: 'El equipo de NEXA nos acompañó en todo el proceso. Su profesionalidad y atención al detalle hicieron que todo fuera perfecto.',
+            image: '/src/assets/testimonials/human3.jpg'
         }
     ];
 
@@ -39,7 +42,12 @@ const TestimonialsSection = () => {
                                 <CardContent className="p-6">
                                     <div className="flex flex-col space-y-4">
                                         <div className="flex items-center space-x-4">
-                                            <div className="h-12 w-12 rounded-full bg-muted"></div>
+                                            {/* <div className="h-12 w-12 rounded-full bg-muted"></div> */}
+                                            <img
+                                                src={ testimonial.image }
+                                                alt={ `Foto de ${ testimonial.name }` }
+                                                className="h-12 w-12 rounded-full object-cover"
+                                            />
                                             <div>
                                                 <h3 className="font-bold">{ testimonial.name }</h3>
                                                 <p className="text-sm text-muted-foreground">{ testimonial.location }</p>
