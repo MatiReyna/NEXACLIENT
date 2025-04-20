@@ -1,7 +1,48 @@
-import { Link } from "react-router-dom";
-import { Home, Phone, Mail, MapPin } from "lucide-react";
+import { Link } from 'react-router-dom';
+import { Home, Phone, Mail, MapPin } from 'lucide-react';
+import AnimatedTooltip from '../ui/animated-tooltip';
 
 const Footer = () => {
+
+    const animatedTeam = [
+        {
+            id: 1,
+            name: 'Matias Reyna',
+            designation: 'Software Engineer',
+            image: '/src/assets/animated/animated1.jpg'
+        },
+        {
+            id: 2,
+            name: 'Facundo Sagario',
+            designation: 'CEO',
+            image: '/src/assets/animated/animated2.jpg'
+        },
+        {
+            id: 3,
+            name: 'Emily Davis',
+            designation: 'Product Manager',
+            image: '/src/assets/animated/animated3.jpg'
+        },
+        {
+            id: 4,
+            name: 'Emily Davis',
+            designation: 'Product Manager',
+            image: '/src/assets/animated/animated2.jpg'
+        },
+        {
+            id: 5,
+            name: 'Emily Davis',
+            designation: 'Product Manager',
+            image: '/src/assets/animated/animated1.jpg'
+        },
+        {
+            id: 6,
+            name: 'Emily Davis',
+            designation: 'Product Manager',
+            image: '/src/assets/animated/animated3.jpg'
+        }
+    ];
+
     return (
         <footer className="bg-background border-t border-neutral-200">
             <div className="container py-8 md:py-12">
@@ -156,6 +197,9 @@ const Footer = () => {
                             </Link>
                         </div>
                     </div>
+                </div>
+                <div className="flex flex-col items-end mt-4 pr-60">
+                    <AnimatedTooltip items={ animatedTeam } />
                 </div>
                 <div className="mt-8 border-t pt-8 text-center">
                     <p className="text-xs text-muted-foreground">
