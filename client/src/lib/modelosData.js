@@ -1,80 +1,80 @@
 export const modelosModernos = [
     {
-        title: "Moderno Aurora",
+        title: "Modelo Florida",
         description: "Diseño contemporáneo con amplios espacios y grandes ventanales.",
-        area: "110m²",
+        area: "80m²",
         rooms: "3 habitaciones",
-        imageSrc: "/modelos/moderno-aurora.jpg",
-        imageAlt: "Moderno Aurora",
+        imageSrc: "/src/assets/models/moderno1.png",
+        imageAlt: "Modelo Florida"
     },
     {
-        title: "Moderno Nova",
+        title: "Modelo Indiana",
         description: "Estilo minimalista con toques cálidos y gran iluminación natural.",
-        area: "95m²",
-        rooms: "2 habitaciones",
-        imageSrc: "/modelos/moderno-nova.jpg",
-        imageAlt: "Moderno Nova",
+        area: "62m²",
+        rooms: "3 habitaciones",
+        imageSrc: "/src/assets/models/moderno2.png",
+        imageAlt: "Modelo Indiana"
     },
     {
-        title: "Moderno Zen",
+        title: "Modelo Oregon",
         description: "Equilibrio entre elegancia y funcionalidad en un espacio abierto.",
-        area: "100m²",
-        rooms: "2-3 habitaciones",
-        imageSrc: "/modelos/moderno-zen.jpg",
-        imageAlt: "Moderno Zen",
+        area: "73m²",
+        rooms: "3 habitaciones",
+        imageSrc: "/src/assets/models/moderno3.png",
+        imageAlt: "Modelo Oregon"
     }
 ];
 
 export const modelosTradicionales = [
     {
-        title: "Tradicional Campo",
+        title: "Modelo Hawaii",
         description: "Casa clásica de un piso, ideal para familia numerosa.",
-        area: "120m²",
-        rooms: "4 habitaciones",
-        imageSrc: "/modelos/tradicional-campo.jpg",
-        imageAlt: "Tradicional Campo",
-    },
-    {
-        title: "Tradicional Nido",
-        description: "Diseño cálido con detalles de madera y cocina integrada.",
-        area: "85m²",
+        area: "47m²",
         rooms: "2 habitaciones",
-        imageSrc: "/modelos/tradicional-nido.jpg",
-        imageAlt: "Tradicional Nido",
+        imageSrc: "/modelos/tradicional-campo.jpg",
+        imageAlt: "Modelo Hawaii"
     },
     {
-        title: "Tradicional Familiar",
+        title: "Modelo Alaska",
+        description: "Diseño cálido con detalles de madera y cocina integrada.",
+        area: "41m²",
+        rooms: "1 habitaciones",
+        imageSrc: "/modelos/tradicional-nido.jpg",
+        imageAlt: "Modelo Alaska"
+    },
+    {
+        title: "Modelo Texas",
         description: "Diseño funcional para convivencias cómodas y privadas.",
-        area: "105m²",
+        area: "79m²",
         rooms: "3 habitaciones",
         imageSrc: "/modelos/tradicional-familiar.jpg",
-        imageAlt: "Tradicional Familiar",
+        imageAlt: "Modelo Texas"
     },
 ];
   
 export const modelosEcologicos = [
     {
-        title: "Ecológico Verde",
+        title: "Modelo California",
         description: "Diseño sustentable con materiales reciclables y paneles solares.",
-        area: "90m²",
+        area: "65m²",
         rooms: "2 habitaciones",
         imageSrc: "/modelos/ecologico-verde.jpg",
-        imageAlt: "Ecológico Verde",
+        imageAlt: "Modelo California"
     },
     {
-        title: "Ecológico Tierra",
+        title: "Modelo Kansas",
         description: "Vivienda ecológica con techos verdes y aislación térmica.",
-        area: "100m²",
+        area: "56m²",
         rooms: "3 habitaciones",
         imageSrc: "/modelos/ecologico-tierra.jpg",
-        imageAlt: "Ecológico Tierra",
+        imageAlt: "Modelo Kansas"
     },
     {
-        title: "Ecológico Loma",
+        title: "Modelo Washington",
         description: "Integración armónica con el entorno natural y bajo consumo.",
-        area: "95m²",
-        rooms: "2 habitaciones",
+        area: "91m²",
+        rooms: "3 habitaciones",
         imageSrc: "/modelos/ecologico-loma.jpg",
-        imageAlt: "Ecológico Loma",
+        imageAlt: "Modelo Washington"
     },
 ];

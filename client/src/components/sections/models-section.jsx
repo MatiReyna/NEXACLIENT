@@ -2,8 +2,9 @@ import { useState } from 'react';
 import Button from '../ui/button';
 import { Card, CardContent } from '../ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../ui/tabs';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Bed, Ruler } from 'lucide-react';
 import ModelDetails from './model-details';
+import { modelosModernos, modelosTradicionales, modelosEcologicos } from '../../lib/modelosData';
 
 const ModelCard = ({ title, description, area, rooms, imageSrc, imageAlt }) => {
 
@@ -22,9 +23,15 @@ const ModelCard = ({ title, description, area, rooms, imageSrc, imageAlt }) => {
                 <CardContent className="p-6">
                     <h3 className="text-xl font-bold">{ title }</h3>
                     <p className="mt-2 text-muted-foreground min-h-[80px]">{ description }</p>
-                    <div className="mt-4 flex justify-between text-sm">
-                        <span>Desde { area }</span>
-                        <span>{ rooms }</span>
+                    <div className="mt-4 flex justify-between text-sm text-muted-foreground">
+                        <span className="flex items-center gap-1">
+                            <Ruler className="h-4 w-4" />
+                            { area }
+                        </span>
+                        <span className="flex items-center gap-1">
+                            <Bed className="h-4 w-4" />
+                            { rooms }
+                        </span>
                     </div>
                     <Button className="mt-4 w-full transition-all duration-300 hover:scale-105 hover:shadow-md hover:bg-[#592e83] hover:text-white" variant="outline" onClick={ () => setShowDetails(true) }>
                         <span className="flex items-center group">
@@ -63,16 +70,8 @@ const ModelsSection = () => {
                     <TabsContent value="modernos" className="mt-6">
                         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
                             {
-                                [1, 2, 3].map((i) => (
-                                    <ModelCard
-                                        key={ i }
-                                        title={ `Modelo Moderno ${ i }` }
-                                        description="Diseño contemporáneo con amplios espacios y grandes ventanales."
-                                        area="90m²"
-                                        rooms="2-3 habitaciones"
-                                        imageSrc={ `/placeholder.svg?height=300&width=500&text=Modelo+Moderno+${ i }` }
-                                        imageAlt={ `Modelo Moderno ${ i }` }
-                                    />
+                                modelosModernos.map((modelo, i) => (
+                                    <ModelCard key={ i } { ...modelo } />
                                 ))
                             }
                         </div>
@@ -80,16 +79,8 @@ const ModelsSection = () => {
                     <TabsContent value="tradicionales" className="mt-6">
                         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
                             {
-                                [1, 2, 3].map((i) => (
-                                    <ModelCard
-                                        key={ i }
-                                        title={ `Modelo Tradicional ${ i }` }
-                                        description="Diseño tradicional con espacios pequeños y ventanas pequeñas."
-                                        area="90m²"
-                                        rooms="2-3 habitaciones"
-                                        imageSrc={ `/placeholder.svg?height=300&width=500&text=Modelo+Tradicional+${ i }` }
-                                        imageAlt={ `Modelo Tradicional ${ i }` }
-                                    />
+                                modelosTradicionales.map((modelo, i) => (
+                                    <ModelCard key={ i } { ...modelo } />
                                 ))
                             }
                         </div>
@@ -97,16 +88,8 @@ const ModelsSection = () => {
                     <TabsContent value="ecologicos" className="mt-6">
                         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
                             {
-                                [1, 2, 3].map((i) => (
-                                    <ModelCard
-                                        key={ i }
-                                        title={ `Modelo Ecológico ${ i }` }
-                                        description="Diseño ecológico con espacios grandes y ventanas grandes."
-                                        area="90m²"
-                                        rooms="2-3 habitaciones"
-                                        imageSrc={ `/placeholder.svg?height=300&width=500&text=Modelo+Ecol%C3%B3gico+${ i }` }
-                                        imageAlt={ `Modelo Ecológico ${ i }` }
-                                    />
+                                modelosEcologicos.map((modelo, i) => (
+                                    <ModelCard key={ i } { ...modelo } />
                                 ))
                             }
                         </div>
