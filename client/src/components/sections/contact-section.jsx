@@ -20,20 +20,20 @@ const ContactSection = () => {
                         <div className="space-y-4">
                             <div className="flex items-center space-x-3">
                                 <Phone className="h-5 w-5 text-[#592e83]" />
-                                <span>+34 900 123 456</span>
+                                <span>+54 9 351559-4819</span>
                             </div>
                             <div className="flex items-center space-x-3">
                                 <Mail className="h-5 w-5 text-[#592e83]" />
-                                <span>info@nexaconstructora.com</span>
+                                <span>hola@nexaconstructora.com</span>
                             </div>
                             <div className="flex items-center space-x-3">
                                 <MapPin className="h-5 w-5 text-[#592e83]" />
-                                <span>Calle Principal 123, 5000 Argentina</span>
+                                <span>Pasaje San Ignacio 104 Bº Villa Esquiu, Provincia de Córdoba</span>
                             </div>
                         </div>
                         <div className="aspect-video w-full overflow-hidden rounded-2xl">
                             <img
-                                src="/placeholder.svg?height=300&width=600&text=Mapa"
+                                src="/src/assets/contact/mapa.png"
                                 alt="Ubicación"
                                 className="h-full w-full object-cover"
                             />
@@ -113,9 +113,15 @@ const ContactSection = () => {
                                     className="flex h-10 w-full rounded-xl border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-300 hover:border-primary/50"
                                 >
                                     <option value="">Selecciona un modelo</option>
-                                    <option value="moderno">Moderno</option>
-                                    <option value="tradicional">Tradicional</option>
-                                    <option value="ecologico">Ecológico</option>
+                                    <option value="Modelo Florida">Modelo Florida</option>
+                                    <option value="Modelo Indiana">Modelo Indiana</option>
+                                    <option value="Modelo Oregon">Modelo Oregon</option>
+                                    <option value="Modelo Hawaii">Modelo Hawaii</option>
+                                    <option value="Modelo Alaska">Modelo Alaska</option>
+                                    <option value="Modelo Texas">Modelo Texas</option>
+                                    <option value="Modelo California">Modelo California</option>
+                                    <option value="Modelo Kansas">Modelo Kansas</option>
+                                    <option value="Modelo Washington">Modelo Washington</option>
                                 </select>
                             </div>
                             <div className="space-y-2">
@@ -141,10 +147,10 @@ const ContactSection = () => {
                                     Acepto la política de privacidad y el tratamiento de mis datos.
                                 </label>
                             </div>
-                            <Button type="submit" className="w-full">
+                            <Button type="submit" className="group w-full transition-transform duration-300 hover:scale-105">
                                 <span className="flex items-center">
                                     Enviar Solicitud
-                                    <ArrowRight className="ml-2 h-4 w-4" />
+                                    <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                                 </span>
                             </Button>
                         </form>
@@ -154,7 +160,7 @@ const ContactSection = () => {
             {
                 showConfirmation && (
                     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm">
-                        <div className="bg-background p-6 rounded-2xl shadow-lg max-w-md w-full text-center space-y-4">
+                        <div className="bg-background p-6 rounded-2xl shadow-lg max-w-md w-full text-center space-y-4 transition-all duration-300 transform scale-100 opacity-100">
                             <h4 className="text-lg font-semibold text-primary">¡Solicitud enviada!</h4>
                             <p className="text-sm text-muted-foreground">
                                 Gracias por contactarnos. Un asesor de NEXA Constructora se comunicará con vos a la brevedad
