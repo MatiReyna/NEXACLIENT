@@ -11,7 +11,7 @@ const ModelCard = ({ title, description, area, rooms, imageSrc, imageAlt }) => {
 
     return (
         <>
-            <Card className="overflow-hidden rounded-xl shadow-md transition-all duration-300 hover:shadow-lg">
+            <Card className="overflow-hidden rounded-xl shadow-md transition-all duration-300 hover:shadow-xl hover:scale-[1.02]">
                 <div className="aspect-video w-full overflow-hidden rounded-t-xl">
                     <img
                         src={ imageSrc || '/placeholder.svg' }
@@ -21,15 +21,15 @@ const ModelCard = ({ title, description, area, rooms, imageSrc, imageAlt }) => {
                 </div>
                 <CardContent className="p-6">
                     <h3 className="text-xl font-bold">{ title }</h3>
-                    <p className="mt-2 text-muted-foreground">{ description }</p>
+                    <p className="mt-2 text-muted-foreground min-h-[80px]">{ description }</p>
                     <div className="mt-4 flex justify-between text-sm">
                         <span>Desde { area }</span>
                         <span>{ rooms }</span>
                     </div>
-                    <Button className="mt-4 w-full" variant="outline" onClick={ () => setShowDetails(true) }>
-                        <span className="flex items-center">
+                    <Button className="mt-4 w-full transition-all duration-300 hover:scale-105 hover:shadow-md hover:bg-[#592e83] hover:text-white" variant="outline" onClick={ () => setShowDetails(true) }>
+                        <span className="flex items-center group">
                             Ver Detalles
-                            <ArrowRight className="ml-2 h-4 w-4" />
+                            <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                         </span>
                     </Button>
                 </CardContent>
@@ -56,9 +56,9 @@ const ModelsSection = () => {
                 </div>
                 <Tabs defaultValue="modernos" className="w-full">
                     <TabsList className="grid w-full grid-cols-3">
-                        <TabsTrigger value="modernos">Modernos</TabsTrigger>
-                        <TabsTrigger value="tradicionales">Tradicionales</TabsTrigger>
-                        <TabsTrigger value="ecologicos">Ecológicos</TabsTrigger>
+                        <TabsTrigger value="modernos" className="data-[state=active]:bg-[#592e83] data-[state=active]:text-white">Modernos</TabsTrigger>
+                        <TabsTrigger value="tradicionales" className="data-[state=active]:bg-[#592e83] data-[state=active]:text-white">Tradicionales</TabsTrigger>
+                        <TabsTrigger value="ecologicos" className="data-[state=active]:bg-[#592e83] data-[state=active]:text-white">Ecológicos</TabsTrigger>
                     </TabsList>
                     <TabsContent value="modernos" className="mt-6">
                         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">

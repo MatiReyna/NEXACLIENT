@@ -30,8 +30,10 @@ const MarcasCarousel = ({ className }) => {
             position -= 0.5
 
             if (position <= -(marcas.length * 180)) {
-                position = 0
-
+                position = 0;
+                container.style.transition = 'none'
+            } else {
+                container.style.transition = 'transform 0.3s linear'
             }
 
             if (container) {
@@ -64,6 +66,7 @@ const MarcasCarousel = ({ className }) => {
                                 <img
                                     src={ marca.logo || '/placeholder.svg' }
                                     alt={ marca.nombre }
+                                    aria-label={ marca.nombre }
                                     className="max-h-14 w-auto object-contain"
                                 />
                             </div>

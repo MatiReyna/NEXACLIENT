@@ -17,17 +17,19 @@ const HeroSection = () => {
                         NEXA Constructora Desarrollista
                     </h1>
                     <p className="mx-auto max-w-[700px] text-white md:text-xl">
-                        Construimos proyectos inmobiliarios de alta calidad, con diseños innovadores y sostenibles.
+                        {/* Construimos proyectos inmobiliarios de alta calidad, con diseños innovadores y sostenibles. */}
+                        Con más de 150 empleados especializados en logística, administración, producción, arquitectura y ventas,
+                        en NEXA ofrecemos un equipo comprometido, comunicativo, complementario y confiable.
                     </p>
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                    <Button size="lg">
+                    <Button size="lg" className="transition-all duration-300 hover:scale-105 hover:shadow-lg">
                         <a href="#modelos" className="flex items-center group">
                             Ver Modelos
-                            <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                            <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1.5" />
                         </a>
                     </Button>
-                    <Button variant="white-outline" size="lg">
+                    <Button variant="white-outline" size="lg" className="transition-all duration-300 hover:scale-105 hover:shadow-lg">
                         <a href="#proceso">Cómo Trabajamos</a>
                     </Button>
                 </div>

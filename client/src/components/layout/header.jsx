@@ -62,7 +62,7 @@ const Header = () => {
                     }
                 </nav>
 
-                <Button className="hidden md:inline-flex">
+                <Button className="hidden md:inline-flex bg-[#592e83] text-white hover:bg-[#4b2670] transition-colorshidden md:inline-flex transition-all duration-300 hover:scale-105 hover:shadow-lg">
                     <a href="#contacto">Solicitar Presupuesto</a>
                 </Button>
 
