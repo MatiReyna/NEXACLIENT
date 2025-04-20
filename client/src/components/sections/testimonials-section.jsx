@@ -5,19 +5,19 @@ const TestimonialsSection = () => {
     const testimonials = [
         {
             name: 'María García',
-            location: 'Arguello',
+            location: 'San Roque, Córdoba',
             text: 'Nunca pensé que construir una casa podría ser tan rápido y sin complicaciones. El resultado final superó todas mis expectativas.',
             image: '/src/assets/testimonials/human1.jpg'
         },
         {
             name: 'Juan Perez',
-            location: 'Carlos Paz',
+            location: 'Carlos Paz, Córdoba',
             text: 'El trabajo de la NEXA me ha llevado a construir una casa perfecta en mi barrio. La calidad de los materiales y el trabajo en equipo fuen los mejores que he experimentado en mi vida.',
             image: '/src/assets/testimonials/human2.jpg'
         },
         {
-            name: 'Alfredo Rodríguez',
-            location: 'Cordoba',
+            name: 'Norma Rodríguez',
+            location: 'Alta Córdoba, Cordoba',
             text: 'El equipo de NEXA nos acompañó en todo el proceso. Su profesionalidad y atención al detalle hicieron que todo fuera perfecto.',
             image: '/src/assets/testimonials/human3.jpg'
         }
@@ -37,23 +37,22 @@ const TestimonialsSection = () => {
                         testimonials.map((testimonial, i) => (
                             <Card
                                 key={ i }
-                                className="overflow-hidden rounded-xl shadow-md transform transition-all duration-300 hover:translate-y-[-8px] hover:shadow-lg"
+                                className="group overflow-hidden rounded-xl shadow-md transform transition-all duration-300 hover:translate-y-[-8px] hover:shadow-lg"
                             >
                                 <CardContent className="p-6">
                                     <div className="flex flex-col space-y-4">
                                         <div className="flex items-center space-x-4">
-                                            {/* <div className="h-12 w-12 rounded-full bg-muted"></div> */}
                                             <img
                                                 src={ testimonial.image }
                                                 alt={ `Foto de ${ testimonial.name }` }
-                                                className="h-12 w-12 rounded-full object-cover"
+                                                className="h-12 w-12 rounded-full object-cover shadow-sm transition-transform duration-300 group-hover:scale-105"
                                             />
                                             <div>
                                                 <h3 className="font-bold">{ testimonial.name }</h3>
                                                 <p className="text-sm text-muted-foreground">{ testimonial.location }</p>
                                             </div>
                                         </div>
-                                        <p className="text-muted-foreground">"{ testimonial.text }"</p>
+                                        <p className="text-muted-foreground italic text-sm md:text-base">"{ testimonial.text }"</p>
                                         <div className="flex">
                                             {
                                                 Array(5)
