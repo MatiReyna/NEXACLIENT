@@ -3,7 +3,7 @@ import { Home, Phone, Mail, MapPin } from 'lucide-react';
 import AnimatedTooltip from '../ui/animated-tooltip';
 import animated1 from '../../assets/animated/animated1.jpg';
 import animated2 from '../../assets/animated/animated2.jpg';
-import animated3 from '../../assets/animated/animated3.jpg';
+// import animated3 from '../../assets/animated/animated3.jpg';
 import animated4 from '../../assets/animated/animated4.jpg';
 // import animated5 from '../../assets/animated/animated5.jpg';
 // import animated6 from '../../assets/animated/animated6.jpg';
@@ -23,12 +23,12 @@ const Footer = () => {
             designation: 'CEO',
             image: animated2
         },
-        {
-            id: 3,
-            name: 'Emily Davis',
-            designation: 'Product Manager',
-            image: animated3
-        },
+        // {
+        //     id: 3,
+        //     name: 'Emily Davis',
+        //     designation: 'Product Manager',
+        //     image: animated3
+        // },
         {
             id: 4,
             name: 'Nicolás Sagario',
