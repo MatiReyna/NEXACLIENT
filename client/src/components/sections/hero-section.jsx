@@ -1,12 +1,13 @@
 import { ArrowRight } from 'lucide-react';
 import Button from '../ui/button';
+import { heroImage } from '../../assets/hero/image.png'
 
 const HeroSection = () => {
     return (
         <section id="inicio" className="relative">
             <div className="absolute inset-0 z-0">
                 <img
-                    src="/src/assets/hero/image.png"
+                    src={ heroImage }
                     alt="Casa prefabricada moderna"
                     className="object-cover w-full h-full brightness-[0.7]"
                 />

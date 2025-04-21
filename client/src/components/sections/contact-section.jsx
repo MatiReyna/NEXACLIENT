@@ -1,6 +1,7 @@
 import { Phone, Mail, MapPin, ArrowRight } from 'lucide-react';
 import { useState } from 'react';
 import Button from '../ui/button';
+import mapa from '../../assets/contact/mapa.png';
 
 const ContactSection = () => {
 
@@ -33,7 +34,7 @@ const ContactSection = () => {
                         </div>
                         <div className="aspect-video w-full overflow-hidden rounded-2xl">
                             <img
-                                src="/src/assets/contact/mapa.png"
+                                src={ mapa }
                                 alt="Ubicación"
                                 className="h-full w-full object-cover"
                             />

@@ -1,20 +1,29 @@
 import { useEffect, useRef, useState } from 'react';
 import { cn } from '../../lib/utils';
 
+import marca1 from '../../assets/logos/marca1.svg';
+import marca2 from '../../assets/logos/marca2.svg';
+import marca3 from '../../assets/logos/marca3.svg';
+import marca4 from '../../assets/logos/marca4.svg';
+import marca5 from '../../assets/logos/marca5.svg';
+import marca6 from '../../assets/logos/marca6.svg';
+import marca7 from '../../assets/logos/marca7.svg';
+import marca8 from '../../assets/logos/marca8.svg';
+
 const MarcasCarousel = ({ className }) => {
 
     const containerRef = useRef(null);
     const [ isHovered, setIsHovered ] = useState(false);
 
     const marcas = [
-        { nombre: 'TechBuild', logo: '/src/assets/logos/marca1.svg' },
-        { nombre: 'EcoMaterials', logo: '/src/assets/logos/marca3.svg' },
-        { nombre: 'ModernHomes', logo: '/src/assets/logos/marca2.svg' },
-        { nombre: 'GreenConstruct', logo: '/src/assets/logos/marca4.svg' },
-        { nombre: 'InnoArch', logo: '/src/assets/logos/marca6.svg' },
-        { nombre: 'SmartHouse', logo: '/src/assets/logos/marca5.svg' },
-        { nombre: 'SustainBuild', logo: '/src/assets/logos/marca7.svg' },
-        { nombre: 'PremiumStruct', logo: '/src/assets/logos/marca8.svg' }
+        { nombre: 'TechBuild', logo: marca1 },
+        { nombre: 'EcoMaterials', logo: marca3 },
+        { nombre: 'ModernHomes', logo: marca2 },
+        { nombre: 'GreenConstruct', logo: marca4 },
+        { nombre: 'InnoArch', logo: marca6 },
+        { nombre: 'SmartHouse', logo: marca5 },
+        { nombre: 'SustainBuild', logo: marca7 },
+        { nombre: 'PremiumStruct', logo: marca8 }
     ];
 
     const allMarcas = [ ...marcas, ...marcas ];  // Duplicamos las marcas para crear el efecto infinito.

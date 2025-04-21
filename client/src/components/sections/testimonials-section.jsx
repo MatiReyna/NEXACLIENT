@@ -1,4 +1,7 @@
 import { Card, CardContent } from '../ui/card';
+import human1 from '../../assets/testimonials/human1.jpg';
+import human2 from '../../assets/testimonials/human2.jpg';
+import human3 from '../../assets/testimonials/human3.jpg';
 
 const TestimonialsSection = () => {
 
@@ -7,19 +10,19 @@ const TestimonialsSection = () => {
             name: 'María García',
             location: 'San Roque, Córdoba',
             text: 'Nunca pensé que construir una casa podría ser tan rápido y sin complicaciones. El resultado final superó todas mis expectativas.',
-            image: '/src/assets/testimonials/human1.jpg'
+            image: human1
         },
         {
             name: 'Juan Perez',
             location: 'Carlos Paz, Córdoba',
             text: 'El trabajo de la NEXA me ha llevado a construir una casa perfecta en mi barrio. La calidad de los materiales y el trabajo en equipo fuen los mejores que he experimentado en mi vida.',
-            image: '/src/assets/testimonials/human2.jpg'
+            image: human2
         },
         {
             name: 'Norma Rodríguez',
             location: 'Alta Córdoba, Cordoba',
             text: 'El equipo de NEXA nos acompañó en todo el proceso. Su profesionalidad y atención al detalle hicieron que todo fuera perfecto.',
-            image: '/src/assets/testimonials/human3.jpg'
+            image: human3
         }
     ];
 
