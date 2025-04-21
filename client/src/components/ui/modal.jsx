@@ -37,7 +37,7 @@ const Modal = ({ isOpen, onClose, children, className }) => {
         >
             <div
                 ref={ modalRef }
-                className={ cn("bg-white rounded-2xl shadow-xl w-full max-w-4xl max-h-[90vh] overflow-auto transform transition-all", className) }
+                className={ cn("bg-white rounded-2xl shadow-xl w-[95%] sm:max-w-2xl md:max-w-3xl lg:max-w-4xl max-h-[90vh] overflow-auto transform transition-transform duration-300 scale-100 opacity-100", className) }
                 onClick={ (e) => e.stopPropagation() }
             >
                 <button

@@ -16,7 +16,7 @@ const AnimatedTooltip = ({ items }) => {
 
     return (
         <div className="flex flex-col items-center gap-2">
-            <div className="flex -mr-4">
+            <div className="flex gap-1">
                 {
                     items.map((item) => (
                         <div
@@ -46,7 +46,7 @@ const AnimatedTooltip = ({ items }) => {
                                                 rotate: rotate,
                                                 whiteSpace: "nowrap",
                                             }}
-                                            className="absolute -top-16 left-1/2 z-50 flex -translate-x-1/2 flex-col items-center justify-center rounded-md bg-black px-4 py-2 text-xs shadow-xl"
+                                            className="absolute -top-16 left-1/2 z-50 flex -translate-x-1/2 flex-col items-center justify-center rounded-md bg-[#592e83] px-4 py-2 text-xs shadow-xl text-white"
                                         >
                                             <div className="absolute inset-x-10 -bottom-px z-30 h-px w-[20%] bg-gradient-to-r from-transparent via-emerald-500 to-transparent" />
                                             <div className="absolute -bottom-px left-10 z-30 h-px w-[40%] bg-gradient-to-r from-transparent via-sky-500 to-transparent" />
@@ -62,7 +62,7 @@ const AnimatedTooltip = ({ items }) => {
                                 width={ 100 }
                                 src={ item.image }
                                 alt={ item.name }
-                                className="relative !m-0 h-14 w-14 rounded-full border-2 border-white object-cover object-top !p-0"
+                                className="relative !m-0 h-14 w-14 sm:h-16 sm:w-16 rounded-full border-2 border-white object-cover object-top !p-0 transition-transform duration-300 group-hover:scale-[1.05]"
                             />
                         </div>
                     ))

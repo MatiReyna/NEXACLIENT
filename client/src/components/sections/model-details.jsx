@@ -175,19 +175,19 @@ const ModelDetails = ({ isOpen, onClose, model }) => {
                     </div>
 
                     <div className="mt-8 space-y-4">
-                        <div className="p-4 bg-[#592e83]/10 rounded-xl">
+                        <div className="p-4 bg-[#592e83]/10 rounded-xl space-y-1">
                             <p className="text-[#592e83] font-medium">Desde <span className="text-2xl font-bold">€149.900</span></p>
-                            <p className="text-sm text-gray-600 mt-1">Financiación disponible</p>
+                            <p className="text-sm text-gray-600">Financiación disponible</p>
                         </div>
 
                         <div className="flex flex-col sm:flex-row gap-3">
-                            <Button className="flex-1">
-                                <span className="flex items-center">
+                            <Button className="flex-1 transition-transform duration-300 hover:scale-105" arial-label="Solicitar Presupuesto">
+                                <span className="flex items-center group">
                                     Solicitar Presupuesto
-                                    <ArrowRight className="ml-2 h-4 w-4" />
+                                    <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1.5" />
                                 </span>
                             </Button>
-                            <Button variant="outline" className="flex-1">
+                            <Button variant="outline" className="flex-1 transition-transform duration-300 hover:scale-105" arial-label="Descargar Catálogo">
                                 Descargar Catálogo
                             </Button>
                         </div>
