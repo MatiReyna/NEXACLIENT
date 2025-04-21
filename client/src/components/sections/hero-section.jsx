@@ -7,7 +7,7 @@ const HeroSection = () => {
         <section id="inicio" className="relative">
             <div className="absolute inset-0 z-0">
                 <img
-                    src= { heroImage }
+                    src= { heroImage }  // '../../assets/hero/image.png'
                     alt="Casa prefabricada moderna"
                     className="object-cover w-full h-full brightness-[0.7]"
                 />

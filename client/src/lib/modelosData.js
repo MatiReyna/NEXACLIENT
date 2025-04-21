@@ -8,7 +8,7 @@ export const modelosModernos = [
         description: "Diseño contemporáneo con amplios espacios y grandes ventanales.",
         area: "80m²",
         rooms: "3 habitaciones",
-        imageSrc: moderno1,
+        imageSrc: moderno1,  // '../assets/models/moderno1.png'
         imageAlt: "Modelo Florida"
     },
     {
@@ -16,7 +16,7 @@ export const modelosModernos = [
         description: "Estilo minimalista con toques cálidos y gran iluminación natural.",
         area: "62m²",
         rooms: "3 habitaciones",
-        imageSrc: moderno2,
+        imageSrc: moderno2,  // '../assets/models/moderno2.png'
         imageAlt: "Modelo Indiana"
     },
     {
@@ -24,7 +24,7 @@ export const modelosModernos = [
         description: "Equilibrio entre elegancia y funcionalidad en un espacio abierto.",
         area: "73m²",
         rooms: "3 habitaciones",
-        imageSrc: moderno3,
+        imageSrc: moderno3,  // '../assets/models/moderno3.png'
         imageAlt: "Modelo Oregon"
     }
 ];

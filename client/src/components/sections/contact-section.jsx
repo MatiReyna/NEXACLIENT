@@ -14,7 +14,10 @@ const ContactSection = () => {
                     <div className="space-y-6">
                         <div className="space-y-2">
                             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Contacta con Nosotros</h2>
-                            <p className="text-muted-foreground">
+                            {/* <p className="text-muted-foreground">
+                                Estamos aquí para responder a todas tus preguntas y ayudarte a hacer realidad tu proyecto.
+                            </p> */}
+                            <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
                                 Estamos aquí para responder a todas tus preguntas y ayudarte a hacer realidad tu proyecto.
                             </p>
                         </div>

@@ -43,7 +43,8 @@ const ProcessSection = () => {
                                     { item.step }
                                 </div>
                                 <h3 className="text-xl font-bold">{ item.title }</h3>
-                                <p className="text-muted-foreground">{ item.description }</p>
+                                {/* <p className="text-muted-foreground">{ item.description }</p> */}
+                                <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">{ item.description }</p>
                                 {
                                     item.step < 4 && (
                                         <ChevronRight className="absolute -right-4 top-12 hidden h-8 w-8 text-[#592e83] lg:block transition-transform duration-300 group-hover:translate-x-1" />
