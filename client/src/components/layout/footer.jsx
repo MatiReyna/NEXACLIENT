@@ -1,6 +1,12 @@
 import { Link } from 'react-router-dom';
 import { Home, Phone, Mail, MapPin } from 'lucide-react';
 import AnimatedTooltip from '../ui/animated-tooltip';
+import animated1 from '../../assets/animated/animated1.jpg';
+import animated2 from '../../assets/animated/animated2.jpg';
+import animated3 from '../../assets/animated/animated3.jpg';
+import animated4 from '../../assets/animated/animated4.jpg';
+import animated5 from '../../assets/animated/animated5.jpg';
+import animated6 from '../../assets/animated/animated6.jpg';
 
 const Footer = () => {
 
@@ -9,37 +15,37 @@ const Footer = () => {
             id: 1,
             name: 'Matias Reyna',
             designation: 'Software Engineer',
-            image: '/src/assets/animated/animated1.jpg'
+            image: animated1
         },
         {
             id: 2,
             name: 'Facundo Sagario',
             designation: 'CEO',
-            image: '/src/assets/animated/animated2.jpg'
+            image: animated2
         },
         {
             id: 3,
             name: 'Emily Davis',
             designation: 'Product Manager',
-            image: '/src/assets/animated/animated3.jpg'
+            image: animated3
         },
         {
             id: 4,
             name: 'Nicolás Sagario',
             designation: 'Soap Developer',
-            image: '/src/assets/animated/animated4.jpg'
+            image: animated4
         },
         {
             id: 5,
             name: 'Jane Smith',
             designation: 'The Explorer',
-            image: '/src/assets/animated/animated5.jpg'
+            image: animated5
         },
         {
             id: 6,
             name: 'Dora',
             designation: 'Data Scientist',
-            image: '/src/assets/animated/animated6.jpg'
+            image: animated6
         }
     ];
 
