@@ -8,6 +8,7 @@ export const modelosModernos = [
         description: "Diseño contemporáneo con amplios espacios y grandes ventanales.",
         area: "80m²",
         rooms: "3 habitaciones",
+        bathrooms: "2 baños",
         imageSrc: moderno1,  // '../assets/models/moderno1.png'
         imageAlt: "Modelo Florida"
     },
@@ -16,6 +17,7 @@ export const modelosModernos = [
         description: "Estilo minimalista con toques cálidos y gran iluminación natural.",
         area: "62m²",
         rooms: "3 habitaciones",
+        bathrooms: "2 baños",
         imageSrc: moderno2,  // '../assets/models/moderno2.png'
         imageAlt: "Modelo Indiana"
     },
@@ -24,6 +26,7 @@ export const modelosModernos = [
         description: "Equilibrio entre elegancia y funcionalidad en un espacio abierto.",
         area: "73m²",
         rooms: "3 habitaciones",
+        bathrooms: "2 baños",
         imageSrc: moderno3,  // '../assets/models/moderno3.png'
         imageAlt: "Modelo Oregon"
     }
@@ -35,6 +38,7 @@ export const modelosTradicionales = [
         description: "Casa clásica de un piso, ideal para familia numerosa.",
         area: "47m²",
         rooms: "2 habitaciones",
+        bathrooms: "1 baños",
         imageSrc: "/modelos/tradicional-campo.jpg",
         imageAlt: "Modelo Hawaii"
     },
@@ -43,6 +47,7 @@ export const modelosTradicionales = [
         description: "Diseño cálido con detalles de madera y cocina integrada.",
         area: "41m²",
         rooms: "1 habitaciones",
+        bathrooms: "1 baños",
         imageSrc: "/modelos/tradicional-nido.jpg",
         imageAlt: "Modelo Alaska"
     },
@@ -51,6 +56,7 @@ export const modelosTradicionales = [
         description: "Diseño funcional para convivencias cómodas y privadas.",
         area: "79m²",
         rooms: "3 habitaciones",
+        bathrooms: "2 baños",
         imageSrc: "/modelos/tradicional-familiar.jpg",
         imageAlt: "Modelo Texas"
     },
@@ -62,6 +68,7 @@ export const modelosEcologicos = [
         description: "Diseño sustentable con materiales reciclables y paneles solares.",
         area: "65m²",
         rooms: "2 habitaciones",
+        bathrooms: "1 baños",
         imageSrc: "/modelos/ecologico-verde.jpg",
         imageAlt: "Modelo California"
     },
@@ -70,6 +77,7 @@ export const modelosEcologicos = [
         description: "Vivienda ecológica con techos verdes y aislación térmica.",
         area: "56m²",
         rooms: "3 habitaciones",
+        bathrooms: "2 baños",
         imageSrc: "/modelos/ecologico-tierra.jpg",
         imageAlt: "Modelo Kansas"
     },
@@ -78,6 +86,7 @@ export const modelosEcologicos = [
         description: "Integración armónica con el entorno natural y bajo consumo.",
         area: "91m²",
         rooms: "3 habitaciones",
+        bathrooms: "2 baños",
         imageSrc: "/modelos/ecologico-loma.jpg",
         imageAlt: "Modelo Washington"
     },

@@ -133,7 +133,8 @@ const ModelDetails = ({ isOpen, onClose, model }) => {
                             </div>
                             <div className="flex flex-col">
                                 <span className="text-sm text-gray-500">Baños</span>
-                                <span className="font-medium">{ model.rooms.split('-')[0] } completos</span>
+                                {/* <span className="font-medium">{ model.rooms.split('-')[0] } completos</span> */}
+                                <span className="font-medium">{ model.bathrooms } completos</span>
                             </div>
                             <div className="flex flex-col">
                                 <span className="text-sm text-gray-500">Tiempo de construcción</span>
@@ -176,7 +177,7 @@ const ModelDetails = ({ isOpen, onClose, model }) => {
 
                     <div className="mt-8 space-y-4">
                         <div className="p-4 bg-[#592e83]/10 rounded-xl space-y-1">
-                            <p className="text-[#592e83] font-medium">Desde <span className="text-2xl font-bold">€149.900</span></p>
+                            <p className="text-[#592e83] font-medium">Desde <span className="text-2xl font-bold">$1.750.000</span></p>
                             <p className="text-sm text-gray-600">Financiación disponible</p>
                         </div>
 
