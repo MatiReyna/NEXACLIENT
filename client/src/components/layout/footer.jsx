@@ -32,7 +32,7 @@ const Footer = () => {
         {
             id: 4,
             name: 'Nicolás Sagario',
-            designation: 'Soap Developer',
+            designation: 'Manager de Ventas',
             image: animated4
         },
         // {
