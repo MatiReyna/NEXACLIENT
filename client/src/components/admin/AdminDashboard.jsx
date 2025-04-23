@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
 import Button from '../ui/button';
+import ModelManager from './ModelManager';
 
 const AdminDashboard = () => {
 
     const [ isAuthenticated, setIsAuthenticated ] = useState(false);
+    const [ view, setView ] = useState('home');
 
     useEffect(() => {
         const auth = localStorage.getItem('admin-auth');
@@ -18,6 +20,10 @@ const AdminDashboard = () => {
                 </div>
             </div>
         )
+    }
+
+    if (view === 'modelos') {
+        return <ModelManager />
     }
 
     return (
@@ -50,7 +56,7 @@ const AdminDashboard = () => {
                         <p className="text-sm text-muted-foreground mb-4">
                             Agregá, editá o eliminá modelos de casas desde esta sección.
                         </p>
-                        <Button className="w-full">Administrar modelos</Button>
+                        <Button className="w-full" onClick={ () => setView('modelos') }>Administrar modelos</Button>
                     </div>
                 </section>
             </div>
