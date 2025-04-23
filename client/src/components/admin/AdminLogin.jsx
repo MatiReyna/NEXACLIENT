@@ -8,7 +8,7 @@ const AdminLogin = ({ onLoginSuccess }) => {
     const [ password, setPassword ] = useState('');
     const [ error, setError ] = useState('');
 
-    const handleSumit = (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
         if (email === 'administrador@nexa.com' && password === 'nexa123') {
             localStorage.setItem('admin-auth', 'true')
@@ -25,7 +25,7 @@ const AdminLogin = ({ onLoginSuccess }) => {
                 <h2 className="text-2x1 font-bold text-center text-[#592e83]">
                     Acceso Administrador
                 </h2>
-                <form onSubmit={ handleSumit } className="space-y-4">
+                <form onSubmit={ handleSubmit } className="space-y-4">
                     <div>
                         <label className="block text-sm font-medium mb-1 text-gray-700">
                             Correo electrónico
