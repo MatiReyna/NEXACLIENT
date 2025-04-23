@@ -59,6 +59,57 @@ const AdminDashboard = () => {
                         <Button className="w-full" onClick={ () => setView('modelos') }>Administrar modelos</Button>
                     </div>
                 </section>
+
+                <section>
+                    <h2 className="text-xl font-semibold text-[#592e83] mb-4">
+                        Modelos actuales
+                    </h2>
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                        {[
+                            {
+                                id: 1,
+                                nombre: 'Moderno XL',
+                                categoria: 'Moderno',
+                                metrosCuadrados: 120,
+                                habitaciones: 5,
+                                imagen: 'https://picsum.photos/id/10/400/300',
+                            },
+                            {
+                                id: 2,
+                                nombre: 'Casa Natural',
+                                categoria: 'Ecológico',
+                                metrosCuadrados: 100,
+                                habitaciones: 4,
+                                imagen: 'https://picsum.photos/id/100/400/300',
+                            },
+                            {
+                                id: 3,
+                                nombre: 'Casa Tradicional',
+                                categoria: 'Tradicional',
+                                metrosCuadrados: 80,
+                                habitaciones: 3,
+                                imagen: 'https://picsum.photos/id/200/400/300',
+                            }
+                        ].map((modelo) => (
+                            <div
+                                key={ modelo.id }
+                                className="rounded-lg border bg-white shadow-sm overflow-hidden"
+                            >
+                                <img
+                                    src={ modelo.imagen }
+                                    alt={ modelo.nombre }
+                                    className="w-full h-36 object-cover"
+                                />
+                                <div className="p-3 space-y-1">
+                                    <h3 className="text-base font-semibold">{ modelo.nombre }</h3>
+                                    <p className="text-sm text-muted-foreground">
+                                        { modelo.metrosCuadrados } metros cuadrados . { modelo.habitaciones } habs.
+                                    </p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </section>
             </div>
         </div>
     )
