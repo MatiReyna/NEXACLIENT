@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Button from '../ui/button';
 import Input from '../ui/input';
 
@@ -8,12 +9,14 @@ const AdminLogin = ({ onLoginSuccess }) => {
     const [ password, setPassword ] = useState('');
     const [ error, setError ] = useState('');
 
+    const navigate = useNavigate();
+
     const handleSubmit = (e) => {
         e.preventDefault();
         if (email === 'administrador@nexa.com' && password === 'nexa123') {
             localStorage.setItem('admin-auth', 'true')
             setError('')
-            onLoginSuccess?.()
+            navigate("/administrador/dashboard");
         } else {
             setError('Credenciales inválidas. Intentá de nuevo.')
         }
