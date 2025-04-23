@@ -27,30 +27,28 @@ const App = () => {
     //   </main>
     //   <Footer />
     // </div>
-    <BrowserRouter>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <div className="flex min-h-screen flex-col">
-              <Header />
-              <main className="flex-1">
-                <HeroSection />
-                <BenefitsSection />
-                <MarcasSection />
-                <ModelsSection />
-                <ProcessSection />
-                <TestimonialsSection />
-                <ContactSection />
-                <CtaSection />
-              </main>
-              <Footer />
-            </div>
-          }
-        />
-        <Route path="/administrador" element={ <AdminLogin /> } />
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <div className="flex min-h-screen flex-col">
+            <Header />
+            <main className="flex-1">
+              <HeroSection />
+              <BenefitsSection />
+              <MarcasSection />
+              <ModelsSection />
+              <ProcessSection />
+              <TestimonialsSection />
+              <ContactSection />
+              <CtaSection />
+            </main>
+            <Footer />
+          </div>
+        }
+      />
+      <Route path="/administrador" element={<AdminLogin />} />
+    </Routes>
   )
 };
 
