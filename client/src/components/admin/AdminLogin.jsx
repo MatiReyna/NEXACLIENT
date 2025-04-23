@@ -10,7 +10,7 @@ const AdminLogin = ({ onLoginSuccess }) => {
 
     const handleSumit = (e) => {
         e.preventDefault();
-        if (email === 'admin@nexa.com' && password === 'nexa123') {
+        if (email === 'administrador@nexa.com' && password === 'nexa123') {
             localStorage.setItem('admin-auth', 'true')
             setError('')
             onLoginSuccess?.()
