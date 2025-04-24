@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import Button from '../ui/button';
 import ModelManager from './ModelManager';
+import MarcasManager from './MarcasManager';
 
 const AdminDashboard = () => {
 
@@ -194,6 +195,10 @@ const AdminDashboard = () => {
                             </div>
                         ))}
                     </div>
+                </div>
+
+                <div className="col-span-4 md:col-span-2 row-span-3 md:row-start-9 bg-white border rounded-xl p-6 shadow hover:shadow-lg transition-all space-y-4">
+                    <MarcasManager />
                 </div>
             </div>
         </div>
