@@ -2,6 +2,10 @@ import { useEffect, useState } from 'react';
 import Button from '../ui/button';
 import ModelManager from './ModelManager';
 import MarcasManager from './MarcasManager';
+import AnimatedTooltip from '../ui/animated-tooltip';
+import avatar1 from '../../../src/assets/animated/animated1.jpg';
+import avatar2 from '../../../src/assets/animated/animated2.jpg';
+import avatar3 from '../../../src/assets/animated/animated3.jpg';
 
 const AdminDashboard = () => {
 
@@ -199,6 +203,22 @@ const AdminDashboard = () => {
 
                 <div className="col-span-4 md:col-span-2 row-span-3 md:row-start-9 bg-white border rounded-xl p-6 shadow hover:shadow-lg transition-all space-y-4">
                     <MarcasManager />
+                </div>
+
+                <div className="col-span-4 md:col-span-2 row-span-3 md:col-start-3 md:row-start-9 bg-white border rounded-xl p-6 shadow hover:shadow-lg transition-all space-y-4">
+                    <h2 className="text-xl font-semibold text-[#592e83] mb-2">Equipo de NEXA</h2>
+                    <p className="text-sm textmuted-foreground mb-4">
+                        Gestioná los integrantes que se muestran en la página principal.
+                    </p>
+                    <div className="flex justify-center items-center">
+                        <AnimatedTooltip
+                            items={[
+                                { id: 1, name: 'Matias Reyna', designation: 'Desarrollador', avatar: avatar1 },
+                                { id: 2, name: 'Ana Pérez', designation: 'Diseñadora', avatar: avatar2 },
+                                { id: 3, name: 'Juan Pérez', designation: 'Diseñadora', avatar: avatar3 },
+                            ]}
+                        />
+                    </div>
                 </div>
             </div>
         </div>
