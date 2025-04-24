@@ -3,9 +3,9 @@ import Button from '../ui/button';
 import ModelManager from './ModelManager';
 import MarcasManager from './MarcasManager';
 import AnimatedTooltip from '../ui/animated-tooltip';
-import avatar1 from '../../../src/assets/animated/animated1.jpg';
-import avatar2 from '../../../src/assets/animated/animated2.jpg';
-import avatar3 from '../../../src/assets/animated/animated3.jpg';
+import animated1 from '../../../src/assets/animated/animated1.jpg';
+import animated2 from '../../../src/assets/animated/animated2.jpg';
+import animated3 from '../../../src/assets/animated/animated3.jpg';
 
 const AdminDashboard = () => {
 
@@ -213,9 +213,9 @@ const AdminDashboard = () => {
                     <div className="flex justify-center items-center">
                         <AnimatedTooltip
                             items={[
-                                { id: 1, name: 'Matias Reyna', designation: 'Desarrollador', avatar: avatar1 },
-                                { id: 2, name: 'Ana Pérez', designation: 'Diseñadora', avatar: avatar2 },
-                                { id: 3, name: 'Juan Pérez', designation: 'Diseñadora', avatar: avatar3 },
+                                { id: 1, name: 'Matias Reyna', designation: 'Desarrollador', image: animated1 },
+                                { id: 2, name: 'Ana Pérez', designation: 'Diseñadora', image: animated2 },
+                                { id: 3, name: 'Juan Pérez', designation: 'Diseñadora', image: animated3 },
                             ]}
                         />
                     </div>
