@@ -39,14 +39,70 @@ const AdminDashboard = () => {
                 </header>
 
                 <section className="grid md:grid-cols-2 gap-6">
-                    <div className="rounded-xl border bg-white p-6 shadow hover:shadow-lg transition-all">
-                        <h2 className="text-xl font-semibold text-[#592e83] mb-2">
+                    <div className="rounded-xl border bg-white p-6 shadow hover:shadow-lg transition-all space-y-4">
+                        <h2 className="text-xl foont-semibold text-[#692e83] mb-2">
                             Solicitudes de Contacto
                         </h2>
-                        <p className="text-sm text-muted-foreground mb-4">
-                            Revisá los mensajes de los usuarios interesados en modelos.
-                        </p>
-                        <Button className="w-full">Ver solicitudes</Button>
+                        <div className="overflow-x-auto">
+                            <table className="w-full text-sm">
+                                <thead>
+                                    <tr className="text-left text-muted-foreground">
+                                        <th className="py-2 pr-4">Fecha</th>
+                                        <th className="py-2 pr-4">Nombre</th>
+                                        <th className="py-2 pr-4">Correo</th>
+                                        <th className="py-2 pr-4">Modelo</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {[
+                                        {
+                                            fecha: '2023-01-01',
+                                            nombre: 'Matias Reyna',
+                                            correo: 'matias@nexa.com',
+                                            modelo: 'Casa Natural'
+                                        },
+                                        {
+                                            fecha: '2023-01-02',
+                                            nombre: 'Ana Pérez',
+                                            correo: 'ana@nexa.com',
+                                            modelo: 'Casa Tradicional'
+                                        },
+                                        {
+                                            fecha: '2023-01-03',
+                                            nombre: 'Juan Pérez',
+                                            correo: 'juan@nexa.com',
+                                            modelo: 'Casa Tradicional'
+                                        },
+                                        {
+                                            fecha: '2023-01-04',
+                                            nombre: 'Juan Pérez',
+                                            correo: 'juan@nexa.com',
+                                            modelo: 'Casa Tradicional'
+                                        },
+                                        {
+                                            fecha: '2023-01-05',
+                                            nombre: 'Carlas Méndez',
+                                            correo: 'carlas@nexa.com',
+                                            modelo: 'Casa Natural'
+                                        },
+                                        {
+                                            fecha: '2023-01-06',
+                                            nombre: 'Carlas Méndez',
+                                            correo: 'carlas@nexa.com',
+                                            modelo: 'Casa Natural'
+                                        }
+                                    ].map((item, idx) => (
+                                        <tr key={ idx } className="border-b last:border-none">
+                                            <th className="py-2 pr-4">{ item.fecha }</th>
+                                            <td className="py-2 pr-4">{ item.nombre }</td>
+                                            <td className="py-2 pr-4">{ item.correo }</td>
+                                            <td className="py-2 pr-4">{ item.modelo }</td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
+                        <Button className="w-full mt-2">Ver todos</Button>
                     </div>
 
                     <div className="rounded-xl border bg-white p-6 shadow hover:shadow-lg transition-all">
