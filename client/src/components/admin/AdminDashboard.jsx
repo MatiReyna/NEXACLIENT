@@ -38,8 +38,8 @@ const AdminDashboard = () => {
                     </p>
                 </header>
 
-                <section className="grid md:grid-cols-2 gap-6">
-                    <div className="rounded-xl border bg-white p-6 shadow hover:shadow-lg transition-all space-y-4">
+                <section className="grid md:grid-cols-4 md:grid-rows-11 gap-6">
+                    <div className="col-span-4 md:col-span-2 row-span-5 bg-white border rounded-xl p-6 shadow hover:shadow-lg transition-all space-y-4">
                         <h2 className="text-xl foont-semibold text-[#692e83] mb-2">
                             Solicitudes de Contacto
                         </h2>
@@ -50,7 +50,7 @@ const AdminDashboard = () => {
                                         <th className="py-2 pr-4">Fecha</th>
                                         <th className="py-2 pr-4">Nombre</th>
                                         <th className="py-2 pr-4">Correo</th>
-                                        <th className="py-2 pr-4">Modelo</th>
+                                        <th className="py-2">Modelo</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -96,7 +96,7 @@ const AdminDashboard = () => {
                                             <th className="py-2 pr-4">{ item.fecha }</th>
                                             <td className="py-2 pr-4">{ item.nombre }</td>
                                             <td className="py-2 pr-4">{ item.correo }</td>
-                                            <td className="py-2 pr-4">{ item.modelo }</td>
+                                            <td className="py-2">{ item.modelo }</td>
                                         </tr>
                                     ))}
                                 </tbody>
