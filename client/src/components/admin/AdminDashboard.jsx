@@ -38,7 +38,7 @@ const AdminDashboard = () => {
                     </p>
                 </header>
 
-                <section className="grid md:grid-cols-4 md:grid-rows-11 gap-6">
+                <section className="grid md:grid-cols-4 md:grid-rows-5 gap-6">
                     <div className="col-span-4 md:col-span-2 row-span-5 bg-white border rounded-xl p-6 shadow hover:shadow-lg transition-all space-y-4">
                         <h2 className="text-xl foont-semibold text-[#692e83] mb-2">
                             Solicitudes de Contacto
@@ -105,7 +105,7 @@ const AdminDashboard = () => {
                         <Button className="w-full mt-2">Ver todos</Button>
                     </div>
 
-                    <div className="rounded-xl border bg-white p-6 shadow hover:shadow-lg transition-all space-y-4">
+                    <div className="col-span-4 md:col-span-2 row-span-2 md:col-start-3 bg-white border rounded-xl p-6 shadow hover:shadow-lg transition-all space-y-4">
                         <h2 className="text-xl font-semibold text-[#592e83] mb-2">
                             Mi Perfil
                         </h2>
