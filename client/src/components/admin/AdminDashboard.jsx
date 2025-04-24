@@ -105,14 +105,43 @@ const AdminDashboard = () => {
                         <Button className="w-full mt-2">Ver todos</Button>
                     </div>
 
-                    <div className="rounded-xl border bg-white p-6 shadow hover:shadow-lg transition-all">
+                    <div className="rounded-xl border bg-white p-6 shadow hover:shadow-lg transition-all space-y-4">
+                        <h2 className="text-xl font-semibold text-[#592e83] mb-2">
+                            Mi Perfil
+                        </h2>
+                        <p className="text-sm text-muted-foreground mb-4">
+                            Modifica tu información personal y datos de acceso.
+                        </p>
+                        <div className="space-y-3">
+                            <input
+                                type="text"
+                                placeholder="Nombre Completo"
+                                className="w-full px-3 py-2 border rounded-md text-sm"
+                            />
+                            <input
+                                type="email"
+                                placeholder="tu@email.com"
+                                className="w-full px-3 py-2 border rounded-md text-sm"
+                            />
+                            <input
+                                type="password"
+                                placeholder="Nueva contraseña"
+                                className="w-full px-3 py-2 border rounded-md text-sm"
+                            />
+                            <Button className="w-full">Actualizar perfil</Button>
+                        </div>
+                    </div>
+
+                    <div>
                         <h2 className="text-xl font-semibold text-[#592e83] mb-2">
                             Gestión de Modelos
                         </h2>
                         <p className="text-sm text-muted-foreground mb-4">
                             Agregá, editá o eliminá modelos de casas desde esta sección.
                         </p>
-                        <Button className="w-full" onClick={ () => setView('modelos') }>Administrar modelos</Button>
+                        <Button className="w-full" onClick={ () => setView('modelos') }>
+                            Administrar modelos
+                        </Button>
                     </div>
                 </section>
 
