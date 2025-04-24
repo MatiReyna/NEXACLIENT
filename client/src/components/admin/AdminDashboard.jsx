@@ -145,7 +145,7 @@ const AdminDashboard = () => {
                     </div>
                 </section>
 
-                <section>
+                <div className="col-span-4 row-span-3 md:row-start-6 bg-white border rounded-xl p-6 shadow hover:shadow-lg transition-all space-y-4">
                     <h2 className="text-xl font-semibold text-[#592e83] mb-4">
                         Modelos actuales
                     </h2>
@@ -194,7 +194,7 @@ const AdminDashboard = () => {
                             </div>
                         ))}
                     </div>
-                </section>
+                </div>
             </div>
         </div>
     )
