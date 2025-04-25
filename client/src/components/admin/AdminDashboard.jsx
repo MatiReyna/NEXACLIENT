@@ -224,107 +224,81 @@ const AdminDashboard = () => {
         // </div>
 
         <div className="min-h-screen px-4 py-10 bg-background text-foreground">
-      <div className="max-w-6xl mx-auto space-y-10">
-        <header className="space-y-2">
-          <h1 className="text-3xl font-bold text-[#592e83]">Panel de Administración</h1>
-          <p className="text-muted-foreground">
-            Bienvenido al dashboard. Desde aquí podés gestionar tu contenido.
-          </p>
-        </header>
-
-        <section className="grid grid-cols-4 grid-rows-10 gap-3">
-          {/* div1 - Solicitudes */}
-          <div className="col-span-2 row-span-4 bg-white border rounded-xl p-6 shadow hover:shadow-lg transition-all space-y-4">
-            <h2 className="text-xl font-semibold text-[#592e83] mb-2">Solicitudes de Contacto</h2>
-            <div className="overflow-x-auto">
-              <table className="w-full text-sm">
-                <thead>
-                  <tr className="text-left text-muted-foreground">
-                    <th className="py-2 pr-4">Fecha</th>
-                    <th className="py-2 pr-4">Nombre</th>
-                    <th className="py-2 pr-4">Correo</th>
-                    <th className="py-2">Modelo</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {[
-                    {
-                      fecha: '2023-01-01',
-                      nombre: 'Matias Reyna',
-                      correo: 'matias@nexa.com',
-                      modelo: 'Casa Natural',
-                    },
-                    {
-                      fecha: '2023-01-02',
-                      nombre: 'Ana Pérez',
-                      correo: 'ana@nexa.com',
-                      modelo: 'Casa Tradicional',
-                    },
-                    {
-                      fecha: '2023-01-03',
-                      nombre: 'Juan Pérez',
-                      correo: 'juan@nexa.com',
-                      modelo: 'Casa Tradicional',
-                    },
-                    {
-                      fecha: '2023-01-04',
-                      nombre: 'Juan Pérez',
-                      correo: 'juan@nexa.com',
-                      modelo: 'Casa Tradicional',
-                    },
-                    {
-                      fecha: '2023-01-05',
-                      nombre: 'Carlas Méndez',
-                      correo: 'carlas@nexa.com',
-                      modelo: 'Casa Natural',
-                    },
-                    {
-                      fecha: '2023-01-06',
-                      nombre: 'Carlas Méndez',
-                      correo: 'carlas@nexa.com',
-                      modelo: 'Casa Natural',
-                    },
-                  ].map((item, idx) => (
-                    <tr key={idx} className="border-b last:border-none">
-                      <th className="py-2 pr-4">{item.fecha}</th>
-                      <td className="py-2 pr-4">{item.nombre}</td>
-                      <td className="py-2 pr-4">{item.correo}</td>
-                      <td className="py-2">{item.modelo}</td>
+        <div className="max-w-6xl mx-auto space-y-10">
+          <header className="space-y-2">
+            <h1 className="text-3xl font-bold text-[#592e83]">Panel de Administración</h1>
+            <p className="text-muted-foreground">Gestioná el contenido del sitio desde aquí.</p>
+          </header>
+  
+          <section className="grid grid-cols-4 grid-rows-10 gap-3">
+            {/* div1 - Solicitudes */}
+            <div className="col-span-2 row-span-3 bg-white border rounded-xl p-6 shadow hover:shadow-lg transition-all space-y-4">
+              <h2 className="text-xl font-semibold text-[#592e83] mb-2">Solicitudes de Contacto</h2>
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className="text-left text-muted-foreground">
+                      <th className="py-2 pr-4">Fecha</th>
+                      <th className="py-2 pr-4">Nombre</th>
+                      <th className="py-2 pr-4">Correo</th>
+                      <th className="py-2">Modelo</th>
                     </tr>
-                  ))}
-                </tbody>
-              </table>
+                  </thead>
+                  <tbody>
+                    {[
+                      {
+                        fecha: '2023-01-01',
+                        nombre: 'Matias Reyna',
+                        correo: 'matias@nexa.com',
+                        modelo: 'Casa Natural',
+                      },
+                      {
+                        fecha: '2023-01-02',
+                        nombre: 'Ana Pérez',
+                        correo: 'ana@nexa.com',
+                        modelo: 'Casa Tradicional',
+                      },
+                    ].map((item, idx) => (
+                      <tr key={idx} className="border-b last:border-none">
+                        <th className="py-2 pr-4">{item.fecha}</th>
+                        <td className="py-2 pr-4">{item.nombre}</td>
+                        <td className="py-2 pr-4">{item.correo}</td>
+                        <td className="py-2">{item.modelo}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <Button className="w-full mt-2">Ver todos</Button>
             </div>
-            <Button className="w-full mt-2">Ver todos</Button>
-          </div>
-
-          {/* div2 - Perfil */}
-          <div className="col-span-2 row-span-2 col-start-3 bg-white border rounded-xl p-6 shadow hover:shadow-lg transition-all space-y-4">
-            <h2 className="text-xl font-semibold text-[#592e83] mb-2">Mi Perfil</h2>
-            <p className="text-sm text-muted-foreground mb-4">
-              Modifica tu información personal y datos de acceso.
-            </p>
-            <div className="space-y-3">
-              <input
-                type="text"
-                placeholder="Nombre Completo"
-                className="w-full px-3 py-2 border rounded-md text-sm"
-              />
-              <input
-                type="email"
-                placeholder="tu@email.com"
-                className="w-full px-3 py-2 border rounded-md text-sm"
-              />
-              <input
-                type="password"
-                placeholder="Nueva contraseña"
-                className="w-full px-3 py-2 border rounded-md text-sm"
-              />
-              <Button className="w-full">Actualizar perfil</Button>
+  
+            {/* div2 - Perfil */}
+            <div className="col-span-2 row-span-2 col-start-3 bg-white border rounded-xl p-6 shadow hover:shadow-lg transition-all space-y-4">
+              <h2 className="text-xl font-semibold text-[#592e83] mb-2">Mi Perfil</h2>
+              <p className="text-sm text-muted-foreground mb-4">
+                Modifica tu información personal y datos de acceso.
+              </p>
+              <div className="space-y-3">
+                <input
+                  type="text"
+                  placeholder="Nombre Completo"
+                  className="w-full px-3 py-2 border rounded-md text-sm"
+                />
+                <input
+                  type="email"
+                  placeholder="tu@email.com"
+                  className="w-full px-3 py-2 border rounded-md text-sm"
+                />
+                <input
+                  type="password"
+                  placeholder="Nueva contraseña"
+                  className="w-full px-3 py-2 border rounded-md text-sm"
+                />
+                <Button className="w-full">Actualizar perfil</Button>
+              </div>
             </div>
-          </div>
 
-          {/* div3 - Gestión de Modelos */}
+            {/* div3 - Gestión de Modelos */}
           <div className="col-span-2 row-span-2 col-start-3 row-start-3 bg-white border rounded-xl p-6 shadow hover:shadow-lg transition-all space-y-4">
             <h2 className="text-xl font-semibold text-[#592e83] mb-2">Gestión de Modelos</h2>
             <p className="text-sm text-muted-foreground mb-4">
@@ -370,7 +344,7 @@ const AdminDashboard = () => {
                   <div className="p-3 space-y-1">
                     <h3 className="text-base font-semibold">{modelo.nombre}</h3>
                     <p className="text-sm text-muted-foreground">
-                      {modelo.metrosCuadrados} m² . {modelo.habitaciones} habs.
+                      {modelo.metrosCuadrados} m² · {modelo.habitaciones} habs.
                     </p>
                   </div>
                 </div>
@@ -379,7 +353,8 @@ const AdminDashboard = () => {
           </div>
 
           {/* div5 - Marcas */}
-          <div className="col-span-1 row-span-3 col-start-3 row-start-8 bg-white border rounded-xl p-6 shadow hover:shadow-lg transition-all space-y-4">
+          <div className="col-span-2 row-span-3 col-start-3 row-start-8 bg-white border rounded-xl p-6 shadow hover:shadow-lg transition-all space-y-4">
+            <h2 className="text-xl font-semibold text-[#592e83] mb-2">Gestión de Marcas</h2>
             <MarcasManager />
           </div>
 
@@ -394,7 +369,7 @@ const AdminDashboard = () => {
                 items={[
                   { id: 1, name: 'Matias Reyna', designation: 'Desarrollador', image: animated1 },
                   { id: 2, name: 'Ana Pérez', designation: 'Diseñadora', image: animated2 },
-                  { id: 3, name: 'Juan Pérez', designation: 'Diseñadora', image: animated3 },
+                  { id: 3, name: 'Juan Pérez', designation: 'Diseñador', image: animated3 },
                 ]}
               />
             </div>
