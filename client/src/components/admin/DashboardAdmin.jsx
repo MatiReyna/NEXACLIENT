@@ -1,7 +1,7 @@
 import React from 'react';
 import { BentoGrid, BentoGridItem } from '../ui/bento-grid';
 import { IconArrowWaveRightUp, IconBoxAlignRightFilled, IconBoxAlignTopLeft, IconUserEdit, IconFileBroken, IconSignature, IconTableColumn, IconClipboardCopy } from '@tabler/icons-react';
-import AnimatedBrand from '../ui/animated-brand'; 
+import { AnimatedBrand } from '../ui/animated-brand';
 
 const BentoGridDemo = () => {
     const [showRatingsModal, setShowRatingsModal] = React.useState(false);
@@ -68,7 +68,11 @@ const items = [
     {
         title: 'Gestión de Marcas',
         description: 'Visualizá, editá o eliminá las marcas asociadas a tu catálogo de casas.',
-        header: <AnimatedBrand />,
+        header: (
+            <div className="w-full h-full">
+              <AnimatedBrand />
+            </div>
+        ),
         icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
     },
     {
