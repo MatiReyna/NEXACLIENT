@@ -27,10 +27,22 @@ const Skeleton = () => (
 
 const items = [
     {
-        title: "The Dawn of Innovation",
-        description: "Explore the birth of groundbreaking ideas and inventions.",
-        header: <Skeleton />,
-        icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
+        title: 'Perfil del Administrador',
+        description: 'Visualiza tu perfil, edita tus datos personales y mantené tu información actualizada.',
+        header: (
+            <div className="flex flex-col items-center justify-center w-full h-full rounded-xl bg-gradient-to-br from-purple-200 to-purple-300 dark:from-purpel-700 dark:to-purple-800">
+                <img
+                    src="https://picsum.photos/id/10/400/300"
+                    alt="Avatar"
+                    className="w-20 h-20 rounded-full border-4 border-white shadow-md"
+                />
+                <p className="mt-3 text-white font-semibold text-lg">Facundo Sagario</p>
+                <button className="mt-2 px-4 py-1 text-sm rounded-full bg-white text-purple-700 font-medium shadow hover:bg-purple-100 transition">
+                    Editar Perfil
+                </button>
+            </div>
+        ),
+        icon: <IconClipboardCopy className="h-4 w-4 text-purple-500" />,
     },
     {
         title: "The Digital Revolution",
