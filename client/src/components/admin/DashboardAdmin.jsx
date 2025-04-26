@@ -1,6 +1,6 @@
 import React from 'react';
 import { BentoGrid, BentoGridItem } from '../ui/bento-grid';
-import { IconArrowWaveRightUp, IconBoxAlignRightFilled, IconBoxAlignRightFilled, IconClipboardCopy, IconFileBroken, IconSignature, IconTableColumn, } from '@tabler/icons-react';
+import { IconArrowWaveRightUp, IconBoxAlignRightFilled, IconBoxAlignTopLeft, IconClipboardCopy, IconFileBroken, IconSignature, IconTableColumn, } from '@tabler/icons-react';
 
 const BentoGridDemo = () => {
     return (
