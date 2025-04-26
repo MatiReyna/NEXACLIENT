@@ -13,7 +13,7 @@ const BentoGridDemo = () => {
                         description={ item.description }
                         header={ item.header }
                         icon={ item.icon }
-                        className={ i === 0 ? "md:col-span-1 bg-gradient-to-br from-purple-400 to-purple-600 dark:from-purple-700 dark:to-purple-800 text-white" : i === 3 || i === 6 ? 'md:col-span-2' : '' }
+                        className={ item.className || (i === 3 || i === 6 ? 'md:col-span-2' : '') }
                     />
                 ))
             }
@@ -36,14 +36,14 @@ const items = [
                     alt="Avatar"
                     className="w-20 h-20 rounded-full border-4 border-black shadow-md"
                 />
-                <p className="mt-3 text-white font-semibold text-lg">Facundo Sagario</p>
+                <p className="mt-3 text-black font-semibold text-lg">Facundo Sagario</p>
                 <button className="mt-2 px-4 py-1 text-sm rounded-full bg-white text-purple-700 font-medium shadow hover:bg-purple-100 transition">
                     Editar Perfil
                 </button>
             </div>
         ),
         icon: <IconUserEdit className="h-4 w-4 text-black" />,
-        className: "md:col-span-1 bg-white text-black hover:shadow-[0_4px_20px_rgba(89,46,131,0.5)]"
+        className: "md:col-span-1 bg-white text-black hover:shadow-[0_4px_20px_#592e83]"
     },
     {
         title: "The Digital Revolution",
