@@ -31,6 +31,16 @@ const AnimatedBrand = ({ brands, autoplay = false }) => {
 
     return (
         <div className="mx-auto max-w-sm px-4 py-20 font-sans antialiased md:max-w-4xl md:px-8 lg:px-12">
+            {brands.length === 0 ? (
+              <div className="flex flex-col items-center justify-center h-60">
+                <p className="text-gray-500 dark:text-neutral-400 text-center text-sm">
+                  No hay marcas registradas aún.
+                </p>
+                <p className="text-gray-400 text-xs mt-1">
+                  Cuando agregues una marca, aparecerá aquí.
+                </p>
+              </div>
+            ) : (
             <div className="relative grid grid-cols-1 gap-20 md:grid-cols-2">
                 <div>
                     <div className="relative h-80 w-full">
@@ -131,6 +141,7 @@ const AnimatedBrand = ({ brands, autoplay = false }) => {
                     </div>
                 </div>
             </div>
+            )}
         </div>
     )
 };
