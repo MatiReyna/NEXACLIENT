@@ -13,7 +13,7 @@ const BentoGridDemo = () => {
                         description={ item.description }
                         header={ item.header }
                         icon={ item.icon }
-                        className={ i === 3 || i === 6 ? 'md:col-span-2' : '' }
+                        className={ i === 0 ? "md:col-span-1 bg-gradient-t-br from-purple-400 to-purple-600 dark:form-purple-700 dark:to-purple-800 text-white" : i === 3 || i === 6 ? 'md:col-span-2' : '' }
                     />
                 ))
             }
@@ -30,7 +30,7 @@ const items = [
         title: 'Perfil del Administrador',
         description: 'Visualiza tu perfil, edita tus datos personales y mantené tu información actualizada.',
         header: (
-            <div className="flex flex-col items-center justify-center w-full h-full rounded-xl bg-gradient-to-br from-purple-400 to-purple-600 dark:from-purpel-700 dark:to-purple-800">
+            <div className="flex flex-col items-center justify-center w-full h-full rounded-xl">
                 <img
                     src="https://picsum.photos/id/10/400/300"
                     alt="Avatar"
@@ -42,7 +42,8 @@ const items = [
                 </button>
             </div>
         ),
-        icon: <IconUserEdit className="h-4 w-4 text-black-500" />,
+        icon: <IconUserEdit className="h-4 w-4 text-white" />,
+        className: "md:col-span-1 bg-gradient-to-br from-purple-400 to-purple-600 dark:form-purple-700 dark:to-purple-800 text-white"
     },
     {
         title: "The Digital Revolution",
