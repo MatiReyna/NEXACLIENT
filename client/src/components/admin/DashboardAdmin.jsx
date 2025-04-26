@@ -101,9 +101,36 @@ const items = [
         // icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
     },
     {
-        title: "The Pursuit of Knowledge",
-        description: "Join the quest for understanding and enlightenment.",
-        header: <Skeleton />,
+        title: 'Valoraciones de la página',
+        description: 'Observa las opiniones recientes de los usuarios sobre los modelos y el servicio.',
+        header: (
+          <div className="flex flex-col gap-2 items-start justify-start w-full h-full rounded-xl bg-gray-100 dark:bg-neutral-800 p-4 overflow-y-auto">
+            {[
+              { name: "Lucía Gómez", comentario: "Excelente atención y diseños modernos.", rating: 5 },
+              { name: "Martín Herrera", comentario: "Buena calidad, aunque el proceso fue algo lento.", rating: 4 },
+              { name: "Sofía Ramírez", comentario: "Me encantó el modelo ecológico, ¡muy recomendable!", rating: 5 },
+            ].map((item, index) => (
+              <div key={index} className="w-full bg-white dark:bg-neutral-900 rounded-lg px-4 py-2 shadow-sm text-xs">
+                <div className="flex justify-between items-center mb-1">
+                  <span className="font-semibold text-neutral-700 dark:text-neutral-100">{item.name}</span>
+                  <div className="flex gap-1">
+                    {Array(5).fill(null).map((_, i) => (
+                      <span key={i} className={`h-2 w-2 rounded-full ${i < item.rating ? 'bg-green-500' : 'bg-gray-300 dark:bg-gray-700'}`}></span>
+                    ))}
+                  </div>
+                </div>
+                <p className="text-neutral-600 dark:text-neutral-300">{item.comentario}</p>
+              </div>
+            ))}
+            <div className="flex justify-center mt-3 w-full">
+              <button className="animate-bounce">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-neutral-500 dark:text-white">
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        ),
         icon: <IconArrowWaveRightUp className="h-4 w-4 text-neutral-500" />,
     },
     {
