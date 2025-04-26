@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import AdminLogin from './components/admin/AdminLogin';
 import AdminDashboard from './components/admin/AdminDashboard';
+import DashboardAdmin from './components/admin/DashboardAdmin';
 import Header from './components/layout/header';
 import HeroSection from './components/sections/hero-section';
 import BenefitsSection from './components/sections/benefits-section';
@@ -49,7 +50,7 @@ const App = () => {
         }
       />
       <Route path="/administrador" element={<AdminLogin />} />
-      <Route path="/administrador/dashboard" element={<AdminDashboard />} />
+      <Route path="/administrador/dashboard" element={<DashboardAdmin />} />
     </Routes>
   )
 };
