@@ -1,13 +1,14 @@
 import React from 'react';
 import { BentoGrid, BentoGridItem } from '../ui/bento-grid';
 import { IconArrowWaveRightUp, IconBoxAlignRightFilled, IconBoxAlignTopLeft, IconUserEdit, IconFileBroken, IconSignature, IconTableColumn, IconClipboardCopy } from '@tabler/icons-react';
+import { AnimatedBrand } from '../ui/animated-brand'; 
 
 const BentoGridDemo = () => {
     const [showRatingsModal, setShowRatingsModal] = React.useState(false);
 
     return (
         <>
-        <BentoGrid className="max-w-4xl mx-auto">
+        <BentoGrid className="max-w-6xl mx-auto px-4">
             {
                 items.map((item, i) => (
                     <BentoGridItem
@@ -65,9 +66,9 @@ const items = [
         className: "md:col-span-1 bg-white text-black hover:shadow"
     },
     {
-        title: "The Digital Revolution",
-        description: "Dive into the transformative power of technology.",
-        header: <Skeleton />,
+        title: 'Gestión de Marcas',
+        description: 'Visualizá, editá o eliminá las marcas asociadas a tu catálogo de casas.',
+        header: <AnimatedBrand />,
         icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
     },
     {
