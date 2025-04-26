@@ -3,8 +3,29 @@ import { BentoGrid, BentoGridItem } from '../ui/bento-grid';
 import { IconArrowWaveRightUp, IconBoxAlignRightFilled, IconBoxAlignTopLeft, IconUserEdit, IconFileBroken, IconSignature, IconTableColumn, IconClipboardCopy } from '@tabler/icons-react';
 import AnimatedBrand from '../ui/animated-brand';
 
-const BentoGridDemo = () => {
+const DashboardAdmin = () => {
     const [showRatingsModal, setShowRatingsModal] = React.useState(false);
+
+    const brands = [
+        {
+          id: 1,
+          name: "Nexa",
+          src: "https://upload.wikimedia.org/wikipedia/commons/4/4e/Nexa_logo.png",
+          status: "active",
+        },
+        {
+          id: 2,
+          name: "EcoHomes",
+          src: "https://upload.wikimedia.org/wikipedia/commons/1/17/Eco_logo.png",
+          status: "inactive",
+        },
+        {
+          id: 3,
+          name: "Urbania",
+          src: "https://upload.wikimedia.org/wikipedia/commons/8/8e/Urbania_logo.png",
+          status: "active",
+        },
+      ];
 
     return (
         <>
@@ -70,7 +91,7 @@ const items = [
         description: 'Visualizá, editá o eliminá las marcas asociadas a tu catálogo de casas.',
         header: (
             <div className="w-full h-full">
-              <AnimatedBrand />
+              <AnimatedBrand brands={brands} />
             </div>
         ),
         icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
@@ -162,4 +183,4 @@ const items = [
     }
 ];
 
-export default BentoGridDemo;
+export default DashboardAdmin;

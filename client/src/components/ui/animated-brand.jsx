@@ -31,7 +31,7 @@ const AnimatedBrand = ({ brands, autoplay = false }) => {
 
     return (
         <div className="mx-auto max-w-sm px-4 py-20 font-sans antialiased md:max-w-4xl md:px-8 lg:px-12">
-            {brands.length === 0 ? (
+            {!brands || brands.length === 0 ? (
               <div className="flex flex-col items-center justify-center h-60">
                 <p className="text-gray-500 dark:text-neutral-400 text-center text-sm">
                   No hay marcas registradas aún.
