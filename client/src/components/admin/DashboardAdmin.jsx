@@ -69,13 +69,15 @@ const items = [
                         { name: 'Ana Pérez', email: 'ana@email.com', modelo: 'Casa Tradicional' },
                         { name: 'Carlos Méndez', email: 'carlos@email.com', modelo: 'Casa Natural' },
                     ].map(({ name, email, modelo }, i) => (
-                        <div key={ i } className="flex flex-col bg-white dark:bg-neutral-900 rounded-lg p-2 shadow-sm">
-                            <div className="flex items-center justify-between">
-                                <span className="text-xs font-medium text-neutral-800 dark:text-neutral-100">{ name }</span>
-                                <span className="text-xs text-purple-600 font-semibold bg-purple-100 px-2 py-0.5 rounded-full">{ modelo }</span>
+                        <div key={ i } className="grid grid-cols-3 items-center bg-white dark:bg-neutral-900 rounded-lg px-3 py-2 shadow-sm text-xs gap-2">
+                            <div className="flex flex-col">
+                                <span className="font-medium text-neutral-800 dark:text-neutral-100">{name}</span>
+                                <span className="text-neutral-500 dark:text-neutral-400">{email}</span>
+                            </div>
+                            <span className="text-center text-purple-600 font-semibold bg-purple-100 px-2 py-0.5 rounded-full">{modelo}</span>
+                            <div className="flex justify-end">
                                 <span className="w-2 h-2 rounded-full bg-green-500"></span>
                             </div>
-                            <span className="text-[10px] text-neutral-500 dark:text-neutral-400">{email}</span>
                         </div>
                     ))}
                     <div className="flex justify-center mt-3 w-full">
