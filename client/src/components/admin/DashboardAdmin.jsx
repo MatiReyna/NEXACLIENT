@@ -13,7 +13,7 @@ const BentoGridDemo = () => {
                         description={ item.description }
                         header={ item.header }
                         icon={ item.icon }
-                        className={ i === 0 ? "md:col-span-1 bg-gradient-t-br from-purple-400 to-purple-600 dark:form-purple-700 dark:to-purple-800 text-white" : i === 3 || i === 6 ? 'md:col-span-2' : '' }
+                        className={ i === 0 ? "md:col-span-1 bg-gradient-to-br from-purple-400 to-purple-600 dark:from-purple-700 dark:to-purple-800 text-white" : i === 3 || i === 6 ? 'md:col-span-2' : '' }
                     />
                 ))
             }
