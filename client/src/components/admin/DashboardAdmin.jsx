@@ -1,6 +1,6 @@
 import React from 'react';
 import { BentoGrid, BentoGridItem } from '../ui/bento-grid';
-import { IconArrowWaveRightUp, IconBoxAlignRightFilled, IconBoxAlignTopLeft, IconClipboardCopy, IconFileBroken, IconSignature, IconTableColumn, } from '@tabler/icons-react';
+import { IconArrowWaveRightUp, IconBoxAlignRightFilled, IconBoxAlignTopLeft, IconUserEdit, IconFileBroken, IconSignature, IconTableColumn, } from '@tabler/icons-react';
 
 const BentoGridDemo = () => {
     return (
@@ -30,7 +30,7 @@ const items = [
         title: 'Perfil del Administrador',
         description: 'Visualiza tu perfil, edita tus datos personales y mantené tu información actualizada.',
         header: (
-            <div className="flex flex-col items-center justify-center w-full h-full rounded-xl bg-gradient-to-br from-purple-200 to-purple-300 dark:from-purpel-700 dark:to-purple-800">
+            <div className="flex flex-col items-center justify-center w-full h-full rounded-xl bg-gradient-to-br from-purple-400 to-purple-600 dark:from-purpel-700 dark:to-purple-800">
                 <img
                     src="https://picsum.photos/id/10/400/300"
                     alt="Avatar"
@@ -42,7 +42,7 @@ const items = [
                 </button>
             </div>
         ),
-        icon: <IconClipboardCopy className="h-4 w-4 text-purple-500" />,
+        icon: <IconUserEdit className="h-4 w-4 text-black-500" />,
     },
     {
         title: "The Digital Revolution",
