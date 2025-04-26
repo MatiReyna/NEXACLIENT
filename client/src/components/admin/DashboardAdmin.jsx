@@ -133,13 +133,12 @@ const items = [
                 Valoración media basada en las opiniones de los usuarios.
               </p>
             </div>
-            <div className="flex justify-center mt-3 w-full">
-              <button onClick={() => setShowRatingsModal(true)} className="transition-transform hover:scale-105">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-neutral-500 dark:text-white">
-                  <path d="M6 9l6 6 6-6" />
-                </svg>
-              </button>
-            </div>
+            <button
+              onClick={() => setShowRatingsModal(true)}
+              className="text-sm mt-3 px-4 py-1 bg-purple-600 text-white rounded-full hover:bg-purple-700 transition"
+            >
+              Ver más
+            </button>
           </div>
         ),
         icon: <IconArrowWaveRightUp className="h-4 w-4 text-neutral-500" />,
