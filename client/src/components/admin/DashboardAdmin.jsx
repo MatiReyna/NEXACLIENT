@@ -58,11 +58,10 @@ const items = [
         icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
     },
     {
-        // title: 'Solicitudes de contacto',
+        title: 'Solicitudes de contacto',
         description: 'Gestiona fácilmente las solicitudes de contacto recibidas por modelos de casas.',
         header: (
             <div className="flex flex-col items-start justify-start w-full h-full rounded-xl bg-gray-100 p-4 dark:bg-neutral-800">
-                <p className="text-sm font-semibold text-neutral-700 dark:text-neutral-200 mb-2">Solicitudes de contacto</p>
                 <div className="w-full flex flex-col gap-2">
                     {[
                         { name: 'Juan Pérez', email: 'juan@email.com', modelo: 'Casa Moderno' },
