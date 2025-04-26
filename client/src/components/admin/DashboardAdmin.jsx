@@ -1,7 +1,7 @@
 import React from 'react';
 import { BentoGrid, BentoGridItem } from '../ui/bento-grid';
 import { IconArrowWaveRightUp, IconBoxAlignRightFilled, IconBoxAlignTopLeft, IconUserEdit, IconFileBroken, IconSignature, IconTableColumn, IconClipboardCopy } from '@tabler/icons-react';
-import { AnimatedBrand } from '../ui/animated-brand'; 
+import AnimatedBrand from '../ui/animated-brand'; 
 
 const BentoGridDemo = () => {
     const [showRatingsModal, setShowRatingsModal] = React.useState(false);
