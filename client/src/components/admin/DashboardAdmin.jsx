@@ -3,7 +3,10 @@ import { BentoGrid, BentoGridItem } from '../ui/bento-grid';
 import { IconArrowWaveRightUp, IconBoxAlignRightFilled, IconBoxAlignTopLeft, IconUserEdit, IconFileBroken, IconSignature, IconTableColumn, IconClipboardCopy } from '@tabler/icons-react';
 
 const BentoGridDemo = () => {
+    const [showRatingsModal, setShowRatingsModal] = React.useState(false);
+
     return (
+        <>
         <BentoGrid className="max-w-4xl mx-auto">
             {
                 items.map((item, i) => (
@@ -18,6 +21,22 @@ const BentoGridDemo = () => {
                 ))
             }
         </BentoGrid>
+        {showRatingsModal && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-40 backdrop-blur-sm">
+            <div className="bg-white dark:bg-neutral-900 rounded-lg shadow-lg w-full max-w-lg p-6">
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-lg font-bold text-gray-800 dark:text-white">Valoraciones de usuarios</h2>
+                <button onClick={() => setShowRatingsModal(false)} className="text-gray-500 hover:text-gray-800 dark:hover:text-white">&times;</button>
+              </div>
+              <ul className="space-y-3 text-sm text-gray-700 dark:text-neutral-300">
+                <li className="border-b pb-2">“Muy buena atención y excelente calidad de la casa” <span className="text-green-500">★ 5</span></li>
+                <li className="border-b pb-2">“Me encantó el diseño moderno, pero tardaron un poco en responder” <span className="text-yellow-500">★ 3</span></li>
+                <li className="border-b pb-2">“No me convenció la atención, esperaba más profesionalismo” <span className="text-red-500">★ 2</span></li>
+              </ul>
+            </div>
+          </div>
+        )}
+        </>
     )
 };
 
@@ -104,26 +123,18 @@ const items = [
         title: 'Valoraciones de la página',
         description: 'Observa las opiniones recientes de los usuarios sobre los modelos y el servicio.',
         header: (
-          <div className="flex flex-col gap-2 items-start justify-start w-full h-full rounded-xl bg-gray-100 dark:bg-neutral-800 p-4 overflow-y-auto">
-            {[
-              { name: "Lucía Gómez", comentario: "Excelente atención y diseños modernos.", rating: 5 },
-              { name: "Martín Herrera", comentario: "Buena calidad, aunque el proceso fue algo lento.", rating: 4 },
-              { name: "Sofía Ramírez", comentario: "Me encantó el modelo ecológico, ¡muy recomendable!", rating: 5 },
-            ].map((item, index) => (
-              <div key={index} className="w-full bg-white dark:bg-neutral-900 rounded-lg px-4 py-2 shadow-sm text-xs">
-                <div className="flex justify-between items-center mb-1">
-                  <span className="font-semibold text-neutral-700 dark:text-neutral-100">{item.name}</span>
-                  <div className="flex gap-1">
-                    {Array(5).fill(null).map((_, i) => (
-                      <span key={i} className={`h-2 w-2 rounded-full ${i < item.rating ? 'bg-green-500' : 'bg-gray-300 dark:bg-gray-700'}`}></span>
-                    ))}
-                  </div>
-                </div>
-                <p className="text-neutral-600 dark:text-neutral-300">{item.comentario}</p>
+          <div className="flex flex-col items-start justify-start w-full h-full rounded-xl bg-gray-100 dark:bg-neutral-800 p-4">
+            <div className="w-full flex flex-col gap-2">
+              <span className="font-semibold text-sm text-neutral-700 dark:text-neutral-100">Promedio de valoraciones</span>
+              <div className="w-full bg-gray-300 dark:bg-gray-700 h-3 rounded-full relative overflow-hidden">
+                <div className="absolute left-0 top-0 h-3 rounded-full bg-green-500" style={{ width: '90%' }}></div>
               </div>
-            ))}
+              <p className="text-xs text-neutral-600 dark:text-neutral-300 mt-2">
+                Valoración media basada en las opiniones de los usuarios.
+              </p>
+            </div>
             <div className="flex justify-center mt-3 w-full">
-              <button className="animate-bounce">
+              <button onClick={() => setShowRatingsModal(true)} className="transition-transform hover:scale-105">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-neutral-500 dark:text-white">
                   <path d="M6 9l6 6 6-6" />
                 </svg>
