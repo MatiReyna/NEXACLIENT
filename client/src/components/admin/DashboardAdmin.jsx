@@ -64,20 +64,37 @@ const items = [
             <div className="flex flex-col items-start justify-start w-full h-full rounded-xl bg-gray-100 p-4 dark:bg-neutral-800">
                 <p className="text-sm font-semibold text-neutral-700 dark:text-neutral-200 mb-2">Últimas solicitudes</p>
                 <div className="w-full flex flex-col gap-2">
-                    <div className="flex items-center justify-between bg-white dark:bg-neutral-900 rounded-lg p-2 shadow-sm">
-                        <span className="text-xs font-medium text-neutral-800 dark:text-neutral-100">Juan Pérez</span>
-                        <span className="text-xs text-purple-600 font-semibold bg-purple-100 px-2 py-0.5 rounded-full">Casa Moderno</span>
-                        <span className="w-2 h-2 rounded-full bg-green-500"></span>
-                    </div>
-                    <div className="flex items-center justify-between bg-white dark:bg-neutral-900 rounded-lg p-2 shadow-sm">
-                        <span className="text-xs font-medium text-neutral-800 dark:text-neutral-100">Ana Pérez</span>
-                        <span className="text-xs text-purple-600 font-semibold bg-purple-100 px-2 py-0.5 rounded-full">Casa Tradicional</span>
-                        <span className="w-2 h-2 rounded-full bg-green-500"></span>
-                    </div>
-                    <div className="flex items-center justify-between bg-white dark:bg-neutral-900 rounded-lg p-2 shadow-sm">
-                        <span className="text-xs font-medium text-neutral-800 dark:text-neutral-100">Carlos Méndez</span>
-                        <span className="text-xs text-purple-600 font-semibold bg-purple-100 px-2 py-0.5 rounded-full">Casa Natural</span>
-                        <span className="w-2 h-2 rounded-full bg-green-500"></span>
+                    {[
+                        { name: 'Juan Pérez', email: 'juan@email.com', modelo: 'Casa Moderno' },
+                        { name: 'Ana Pérez', email: 'ana@email.com', modelo: 'Casa Tradicional' },
+                        { name: 'Carlos Méndez', email: 'carlos@email.com', modelo: 'Casa Natural' },
+                    ].map(({ name, email, modelo }, i) => (
+                        <div key={ i } className="flex flex-col bg-white dark:bg-neutral-900 rounded-lg p-2 shadow-sm">
+                            <div className="flex items-center justify-between">
+                                <span className="text-xs font-medium text-neutral-800 dark:text-neutral-100">{ name }</span>
+                                <span className="text-xs text-purple-600 font-semibold bg-purple-100 px-2 py-0.5 rounded-full">{ modelo }</span>
+                                <span className="w-2 h-2 rounded-full bg-green-500"></span>
+                            </div>
+                            <span className="text-[10px] text-neutral-500 dark:text-neutral-400">{email}</span>
+                        </div>
+                    ))}
+                    <div className="flex justify-center mt-3 w-full">
+                        <button className="animate-bounce">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="2"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                className="text-neutral-500 dark:text-white"
+                            >
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </button>
                     </div>
                 </div>
             </div>
