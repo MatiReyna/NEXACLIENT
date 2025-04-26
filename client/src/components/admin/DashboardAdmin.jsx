@@ -34,7 +34,7 @@ const items = [
                 <img
                     src="https://picsum.photos/id/10/400/300"
                     alt="Avatar"
-                    className="w-20 h-20 rounded-full border-4 border-white shadow-md"
+                    className="w-20 h-20 rounded-full border-4 border-black shadow-md"
                 />
                 <p className="mt-3 text-white font-semibold text-lg">Facundo Sagario</p>
                 <button className="mt-2 px-4 py-1 text-sm rounded-full bg-white text-purple-700 font-medium shadow hover:bg-purple-100 transition">
@@ -42,8 +42,8 @@ const items = [
                 </button>
             </div>
         ),
-        icon: <IconUserEdit className="h-4 w-4 text-white" />,
-        className: "md:col-span-1 bg-gradient-to-br from-purple-400 to-purple-600 dark:form-purple-700 dark:to-purple-800 text-white"
+        icon: <IconUserEdit className="h-4 w-4 text-black" />,
+        className: "md:col-span-1 bg-white text-black hover:shadow-[0_4px_20px_rgba(89,46,131,0.5)]"
     },
     {
         title: "The Digital Revolution",
