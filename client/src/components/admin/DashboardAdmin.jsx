@@ -12,18 +12,21 @@ const DashboardAdmin = () => {
           name: "Nexa",
           src: "https://upload.wikimedia.org/wikipedia/commons/4/4e/Nexa_logo.png",
           status: "active",
+          quote: "Calidad e innovación en viviendas modulares."
         },
         {
           id: 2,
           name: "EcoHomes",
           src: "https://upload.wikimedia.org/wikipedia/commons/1/17/Eco_logo.png",
           status: "inactive",
+          quote: "Casas ecológicas para un futuro sustentable."
         },
         {
           id: 3,
           name: "Urbania",
           src: "https://upload.wikimedia.org/wikipedia/commons/8/8e/Urbania_logo.png",
           status: "active",
+          quote: "Urbanismo moderno y diseño vanguardista."
         },
       ];
 

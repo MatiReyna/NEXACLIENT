@@ -104,25 +104,14 @@ const AnimatedBrand = ({ brands, autoplay = false }) => {
                         <p className="text-sm text-gray-500 dark:text-neutral-500">
                             { brands[active].status }
                         </p>
-                        <motion.p className="mt-8 text-lg text-gray-500 dark:text-neutral-300">
-                            {
-                                brands[active].description.split(' ').map((word, index) => (
-                                    <motion.span
-                                        key={ index }
-                                        initial={{ filter: "blur(10px)", opacity: 0, y: 5 }}
-                                        animate={{ filter: "blur(0px)", opacity: 1, y: 0 }}
-                                        transition={{
-                                            duration: 0.2,
-                                            ease: "easeInOut",
-                                            delay: 0.02 * index
-                                        }}
-                                        className="inline-block"
-                                    >
-                                         { word }&nbsp;
-                                    </motion.span>
-                                ))
-                            }
-                        </motion.p>
+                        <div className="mt-8 flex items-center gap-2">
+                          <button className="text-sm bg-blue-500 text-white px-3 py-1 rounded-md hover:bg-blue-600 transition">
+                            Editar
+                          </button>
+                          <button className="text-sm bg-red-500 text-white px-3 py-1 rounded-md hover:bg-red-600 transition">
+                            Eliminar
+                          </button>
+                        </div>
                     </motion.div>
 
                     <div className="flex gap-4 pt-12 md:pt-0">
