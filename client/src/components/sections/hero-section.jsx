@@ -7,7 +7,7 @@ const HeroSection = () => {
         <section id="inicio" className="relative">
             <div className="absolute inset-0 z-0">
                 <img
-                    src= { heroImage }  // '../../assets/hero/image.png'
+                    src={ heroImage }
                     alt="Casa prefabricada moderna"
                     className="object-cover w-full h-full brightness-[0.7]"
                 />
@@ -18,7 +18,6 @@ const HeroSection = () => {
                         NEXA Constructora Desarrollista
                     </h1>
                     <p className="mx-auto max-w-[700px] text-white md:text-xl">
-                        {/* Construimos proyectos inmobiliarios de alta calidad, con diseños innovadores y sostenibles. */}
                         Con más de 150 empleados especializados en logística, administración, producción, arquitectura y ventas,
                         en NEXA ofrecemos un equipo comprometido, comunicativo, complementario y confiable.
                     </p>

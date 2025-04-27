@@ -52,7 +52,6 @@ const ModelDetails = ({ isOpen, onClose, model }) => {
     return (
         <Modal isOpen={ isOpen } onClose={ onClose } className="p-0 overflow-hidden">
             <div className="flex flex-col lg:flex-row h-full">
-                {/* Sección de imágenes */}
                 <div className="relative lg:w-1/2">
                     <div className="aspect-video w-full overflow-hidden bg-gray-100">
                         <img
@@ -106,7 +105,6 @@ const ModelDetails = ({ isOpen, onClose, model }) => {
                     </div>
                 </div>
 
-                {/* Sección de información */}
                 <div className="lg:w-1/2 p-6 overflow-y-auto max-h-[70vh] lg:max-h-[90vh]">
                     <h2 className="text-2xl font-bold text-gray-900">{ model.title }</h2>
                     <p className="text-sm text-gray-500 mt-1">Ref: NEXA-{ model.title.replace(/\s+/g, '').toLowerCase() }-{ Math.floor(Math.random() * 1000) }</p>
@@ -133,7 +131,6 @@ const ModelDetails = ({ isOpen, onClose, model }) => {
                             </div>
                             <div className="flex flex-col">
                                 <span className="text-sm text-gray-500">Baños</span>
-                                {/* <span className="font-medium">{ model.rooms.split('-')[0] } completos</span> */}
                                 <span className="font-medium">{ model.bathrooms } completos</span>
                             </div>
                             <div className="flex flex-col">

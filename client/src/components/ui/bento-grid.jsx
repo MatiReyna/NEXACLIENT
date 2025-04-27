@@ -10,9 +10,7 @@ const BentoGrid = ({ className, children }) => {
 
 const BentoGridItem = ({ className, title, description, header, icon }) => {
     return (
-        <div className={ cn("group/bento shadow-input row-span-1 flex flex-col justify-between space-y-4 rounded-xl border border-neutral-200 bg-white p-4 transition duration-200 hover:shadow-xl dark:border-white/[0.2] dark:bg-black dark:shadow-none",
-            className) }
-        >
+        <div className={ cn("group/bento shadow-input row-span-1 flex flex-col justify-between space-y-4 rounded-xl border border-neutral-200 bg-white p-4 transition duration-200 hover:shadow-xl dark:border-white/[0.2] dark:bg-black dark:shadow-none", className) }>
             { header }
             <div className="transition duration-200 group-hover/bento:translate-x-2">
                 { icon }

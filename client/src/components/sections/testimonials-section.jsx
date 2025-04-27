@@ -47,7 +47,7 @@ const TestimonialsSection = () => {
                                         <div className="flex items-center space-x-4">
                                             <img
                                                 src={ testimonial.image }
-                                                alt={ `Foto de ${ testimonial.name }` }
+                                                alt={`Foto de ${ testimonial.name }`}
                                                 className="h-12 w-12 rounded-full object-cover shadow-sm transition-transform duration-300 group-hover:scale-105"
                                             />
                                             <div>

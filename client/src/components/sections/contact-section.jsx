@@ -6,7 +6,7 @@ import mapa from '../../assets/contact/mapa.png';
 const ContactSection = () => {
 
     const [ showConfirmation, setShowConfirmation ] = useState(false);
-    
+
     return (
         <section id="contacto" className="bg-muted py-16 md:py-24 rounded-t-3xl">
             <div className="container">
@@ -14,9 +14,6 @@ const ContactSection = () => {
                     <div className="space-y-6">
                         <div className="space-y-2">
                             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Contacta con Nosotros</h2>
-                            {/* <p className="text-muted-foreground">
-                                Estamos aquí para responder a todas tus preguntas y ayudarte a hacer realidad tu proyecto.
-                            </p> */}
                             <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
                                 Estamos aquí para responder a todas tus preguntas y ayudarte a hacer realidad tu proyecto.
                             </p>
@@ -45,10 +42,10 @@ const ContactSection = () => {
                     </div>
                     <div className="rounded-2xl border bg-background p-6 shadow-sm transform transition-all duration-300 hover:shadow-lg">
                         <h3 className="mb-4 text-xl font-bold">Solicita Información</h3>
-                        <form className="space-y-4" onSubmit={(e) => {
+                        <form className="space-y-4" onSubmit={ (e) => {
                             e.preventDefault();
                             setShowConfirmation(true)
-                        }}>
+                        } }>
                             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                                 <div className="space-y-2">
                                     <label
@@ -169,7 +166,7 @@ const ContactSection = () => {
                             <p className="text-sm text-muted-foreground">
                                 Gracias por contactarnos. Un asesor de NEXA Constructora se comunicará con vos a la brevedad
                             </p>
-                            <Button onClick={() => setShowConfirmation(false)} className="mt-2 w-full">
+                            <Button onClick={ () => setShowConfirmation(false) } className="mt-2 w-full">
                                 Cerrar
                             </Button>
                         </div>

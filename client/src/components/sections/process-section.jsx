@@ -43,7 +43,6 @@ const ProcessSection = () => {
                                     { item.step }
                                 </div>
                                 <h3 className="text-xl font-bold">{ item.title }</h3>
-                                {/* <p className="text-muted-foreground">{ item.description }</p> */}
                                 <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">{ item.description }</p>
                                 {
                                     item.step < 4 && (
