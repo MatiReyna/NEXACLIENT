@@ -86,7 +86,7 @@ const DashboardAdmin = () => {
           </div>
         </div>
       ),
-      className: "md:col-span-1 bg-white text-black hover:shadow"  // Ver si rompe.
+      // className: "md:col-span-1 bg-white text-black hover:shadow"  // Ver si rompe.
     },
     {
       title: 'Equipo NEXA',
@@ -149,7 +149,7 @@ const DashboardAdmin = () => {
           </div>
         </div>
       ),
-      className: "md:col-span-1 bg-white text-black hover:shadow-lg"  // Ver si rompe.
+      // className: "md:col-span-1 bg-white text-black hover:shadow-lg"  // Ver si rompe.
     },
     {
       title: 'Valoraciones de la página',
@@ -173,7 +173,7 @@ const DashboardAdmin = () => {
           </button>
         </div>
       ),
-      className: "md:col-span-1 bg-white text-black hover:shadow-lg"  // Ver si rompe.
+      // className: "md:col-span-1 bg-white text-black hover:shadow-lg"  // Ver si rompe.
     },
     {
       title: 'Gestión de Modelos',
