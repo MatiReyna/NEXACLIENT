@@ -191,10 +191,10 @@ const DashboardAdmin = () => {
           header: (
             <div className="flex flex-col justify-between w-full h-full rounded-xl bg-gray-100 dark:bg-neutral-800 p-6">
               <div className="text-center">
-                <h3 className="text-lg font-bold text-purple-700">Modelos actuales</h3>
-                <p className="text-sm text-gray-600 dark:text-neutral-400 mt-2">
+                <h3 className="text-lg font-bold text-purple-700">Modelos</h3>
+                {/* <p className="text-sm text-gray-600 dark:text-neutral-400 mt-2">
                   Gestioná los modelos de casas disponibles en la plataforma.
-                </p>
+                </p> */}
               </div>
               <div className="flex flex-col items-start text-sm text-gray-700 dark:text-neutral-300 mt-6 gap-1">
                 <span>🏠 Modelos actuales: <strong>9 Modelos</strong></span>
@@ -210,8 +210,8 @@ const DashboardAdmin = () => {
               </div>
             </div>
           ),
-          icon: <IconBoxAlignTopLeft className="h-4 w-4 text-purple-500" />,
-          className: "md:col-span-2 bg-white text-black hover:shadow-lg",
+        //   icon: <IconBoxAlignTopLeft className="h-4 w-4 text-purple-500" />,
+          className: "md:col-span-1 bg-white text-black hover:shadow-lg",
         },
         {
             title: "The Spirit of Adventure",
