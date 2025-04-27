@@ -34,6 +34,27 @@ const DashboardAdmin = () => {
         },
       ];
 
+      const equipoNexa = [
+        {
+          id: 1,
+          name: "Facundo Sagario",
+          role: "CEO",
+          image: "https://images.unsplash.com/photo-1595152772835-219674b2a8a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+        },
+        {
+          id: 2,
+          name: "Matias Reyna",
+          role: "Developer",
+          image: "https://images.unsplash.com/photo-1603415526960-f8f0b4fd2b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+        },
+        {
+          id: 3,
+          name: "Nicolas Sagario",
+          role: "Manager Sale",
+          image: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+        }
+      ];
+
     const items = [
         {
             title: 'Perfil del Administrador',
@@ -76,10 +97,30 @@ const DashboardAdmin = () => {
             
         },
         {
-            title: "The Art of Design",
-            description: "Discover the beauty of thoughtful and functional design.",
-            header: <Skeleton />,
-            icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
+            title: "Equipo NEXA",
+            description: "Conoce a los integrantes que hacen posible nuestro éxito.",
+            header: (
+              <div className="flex flex-col items-center justify-center w-full h-full p-4">
+                <div className="flex space-x-4">
+                  {equipoNexa.slice(0, 3).map((member) => (
+                    <div key={member.id} className="flex flex-col items-center">
+                      <img
+                        src={member.image}
+                        alt={member.name}
+                        className="w-16 h-16 rounded-full object-cover border-2 border-purple-500"
+                      />
+                      <p className="mt-2 text-xs font-semibold text-neutral-700">{member.name}</p>
+                      <span className="text-[10px] text-neutral-500">{member.role}</span>
+                    </div>
+                  ))}
+                </div>
+                <button className="mt-4 text-xs px-3 py-1 bg-purple-600 hover:bg-purple-700 text-white rounded-full animate-bounce">
+                  Ver Todos
+                </button>
+              </div>
+            ),
+            icon: <IconSignature className="h-4 w-4 text-purple-500" />,
+            className: "md:col-span-1 bg-white text-black hover:shadow-lg"
         },
         {
             title: 'Solicitudes de contacto',
