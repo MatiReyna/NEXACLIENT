@@ -1,4 +1,4 @@
-import { IconArrowLeft, IconArrowRight } from '@tabler/icons-react';
+import { IconArrowLeft, IconArrowRight, IconPencil, IconTrash } from '@tabler/icons-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
@@ -101,15 +101,15 @@ const AnimatedBrand = ({ brands, autoplay = false }) => {
                         <h3 className="text-2xl font-bold text-black dark:text-white">
                             { brands[active].name }
                         </h3>
-                        <p className="text-sm text-gray-500 dark:text-neutral-500">
-                            { brands[active].status }
-                        </p>
+                        <span className={`text-sm font-semibold ${brands[active].status === "Activo" ? "text-green-500" : "text-red-500"}`}>
+                            {brands[active].status}
+                        </span>
                         <div className="mt-8 flex items-center gap-2">
-                          <button className="text-sm bg-blue-500 text-white px-3 py-1 rounded-md hover:bg-blue-600 transition">
-                            Editar
+                          <button className="p-2 bg-blue-100 text-blue-600 rounded-full hover:bg-blue-200 transition" title="Editar">
+                            <IconPencil className="h-5 w-5" />
                           </button>
-                          <button className="text-sm bg-red-500 text-white px-3 py-1 rounded-md hover:bg-red-600 transition">
-                            Eliminar
+                          <button className="p-2 bg-red-100 text-red-600 rounded-full hover:bg-red-200 transition" title="Eliminar">
+                            <IconTrash className="h-5 w-5" />
                           </button>
                         </div>
                     </motion.div>

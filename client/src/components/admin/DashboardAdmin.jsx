@@ -3,6 +3,10 @@ import { BentoGrid, BentoGridItem } from '../ui/bento-grid';
 import { IconArrowWaveRightUp, IconBoxAlignRightFilled, IconBoxAlignTopLeft, IconUserEdit, IconFileBroken, IconSignature, IconTableColumn, IconClipboardCopy } from '@tabler/icons-react';
 import AnimatedBrand from '../ui/animated-brand';
 
+import marca1 from '../../../src/assets/logos/marca1.svg';
+import marca2 from '../../../src/assets/logos/marca2.svg';
+import marca3 from '../../../src/assets/logos/marca3.svg';
+
 const DashboardAdmin = () => {
     const [showRatingsModal, setShowRatingsModal] = React.useState(false);
 
@@ -10,21 +14,21 @@ const DashboardAdmin = () => {
         {
           id: 1,
           name: "Nexa",
-          src: "https://upload.wikimedia.org/wikipedia/commons/4/4e/Nexa_logo.png",
+          src: marca1,
           status: "active",
           quote: "Calidad e innovación en viviendas modulares."
         },
         {
           id: 2,
           name: "EcoHomes",
-          src: "https://upload.wikimedia.org/wikipedia/commons/1/17/Eco_logo.png",
+          src: marca2,
           status: "inactive",
           quote: "Casas ecológicas para un futuro sustentable."
         },
         {
           id: 3,
           name: "Urbania",
-          src: "https://upload.wikimedia.org/wikipedia/commons/8/8e/Urbania_logo.png",
+          src: marca3,
           status: "active",
           quote: "Urbanismo moderno y diseño vanguardista."
         },
