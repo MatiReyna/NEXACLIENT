@@ -43,7 +43,7 @@ const AnimatedBrand = ({ brands, autoplay = false }) => {
             ) : (
             <div className="relative grid grid-cols-1 gap-20 md:grid-cols-2">
                 <div>
-                    <div className="relative h-80 w-full">
+                    <div className="relative h-56 w-full overflow-hidden">
                         <AnimatePresence>
                             {
                                 brands.map((brand, index) => (
@@ -81,7 +81,7 @@ const AnimatedBrand = ({ brands, autoplay = false }) => {
                                             width={ 500 }
                                             height={ 500 }
                                             draggable={ false }
-                                            className="h-full w-full rounded-3xl object-cover object-center"
+                                            className="h-full w-full rounded-3xl object-contain object-center"
                                         />
                                     </motion.div>
                                 ))
@@ -101,7 +101,7 @@ const AnimatedBrand = ({ brands, autoplay = false }) => {
                         <h3 className="text-2xl font-bold text-black dark:text-white">
                             { brands[active].name }
                         </h3>
-                        <span className={`text-sm font-semibold ${brands[active].status === "Activo" ? "text-green-500" : "text-red-500"}`}>
+                        <span className={`inline-block rounded-full px-3 py-1 text-xs font-semibold ${brands[active].status === "Activo" ? "bg-green-100 text-green-800" : "bg-red-100 text-red-800"}`}>
                             {brands[active].status}
                         </span>
                         <div className="mt-8 flex items-center gap-2">
