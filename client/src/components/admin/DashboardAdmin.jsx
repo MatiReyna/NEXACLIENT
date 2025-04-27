@@ -55,14 +55,25 @@ const DashboardAdmin = () => {
             className: "md:col-span-1 bg-white text-black hover:shadow"
         },
         {
+            // title: 'Gestión de Marcas',
+            // description: 'Visualizá, editá o eliminá las marcas asociadas a tu catálogo de casas.',
+            // header: (
+            //     <div className="w-full h-full">
+            //       <AnimatedBrand brands={brands} />
+            //     </div>
+            // ),
+            // icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
             title: 'Gestión de Marcas',
             description: 'Visualizá, editá o eliminá las marcas asociadas a tu catálogo de casas.',
             header: (
-                <div className="w-full h-full">
-                  <AnimatedBrand brands={brands} />
+                <div className="w-full h-full flex items-center justify-center overflow-hidden p-2">
+                    <div className="max-w-full w-full">
+                        <AnimatedBrand brands={brands} />
+                    </div>
                 </div>
             ),
-            icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
+            // icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
+            
         },
         {
             title: "The Art of Design",
