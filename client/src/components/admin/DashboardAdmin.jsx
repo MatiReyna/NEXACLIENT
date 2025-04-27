@@ -2,6 +2,7 @@ import React from 'react';
 import { BentoGrid, BentoGridItem } from '../ui/bento-grid';
 import { IconArrowWaveRightUp, IconBoxAlignRightFilled, IconBoxAlignTopLeft, IconUserEdit, IconFileBroken, IconSignature, IconTableColumn, IconClipboardCopy } from '@tabler/icons-react';
 import AnimatedBrand from '../ui/animated-brand';
+import AnimatedTooltip from '../ui/animated-tooltip';
 
 import marca1 from '../../../src/assets/logos/marca1.svg';
 import marca2 from '../../../src/assets/logos/marca2.svg';
