@@ -197,8 +197,8 @@ const DashboardAdmin = () => {
                 </p> */}
               </div>
               <div className="flex flex-col items-start text-sm text-gray-700 dark:text-neutral-300 mt-6 gap-1">
-                <span>🏠 Modelos actuales: <strong>9 Modelos</strong></span>
-                <span>📂 Categorías disponibles: <strong>3 Categorías (Modernas, Tradicionales, Ecológicas)</strong></span>
+                <span>🏠 Modelos: <strong>9 Modelos</strong></span>
+                <span>📂 Categorías disponibles: <strong>3 Categorías</strong></span>
               </div>
               <div className="flex gap-2 mt-6">
                 <button className="px-4 py-2 text-xs font-semibold bg-purple-600 hover:bg-purple-700 text-white rounded-full transition">
