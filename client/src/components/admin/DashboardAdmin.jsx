@@ -46,7 +46,7 @@ const DashboardAdmin = () => {
           id: 2,
           name: "Matias Reyna",
           role: "Developer",
-          image: "https://images.unsplash.com/photo-1603415526960-f8f0b4fd2b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+          image: "https://images.unsplash.com/photo-1603415526960-f8f0b4fd2b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
         },
         {
           id: 3,
@@ -101,7 +101,7 @@ const DashboardAdmin = () => {
             title: "Equipo NEXA",
             description: "Conoce a los integrantes que hacen posible nuestro éxito.",
             header: (
-              <div className="flex flex-col items-center justify-center w-full h-full p-4">
+              <div className="flex flex-col items-center justify-center w-full h-full rounded-xl bg-gray-100 dark:bg-neutral-800 p-4">
                 <div className="flex justify-center">
                   <AnimatedTooltip items={equipoNexa.map(member => ({
                     id: member.id,
