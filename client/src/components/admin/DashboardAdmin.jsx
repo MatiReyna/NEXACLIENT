@@ -186,10 +186,28 @@ const DashboardAdmin = () => {
             icon: <IconArrowWaveRightUp className="h-4 w-4 text-neutral-500" />,
         },
         {
-            title: "The Joy of Creation",
-            description: "Experience the thrill of bringing ideas to life.",
-            header: <Skeleton />,
-            icon: <IconBoxAlignTopLeft className="h-4 w-4 text-neutral-500" />,
+            title: 'Gestión de Modelos',
+  description: 'Visualizá, creá o modificá modelos de casas de forma sencilla.',
+  header: (
+    <div className="flex flex-col items-center justify-center w-full h-full rounded-xl bg-gray-100 dark:bg-neutral-800 p-4">
+      <div className="text-center">
+        <h3 className="text-lg font-bold text-purple-700">Modelos actuales</h3>
+        <p className="text-sm text-gray-600 dark:text-neutral-400 mt-2">
+          Gestioná los modelos de casas disponibles en la plataforma.
+        </p>
+      </div>
+      <div className="flex gap-2 mt-6">
+        <button className="px-4 py-2 text-xs font-semibold bg-purple-600 hover:bg-purple-700 text-white rounded-full transition">
+          Crear Modelo
+        </button>
+        <button className="px-4 py-2 text-xs font-semibold bg-gray-200 hover:bg-gray-300 text-gray-800 rounded-full transition dark:bg-neutral-700 dark:text-white dark:hover:bg-neutral-600">
+          Ver Modelos
+        </button>
+      </div>
+    </div>
+  ),
+  icon: <IconBoxAlignTopLeft className="h-4 w-4 text-purple-500" />,
+  className: "md:col-span-2 bg-white text-black hover:shadow-lg",
         },
         {
             title: "The Spirit of Adventure",
