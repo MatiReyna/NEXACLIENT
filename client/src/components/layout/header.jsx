@@ -36,9 +36,9 @@ const Header = () => {
                     : "bg-transparent"
             ) }
         >
-            <div className="container flex h-16 items-center justify-between py-4">
+            <div className="container flex h-16 items-center justify-between py-4 transition-colors duration-300">
                 <div className="flex items-center gap-2">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#592e83] text-white">
+                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#592e83] text-white transition-transform hover:rotate-6">
                         <Home className="h-4 w-4" />
                     </div>
                     <div className="flex flex-col">
@@ -53,7 +53,8 @@ const Header = () => {
                             <a
                                 key={ link.href }
                                 href={ link.href }
-                                className="text-sm font-medium transition-colors hover:text-[#592e83] relative group"
+                                className="text-sm font-medium relative group transition-all duration-300 hover:text-[#592e83] hover:opacity-90"
+                                arial-current={ window.location.hash === link.href ? 'page' : undefined }
                             >
                                 { link.label }
                                 <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-[#592e83] transition-all duration-300 group-hover:w-full"></span>
@@ -77,7 +78,7 @@ const Header = () => {
                 </button>
             </div>
             <div
-                className={ cn("md:hidden fixed inset-x-0 top-16 bg-white border-b border-neutral-200 shadow-lg transition-all duration-300 ease-in-out transform", isMenuOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0 pointer-events-none") }
+                className={ cn("md:hidden fixed inset-x-0 top-16 bg-white border-b border-neutral-200 shadow-lg transition-all transition-opacity duration-300 ease-in-out transform", isMenuOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0 pointer-events-none") }
             >
                 <nav className="container py-4 flex flex-col space-y-4">
                     {
@@ -93,7 +94,7 @@ const Header = () => {
                         ))
                     }
                     <div className="pt-2 pb-4">
-                        <Button className="w-full">
+                        <Button className="w-full shadow-md hover:shadow-lg transition duration-300">
                             <a href="#contacto" onClick={ handleLinkClick }>
                                 Solicitar Presupuesto
                             </a>
