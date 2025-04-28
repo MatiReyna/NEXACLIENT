@@ -1,6 +1,6 @@
-import moderno1 from '../assets/models/moderno1.png';
-import moderno2 from '../assets/models/moderno2.png';
-import moderno3 from '../assets/models/moderno3.png';
+import moderno1 from '../../../src/assets/models/moderno1.png';
+import moderno2 from '../../../src/assets/models/moderno2.png';
+import moderno3 from '../../../src/assets/models/moderno3.png';
 
 export const modelosModernos = [
     {
