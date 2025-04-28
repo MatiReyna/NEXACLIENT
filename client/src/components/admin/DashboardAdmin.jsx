@@ -1,6 +1,6 @@
 import React from 'react';
 import { BentoGrid, BentoGridItem } from '../ui/bento-grid';
-import { IconArrowWaveRightUp, IconBoxAlignRightFilled, IconUserEdit, IconSignature } from '@tabler/icons-react';
+import { IconBoxAlignRightFilled, IconUserEdit } from '@tabler/icons-react';
 import AnimatedBrand from '../ui/animated-brand';
 import AnimatedTooltip from '../ui/animated-tooltip';
 

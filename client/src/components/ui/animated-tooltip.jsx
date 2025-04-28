@@ -29,6 +29,7 @@ const AnimatedTooltip = ({ items }) => {
                                 {
                                     hoveredIndex === item.id && (
                                         <motion.div
+                                            role="tooltip"
                                             initial={{ opacity: 0, y: 20, scale: 0.6 }}
                                             animate={{
                                                 opacity: 1,

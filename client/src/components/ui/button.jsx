@@ -27,6 +27,7 @@ const Button = forwardRef(({ className, variant = 'default', size = 'default', a
 
     return (
         <button
+            type={ props.type || "button" }
             className={ cn(baseClasses, variantClasses, sizeClasses, className) }
             ref={ ref }
             { ...props }
