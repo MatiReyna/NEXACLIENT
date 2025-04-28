@@ -10,6 +10,7 @@ const HeroSection = () => {
                     src={ heroImage }
                     alt="Casa prefabricada moderna"
                     className="object-cover w-full h-full brightness-[0.7]"
+                    loading="lazy"
                 />
             </div>
             <div className="container relative z-10 flex flex-col items-center justify-center space-y-4 py-24 text-center md:py-32 lg:py-40">
@@ -24,13 +25,13 @@ const HeroSection = () => {
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
                     <Button size="lg" className="transition-all duration-300 hover:scale-105 hover:shadow-lg">
-                        <a href="#modelos" className="flex items-center group">
+                        <a href="#modelos" aria-label="Ver Modelos de casas" className="flex items-center group">
                             Ver Modelos
                             <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1.5" />
                         </a>
                     </Button>
                     <Button variant="white-outline" size="lg" className="transition-all duration-300 hover:scale-105 hover:shadow-lg">
-                        <a href="#proceso">Cómo Trabajamos</a>
+                        <a href="#proceso" aria-label="Cómo Trabajamos">Cómo Trabajamos</a>
                     </Button>
                 </div>
             </div>
