@@ -123,7 +123,7 @@ const Footer = () => {
                         <ul className="space-y-2 text-sm">
                             <li>
                                 <Link
-                                    href="#"
+                                    to="#"
                                     className="text-muted-foreground
                             hover:text-foreground hover:underline transition-colors
                             duration-300"
@@ -133,7 +133,7 @@ const Footer = () => {
                             </li>
                             <li>
                                 <Link
-                                    href="#"
+                                    to="#"
                                     className="text-muted-foreground
                             hover:text-foreground hover:underline transition-colors
                             duration-300"
@@ -143,7 +143,7 @@ const Footer = () => {
                             </li>
                             <li>
                                 <Link
-                                    href="#"
+                                    to="#"
                                     className="text-muted-foreground
                             hover:text-foreground hover:underline transition-colors
                             duration-300"
@@ -153,7 +153,7 @@ const Footer = () => {
                             </li>
                             <li>
                                 <Link
-                                    href="#"
+                                    to="#"
                                     className="text-muted-foreground
                             hover:text-foreground hover:underline transition-colors
                             duration-300"
@@ -181,10 +181,11 @@ const Footer = () => {
                         </ul>
                         <div className="mt-4 flex space-x-4">
                             <Link
-                                href="#"
+                                to="#"
+                                arial-label="Facebook"
                                 className="text-muted-foreground
                             hover:text-foreground transition-transform
-                            duration-300 hover:scale-110"
+                            duration-300 hover:scale-110 hover:rotate-2"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -202,10 +203,11 @@ const Footer = () => {
                                 </svg>
                             </Link>
                             <Link
-                                href="#"
+                                to="#"
+                                arial-label="Instagram"
                                 className="text-muted-foreground
                             hover:text-foreground transition-transform
-                            duration-300 hover:scale-110"
+                            duration-300 hover:scale-110 hover:rotate-2"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -225,10 +227,11 @@ const Footer = () => {
                                 </svg>
                             </Link>
                             <Link
-                                href="#"
+                                to="#"
+                                arial-label="Twitter"
                                 className="text-muted-foreground
                             hover:text-foreground transition-transform
-                            duration-300 hover:scale-110"
+                            duration-300 hover:scale-110 hover:rotate-2"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -248,7 +251,7 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <div className="mt-4 flex justify-center md:justifiy-center">
+                <div className="mt-4 flex justify-center md:justify-center">
                     <AnimatedTooltip items={ animatedTeam } />
                 </div>
                 <div className="mt-8 border-t pt-8 text-center">
