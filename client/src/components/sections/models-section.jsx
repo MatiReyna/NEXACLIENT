@@ -4,7 +4,7 @@ import { Card, CardContent } from '../ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../ui/tabs';
 import { ArrowRight, Bed, Ruler } from 'lucide-react';
 import ModelDetails from './model-details';
-import { modelosModernos, modelosTradicionales, modelosEcologicos } from '../../lib/modelosData';
+import { modelosModernos, modelosTradicionales, modelosEcologicos } from '../../lib/data/modelosData';
 
 const ModelCard = ({ title, description, area, rooms, imageSrc, imageAlt }) => {
 
@@ -16,7 +16,8 @@ const ModelCard = ({ title, description, area, rooms, imageSrc, imageAlt }) => {
                 <div className="aspect-video w-full overflow-hidden rounded-t-xl">
                     <img
                         src={ imageSrc || '/placeholder.svg' }
-                        alt={ imageAlt }
+                        alt={ imageAlt || 'Modelo de casa prefabricada' }
+                        loading="lazy"
                         className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
                     />
                 </div>
@@ -67,7 +68,7 @@ const ModelsSection = () => {
                         <TabsTrigger value="tradicionales" className="data-[state=active]:bg-[#592e83] data-[state=active]:text-white">Tradicionales</TabsTrigger>
                         <TabsTrigger value="ecologicos" className="data-[state=active]:bg-[#592e83] data-[state=active]:text-white">Ecológicos</TabsTrigger>
                     </TabsList>
-                    <TabsContent value="modernos" className="mt-6">
+                    <TabsContent value="modernos" className="mt-6 animate-fade">
                         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
                             {
                                 modelosModernos.map((modelo, i) => (
@@ -76,7 +77,7 @@ const ModelsSection = () => {
                             }
                         </div>
                     </TabsContent>
-                    <TabsContent value="tradicionales" className="mt-6">
+                    <TabsContent value="tradicionales" className="mt-6 animate-fade">
                         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
                             {
                                 modelosTradicionales.map((modelo, i) => (
@@ -85,7 +86,7 @@ const ModelsSection = () => {
                             }
                         </div>
                     </TabsContent>
-                    <TabsContent value="ecologicos" className="mt-6">
+                    <TabsContent value="ecologicos" className="mt-6 animate-fade">
                         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
                             {
                                 modelosEcologicos.map((modelo, i) => (
