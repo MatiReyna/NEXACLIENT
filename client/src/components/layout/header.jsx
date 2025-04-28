@@ -32,7 +32,7 @@ const Header = () => {
         <header
             className={ cn("sticky top-0 z-40 w-full transition-all duration-300",
                 scrolled
-                    ? "bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 shadow-sm border-b border-neutral-200"
+                    ? "bg-white shadow-sm border-b border-neutral-200"
                     : "bg-transparent"
             ) }
         >
@@ -53,17 +53,16 @@ const Header = () => {
                             <a
                                 key={ link.href }
                                 href={ link.href }
-                                className="text-sm font-medium relative group transition-all duration-300 hover:text-[#592e83] hover:opacity-90"
+                                className="text-sm font-medium transition-colors hover:text-[#592e83]"
                                 arial-current={ window.location.hash === link.href ? 'page' : undefined }
                             >
                                 { link.label }
-                                <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-[#592e83] transition-all duration-300 group-hover:w-full"></span>
                             </a>
                         ))
                     }
                 </nav>
 
-                <Button className="hidden md:inline-flex bg-[#592e83] text-white hover:bg-[#4b2670] transition-colorshidden md:inline-flex transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                <Button className="hidden md:inline-flex bg-[#592e83] text-white hover:bg-[#4b2670]">
                     <a href="#contacto">Solicitar Presupuesto</a>
                 </Button>
 
@@ -94,7 +93,7 @@ const Header = () => {
                         ))
                     }
                     <div className="pt-2 pb-4">
-                        <Button className="w-full shadow-md hover:shadow-lg transition duration-300">
+                        <Button className="w-full">
                             <a href="#contacto" onClick={ handleLinkClick }>
                                 Solicitar Presupuesto
                             </a>
