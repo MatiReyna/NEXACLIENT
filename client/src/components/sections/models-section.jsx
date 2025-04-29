@@ -77,7 +77,7 @@ const ModelsSection = () => {
                             }
                         </div>
                     </TabsContent>
-                    <TabsContent value="tradicionales" className="mt-6 animate-fade">
+                    <TabsContent value="tradicionales" className="mt-6">
                         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
                             {
                                 modelosTradicionales.map((modelo, i) => (
@@ -86,7 +86,7 @@ const ModelsSection = () => {
                             }
                         </div>
                     </TabsContent>
-                    <TabsContent value="ecologicos" className="mt-6 animate-fade">
+                    <TabsContent value="ecologicos" className="mt-6">
                         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
                             {
                                 modelosEcologicos.map((modelo, i) => (
