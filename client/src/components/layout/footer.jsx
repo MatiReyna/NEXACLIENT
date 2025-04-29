@@ -14,7 +14,7 @@ const Footer = () => {
         {
             id: 1,
             name: 'Matias Reyna',
-            designation: 'Software Engineer',
+            designation: 'Developer Engineer',
             image: animated1
         },
         {
@@ -26,19 +26,19 @@ const Footer = () => {
         {
             id: 3,
             name: 'Emily Davis',
-            designation: 'Product Manager',
+            designation: 'Logistics Manager',
             image: animated3
         },
         {
             id: 4,
             name: 'Nicolás Sagario',
-            designation: 'Manager de Ventas',
+            designation: 'Sales Manager',
             image: animated4
         },
         {
             id: 5,
             name: 'Jane Smith',
-            designation: 'The Explorer',
+            designation: 'Marketing Manager',
             image: animated5
         },
         {
