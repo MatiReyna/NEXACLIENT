@@ -23,30 +23,19 @@ export default {
                     DEFAULT: '#592e83',
                     foreground: '#ffffff',
                 },
-                secondary: {
-                    DEFAULT: '#f1f5f9',
-                    foreground: '#1e293b',
+                brand: {
+                    50: '#faf6fe',
+                    100: '#f2ebfc',
+                    200: '#e7dbf9',
+                    300: '#d5bef4',
+                    400: '#bb94ec',
+                    500: '#a16be1',
+                    600: '#8b4cd1',
+                    700: '#7539b7',
+                    800: '#643396',
+                    900: '#361358',
                 },
-                destructive: {
-                    DEFAULT: '#ef4444',
-                    foreground: '#f8fafc',
-                },
-                muted: {
-                    DEFAULT: '#f1f5f9',
-                    foreground: '#64748b',
-                },
-                accent: {
-                    DEFAULT: '#f1f5f9',
-                    foreground: '#1e293b',
-                },
-                popover: {
-                    DEFAULT: '#ffffff',
-                    foreground: '#0f172a',
-                },
-                card: {
-                    DEFAULT: '#ffffff',
-                    foreground: '#0f172a',
-                }
+                dark: '#241f19',
             },
             borderRadius: {
                 lg: '16px',
