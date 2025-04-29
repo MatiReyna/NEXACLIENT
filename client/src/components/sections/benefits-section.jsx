@@ -14,7 +14,7 @@ const BenefitsSection = () => {
                     </p>
                 </div>
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-                    <Card className="group rounded-xl shadow-md overflow-hidden transform transition-all duration-500 hover:translate-y-[-8px] hover:shadow-[0_4px_14px_0_#f2ebfc] hover:scale-[1.02] hover:border-primary border-transparent border">
+                    <Card className="group rounded-xl shadow-md overflow-hidden transform transition-all duration-500 hover:translate-y-[-8px] hover:shadow-lg hover:scale-[1.02] hover:border-primary border-transparent border">
                         <CardContent className="flex flex-col items-center space-y-4 p-6">
                             <Clock aria-label="Construcción Rápida" className="h-12 w-12 text-primary transition-transform duration-500 group-hover:rotate-6 group-hover:scale-110" />
                             <h3 id="beneficio-construccion-rapida" className="text-xl font-bold">Construcción Rápida</h3>
@@ -23,7 +23,7 @@ const BenefitsSection = () => {
                             </p>
                         </CardContent>
                     </Card>
-                    <Card className="group rounded-xl shadow-md overflow-hidden transform transition-all duration-500 hover:translate-y-[-8px] hover:shadow-[0_4px_14px_0_#f2ebfc] hover:scale-[1.02] hover:border-primary border-transparent border">
+                    <Card className="group rounded-xl shadow-md overflow-hidden transform transition-all duration-500 hover:translate-y-[-8px] hover:shadow-lg hover:scale-[1.02] hover:border-primary border-transparent border">
                         <CardContent className="flex flex-col items-center space-y-4 p-6">
                             <Leaf aria-label="Ecológicas" className="h-12 w-12 text-primary transition-transform duration-500 group-hover:rotate-6 group-hover:scale-110" />
                             <h3 id="beneficio-ecologicos" className="text-xl font-bold">Ecológicas</h3>
@@ -32,7 +32,7 @@ const BenefitsSection = () => {
                             </p>
                         </CardContent>
                     </Card>
-                    <Card className="group rounded-xl shadow-md overflow-hidden transform transition-all duration-500 hover:translate-y-[-8px] hover:shadow-[0_4px_14px_0_#f2ebfc] hover:scale-[1.02] hover:border-primary border-transparent border">
+                    <Card className="group rounded-xl shadow-md overflow-hidden transform transition-all duration-500 hover:translate-y-[-8px] hover:shadow-lg hover:scale-[1.02] hover:border-primary border-transparent border">
                         <CardContent className="flex flex-col items-center space-y-4 p-6">
                             <Shield aria-label="Alta Calidad" className="h-12 w-12 text-primary transition-transform duration-500 group-hover:rotate-6 group-hover:scale-110" />
                             <h3 id="beneficio-alta-calidad" className="text-xl font-bold">Alta Calidad</h3>
@@ -41,7 +41,7 @@ const BenefitsSection = () => {
                             </p>
                         </CardContent>
                     </Card>
-                    <Card className="group rounded-xl shadow-md overflow-hidden transform transition-all duration-500 hover:translate-y-[-8px] hover:shadow-[0_4px_14px_0_#f2ebfc] hover:scale-[1.02] hover:border-primary border-transparent border">
+                    <Card className="group rounded-xl shadow-md overflow-hidden transform transition-all duration-500 hover:translate-y-[-8px] hover:shadow-lg hover:scale-[1.02] hover:border-primary border-transparent border">
                         <CardContent className="flex flex-col items-center space-y-4 p-6">
                             <CheckCircle aria-label="Personalización" className="h-12 w-12 text-primary transition-transform duration-500 group-hover:rotate-6 group-hover:scale-110" />
                             <h3 id="beneficio-personalizacion" className="text-xl font-bold">Personalización</h3>
