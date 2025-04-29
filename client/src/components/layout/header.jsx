@@ -36,9 +36,9 @@ const Header = () => {
                     : "bg-transparent"
             ) }
         >
-            <div className="container flex h-16 items-center justify-between py-4 transition-colors duration-300">
+            <div className="container flex h-16 items-center justify-between py-4">
                 <div className="flex items-center gap-2">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#592e83] text-white transition-transform hover:rotate-6">
+                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#592e83] text-white">
                         <Home className="h-4 w-4" />
                     </div>
                     <div className="flex flex-col">
@@ -53,8 +53,8 @@ const Header = () => {
                             <a
                                 key={ link.href }
                                 href={ link.href }
-                                className="text-sm font-medium transition-colors hover:text-[#592e83]"
-                                arial-current={ window.location.hash === link.href ? 'page' : undefined }
+                                className="text-sm font-medium transition-colors hover:text-[#592e83] relative group"
+                                // arial-current={ window.location.hash === link.href ? 'page' : undefined }
                             >
                                 { link.label }
                             </a>
@@ -77,7 +77,7 @@ const Header = () => {
                 </button>
             </div>
             <div
-                className={ cn("md:hidden fixed inset-x-0 top-16 bg-white border-b border-neutral-200 shadow-lg transition-all transition-opacity duration-300 ease-in-out transform", isMenuOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0 pointer-events-none") }
+                className={ cn("md:hidden fixed inset-x-0 top-16 bg-white border-b border-neutral-200 shadow-lg transition-all duration-300 ease-in-out transform", isMenuOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0 pointer-events-none") }
             >
                 <nav className="container py-4 flex flex-col space-y-4">
                     {
