@@ -32,13 +32,13 @@ const HeroSection = () => {
                         Ver Modelos
                         <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1.5" />
                     </a>
-                    <Button
-                        variant="white-outline"
-                        size="lg"
-                        className="transition-all duration-300 hover:bg-primary/10 hover:text-primary hover:scale-105 hover:shadow-lg"
+                    <a
+                        href="#proceso"
+                        aria-label="Cómo Trabajamos"
+                        className="inline-flex items-center justify-center px-6 py-3 text-lg font-medium text-white border border-white rounded-xl transition-all duration-300 hover:bg-[#d5bef4] hover:scale-105 hover:shadow-lg"
                     >
-                        <a href="#proceso" aria-label="Cómo Trabajamos">Cómo Trabajamos</a>
-                    </Button>
+                        Cómo Trabajamos
+                    </a>
                 </div>
             </div>
         </section>
