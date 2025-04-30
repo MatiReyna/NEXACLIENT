@@ -5,8 +5,8 @@ import animated1 from '../../assets/animated/animated1.jpg';
 import animated2 from '../../assets/animated/animated2.jpg';
 import animated3 from '../../assets/animated/animated3.jpg';
 import animated4 from '../../assets/animated/animated4.jpg';
-import animated5 from '../../assets/animated/animated5.jpg';
-import animated6 from '../../assets/animated/animated6.jpg';
+// import animated5 from '../../assets/animated/animated5.jpg';
+// import animated6 from '../../assets/animated/animated6.jpg';
 
 const Footer = () => {
 
@@ -35,18 +35,18 @@ const Footer = () => {
             designation: 'Sales Manager',
             image: animated4
         },
-        {
-            id: 5,
-            name: 'Jane Smith',
-            designation: 'Marketing Manager',
-            image: animated5
-        },
-        {
-            id: 6,
-            name: 'Dora',
-            designation: 'Data Scientist',
-            image: animated6
-        }
+        // {
+        //     id: 5,
+        //     name: 'Jane Smith',
+        //     designation: 'Marketing Manager',
+        //     image: animated5
+        // },
+        // {
+        //     id: 6,
+        //     name: 'Dora',
+        //     designation: 'Data Scientist',
+        //     image: animated6
+        // }
     ];
 
     return (
@@ -56,7 +56,7 @@ const Footer = () => {
                     <div className="space-y-4">
                         <div className="flex items-center gap-2">
                             <Home className="h-6 w-6" />
-                            <span className="text-xl font-bold text-[#592e83]">NEXA</span>
+                            <span className="text-xl font-bold text-primary">NEXA</span>
                         </div>
                         <p className="text-sm text-muted-foreground">
                             Construimos casa prefabricadas de alta calidad,
@@ -182,7 +182,7 @@ const Footer = () => {
                         <div className="mt-4 flex space-x-4">
                             <Link
                                 to="#"
-                                arial-label="Facebook"
+                                aria-label="Facebook"
                                 className="text-muted-foreground
                             hover:text-foreground transition-transform
                             duration-300 hover:scale-110 hover:rotate-2"
@@ -204,7 +204,7 @@ const Footer = () => {
                             </Link>
                             <Link
                                 to="#"
-                                arial-label="Instagram"
+                                aria-label="Instagram"
                                 className="text-muted-foreground
                             hover:text-foreground transition-transform
                             duration-300 hover:scale-110 hover:rotate-2"
@@ -228,7 +228,7 @@ const Footer = () => {
                             </Link>
                             <Link
                                 to="#"
-                                arial-label="Twitter"
+                                aria-label="Twitter"
                                 className="text-muted-foreground
                             hover:text-foreground transition-transform
                             duration-300 hover:scale-110 hover:rotate-2"
