@@ -102,8 +102,8 @@ const AnimatedBrand = ({ brands, autoplay = false }) => {
                                 <h3 className="text-2xl font-bold text-black dark:text-white">
                                     { brands[active].name }
                                 </h3>
-                                <span className={`inline-block rounded-full px-3 py-1 text-xs font-semibold hover:scale-105 ${ brands[active].status === "Activo" ? "bg-green-100 text-green-800" : "bg-red-100 text-red-800" }`}>
-                                    { brands[active].status }
+                                <span className={`inline-block rounded-full px-3 py-1 text-xs font-semibold hover:scale-105 ${ brands[active].activo ? "bg-green-100 text-green-800" : "bg-red-100 text-red-800" }`}>
+                                    { brands[active].activo ? "Activo" : "Inactivo" }
                                 </span>
                                 <div className="mt-8 flex items-center gap-2">
                                     <button className="p-2 bg-blue-100 text-blue-600 rounded-full hover:bg-blue-200 transition" title="Editar" aria-label="Editar marca">
