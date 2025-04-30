@@ -39,8 +39,8 @@ const Header = () => {
             <div className="container flex h-16 items-center justify-between py-4">
                 <div className="flex items-center gap-2">
                     <div className={ cn(
-                        "flex h-8 w-8 items-center justify-center rounded-full transition-colors duration-300",
-                        scrolled ? "bg-primary text-white" : "bg-white/20 border border-white text-white"
+                        "flex h-8 w-8 items-center justify-center rounded-full border transition-colors duration-300",
+                        scrolled ? "bg-primary text-white border-primary" : "bg-transparent border-black text-black"
                     ) }>
                         <Home className="h-4 w-4" />
                     </div>
@@ -56,10 +56,12 @@ const Header = () => {
                             <a
                                 key={ link.href }
                                 href={ link.href }
-                                className="text-sm font-medium transition-colors text-neutral-700 hover:text-primary relative group after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 group-hover:after:w-full"
-                                arial-current={ window.location.hash === link.href ? 'page' : undefined }
+                                className="group relative text-sm font-medium transition-colors text-neutral-700 hover:text-primary"
+                                aria-current={ window.location.hash === link.href ? 'page' : undefined }
                             >
-                                { link.label }
+                                <span className="after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 group-hover:after:w-full relative">
+                                    { link.label }
+                                </span>
                             </a>
                         ))
                     }
