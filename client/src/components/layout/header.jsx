@@ -32,13 +32,16 @@ const Header = () => {
         <header
             className={ cn("sticky top-0 z-40 w-full transition-all duration-300",
                 scrolled
-                    ? "bg-white shadow-sm border-b border-neutral-200"
+                    ? "bg-gradient-to-b from-[#faf6fe]/90 to-white/60 backdrop-blur-md shadow-sm border-b border-neutral-200"
                     : "bg-transparent"
             ) }
         >
             <div className="container flex h-16 items-center justify-between py-4">
                 <div className="flex items-center gap-2">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#592e83] text-white">
+                    <div className={ cn(
+                        "flex h-8 w-8 items-center justify-center rounded-full transition-colors duration-300",
+                        scrolled ? "bg-primary text-white" : "bg-white/20 border border-white text-white"
+                    ) }>
                         <Home className="h-4 w-4" />
                     </div>
                     <div className="flex flex-col">
@@ -53,8 +56,8 @@ const Header = () => {
                             <a
                                 key={ link.href }
                                 href={ link.href }
-                                className="text-sm font-medium transition-colors hover:text-[#592e83] relative group"
-                                // arial-current={ window.location.hash === link.href ? 'page' : undefined }
+                                className="text-sm font-medium transition-colors text-neutral-700 hover:text-primary relative group after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 group-hover:after:w-full"
+                                arial-current={ window.location.hash === link.href ? 'page' : undefined }
                             >
                                 { link.label }
                             </a>
@@ -70,6 +73,8 @@ const Header = () => {
                     onClick={ () => setIsMenuOpen(!isMenuOpen) }
                     className="md:hidden flex items-center justify-center h-10 w-10 rounded-lg border border-neutral-200 text-neutral-700 transition-colors hover:bg-neutral-100"
                     aria-label={ isMenuOpen ? 'Cerrar menú' : 'Abrir menú' }
+                    aria-controls="mobile-menu"
+                    aria-expanded={ isMenuOpen }
                 >
                     {
                         isMenuOpen ? (<X className="h-5 w-5" />) : (<Menu className="h-5 w-5" />)
@@ -77,7 +82,10 @@ const Header = () => {
                 </button>
             </div>
             <div
-                className={ cn("md:hidden fixed inset-x-0 top-16 bg-white border-b border-neutral-200 shadow-lg transition-all duration-300 ease-in-out transform", isMenuOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0 pointer-events-none") }
+                className={ cn("md:hidden fixed inset-x-0 top-16 bg-white border-b border-neutral-200 shadow-lg transition-all duration-300 ease-in-out transform",
+                    isMenuOpen ? "translate-y-0 opacity-100 scale-100" : "-translate-y-full opacity-0 scale-95 pointer-events-none"
+                ) }
+                id="mobile-menu"
             >
                 <nav className="container py-4 flex flex-col space-y-4">
                     {
