@@ -2,7 +2,7 @@ import moderno1 from '../../../src/assets/models/moderno1.png';
 import moderno2 from '../../../src/assets/models/moderno2.png';
 import moderno3 from '../../../src/assets/models/moderno3.png';
 
-export const modelosModernos = [
+export const modelos = [
     {
         title: 'Modelo Florida',
         description: 'Diseño contemporáneo con amplios espacios y grandes ventanales.',
@@ -10,7 +10,8 @@ export const modelosModernos = [
         rooms: '3 habitaciones',
         bathrooms: '2 baños',
         imageSrc: moderno1,
-        imageAlt: 'Modelo Florida'
+        imageAlt: 'Modelo Florida',
+        type: 'moderno'
     },
     {
         title: 'Modelo Indiana',
@@ -19,7 +20,8 @@ export const modelosModernos = [
         rooms: '3 habitaciones',
         bathrooms: '2 baños',
         imageSrc: moderno2,
-        imageAlt: 'Modelo Indiana'
+        imageAlt: 'Modelo Indiana',
+        type: 'moderno'
     },
     {
         title: 'Modelo Oregon',
@@ -28,11 +30,9 @@ export const modelosModernos = [
         rooms: '3 habitaciones',
         bathrooms: '2 baños',
         imageSrc: moderno3,
-        imageAlt: 'Modelo Oregon'
-    }
-];
-
-export const modelosTradicionales = [
+        imageAlt: 'Modelo Oregon',
+        type: 'moderno'
+    },
     {
         title: 'Modelo Hawaii',
         description: 'Casa clásica de un piso, ideal para familia numerosa.',
@@ -40,7 +40,8 @@ export const modelosTradicionales = [
         rooms: '2 habitaciones',
         bathrooms: '1 baño',
         imageSrc: moderno3,
-        imageAlt: 'Modelo Hawaii'
+        imageAlt: 'Modelo Hawaii',
+        type: 'tradicional'
     },
     {
         title: 'Modelo Alaska',
@@ -49,7 +50,8 @@ export const modelosTradicionales = [
         rooms: '1 habitaciones',
         bathrooms: '1 baño',
         imageSrc: moderno2,
-        imageAlt: 'Modelo Alaska'
+        imageAlt: 'Modelo Alaska',
+        type: 'tradicional'
     },
     {
         title: 'Modelo Texas',
@@ -58,11 +60,9 @@ export const modelosTradicionales = [
         rooms: '3 habitaciones',
         bathrooms: '2 baños',
         imageSrc: moderno1,
-        imageAlt: 'Modelo Texas'
+        imageAlt: 'Modelo Texas',
+        type: 'tradicional'
     },
-];
-
-export const modelosEcologicos = [
     {
         title: 'Modelo California',
         description: 'Diseño sustentable con materiales reciclables y paneles solares.',
@@ -70,7 +70,8 @@ export const modelosEcologicos = [
         rooms: '2 habitaciones',
         bathrooms: '1 baño',
         imageSrc: moderno2,
-        imageAlt: 'Modelo California'
+        imageAlt: 'Modelo California',
+        type: 'ecologico'
     },
     {
         title: 'Modelo Kansas',
@@ -79,7 +80,8 @@ export const modelosEcologicos = [
         rooms: '3 habitaciones',
         bathrooms: '2 baños',
         imageSrc: moderno1,
-        imageAlt: 'Modelo Kansas'
+        imageAlt: 'Modelo Kansas',
+        type: 'ecologico'
     },
     {
         title: 'Modelo Washington',
@@ -88,6 +90,7 @@ export const modelosEcologicos = [
         rooms: '3 habitaciones',
         bathrooms: '2 baños',
         imageSrc: moderno3,
-        imageAlt: 'Modelo Washington'
+        imageAlt: 'Modelo Washington',
+        type: 'ecologico'
     },
 ];

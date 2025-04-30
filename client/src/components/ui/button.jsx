@@ -19,7 +19,7 @@ const buttonVariants = {
     }
 };
 
-const Button = forwardRef(({ className, variant = 'default', size = 'default', asChild = false, ...props }, ref) => {
+const Button = forwardRef(({ className, variant = 'default', size = 'default', loading = false , asChild = false, ...props }, ref) => {
 
     const variantClasses = buttonVariants.variant[variant] || buttonVariants.variant.default;
     const sizeClasses = buttonVariants.size[size] || buttonVariants.size.default;
@@ -31,7 +31,16 @@ const Button = forwardRef(({ className, variant = 'default', size = 'default', a
             className={ cn(baseClasses, variantClasses, sizeClasses, className) }
             ref={ ref }
             { ...props }
-        />
+        >
+            {
+                loading ? (
+                    <svg className="animate-spin mr-2 h-4 w-4 text-current" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z" />
+                    </svg>
+                ) : (props.children)
+            }
+        </button>
     )
 });
 

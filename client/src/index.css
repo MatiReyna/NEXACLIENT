@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer base {
-  * {
+  button, input, textarea, select {
     @apply border-neutral-200;
   }
 
@@ -14,6 +14,6 @@
 
 @layer components {
   .btn-white-outline {
-    @apply relative border border-white text-white rounded-xl inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors hover:bg-white hover:text-primary;
+    @apply relative border border-white text-white rounded-xl inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all duration-200 ease-in-out hover:bg-white hover:text-primary;
   }
 }
