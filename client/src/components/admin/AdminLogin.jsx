@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Button from '../ui/button';
 import Input from '../ui/input';
+import { HeroHighlight } from '../ui/hero-highlight';
 
 const AdminLogin = ({ onLoginSuccess }) => {
 
@@ -24,8 +25,8 @@ const AdminLogin = ({ onLoginSuccess }) => {
     };
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-background px-4">
-            <div className="w-full max-w-md p-8 space-y-6 rounded-lg shadow-xl bg-white border border-[#e7dbf9]">
+        <HeroHighlight containerClassName="min-h-screen flex items-center justify-center px-4">
+            <div className="relative w-full max-w-md p-8 space-y-6 rounded-lg shadow-xl bg-white border border-[#e7dbf9] z-10">
                 <h2 className="text-2xl font-bold text-center text-primary">
                     Acceso Administrador
                 </h2>
@@ -68,7 +69,7 @@ const AdminLogin = ({ onLoginSuccess }) => {
                     </Button>
                 </form>
             </div>
-        </div>
+        </HeroHighlight>
     )
 };
 
