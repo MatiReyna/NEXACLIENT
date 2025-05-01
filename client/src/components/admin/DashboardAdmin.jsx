@@ -4,6 +4,7 @@ import { IconBoxAlignRightFilled, IconUserEdit } from '@tabler/icons-react';
 import AnimatedBrand from '../ui/animated-brand';
 import AnimatedTooltip from '../ui/animated-tooltip';
 
+import animated2 from '../../../src/assets/animated/animated2.jpg';
 import marca1 from '../../../src/assets/logos/marca1.svg';
 import marca2 from '../../../src/assets/logos/marca2.svg';
 import marca3 from '../../../src/assets/logos/marca3.svg';
@@ -63,11 +64,11 @@ const DashboardAdmin = () => {
       title: 'Perfil del Administrador',
       description: 'Visualiza tu perfil, edita tus datos personales y mantené tu información actualizada.',
       header: (
-        <div className="flex flex-col items-center justify-center w-full h-full rounded-xl">
+        <div className="flex flex-col items-center justify-center w-full h-full rounded-xl pb-6">
           <img
-            src="https://picsum.photos/id/10/400/300"
+            src={ animated2 }
             alt="Avatar"
-            className="w-24 h-24 rounded-full shadow-md"
+            className="w-24 h-24 rounded-full shadow-md transition-transform duration-300 hover:scale-105"
           />
           <p className="mt-3 text-primary font-semibold text-xl">Facundo Sagario</p>
           <button
