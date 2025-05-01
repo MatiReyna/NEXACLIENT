@@ -3,40 +3,38 @@ import { BentoGrid, BentoGridItem } from '../ui/bento-grid';
 import { IconBoxAlignRightFilled, IconUserEdit } from '@tabler/icons-react';
 import AnimatedBrand from '../ui/animated-brand';
 import AnimatedTooltip from '../ui/animated-tooltip';
+import { marcasData } from '../../lib/data/marcaData';
 
 import animated2 from '../../../src/assets/animated/animated2.jpg';
-import marca1 from '../../../src/assets/logos/marca1.svg';
-import marca2 from '../../../src/assets/logos/marca2.svg';
-import marca3 from '../../../src/assets/logos/marca3.svg';
 
 const DashboardAdmin = () => {
 
   const [ showRatingsModal, setShowRatingsModal ] = React.useState(false);
   const [ showProfileModal, setShowProfileModal ] = React.useState(false);
 
-  const brands = [
-    {
-      id: 1,
-      name: 'Nexa',
-      src: marca1,
-      status: 'active',
-      quote: 'Calidad e innovación en viviendas modulares.'
-    },
-    {
-      id: 2,
-      name: 'EcoHomes',
-      src: marca2,
-      status: 'inactive',
-      quote: 'Casas ecológicas para un futuro sustentable.'
-    },
-    {
-      id: 3,
-      name: 'Urbania',
-      src: marca3,
-      status: 'active',
-      quote: 'Urbanismo moderno y diseño vanguardista.'
-    }
-  ];
+  // const brands = [
+  //   {
+  //     id: 1,
+  //     name: 'Nexa',
+  //     src: marca1,
+  //     status: 'active',
+  //     quote: 'Calidad e innovación en viviendas modulares.'
+  //   },
+  //   {
+  //     id: 2,
+  //     name: 'EcoHomes',
+  //     src: marca2,
+  //     status: 'inactive',
+  //     quote: 'Casas ecológicas para un futuro sustentable.'
+  //   },
+  //   {
+  //     id: 3,
+  //     name: 'Urbania',
+  //     src: marca3,
+  //     status: 'active',
+  //     quote: 'Urbanismo moderno y diseño vanguardista.'
+  //   }
+  // ];
 
   const equipoNexa = [
     {
@@ -88,11 +86,11 @@ const DashboardAdmin = () => {
       header: (
         <div className="w-full h-full flex items-center justify-center overflow-hidden p-6 min-h-[200px]">
           <div className="max-w-full w-full">
-            <AnimatedBrand brands={ brands } />
+            <AnimatedBrand brands={ marcasData } className="object-contain max-h-20" />
           </div>
         </div>
       ),
-      className: "md:col-span-1 bg-[#f2ebfc] text-[#241f19] hover:shadow-lg rounded-xl border border-[#e7dbf9] transition-all duration-300"
+      className: "md:col-span-1 bg-[#e7dbf9] text-[#241f19] hover:shadow-lg rounded-xl border border-[#e7dbf9] transition-all duration-300"
     },
     {
       title: 'Equipo NEXA',
