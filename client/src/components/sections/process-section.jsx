@@ -27,7 +27,7 @@ const ProcessSection = () => {
     ];
 
     return (
-        <section id="proceso" className="bg-[#f2ebfc] py-16 md:py-24 rounded-t-3xl">
+        <section id="proceso" className="bg-[#f2ebfc] py-16 md:py-24">
             <div className="container space-y-12">
                 <div className="space-y-4 text-center">
                     <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl text-primary">Nuestro Proceso</h2>
@@ -44,7 +44,7 @@ const ProcessSection = () => {
                                     { item.step }
                                 </div>
                                 <h3 className="text-xl font-bold">{ item.title }</h3>
-                                <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">{ item.description }</p>
+                                <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl text-[#241f19]">{ item.description }</p>
                                 {
                                     item.step < 4 && (
                                         <ChevronRight className="absolute -right-4 top-12 hidden h-8 w-8 text-[#592e83] lg:block transition-transform duration-300 group-hover:translate-x-1" />
