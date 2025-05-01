@@ -8,10 +8,11 @@ const CtaSection = () => {
                     <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
                         ¿Listo para comenzar tu proyecto con <span className="text-[#bb94ec]">NEXA</span>?
                     </h2>
+                    <div className="mx-auto h-1 w-24 bg-primary rounded-full mt-4"></div>
                     <p className="mx-auto max-w-[600px] md:text-xl">
                         Construye el espacio de tus sueños con la mejor calidad, innovación y sostenibilidad.
                     </p>
-                    <div className="flex flex-col gap-2 min-[400px]:flex-row">
+                    <div className="flex flex-col gap-2 min-[400px]:flex-row justify-center items-center">
                         <a
                             href="#contacto"
                             className="inline-flex items-center justify-center px-6 py-3 text-lg font-medium text-white bg-primary rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg"

@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, ArrowRight } from 'lucide-react';
+import { Phone, Mail, MapPin, ArrowRight, CheckCircle } from 'lucide-react';
 import { useState } from 'react';
 import Button from '../ui/button';
 import mapa from '../../assets/contact/mapa.png';
@@ -8,13 +8,13 @@ const ContactSection = () => {
     const [ showConfirmation, setShowConfirmation ] = useState(false);
 
     return (
-        <section id="contacto" className="bg-muted py-16 md:py-24 rounded-t-3xl">
+        <section id="contacto" className="bg-[#f5f5f5] py-16 md:py-24 rounded-t-3xl">
             <div className="container">
                 <div className="grid gap-8 lg:grid-cols-2">
                     <div className="space-y-6">
                         <div className="space-y-2">
-                            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Contacta con Nosotros</h2>
-                            <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
+                            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-primary">Contacta con Nosotros</h2>
+                            <p className="mx-auto max-w-[700px] text-[#241f19]/80 md:text-xl">
                                 Estamos aquí para responder a todas tus preguntas y ayudarte a hacer realidad tu proyecto.
                             </p>
                         </div>
@@ -56,7 +56,7 @@ const ContactSection = () => {
                                     </label>
                                     <input
                                         id="nombre"
-                                        className="flex h-10 w-full rounded-xl border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-300 hover:border-primary/50"
+                                        className="flex h-10 w-full rounded-xl border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-300 hover:border-primary/50"
                                         placeholder="Tu nombre"
                                     />
                                 </div>
@@ -69,7 +69,7 @@ const ContactSection = () => {
                                     </label>
                                     <input
                                         id="apellidos"
-                                        className="flex h-10 w-full rounded-xl border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-300 hover:border-primary/50"
+                                        className="flex h-10 w-full rounded-xl border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-300 hover:border-primary/50"
                                         placeholder="Tus apellidos"
                                     />
                                 </div>
@@ -84,7 +84,7 @@ const ContactSection = () => {
                                 <input
                                     id="email"
                                     type="email"
-                                    className="flex h-10 w-full rounded-xl border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-300 hover:border-primary/50"
+                                    className="flex h-10 w-full rounded-xl border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-300 hover:border-primary/50"
                                     placeholder="tu@email.com"
                                 />
                             </div>
@@ -98,7 +98,7 @@ const ContactSection = () => {
                                 <input
                                     id="telefono"
                                     type="tel"
-                                    className="flex h-10 w-full rounded-xl border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-300 hover:border-primary/50"
+                                    className="flex h-10 w-full rounded-xl border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-300 hover:border-primary/50"
                                     placeholder="Tu teléfono"
                                 />
                             </div>
@@ -111,7 +111,7 @@ const ContactSection = () => {
                                 </label>
                                 <select
                                     id="modelo"
-                                    className="flex h-10 w-full rounded-xl border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-300 hover:border-primary/50"
+                                    className="flex h-10 w-full rounded-xl border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-300 hover:border-primary/50"
                                 >
                                     <option value="">Selecciona un modelo</option>
                                     <option value="Modelo Florida">Modelo Florida</option>
@@ -134,7 +134,7 @@ const ContactSection = () => {
                                 </label>
                                 <textarea
                                     id="mensaje"
-                                    className="flex min-h-[120px] w-full rounded-xl border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-300 hover:border-primary/50"
+                                    className="flex min-h-[120px] w-full rounded-xl border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-300 hover:border-primary/50"
                                     placeholder="Cuéntanos sobre tu proyecto..."
                                 ></textarea>
                             </div>
@@ -162,6 +162,7 @@ const ContactSection = () => {
                 showConfirmation && (
                     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm">
                         <div className="bg-background p-6 rounded-2xl shadow-lg max-w-md w-full text-center space-y-4 transition-all duration-300 transform scale-100 opacity-100">
+                            <CheckCircle className="mx-auto h-10 w-10 text-green-500" />
                             <h4 className="text-lg font-semibold text-primary">¡Solicitud enviada!</h4>
                             <p className="text-sm text-muted-foreground">
                                 Gracias por contactarnos. Un asesor de NEXA Constructora se comunicará con vos a la brevedad
