@@ -3,7 +3,7 @@ import { BentoGrid, BentoGridItem } from '../ui/bento-grid';
 import { IconBoxAlignRightFilled, IconUserEdit } from '@tabler/icons-react';
 import AnimatedBrand from '../ui/animated-brand';
 import AnimatedTooltip from '../ui/animated-tooltip';
-import { marcasData } from '../../lib/data/marcaData';
+import { marcas } from '../../lib/data/marcasData';
 
 import animated2 from '../../../src/assets/animated/animated2.jpg';
 
@@ -86,7 +86,7 @@ const DashboardAdmin = () => {
       header: (
         <div className="w-full h-full flex items-center justify-center overflow-hidden p-6 min-h-[200px]">
           <div className="max-w-full w-full">
-            <AnimatedBrand brands={ marcasData } className="object-contain max-h-20" />
+            <AnimatedBrand brands={ marcas } className="object-contain max-h-20" />
           </div>
         </div>
       ),
