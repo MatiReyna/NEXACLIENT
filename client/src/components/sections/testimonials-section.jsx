@@ -30,7 +30,7 @@ const TestimonialsSection = () => {
         <section className="py-16 md:py-24">
             <div className="container space-y-12">
                 <div className="space-y-4 text-center">
-                    <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Lo Que Dicen Nuestros Clientes</h2>
+                    <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary">Lo Que Dicen Nuestros Clientes</h2>
                     <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
                         Experiencias reales de quienes ya disfrutan de su casa prefabricada.
                     </p>
@@ -40,7 +40,7 @@ const TestimonialsSection = () => {
                         testimonials.map((testimonial, i) => (
                             <Card
                                 key={ i }
-                                className="group overflow-hidden rounded-xl shadow-md transform transition-all duration-300 hover:translate-y-[-8px] hover:shadow-lg"
+                                className="group overflow-hidden rounded-xl shadow-md border border-[#e7dbf9] bg-[#f2ebfc] transform transition-all duration-300 hover:translate-y-[-8px] hover:shadow-lg"
                             >
                                 <CardContent className="p-6">
                                     <div className="flex flex-col space-y-4">
@@ -48,14 +48,14 @@ const TestimonialsSection = () => {
                                             <img
                                                 src={ testimonial.image }
                                                 alt={`Foto de ${ testimonial.name }`}
-                                                className="h-12 w-12 rounded-full object-cover shadow-sm transition-transform duration-300 group-hover:scale-105"
+                                                className="h-12 w-12 rounded-full object-cover shadow-sm transition-transform duration-300 group-hover:scale-105 group-hover:ring-2 group-hover:ring-primary/30"
                                             />
                                             <div>
                                                 <h3 className="font-bold">{ testimonial.name }</h3>
                                                 <p className="text-sm text-muted-foreground">{ testimonial.location }</p>
                                             </div>
                                         </div>
-                                        <p className="text-muted-foreground italic text-sm md:text-base">"{ testimonial.text }"</p>
+                                        <p className="text-[#241f19]/80 italic text-sm md:text-base">"{ testimonial.text }"</p>
                                         <div className="flex">
                                             {
                                                 Array(5)
@@ -80,6 +80,14 @@ const TestimonialsSection = () => {
                             </Card>
                         ))
                     }
+                </div>
+                <div className="text-center pt-8">
+                    <button
+                        onClick={ () => alert('aca podes escribir tu testimonio') }
+                        className="inline-flex items-center justify-center px-6 py-3 text-lg font-medium text-white bg-primary rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                    >
+                        Agregar Testimonio
+                    </button>
                 </div>
             </div>
         </section>
