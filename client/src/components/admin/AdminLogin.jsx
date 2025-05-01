@@ -11,6 +11,7 @@ const AdminLogin = ({ onLoginSuccess }) => {
 
     const navigate = useNavigate();
 
+    // ⚠️ Login hardcodeado solo para pruebas. Reemplazar por autenticación real.
     const handleSubmit = (e) => {
         e.preventDefault();
         if (email === 'administrador@nexa.com' && password === 'nexa123') {
@@ -24,13 +25,13 @@ const AdminLogin = ({ onLoginSuccess }) => {
 
     return (
         <div className="min-h-screen flex items-center justify-center bg-background px-4">
-            <div className="w-full max-w-md p-8 space-y-6 rounded-lg shadow-xl bg-white border border-gray-200">
-                <h2 className="text-2x1 font-bold text-center text-[#592e83]">
+            <div className="w-full max-w-md p-8 space-y-6 rounded-lg shadow-xl bg-white border border-[#e7dbf9]">
+                <h2 className="text-2xl font-bold text-center text-primary">
                     Acceso Administrador
                 </h2>
                 <form onSubmit={ handleSubmit } className="space-y-4">
                     <div>
-                        <label className="block text-sm font-medium mb-1 text-gray-700">
+                        <label className="block text-sm font-medium mb-1 text-[#241f19]/80">
                             Correo electrónico
                         </label>
                         <Input
@@ -39,10 +40,11 @@ const AdminLogin = ({ onLoginSuccess }) => {
                             value={ email }
                             onChange={ (e) => setEmail(e.target.value) }
                             required
+                            autoComplete="email"
                         />
                     </div>
                     <div>
-                        <label className="block text-sm font-medium mb-1 text-gray-700">
+                        <label className="block text-sm font-medium mb-1 text-[#241f19]/80">
                             Contraseña
                         </label>
                         <Input
@@ -51,6 +53,7 @@ const AdminLogin = ({ onLoginSuccess }) => {
                             value={ password }
                             onChange={ (e) => setPassword(e.target.value) }
                             required
+                            autoComplete="current-password"
                         />
                     </div>
                     {
