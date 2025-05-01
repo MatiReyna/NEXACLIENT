@@ -12,30 +12,6 @@ const DashboardAdmin = () => {
   const [ showRatingsModal, setShowRatingsModal ] = React.useState(false);
   const [ showProfileModal, setShowProfileModal ] = React.useState(false);
 
-  // const brands = [
-  //   {
-  //     id: 1,
-  //     name: 'Nexa',
-  //     src: marca1,
-  //     status: 'active',
-  //     quote: 'Calidad e innovación en viviendas modulares.'
-  //   },
-  //   {
-  //     id: 2,
-  //     name: 'EcoHomes',
-  //     src: marca2,
-  //     status: 'inactive',
-  //     quote: 'Casas ecológicas para un futuro sustentable.'
-  //   },
-  //   {
-  //     id: 3,
-  //     name: 'Urbania',
-  //     src: marca3,
-  //     status: 'active',
-  //     quote: 'Urbanismo moderno y diseño vanguardista.'
-  //   }
-  // ];
-
   const equipoNexa = [
     {
       id: 1,
@@ -84,9 +60,12 @@ const DashboardAdmin = () => {
       title: 'Gestión de Marcas',
       description: 'Visualizá, editá o eliminá las marcas asociadas a tu catálogo de casas.',
       header: (
-        <div className="w-full h-full flex items-center justify-center overflow-hidden p-6 min-h-[200px]">
-          <div className="max-w-full w-full">
-            <AnimatedBrand brands={ marcas } className="object-contain max-h-20" />
+        <div className="w-full h-full flex items-center justify-center p-6 min-h-[200px] overflow-hidden">
+          <div className="w-full max-w-full overflow-x-auto">
+            <AnimatedBrand
+              brands={ marcas }
+              className="object-contain max-h-20 mx-auto"
+            />
           </div>
         </div>
       ),
