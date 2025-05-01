@@ -11,6 +11,7 @@ import marca3 from '../../../src/assets/logos/marca3.svg';
 const DashboardAdmin = () => {
 
   const [ showRatingsModal, setShowRatingsModal ] = React.useState(false);
+  const [ showProfileModal, setShowProfileModal ] = React.useState(false);
 
   const brands = [
     {
@@ -69,12 +70,16 @@ const DashboardAdmin = () => {
             className="w-20 h-20 rounded-full border-4 border-black shadow-md"
           />
           <p className="mt-3 text-black font-semibold text-lg">Facundo Sagario</p>
-          <button className="mt-2 px-4 py-1 text-sm rounded-full">
-            <IconUserEdit className="h-4 w-4 text-black" />
+          <button
+            onClick={() => setShowProfileModal(true)}
+            aria-label="Editar perfil"
+            className="mt-2 px-4 py-1 text-sm rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition"
+          >
+            <IconUserEdit className="h-4 w-4" />
           </button>
         </div>
       ),
-      className: "md:col-span-1 bg-white text-black hover:shadow"
+      className: "md:col-span-1 bg-white text-black hover:shadow-lg rounded-xl border border-[#e7dbf9] transition-all duration-300"
     },
     {
       title: 'Gestión de Marcas',
@@ -236,6 +241,26 @@ const DashboardAdmin = () => {
                 <li className="border-b pb-2">“Me encantó el diseño moderno, pero tardaron un poco en responder” <span className="text-yellow-500">★ 3</span></li>
                 <li className="border-b pb-2">“No me convenció la atención, esperaba más profesionalismo” <span className="text-red-500">★ 2</span></li>
               </ul>
+            </div>
+          </div>
+        )
+      }
+      {
+        showProfileModal && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm">
+            <div className="bg-white dark:bg-neutral-900 rounded-lg shadow-lg max-w-sm w-full p-6">
+              <div className="flex justify-between items-center mb-4">
+                <h4 className="text-lg font-bold text-primary">Edición de Perfil</h4>
+                <button
+                  onClick={ () => setShowProfileModal(false) }
+                  className="text-gray-500 hover:text-gray-800 dark:hover:text-white"
+                >
+                  &times;
+                </button>
+              </div>
+              <p className="text-sm text-[#241f19]/80">
+                En breve vas a poder modificar tu nombre y contraseña desde aquí.
+              </p>
             </div>
           </div>
         )
