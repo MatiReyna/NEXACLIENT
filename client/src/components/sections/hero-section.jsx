@@ -35,7 +35,7 @@ const HeroSection = () => {
                     <a
                         href="#proceso"
                         aria-label="Cómo Trabajamos"
-                        className="inline-flex items-center justify-center px-6 py-3 text-lg font-medium text-white border border-white rounded-xl transition-all duration-300 hover:bg-[#8b55fd] hover:scale-105 hover:shadow-lg"
+                        className="inline-flex items-center justify-center px-6 py-3 text-lg font-medium text-white border border-white rounded-xl transition-all duration-300 hover:bg-[#f2ebfc] hover:scale-105 hover:shadow-lg"
                     >
                         Cómo Trabajamos
                     </a>
