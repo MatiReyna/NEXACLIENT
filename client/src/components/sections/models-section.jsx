@@ -34,7 +34,10 @@ const ModelCard = ({ title, description, area, rooms, imageSrc, imageAlt }) => {
                             { rooms }
                         </span>
                     </div>
-                    <Button className="mt-4 w-full border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 hover:scale-105 hover:shadow-md" variant="outline" onClick={ () => setShowDetails(true) }>
+                    <Button
+                        className="mt-4 w-full text-white bg-primary hover:scale-105 hover:shadow-lg transition-all duration-300 rounded-xl py-3 px-6 text-center"
+                        onClick={ () => setShowDetails(true) }
+                    >
                         <span className="flex items-center group">
                             Ver Detalles
                             <ArrowRight className="ml-2 h-4 w-4 opacity-70 group-hover:opacity-100 transition-opacity duration-300 group-hover:translate-x-1" />
@@ -64,9 +67,24 @@ const ModelsSection = () => {
                 </div>
                 <Tabs defaultValue="modernos" className="w-full">
                     <TabsList className="grid w-full grid-cols-3 sm:grid-cols-3 overflow-x-auto">
-                        <TabsTrigger value="modernos" className="data-[state=active]:bg-primary data-[state=active]:text-white min-w-[120px] hover:bg-primary/10 transition-colors duration-300">Modernos</TabsTrigger>
-                        <TabsTrigger value="tradicionales" className="data-[state=active]:bg-primary data-[state=active]:text-white min-w-[120px] hover:bg-primary/10 transition-colors duration-300">Tradicionales</TabsTrigger>
-                        <TabsTrigger value="ecologicos" className="data-[state=active]:bg-primary data-[state=active]:text-white min-w-[120px] hover:bg-primary/10 transition-colors duration-300">Ecológicos</TabsTrigger>
+                        <TabsTrigger
+                            value="modernos"
+                            className="border border-[#241f19]/10 rounded-md data-[state=active]:bg-primary data-[state=active]:text-white min-w-[120px] hover:bg-primary/10 transition-colors duration-300"
+                        >
+                            Modernos
+                        </TabsTrigger>
+                        <TabsTrigger
+                            value="tradicionales"
+                            className="border border-[#241f19]/10 rounded-md data-[state=active]:bg-primary data-[state=active]:text-white min-w-[120px] hover:bg-primary/10 transition-colors duration-300"
+                        >
+                            Tradicionales
+                        </TabsTrigger>
+                        <TabsTrigger
+                            value="ecologicos"
+                            className="border border-[#241f19]/10 rounded-md data-[state=active]:bg-primary data-[state=active]:text-white min-w-[120px] hover:bg-primary/10 transition-colors duration-300"
+                        >
+                            Ecológicos
+                        </TabsTrigger>
                     </TabsList>
                     <TabsContent value="modernos" className="mt-6 animate-fade">
                         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
