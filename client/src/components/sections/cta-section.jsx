@@ -11,17 +11,17 @@ const CtaSection = () => {
                     <p className="mx-auto max-w-[600px] md:text-xl">
                         Construye el espacio de tus sueños con la mejor calidad, innovación y sostenibilidad.
                     </p>
-                    <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
+                    <div className="flex flex-col gap-2 min-[400px]:flex-row">
                         <a
                             href="#contacto"
-                            className="inline-flex items-center justify-center whitespace-nowrap rounded-xl bg-primary text-white h-11 px-8 text-sm font-medium transition-all duration-300 hover:scale-105 hover:bg-primary/90 group"
+                            className="inline-flex items-center justify-center px-6 py-3 text-lg font-medium text-white bg-primary rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg"
                         >
                             Solicitar Presupuesto
                             <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                         </a>
                         <a
                             href="#modelos"
-                            className="inline-flex items-center justify-center whitespace-nowrap rounded-xl border border-white bg-transparent text-white h-11 px-8 text-sm font-medium transition-all duration-300 hover:bg-[#d5bef4] hover:text-white group"
+                            className="inline-flex items-center justify-center px-6 py-3 text-lg font-medium text-white border border-white rounded-xl transition-all duration-300 hover:bg-[#f2ebfc] hover:scale-105 hover:shadow-lg"
                         >
                             Ver Modelos
                             <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
