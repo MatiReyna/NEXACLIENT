@@ -3,7 +3,7 @@ import { BentoGrid, BentoGridItem } from '../ui/bento-grid';
 import { IconBoxAlignRightFilled, IconUserEdit } from '@tabler/icons-react';
 import AnimatedBrand from '../ui/animated-brand';
 import AnimatedTooltip from '../ui/animated-tooltip';
-import { marcas } from '../../lib/data/marcasData';
+import marcas from '../../lib/data/marcasData';
 
 import animated2 from '../../../src/assets/animated/animated2.jpg';
 
