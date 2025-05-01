@@ -161,7 +161,7 @@ const ContactSection = () => {
             {
                 showConfirmation && (
                     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm">
-                        <div className="bg-gradient-to-b from-[#592e83] to-[#8b4cd1] p-6 rounded-2xl shadow-lg max-w-md w-full text-center space-y-4 transition-all duration-300 transform scale-100 opacity-100">
+                        <div className="bg-background p-6 rounded-2xl shadow-lg max-w-md w-full text-center space-y-4 transition-all duration-300 transform scale-100 opacity-100">
                             <CheckCircle className="mx-auto h-10 w-10 text-green-500" />
                             <h4 className="text-lg font-semibold text-primary">¡Solicitud enviada!</h4>
                             <p className="text-sm text-muted-foreground">
