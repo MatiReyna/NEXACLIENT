@@ -30,16 +30,17 @@ const ProcessSection = () => {
         <section id="proceso" className="bg-[#f2ebfc] py-16 md:py-24 rounded-t-3xl">
             <div className="container space-y-12">
                 <div className="space-y-4 text-center">
-                    <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Nuestro Proceso</h2>
-                    <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
+                    <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl text-primary">Nuestro Proceso</h2>
+                    <div className="mx-auto h-1 w-24 bg-primary rounded-full mt-4"></div>
+                    <p className="mx-auto max-w-[700px] text-[#241f19]/80 md:text-xl">
                         Conoce cómo trabajamos para hacer realidad tu proyecto.
                     </p>
                 </div>
                 <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
                     {
                         steps.map((item) => (
-                            <div key={ item.step } className="group relative flex flex-col items-center space-y-4 p-6 rounded-xl border border-[#e7dbf9] bg-white shadow-sm hover:bg-primary/5 transition-all duration-300">
-                                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary text-2xl font-bold text-white shadow-md transition-transform duration-300 hover:scale-110 hover:shadow-lg ring-2 ring-primary/30">
+                            <div key={ item.step } className="group relative flex flex-col items-center space-y-4 p-6">
+                                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary text-2xl font-bold text-white shadow-md transform transition-transform duration-300 hover:scale-110 hover:shadow-lg">
                                     { item.step }
                                 </div>
                                 <h3 className="text-xl font-bold">{ item.title }</h3>
