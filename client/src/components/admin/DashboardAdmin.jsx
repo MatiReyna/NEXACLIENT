@@ -6,7 +6,7 @@ import AnimatedTooltip from '../ui/animated-tooltip';
 import marcas from '../../lib/data/marcasData';
 
 import animated2 from '../../../src/assets/animated/animated2.jpg';
-import animated3 from '../../../src/assets/animated/animated3.jpg';
+import animated1 from '../../../src/assets/animated/animated1.jpg';
 import animated4 from '../../../src/assets/animated/animated4.jpg';
 
 const DashboardAdmin = () => {
@@ -26,7 +26,7 @@ const DashboardAdmin = () => {
       id: 2,
       name: 'Matias Reyna',
       role: 'Developer Engineer',
-      image: animated3
+      image: animated1
     },
     {
       id: 3,
@@ -102,16 +102,17 @@ const DashboardAdmin = () => {
       title: 'Solicitudes de contacto',
       description: 'Gestiona fácilmente las solicitudes de contacto recibidas por modelos de casas.',
       header: (
-        <div className="flex flex-col items-start justify-start w-full h-full rounded-xl bg-gray-100 p-4 dark:bg-neutral-800">
+        <div className="flex flex-col items-start justify-start w-full h-full rounded-xl bg-[#faf6fe] border border-[#e7dbf9] p-6 dark:bg-neutral-800">
+          <h3 className="text-lg font-semibold text-primary mb-4">Solicitudes recientes</h3>
           <div className="w-full flex flex-col gap-2">
             {[
               { name: 'Juan Pérez', email: 'juan@email.com', modelo: 'Casa Moderno' },
               { name: 'Ana Pérez', email: 'ana@email.com', modelo: 'Casa Tradicional' },
               { name: 'Carlos Méndez', email: 'carlos@email.com', modelo: 'Casa Natural' },
             ].map(({ name, email, modelo }, i) => (
-              <div key={ i } className="grid grid-cols-4 items-center bg-white dark:bg-neutral-900 rounded-lg px-3 py-2 shadow-sm text-xs gap-2">
-                <span className="text-neutral-800 dark:text-neutral-100">{ name }</span>
-                <span className="text-neutral-500 dark:text-neutral-400">{ email }</span>
+              <div key={ i } className="grid grid-cols-4 items-center bg-white dark:bg-neutral-900 rounded-lg px-4 py-3 shadow-sm text-sm gap-2">
+                <span className="text-[#241f19]">{ name }</span>
+                <span className="text-[#241f19]/70">{ email }</span>
                 <span className="text-center text-purple-600 font-semibold bg-purple-100 px-2 py-0.5 rounded-full">{ modelo }</span>
                 <div className="flex justify-center">
                   <span className={`w-2 h-2 rounded-full ${ i === 0 ? 'bg-green-500' : i === 1 ? 'bg-yellow-500' : 'bg-red-500' }`}></span>
