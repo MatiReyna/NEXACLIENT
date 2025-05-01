@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Button from '../ui/button';
 import Input from '../ui/input';
 import { HeroHighlight, Highlight } from '../ui/hero-highlight';
+import { motion } from 'motion/react';
 
 const AdminLogin = ({ onLoginSuccess }) => {
 
