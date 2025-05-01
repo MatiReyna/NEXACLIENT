@@ -22,12 +22,12 @@ const ProcessSection = () => {
         {
             step: 4,
             title: 'Instalación',
-            description: 'Transportamos e intalamos tu casa en el terreno en tiempo récord.'
+            description: 'Transportamos e instalamos tu casa en el terreno en tiempo récord.'
         }
     ];
 
     return (
-        <section id="proceso" className="bg-muted py-16 md:py-24 rounded-t-3xl">
+        <section id="proceso" className="bg-[#f2ebfc] py-16 md:py-24 rounded-t-3xl">
             <div className="container space-y-12">
                 <div className="space-y-4 text-center">
                     <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Nuestro Proceso</h2>
@@ -38,8 +38,8 @@ const ProcessSection = () => {
                 <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
                     {
                         steps.map((item) => (
-                            <div key={ item.step } className="group relative flex flex-col items-center space-y-4 p-6">
-                                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#592e83] text-2xl font-bold text-white shadow-md transform transition-transform duration-300 hover:scale-110 hover:shadow-lg">
+                            <div key={ item.step } className="group relative flex flex-col items-center space-y-4 p-6 rounded-xl border border-[#e7dbf9] bg-white shadow-sm hover:bg-primary/5 transition-all duration-300">
+                                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary text-2xl font-bold text-white shadow-md transition-transform duration-300 hover:scale-110 hover:shadow-lg ring-2 ring-primary/30">
                                     { item.step }
                                 </div>
                                 <h3 className="text-xl font-bold">{ item.title }</h3>
@@ -54,12 +54,13 @@ const ProcessSection = () => {
                     }
                 </div>
                 <div className="flex justify-center">
-                    <Button size="lg" className="transition-all duration-300 hover:scale-105 hover:shadow-lg">
-                        <a href="#contacto" className="flex items-center group">
-                            Solicitar Información
-                            <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1.5" />
-                        </a>
-                    </Button>
+                    <a
+                        href="#contacto"
+                        className="inline-flex items-center justify-center px-6 py-3 text-lg font-medium text-white bg-primary rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                    >
+                        Solicitar Información
+                        <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1.5" />
+                    </a>
                 </div>
             </div>
         </section>
