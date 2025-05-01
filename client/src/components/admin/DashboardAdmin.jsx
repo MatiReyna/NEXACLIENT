@@ -6,30 +6,33 @@ import AnimatedTooltip from '../ui/animated-tooltip';
 import marcas from '../../lib/data/marcasData';
 
 import animated2 from '../../../src/assets/animated/animated2.jpg';
+import animated3 from '../../../src/assets/animated/animated3.jpg';
+import animated4 from '../../../src/assets/animated/animated4.jpg';
 
 const DashboardAdmin = () => {
 
   const [ showRatingsModal, setShowRatingsModal ] = React.useState(false);
   const [ showProfileModal, setShowProfileModal ] = React.useState(false);
+  const [ showTeamModal, setShowTeamModal ] = React.useState(false);
 
   const equipoNexa = [
     {
       id: 1,
       name: 'Facundo Sagario',
       role: 'CEO',
-      image: 'https://images.unsplash.com/photo-1595152772835-219674b2a8a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'
+      image: animated2
     },
     {
       id: 2,
       name: 'Matias Reyna',
-      role: 'Developer',
-      image: 'https://images.unsplash.com/photo-1603415526960-f8f0b4fd2b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'
+      role: 'Developer Engineer',
+      image: animated3
     },
     {
       id: 3,
       name: 'Nicolas Sagario',
-      role: 'Manager Sale',
-      image: 'https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'
+      role: 'Sales Manager',
+      image: animated4
     }
   ];
 
@@ -85,7 +88,10 @@ const DashboardAdmin = () => {
               image: member.image
             })) } />
           </div>
-          <button className="mt-4 px-4 py-2 text-sm bg-primary text-white rounded-full hover:bg-primary/90 transition">
+          <button
+            onClick={ () => setShowTeamModal(true) }
+            className="mt-4 px-4 py-2 text-sm bg-primary text-white rounded-full hover:bg-primary/90 transition"
+          >
             Ver Todos
           </button>
         </div>
@@ -244,6 +250,42 @@ const DashboardAdmin = () => {
               <p className="text-sm text-[#241f19]/80">
                 En breve vas a poder modificar tu nombre y contraseña desde aquí.
               </p>
+            </div>
+          </div>
+        )
+      }
+      {
+        showTeamModal && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm">
+            <div className="bg-white dark:bg-neutral-900 rounded-lg shadow-lg max-w-2xl w-full p-6">
+              <div className="flex justify-between items-center mb-4">
+                <h4 className="text-lg font-bold text-primary">Equipo NEXA</h4>
+                <button
+                  onClick={ () => setShowTeamModal(false) }
+                  className="text-gray-500 hover:text-gray-800 dark:hover:text-white"
+                >
+                  &times;
+                </button>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {
+                  equipoNexa.map(member => (
+                    <div key={ member.id } className="flex items-center justify-between p-4 rounded-lg bg-[#f2ebfc] border border-[#e7dbf9]">
+                      <div className="flex items-center gap-3">
+                        <img src={ member.image } alt={ member.name } className="w-12 h-12 rounded-full object-cover shadow" />
+                        <div>
+                          <p className="font-semibold text-[#241f19]">{ member.name }</p>
+                          <p className="text-sm text-[#241f19]/70">{ member.role }</p>
+                        </div>
+                      </div>
+                      <div className="flex gap-2">
+                        <button className="px-3 py-1 text-xs bg-primary text-white rounded-full hover:bg-primary/90 transition">Editar</button>
+                        <button className="px-3 py-1 text-xs bg-red-500 text-white rounded-full hover:bg-red-600 transition">Eliminar</button>
+                      </div>
+                    </div>
+                  ))
+                }
+              </div>
             </div>
           </div>
         )
