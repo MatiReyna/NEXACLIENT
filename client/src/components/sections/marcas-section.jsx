@@ -2,7 +2,7 @@ import MarcasCarousel from './marcas-carousel';
 
 const MarcasSection = () => {
     return (
-        <section className="bg-[#f5f5f5] py-12 md:py-16" aria-label="Sección de Marcas de Confianza">
+        <section className="py-12 md:py-16" aria-label="Sección de Marcas de Confianza">
             <div className="container">
                 <div className="space-y-8">
                     <div className="text-center">

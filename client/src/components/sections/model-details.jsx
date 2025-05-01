@@ -92,7 +92,7 @@ const ModelDetails = ({ isOpen, onClose, model }) => {
                                 <button
                                     key={ index }
                                     onClick={ () => setActiveImage(index) }
-                                    className={ `w-16 h-16 rounded-lg overflow-hidden border-2 transition-colors ${ index === activeImage ? 'border-[#592e83]' : 'border-transparent' }` }
+                                    className={ `w-16 h-16 rounded-lg overflow-hidden border-2 transition-colors ${ index === activeImage ? 'border-[#592e83] ring-2 ring-primary/30 scale-105' : 'border-transparent' }` }
                                 >
                                     <img
                                         src={ img || '/placeholder.svg' }
@@ -107,11 +107,11 @@ const ModelDetails = ({ isOpen, onClose, model }) => {
 
                 <div className="lg:w-1/2 p-6 overflow-y-auto max-h-[70vh] lg:max-h-[90vh]">
                     <h2 className="text-2xl font-bold text-gray-900">{ model.title }</h2>
-                    <p className="text-sm text-gray-500 mt-1">Ref: NEXA-{ model.title.replace(/\s+/g, '').toLowerCase() }-{ Math.floor(Math.random() * 1000) }</p>
+                    <p className="text-sm text-[#241f19]/60 mt-1">Ref: NEXA-{ model.title.replace(/\s+/g, '').toLowerCase() }-{ Math.floor(Math.random() * 1000) }</p>
 
                     <div className="mt-6">
                         <h3 className="text-lg font-semibold text-gray-900">Descripción</h3>
-                        <p className="mt-2 text-gray-600">
+                        <p className="mt-2 text-[#241f19]/80">
                             { model.description } Diseñada para maximizar la comodidad y funcionalidad,
                             esta casa prefabricada ofrece un equilibrio perfecto entre estética y practicidad.
                             Construida con materiales de primera calidad y acabados premium.
@@ -122,19 +122,19 @@ const ModelDetails = ({ isOpen, onClose, model }) => {
                         <h3 className="text-lg font-semibold text-gray-900">Especificaciones</h3>
                         <div className="mt-2 grid grid-cols-2 gap-4">
                             <div className="flex flex-col">
-                                <span className="text-sm text-gray-500">Superficie</span>
+                                <span className="text-sm text-[#241f19]/80">Superficie</span>
                                 <span className="font-medium">{ model.area }</span>
                             </div>
                             <div className="flex flex-col">
-                                <span className="text-sm text-gray-500">Habitaciones</span>
+                                <span className="text-sm text-[#241f19]/80">Habitaciones</span>
                                 <span className="font-medium">{ model.rooms }</span>
                             </div>
                             <div className="flex flex-col">
-                                <span className="text-sm text-gray-500">Baños</span>
+                                <span className="text-sm text-[#241f19]/80">Baños</span>
                                 <span className="font-medium">{ model.bathrooms } completos</span>
                             </div>
                             <div className="flex flex-col">
-                                <span className="text-sm text-gray-500">Tiempo de construcción</span>
+                                <span className="text-sm text-[#241f19]/80">Tiempo de construcción</span>
                                 <span className="font-medium">3-4 meses</span>
                             </div>
                         </div>
@@ -147,7 +147,7 @@ const ModelDetails = ({ isOpen, onClose, model }) => {
                                 getFeatures().map((feature, index) => (
                                     <div key={ index } className="flex items-center gap-2">
                                         { feature.icon }
-                                        <span className="text-gray-600">{ feature.text }</span>
+                                        <span className="text-[#241f19]/80">{ feature.text }</span>
                                     </div>
                                 ))
                             }
@@ -159,15 +159,15 @@ const ModelDetails = ({ isOpen, onClose, model }) => {
                         <div className="mt-2 space-y-2">
                             <div className="flex items-start gap-2">
                                 <Check className="h-5 w-5 text-green-500 mt-0.5" />
-                                <span className="text-gray-600">Distribución interior flexible</span>
+                                <span className="text-[#241f19]/80">Distribución interior flexible</span>
                             </div>
                             <div className="flex items-start gap-2">
                                 <Check className="h-5 w-5 text-green-500 mt-0.5" />
-                                <span className="text-gray-600">Acabados y materiales a elegir</span>
+                                <span className="text-[#241f19]/80">Acabados y materiales a elegir</span>
                             </div>
                             <div className="flex items-start gap-2">
                                 <Check className="h-5 w-5 text-green-500 mt-0.5" />
-                                <span className="text-gray-600">Posibilidad de ampliación modular</span>
+                                <span className="text-[#241f19]/80">Posibilidad de ampliación modular</span>
                             </div>
                         </div>
                     </div>
@@ -175,17 +175,17 @@ const ModelDetails = ({ isOpen, onClose, model }) => {
                     <div className="mt-8 space-y-4">
                         <div className="p-4 bg-[#592e83]/10 rounded-xl space-y-1">
                             <p className="text-[#592e83] font-medium">Desde <span className="text-2xl font-bold">$1.750.000</span></p>
-                            <p className="text-sm text-gray-600">Financiación disponible</p>
+                            <p className="text-sm text-[#241f19]/80">Financiación disponible</p>
                         </div>
 
                         <div className="flex flex-col sm:flex-row gap-3">
-                            <Button className="flex-1 transition-transform duration-300 hover:scale-105" arial-label="Solicitar Presupuesto">
+                            <Button className="flex-1 transition-transform duration-300 hover:scale-105" aria-label="Solicitar Presupuesto">
                                 <span className="flex items-center group">
                                     Solicitar Presupuesto
                                     <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1.5" />
                                 </span>
                             </Button>
-                            <Button variant="outline" className="flex-1 transition-transform duration-300 hover:scale-105" arial-label="Descargar Catálogo">
+                            <Button variant="outline" className="flex-1 transition-transform duration-300 hover:scale-105" aria-label="Descargar Catálogo">
                                 Descargar Catálogo
                             </Button>
                         </div>
