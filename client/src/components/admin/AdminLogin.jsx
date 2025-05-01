@@ -31,10 +31,10 @@ const AdminLogin = ({ onLoginSuccess }) => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: [20, -5, 0] }}
               transition={{ duration: 0.5, ease: [0.4, 0.0, 0.2, 1] }}
-              className="text-xl md:text-2xl font-semibold text-center text-[#241f19] max-w-xl mx-auto mb-8 px-4 leading-relaxed"
+              className="text-2xl px-4 md:text-4xl lg:text-5xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto "
             >
               Accedé a tu dashboard para ver datos de tu página y{ " " }
-              <Highlight className="text-[#241f19]">modificarla a tu gusto</Highlight>.
+              <Highlight className="text-black dark:text-white">modificarla a tu gusto</Highlight>.
             </motion.h1>
             <div className="relative w-full max-w-md p-8 space-y-6 rounded-lg shadow-xl bg-white border border-[#e7dbf9] z-10">
                 <h2 className="text-2xl font-bold text-center text-primary">
