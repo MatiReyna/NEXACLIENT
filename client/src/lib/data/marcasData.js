@@ -1,11 +1,11 @@
-import marca1 from '../../src/assets/logos/marca1.svg';
-import marca2 from '../../src/assets/logos/marca2.svg';
-import marca3 from '../../src/assets/logos/marca3.svg';
-import marca4 from '../../src/assets/logos/marca4.svg';
-import marca5 from '../../src/assets/logos/marca5.svg';
-import marca6 from '../../src/assets/logos/marca6.svg';
-import marca7 from '../../src/assets/logos/marca7.svg';
-import marca8 from '../../src/assets/logos/marca8.svg';
+import marca1 from '../../../src/assets/logos/marca1.svg';
+import marca2 from '../../../src/assets/logos/marca2.svg';
+import marca3 from '../../../src/assets/logos/marca3.svg';
+import marca4 from '../../../src/assets/logos/marca4.svg';
+import marca5 from '../../../src/assets/logos/marca5.svg';
+import marca6 from '../../../src/assets/logos/marca6.svg';
+import marca7 from '../../../src/assets/logos/marca7.svg';
+import marca8 from '../../../src/assets/logos/marca8.svg';
 
 const marcas = [
     { id: 1, nombre: 'TechBuild', logo: marca1, activo: true, quote: 'Calidad e innovación en viviendas modulares.' },
