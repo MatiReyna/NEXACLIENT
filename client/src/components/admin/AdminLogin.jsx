@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Button from '../ui/button';
 import Input from '../ui/input';
-import { HeroHighlight } from '../ui/hero-highlight';
+import { HeroHighlight, Highlight } from '../ui/hero-highlight';
 
 const AdminLogin = ({ onLoginSuccess }) => {
 
@@ -26,6 +26,15 @@ const AdminLogin = ({ onLoginSuccess }) => {
 
     return (
         <HeroHighlight containerClassName="min-h-screen flex items-center justify-center px-4">
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: [20, -5, 0] }}
+              transition={{ duration: 0.5, ease: [0.4, 0.0, 0.2, 1] }}
+              className="text-xl md:text-2xl font-semibold text-center text-[#241f19] max-w-xl mx-auto mb-8 px-4 leading-relaxed"
+            >
+              Accedé a tu dashboard para ver datos de tu página y{ " " }
+              <Highlight className="text-[#241f19]">modificarla a tu gusto</Highlight>.
+            </motion.h1>
             <div className="relative w-full max-w-md p-8 space-y-6 rounded-lg shadow-xl bg-white border border-[#e7dbf9] z-10">
                 <h2 className="text-2xl font-bold text-center text-primary">
                     Acceso Administrador
