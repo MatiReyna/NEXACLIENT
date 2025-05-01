@@ -67,19 +67,19 @@ const DashboardAdmin = () => {
           <img
             src="https://picsum.photos/id/10/400/300"
             alt="Avatar"
-            className="w-20 h-20 rounded-full border-4 border-black shadow-md"
+            className="w-24 h-24 rounded-full shadow-md"
           />
-          <p className="mt-3 text-black font-semibold text-lg">Facundo Sagario</p>
+          <p className="mt-3 text-primary font-semibold text-xl">Facundo Sagario</p>
           <button
             onClick={() => setShowProfileModal(true)}
             aria-label="Editar perfil"
-            className="mt-2 px-4 py-1 text-sm rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition"
+            className="mt-3 px-5 py-2 text-sm rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition"
           >
             <IconUserEdit className="h-4 w-4" />
           </button>
         </div>
       ),
-      className: "md:col-span-1 bg-white text-black hover:shadow-lg rounded-xl border border-[#e7dbf9] transition-all duration-300"
+      className: "md:col-span-1 bg-[#f2ebfc] text-[#241f19] hover:shadow-lg rounded-xl border border-[#e7dbf9] transition-all duration-300"
     },
     {
       title: 'Gestión de Marcas',
@@ -219,8 +219,12 @@ const DashboardAdmin = () => {
           items.map((item, i) => (
             <BentoGridItem
               key={ i }
-              title={ item.title }
-              description={ item.description }
+              title={
+                <span className="text-[#241f19]">{ item.title }</span>
+              }
+              description={
+                <span className="text-[#241f19]">{ item.description }</span>
+              }
               header={ item.header }
               icon={ item.icon }
               className={ item.className || (i === 3 || i === 6 ? 'md:col-span-2' : '') }
