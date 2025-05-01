@@ -103,7 +103,7 @@ const DashboardAdmin = () => {
       description: 'Gestiona fácilmente las solicitudes de contacto recibidas por modelos de casas.',
       header: (
         <div className="flex flex-col items-start justify-start w-full h-full rounded-xl bg-[#faf6fe] border border-[#e7dbf9] p-6 dark:bg-neutral-800">
-          <h3 className="text-lg font-semibold text-primary mb-4">Solicitudes recientes</h3>
+          {/* <h3 className="text-lg font-semibold text-primary mb-4">Solicitudes recientes</h3> */}
           <div className="w-full flex flex-col gap-2">
             {[
               { name: 'Juan Pérez', email: 'juan@email.com', modelo: 'Casa Moderno' },
@@ -146,19 +146,19 @@ const DashboardAdmin = () => {
       title: 'Valoraciones de la página',
       description: 'Observa las opiniones recientes de los usuarios sobre los modelos y el servicio.',
       header: (
-        <div className="flex flex-col items-start justify-start w-full h-full rounded-xl bg-gray-100 dark:bg-neutral-800 p-4">
+        <div className="flex flex-col items-start justify-start w-full h-full rounded-xl bg-[#f2ebfc] border border-[#e7dbf9] rounded-xl p-6 dark:bg-neutral-800">
           <div className="w-full flex flex-col gap-2">
-            <span className="font-semibold text-sm text-neutral-700 dark:text-neutral-100">Promedio de valoraciones</span>
-            <div className="w-full bg-gray-300 dark:bg-gray-700 h-3 rounded-full relative overflow-hidden">
-              <div className="absolute left-0 top-0 h-3 rounded-full bg-green-500" style={{ width: '90%' }}></div>
+            <span className="font-semibold text-sm text-[#241f19]">Promedio de valoraciones</span>
+            <div className="w-full bg-[#e7dbf9] h-3 rounded-full relative overflow-hidden">
+              <div className="absolute left-0 top-0 h-3 rounded-full bg-[#8b4cd1]" style={{ width: '90%' }}></div>
             </div>
-            <p className="text-xs text-neutral-600 dark:text-neutral-300 mt-2">
+            <p className="text-sm text-[#241f19]/70 mt-2">
               Valoración media basada en las opiniones de los usuarios.
             </p>
           </div>
           <button
             onClick={ () => setShowRatingsModal(true) }
-            className="text-sm mt-3 px-4 py-1 bg-purple-600 text-white rounded-full hover:bg-purple-700 transition"
+            className="text-sm mt-3 px-4 py-2 bg-primary text-white rounded-full hover:bg-primary/90 transition"
           >
             Ver más
           </button>
