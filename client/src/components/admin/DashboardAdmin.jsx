@@ -64,7 +64,7 @@ const DashboardAdmin = () => {
       title: 'Perfil del Administrador',
       description: 'Visualiza tu perfil, edita tus datos personales y mantené tu información actualizada.',
       header: (
-        <div className="flex flex-col items-center justify-center w-full h-full rounded-xl pb-6">
+        <div className="flex flex-col items-center justify-center w-full h-full rounded-xl">
           <img
             src={ animated2 }
             alt="Avatar"
@@ -86,13 +86,13 @@ const DashboardAdmin = () => {
       title: 'Gestión de Marcas',
       description: 'Visualizá, editá o eliminá las marcas asociadas a tu catálogo de casas.',
       header: (
-        <div className="w-full h-full flex items-center justify-center overflow-hidden p-2">
+        <div className="w-full h-full flex items-center justify-center overflow-hidden p-6 min-h-[200px]">
           <div className="max-w-full w-full">
             <AnimatedBrand brands={ brands } />
           </div>
         </div>
       ),
-      // className: "md:col-span-1 bg-white text-black hover:shadow"  // Ver si rompe.
+      className: "md:col-span-1 bg-[#f2ebfc] text-[#241f19] hover:shadow-lg rounded-xl border border-[#e7dbf9] transition-all duration-300"
     },
     {
       title: 'Equipo NEXA',
