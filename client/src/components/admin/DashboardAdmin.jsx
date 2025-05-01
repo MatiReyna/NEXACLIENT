@@ -75,7 +75,8 @@ const DashboardAdmin = () => {
       title: 'Equipo NEXA',
       description: 'Conoce a los integrantes que hacen posible nuestro éxito.',
       header: (
-        <div className="flex flex-col items-center justify-center w-full h-full rounded-xl bg-gray-100 dark:bg-neutral-800 p-4">
+        <div className="flex flex-col items-center justify-center w-full h-full rounded-xl bg-[#e7dbf9] border border-[#d5bef4] p-6">
+          <h3 className="text-lg font-semibold text-center text-primary mb-4">Nuestro Equipo</h3>
           <div className="flex justify-center">
             <AnimatedTooltip items={ equipoNexa.map(member => ({
               id: member.id,
@@ -84,12 +85,12 @@ const DashboardAdmin = () => {
               image: member.image
             })) } />
           </div>
-          <button className="mt-4 text-xs px-3 py-1 bg-purple-600 hover:bg-purple-700 text-white rounded-full animate-bounce">
+          <button className="mt-4 px-4 py-2 text-sm bg-primary text-white rounded-full hover:bg-primary/90 transition">
             Ver Todos
           </button>
         </div>
       ),
-      className: "md:col-span-1 bg-white text-black hover:shadow-lg"
+      className: "md:col-span-1 text-[#241f19] hover:shadow-lg rounded-xl transition-all duration-300"
     },
     {
       title: 'Solicitudes de contacto',
