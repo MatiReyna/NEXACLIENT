@@ -5,6 +5,7 @@ import AnimatedBrand from '../ui/animated-brand';
 import AnimatedTooltip from '../ui/animated-tooltip';
 import { TypewriterEffectSmooth } from '../ui/typewriter-effect';
 import marcas from '../../lib/data/marcasData';
+import modelos from '../../lib/data/modelosData';
 
 import animated2 from '../../../src/assets/animated/animated2.jpg';
 import animated1 from '../../../src/assets/animated/animated1.jpg';
@@ -16,6 +17,7 @@ const DashboardAdmin = () => {
   const [ showProfileModal, setShowProfileModal ] = React.useState(false);
   const [ showTeamModal, setShowTeamModal ] = React.useState(false);
   const [ showCreateModelModal, setShowCreateModelModal ] = React.useState(false);
+  const [ showAllModelsModal, setShowAllModelsModal ] = React.useState(false);
 
   const equipoNexa = [
     {
@@ -206,10 +208,32 @@ const DashboardAdmin = () => {
       className: "md:col-span-1 bg-[#faf6fe] text-[#241f19] hover:shadow-lg rounded-xl border border-[#e7dbf9] transition-all duration-300",
     },
     {
-      title: 'The Spirit of Adventure',
-      description: 'Embark on exciting journeys and thrilling discoveries.',
-      header: <Skeleton />,
-      icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
+      title: 'Modelos publicados',
+      description: 'Mirá un resumen de los modelos mostrados actualmente en la página.',
+      header: (
+        <div className="flex flex-col items-start justify-start w-full h-full rounded-xl bg-[#faf6fe] border border-[#e7dbf9] p-6 dark:bg-neutral-800">
+          <h3 className="text-lg font-semibold text-primary mb-4">Modelos publicados</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full">
+            {
+              modelos.slice(0, 3).map((modelo, i) => (
+                <div key={ i } className="bg-white dark:bg-neutral-900 p-4 rounded-lg shadow-sm text-sm">
+                  <p className="font-bold text-[#241f19]">{ modelo.nombre }</p>
+                  <p className="text-[#241f19]/70">{ modelo.descripcion }</p>
+                </div>
+              ))
+            }
+          </div>
+          <div className="flex justify-center mt-3 w-full">
+            <button onClick={ () => setShowAllModelsModal(true) } className="animate-bounce">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
+                className="text-neutral-500 dark:text-white">
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      )
     }
   ];
 
@@ -326,9 +350,43 @@ const DashboardAdmin = () => {
                   &times;
                 </button>
               </div>
-              <p className="text-sm text-[#241f19]/80">
-                Próximamente vas a poder crear nuevos modelos desde esta sección.
-              </p>
+              <div className="grid grid-cols-1 gap-3">
+                {
+                modelos.map((modelo, i) => (
+                  <div key={ i } className="bg-[#f2ebfc] border border-[#e7dbf9] p-4 rounded-lg shadow-sm">
+                    <p className="font-bold text-[#241f19]">{ modelo.nombre }</p>
+                    <p className="text-sm text-[#241f19]/80">{ modelo.descripcion }</p>
+                  </div>
+                ))
+                }
+              </div>
+            </div>
+          </div>
+        )
+      }
+      {
+        showAllModelsModal && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm">
+            <div className="bg-white dark:bg-neutral-900 rounded-lg shadow-lg max-w-3xl w-full p-6">
+              <div className="flex justify-between items-center mb-4">
+                <h4 className="text-lg font-bold text-primary">Todos los Modelos</h4>
+                <button
+                  onClick={ () => setShowAllModelsModal(false) }
+                  className="text-gray-500 hover:text-gray-800 dark:hover:text-white"
+                >
+                  &times;
+                </button>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {
+                  modelos.map((modelo, i) => (
+                    <div key={ i } className="bg-[#f2ebfc] border border-[#e7dbf9] p-4 rounded-lg shadow-sm">
+                      <p className="font-bold text-[#241f19]">{ modelo.nombre }</p>
+                      <p className="text-sm text-[#241f19]/80">{ modelo.descripcion }</p>
+                    </div>
+                  ))
+                }
+              </div>
             </div>
           </div>
         )
