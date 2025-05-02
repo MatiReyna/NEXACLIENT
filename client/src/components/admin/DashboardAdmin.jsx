@@ -194,24 +194,33 @@ const DashboardAdmin = () => {
       )
     },
     {
-      title: 'Gestión de Modelos',
-      description: 'Visualizá, creá o modificá modelos de casas de forma sencilla.',
+      title: (
+        <h3 className="text-lg font-bold text-primary">Gestión de Modelos</h3>
+      ),
+      description: (
+        <p className="text-sm text-[#241f19]/80">
+          Visualizá, creá o modificá modelos de casas de forma sencilla.
+        </p>
+      ),
       header: (
-        <div className="flex flex-col w-full h-full rounded-xl p-6 gap-4">
-          <h3 className="text-xl font-bold text-primary flex items-center gap-2">🏠 Modelos</h3>
-          <div className="flex flex-col text-sm text-[#241f19]/80 gap-1">
+        <div className="flex flex-col w-full h-full rounded-xl p-4 sm:p-5 gap-2 sm:gap-3 overflow-hidden">
+          <div className="flex items-center gap-2 mb-1">
+            <span className="text-lg sm:text-xl">🏠</span>
+            <span className="font-bold text-primary text-base sm:text-lg">Modelos</span>
+          </div>
+          <div className="flex flex-col text-xs sm:text-sm text-[#241f19]/80 gap-0.5 sm:gap-1">
             <span><strong>9</strong> Modelos registrados</span>
             <span><strong>3</strong> Categorías disponibles</span>
           </div>
           <button
             onClick={ () => setShowCreateModelModal(true) }
-            className="mt-4 px-4 py-2 text-sm bg-primary text-white rounded-full hover:bg-primary/90 transition"
+            className="mt-2 sm:mt-3 px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm bg-primary text-white rounded-full hover:bg-primary/90 transition w-fit"
           >
             Crear Modelo
           </button>
         </div>
       ),
-      className: "md:col-span-1 bg-[#faf6fe] text-[#241f19] hover:shadow-lg rounded-xl border border-[#e7dbf9] transition-all duration-300",
+      className: "md:col-span-1 bg-[#faf6fe] text-[#241f19] hover:shadow-lg rounded-xl border border-[#e7dbf9] transition-all duration-300 flex flex-col justify-between",
     },
     {
       title: 'Modelos publicados',
