@@ -41,22 +41,11 @@ const DashboardAdmin = () => {
   ];
 
   const words = [
-    {
-      text: 'Bienvenido, ',
-    },
-    {
-      text: 'Facu ',
-    },
-    {
-      text: 'a ',
-    },
-    {
-      text: 'tu ',
-    },
-    {
-      text: 'Dashboard de NEXA.',
-      className: "text-blue-500 dark:text-blue-500",
-    },
+    { text: 'Bienvenido, ' },
+    { text: 'Facu ' },
+    { text: 'a ' },
+    { text: 'tu ' },
+    { text: 'Dashboard de NEXA.', className: "text-primary" },
   ];
 
   const items = [
@@ -239,8 +228,8 @@ const DashboardAdmin = () => {
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center h-[40rem]  ">
-        <p className="text-neutral-600 dark:text-neutral-200 text-xs sm:text-base  ">
+      <div className="flex flex-col items-center justify-center mb-8 mt-4">
+        <p className="text-neutral-600 dark:text-neutral-200 text-xs sm:text-sm mb-2">
           NEXA Constructora Desarrollista
         </p>
         <TypewriterEffectSmooth words={words} />
