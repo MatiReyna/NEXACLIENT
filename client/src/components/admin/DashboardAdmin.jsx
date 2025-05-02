@@ -59,23 +59,26 @@ const DashboardAdmin = () => {
         </p>
       ),
       header: (
-        <div className="flex flex-col items-center justify-center w-full h-full rounded-xl pb-4 gap-2">
+        <div className="flex flex-col items-center justify-center w-full h-full rounded-xl p-6 pb-4 gap-2 bg-[#ffeef8]">
           <img
             src={ animated2 }
             alt="Avatar"
-            className="w-24 h-24 rounded-full shadow-md transition-transform duration-300 hover:scale-105"
+            className="w-16 h-16 rounded-full shadow-md transition-transform duration-300 hover:scale-105"
           />
-          <p className="text-primary font-semibold text-xl">Facundo Sagario</p>
-          <button
-            onClick={ () => setShowProfileModal(true) }
-            aria-label="Editar perfil"
-            className="mt-3 px-5 py-2 text-sm rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition"
-          >
-            <IconUserEdit className="h-4 w-4" />
-          </button>
+          <div className="flex justify-between items-center w-full max-w-xs gap-2 mt-2">
+            <p className="text-primary font-semibold text-xl">Facundo Sagario</p>
+            <button
+              onClick={ () => setShowProfileModal(true) }
+              aria-label="Editar perfil"
+              className="px-5 py-2 text-sm rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition"
+            >
+              <IconUserEdit className="h-4 w-4" />
+            </button>
+          </div>
+          <span className="text-[#241f19]/70 text-sm">Administrador</span>
         </div>
       ),
-      className: "md:col-span-1 bg-[#e7dbf9] text-[#241f19] hover:shadow-lg rounded-xl border border-[#d5bef4] transition-all duration-300"
+      className: "md:col-span-1 bg-[#ffeef8] text-[#241f19] hover:shadow-lg rounded-xl border border-[#d5bef4] transition-all duration-300"
     },
     {
       title: 'Gestión de Marcas',
