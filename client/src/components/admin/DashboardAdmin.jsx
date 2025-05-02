@@ -4,6 +4,7 @@ import { IconBoxAlignRightFilled, IconUserEdit } from '@tabler/icons-react';
 import AnimatedBrand from '../ui/animated-brand';
 import AnimatedTooltip from '../ui/animated-tooltip';
 import { TypewriterEffectSmooth } from '../ui/typewriter-effect';
+import { HeroHighlight, Highlight } from '../ui/hero-highlight';
 import marcas from '../../lib/data/marcasData';
 import { modelos } from '../../lib/data/modelosData';
 
@@ -102,7 +103,6 @@ const DashboardAdmin = () => {
       ),
       header: (
         <div className="flex flex-col items-center justify-center w-full h-full rounded-xl bg-[#d5bef4] pb-4 gap-2 px-4">
-          {/* <h3 className="text-lg font-semibold text-center text-primary">Nuestro Equipo</h3> */}
           <div className="flex justify-center">
             <AnimatedTooltip items={ equipoNexa.map(member => ({
               id: member.id,
@@ -165,8 +165,14 @@ const DashboardAdmin = () => {
       )
     },
     {
-      title: 'Valoraciones de la página',
-      description: 'Observa las opiniones recientes de los usuarios sobre los modelos y el servicio.',
+      title: (
+        <h3 className="text-lg font-bold text-primary">Valoraciones de la página</h3>
+      ),
+      description: (
+        <p className="text-sm text-[#241f19]/80">
+          Observa las opiniones recientes de los usuarios sobre los modelos y el servicio.
+        </p>
+      ),
       header: (
         <div className="flex flex-col items-start justify-start w-full h-full rounded-xl bg-[#f2ebfc] border border-[#e7dbf9] rounded-xl p-6 dark:bg-neutral-800">
           <div className="w-full flex flex-col gap-2">
@@ -174,13 +180,14 @@ const DashboardAdmin = () => {
             <div className="w-full bg-[#e7dbf9] h-3 rounded-full relative overflow-hidden">
               <div className="absolute left-0 top-0 h-3 rounded-full bg-[#8b4cd1]" style={{ width: '90%' }}></div>
             </div>
-            <p className="text-sm text-[#241f19]/70 mt-2">
+            <p className="text-sm text-[#241f19]/80 mt-2">
               Valoración media basada en las opiniones de los usuarios.
             </p>
           </div>
           <button
             onClick={ () => setShowRatingsModal(true) }
-            className="text-sm mt-3 px-4 py-2 bg-primary text-white rounded-full hover:bg-primary/90 transition"
+            // className="text-sm mt-3 px-4 py-2 bg-primary text-white rounded-full hover:bg-primary/90 transition"
+            className="mt-3 px-4 py-2 text-sm bg-primary text-white rounded-full hover:bg-primary/90 transition"
           >
             Ver más
           </button>
@@ -238,7 +245,7 @@ const DashboardAdmin = () => {
   ];
 
   return (
-    <>
+    <HeroHighlight containerClassName="min-h-screen flex items-center justify-center px-4">
       <div className="flex flex-col items-center justify-center mb-8 mt-4">
         <p className="text-neutral-600 dark:text-neutral-200 text-xs sm:text-sm mb-2">
           NEXA Constructora Desarrollista
@@ -387,7 +394,7 @@ const DashboardAdmin = () => {
           </div>
         )
       }
-    </>
+    </HeroHighlight>
   )
 };
 
