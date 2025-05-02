@@ -186,7 +186,7 @@ const DashboardAdmin = () => {
           </div>
           <button
             onClick={() => setShowRatingsModal(true)}
-            className="px-3 py-1.5 text-xs bg-primary text-white rounded-full hover:bg-primary/90 transition"
+            className="py-1 px-3 text-xs mt-0.5 w-fit bg-primary text-white rounded-full hover:bg-primary/90 transition"
           >
             Ver más
           </button>
