@@ -2,7 +2,7 @@ import moderno1 from '../../../src/assets/models/moderno1.png';
 import moderno2 from '../../../src/assets/models/moderno2.png';
 import moderno3 from '../../../src/assets/models/moderno3.png';
 
-export const modelos = [
+const modelos = [
     {
         title: 'Modelo Florida',
         description: 'Diseño contemporáneo con amplios espacios y grandes ventanales.',
@@ -94,3 +94,5 @@ export const modelos = [
         type: 'ecologico'
     },
 ];
+
+export default modelos;
