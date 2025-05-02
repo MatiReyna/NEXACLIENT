@@ -5,7 +5,7 @@ import AnimatedBrand from '../ui/animated-brand';
 import AnimatedTooltip from '../ui/animated-tooltip';
 import { TypewriterEffectSmooth } from '../ui/typewriter-effect';
 import marcas from '../../lib/data/marcasData';
-import modelos from '../../lib/data/modelosData';
+import { modelos } from '../../lib/data/modelosData';
 
 import animated2 from '../../../src/assets/animated/animated2.jpg';
 import animated1 from '../../../src/assets/animated/animated1.jpg';
