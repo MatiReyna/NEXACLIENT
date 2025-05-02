@@ -42,9 +42,8 @@ const DashboardAdmin = () => {
 
   const words = [
     { text: 'Bienvenido, ' },
-    { text: 'Facu ' },
-    { text: 'a ' },
-    { text: 'tu ' },
+    { text: 'Facundo ' },
+    { text: 'al ' },
     { text: 'Dashboard de NEXA.', className: "text-primary" },
   ];
 

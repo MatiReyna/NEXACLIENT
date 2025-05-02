@@ -7,7 +7,7 @@ export const TypewriterEffect = ({ words, className, cursorClassName }) => {
     const wordsArray = words.map((word) => {
         return {
             ...word,
-            text: word.text.split(''),
+            text: word.text.split(' '),
         };
     });
 
