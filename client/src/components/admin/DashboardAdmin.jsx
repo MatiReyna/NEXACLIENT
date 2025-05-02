@@ -15,6 +15,7 @@ const DashboardAdmin = () => {
   const [ showRatingsModal, setShowRatingsModal ] = React.useState(false);
   const [ showProfileModal, setShowProfileModal ] = React.useState(false);
   const [ showTeamModal, setShowTeamModal ] = React.useState(false);
+  const [ showCreateModelModal, setShowCreateModelModal ] = React.useState(false);
 
   const equipoNexa = [
     {
@@ -39,16 +40,16 @@ const DashboardAdmin = () => {
 
   const words = [
     {
-      text: 'Bienvenido,',
+      text: 'Bienvenido, ',
     },
     {
-      text: 'Facundo',
+      text: 'Facu ',
     },
     {
-      text: 'Sagario',
+      text: 'a ',
     },
     {
-      text: 'a tu',
+      text: 'tu ',
     },
     {
       text: 'Dashboard de NEXA.',
@@ -188,25 +189,21 @@ const DashboardAdmin = () => {
       title: 'Gestión de Modelos',
       description: 'Visualizá, creá o modificá modelos de casas de forma sencilla.',
       header: (
-        <div className="flex flex-col justify-between w-full h-full rounded-xl bg-gray-100 dark:bg-neutral-800 p-6">
-          <div className="text-center">
-            <h3 className="text-lg font-bold text-purple-700">Modelos</h3>
+        <div className="flex flex-col w-full h-full rounded-xl p-6 gap-4">
+          <h3 className="text-xl font-bold text-primary flex items-center gap-2">🏠 Modelos</h3>
+          <div className="flex flex-col text-sm text-[#241f19]/80 gap-1">
+            <span><strong>9</strong> Modelos registrados</span>
+            <span><strong>3</strong> Categorías disponibles</span>
           </div>
-          <div className="flex flex-col items-start text-sm text-gray-700 dark:text-neutral-300 mt-6 gap-1">
-            <span>🏠 Modelos: <strong>9 Modelos</strong></span>
-            <span>📂 Categorías disponibles: <strong>3 Categorías</strong></span>
-          </div>
-          <div className="flex gap-2 mt-6">
-            <button className="px-4 py-2 text-xs font-semibold bg-purple-600 hover:bg-purple-700 text-white rounded-full transition">
-              Crear Modelo
-            </button>
-            <button className="px-4 py-2 text-xs font-semibold bg-gray-200 hover:bg-gray-300 text-gray-800 rounded-full transition dark:bg-neutral-700 dark:text-white dark:hover:bg-neutral-600">
-              Ver Modelos
-            </button>
-          </div>
+          <button
+            onClick={ () => setShowCreateModelModal(true) }
+            className="mt-4 px-4 py-2 text-sm bg-primary text-white rounded-full hover:bg-primary/90 transition"
+          >
+            Crear Modelo
+          </button>
         </div>
       ),
-      className: "md:col-span-1 bg-white text-black hover:shadow-lg",
+      className: "md:col-span-1 bg-[#faf6fe] text-[#241f19] hover:shadow-lg rounded-xl border border-[#e7dbf9] transition-all duration-300",
     },
     {
       title: 'The Spirit of Adventure',
@@ -312,6 +309,26 @@ const DashboardAdmin = () => {
                   ))
                 }
               </div>
+            </div>
+          </div>
+        )
+      }
+      {
+        showCreateModelModal && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm">
+            <div className="bg-white dark:bg-neutral-900 rounded-lg shadow-lg max-w-sm w-full p-6">
+              <div className="flex justify-between items-center mb-4">
+                <h4 className="text-lg font-bold text-primary">Crear Modelo</h4>
+                <button
+                  onClick={ () => setShowCreateModelModal(false) }
+                  className="text-gray-500 hover:text-gray-800 dark:hover:text-white"
+                >
+                  &times;
+                </button>
+              </div>
+              <p className="text-sm text-[#241f19]/80">
+                Próximamente vas a poder crear nuevos modelos desde esta sección.
+              </p>
             </div>
           </div>
         )
