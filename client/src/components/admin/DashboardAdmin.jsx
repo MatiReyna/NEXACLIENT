@@ -174,20 +174,19 @@ const DashboardAdmin = () => {
         </p>
       ),
       header: (
-        <div className="flex flex-col items-start justify-start w-full h-full rounded-xl bg-[#f2ebfc] border border-[#e7dbf9] rounded-xl p-6 dark:bg-neutral-800">
-          <div className="w-full flex flex-col gap-2">
+        <div className="flex flex-col justify-between w-full h-full rounded-xl bg-[#f2ebfc] border border-[#e7dbf9] p-6 dark:bg-neutral-800 overflow-hidden gap-4">
+          <div className="flex flex-col gap-2">
             <span className="font-semibold text-sm text-[#241f19]">Promedio de valoraciones</span>
             <div className="w-full bg-[#e7dbf9] h-3 rounded-full relative overflow-hidden">
               <div className="absolute left-0 top-0 h-3 rounded-full bg-[#8b4cd1]" style={{ width: '90%' }}></div>
             </div>
-            <p className="text-sm text-[#241f19]/80 mt-2">
+            <p className="text-sm text-[#241f19]/80">
               Valoración media basada en las opiniones de los usuarios.
             </p>
           </div>
           <button
-            onClick={ () => setShowRatingsModal(true) }
-            // className="text-sm mt-3 px-4 py-2 bg-primary text-white rounded-full hover:bg-primary/90 transition"
-            className="mt-3 px-4 py-2 text-sm bg-primary text-white rounded-full hover:bg-primary/90 transition"
+            onClick={() => setShowRatingsModal(true)}
+            className="px-4 py-2 text-sm bg-primary text-white rounded-full hover:bg-primary/90 transition"
           >
             Ver más
           </button>
@@ -225,7 +224,7 @@ const DashboardAdmin = () => {
               modelos.slice(0, 3).map((modelo, i) => (
                 <div key={ i } className="bg-white dark:bg-neutral-900 p-4 rounded-lg shadow-sm text-sm">
                   <p className="font-bold text-[#241f19]">{ modelo.nombre }</p>
-                  <p className="text-[#241f19]/70">{ modelo.descripcion }</p>
+                  <p className="text-[#241f19]/70">{ modelo.description }</p>
                 </div>
               ))
             }
