@@ -49,8 +49,14 @@ const DashboardAdmin = () => {
 
   const items = [
     {
-      title: 'Perfil del Administrador',
-      description: 'Visualiza tu perfil, edita tus datos personales y mantené tu información actualizada.',
+      title: (
+        <h3 className="text-lg font-bold text-primary">Perfil del Administrador</h3>
+      ),
+      description: (
+        <p className="text-sm text-[#241f19]/80">
+          Visualizá y gestioná tu información personal dentro del sistema de administración.
+        </p>
+      ),
       header: (
         <div className="flex flex-col items-center justify-center w-full h-full rounded-xl">
           <img
@@ -60,7 +66,7 @@ const DashboardAdmin = () => {
           />
           <p className="mt-3 text-primary font-semibold text-xl">Facundo Sagario</p>
           <button
-            onClick={() => setShowProfileModal(true)}
+            onClick={ () => setShowProfileModal(true) }
             aria-label="Editar perfil"
             className="mt-3 px-5 py-2 text-sm rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition"
           >
@@ -68,7 +74,7 @@ const DashboardAdmin = () => {
           </button>
         </div>
       ),
-      className: "md:col-span-1 bg-[#f2ebfc] text-[#241f19] hover:shadow-lg rounded-xl border border-[#e7dbf9] transition-all duration-300"
+      className: "md:col-span-1 bg-[#e7dbf9] text-[#241f19] hover:shadow-lg rounded-xl border border-[#d5bef4] transition-all duration-300"
     },
     {
       title: 'Gestión de Marcas',
@@ -239,12 +245,8 @@ const DashboardAdmin = () => {
           items.map((item, i) => (
             <BentoGridItem
               key={ i }
-              title={
-                <span className="text-[#241f19]">{ item.title }</span>
-              }
-              description={
-                <span className="text-[#241f19]">{ item.description }</span>
-              }
+              title={ item.title }
+              description={ item.description }
               header={ item.header }
               icon={ item.icon }
               className={ item.className || (i === 3 || i === 6 ? 'md:col-span-2' : '') }

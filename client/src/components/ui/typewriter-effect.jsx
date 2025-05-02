@@ -75,7 +75,7 @@ export const TypewriterEffectSmooth = ({ words, className, cursorClassName }) =>
     const wordsArray = words.map((word) => {
         return {
             ...word,
-            text: word.text.split(''),
+            text: word.text.split(' '),
         };
     });
 
@@ -115,8 +115,8 @@ export const TypewriterEffectSmooth = ({ words, className, cursorClassName }) =>
                     delay: 1,
                 }}>
                 <div className="text-xs sm:text-base md:text-xl lg:text:3xl xl:text-5xl font-bold" style={{ whiteSpace: "nowrap", }}>
-                    { renderWords() }{ " " }
-                </div>{ " " }
+                    { renderWords() }{ ' ' }
+                </div>{ ' ' }
             </motion.div>
             <motion.span
                 initial={{ opacity: 0, }}
