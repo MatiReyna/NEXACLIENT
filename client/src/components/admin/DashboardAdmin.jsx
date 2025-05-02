@@ -3,6 +3,7 @@ import { BentoGrid, BentoGridItem } from '../ui/bento-grid';
 import { IconBoxAlignRightFilled, IconUserEdit } from '@tabler/icons-react';
 import AnimatedBrand from '../ui/animated-brand';
 import AnimatedTooltip from '../ui/animated-tooltip';
+import { TypewriterEffectSmooth } from '../ui/typewriter-effect';
 import marcas from '../../lib/data/marcasData';
 
 import animated2 from '../../../src/assets/animated/animated2.jpg';
@@ -34,6 +35,25 @@ const DashboardAdmin = () => {
       role: 'Sales Manager',
       image: animated4
     }
+  ];
+
+  const words = [
+    {
+      text: 'Bienvenido,',
+    },
+    {
+      text: 'Facundo',
+    },
+    {
+      text: 'Sagario',
+    },
+    {
+      text: 'a tu',
+    },
+    {
+      text: 'Dashboard de NEXA.',
+      className: "text-blue-500 dark:text-blue-500",
+    },
   ];
 
   const items = [
@@ -139,8 +159,7 @@ const DashboardAdmin = () => {
             </div>
           </div>
         </div>
-      ),
-      // className: "md:col-span-1 bg-white text-black hover:shadow-lg"  // Ver si rompe.
+      )
     },
     {
       title: 'Valoraciones de la página',
@@ -163,8 +182,7 @@ const DashboardAdmin = () => {
             Ver más
           </button>
         </div>
-      ),
-      // className: "md:col-span-1 bg-white text-black hover:shadow-lg"  // Ver si rompe.
+      )
     },
     {
       title: 'Gestión de Modelos',
@@ -200,6 +218,13 @@ const DashboardAdmin = () => {
 
   return (
     <>
+      <div className="flex flex-col items-center justify-center h-[40rem]  ">
+        <p className="text-neutral-600 dark:text-neutral-200 text-xs sm:text-base  ">
+          NEXA Constructora Desarrollista
+        </p>
+        <TypewriterEffectSmooth words={words} />
+      </div>
+
       <BentoGrid className="max-w-6xl mx-auto px-4">
         {
           items.map((item, i) => (
