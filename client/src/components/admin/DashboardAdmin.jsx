@@ -186,7 +186,7 @@ const DashboardAdmin = () => {
           </div>
           <button
             onClick={() => setShowRatingsModal(true)}
-            className="py-1 px-3 text-xs mt-0.5 w-fit bg-primary text-white rounded-full hover:bg-primary/90 transition"
+            className="py-1 px-3 text-xs mt-1 w-fit bg-primary text-white rounded-full hover:bg-primary/90 transition"
           >
             Ver más
           </button>
@@ -244,7 +244,7 @@ const DashboardAdmin = () => {
   ];
 
   return (
-    <HeroHighlight containerClassName="min-h-screen flex items-center justify-center px-4">
+    <>
       <div className="flex flex-col items-center justify-center mb-8 mt-4">
         <p className="text-neutral-600 dark:text-neutral-200 text-xs sm:text-sm mb-2">
           NEXA Constructora Desarrollista
@@ -393,7 +393,7 @@ const DashboardAdmin = () => {
           </div>
         )
       }
-    </HeroHighlight>
+    </>
   )
 };
 
