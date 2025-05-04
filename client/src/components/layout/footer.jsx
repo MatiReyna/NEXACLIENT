@@ -42,7 +42,7 @@ const Footer = () => {
                             personalizadas y respetuosas con el medio ambiente.
                         </p>
                     </div>
-                    <div>
+                    <div className="lg:border-l lg:pl-6 border-neutral-200">
                         <h3 className="mb-4 text-lg font-semibold">Enlaces</h3>
                         <ul className="space-y-2 text-sm">
                             <li>
@@ -97,7 +97,7 @@ const Footer = () => {
                             </li>
                         </ul>
                     </div>
-                    <div>
+                    <div className="lg:border-l lg:pl-6 border-neutral-200">
                         <h3 className="mb-4 text-lg font-semibold">Legal</h3>
                         <ul className="space-y-2 text-sm">
                             <li>
@@ -142,7 +142,7 @@ const Footer = () => {
                             </li>
                         </ul>
                     </div>
-                    <div>
+                    <div className="lg:border-l lg:pl-6 border-neutral-200">
                         <h3 className="mb-4 text-lg font-semibold">Contacto</h3>
                         <ul className="space-y-2 text-sm">
                             <li className="flex items-center gap-2">
