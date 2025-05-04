@@ -56,8 +56,7 @@ const TestimonialsSection = () => {
                                                 <p className="text-sm text-muted-foreground">{ testimonial.location }</p>
                                             </div>
                                         </div>
-                                        <div className="text-3xl text-primary">“</div>
-                                        <p className="text-[#241f19]/80 italic text-sm md:text-base">"{ testimonial.text }"</p>
+                                        <p className="text-[#241f19]/80 italic text-sm md:text-base">{ testimonial.text }</p>
                                         <div className="flex">
                                             {
                                                 Array(5)
@@ -87,7 +86,7 @@ const TestimonialsSection = () => {
                     <button
                         onClick={ () => alert('aca podes escribir tu testimonio') }
                         aria-label="Agregar un nuevo testimonio"
-                        className="inline-flex items-center justify-center gap-2 px-6 py-3 text-lg font-medium text-white bg-primary rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                        className="inline-flex items-center justify-center gap-2 px-6 py-3 text-lg font-medium text-white bg-primary rounded-xl transition-transform duration-300 hover:scale-105 hover:shadow-lg hover:animate-bounce-slow"
                     >
                         <Pencil className="w-5 h-5" />
                         Agregar Testimonio
