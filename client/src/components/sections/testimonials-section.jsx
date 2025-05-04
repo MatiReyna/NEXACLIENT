@@ -1,7 +1,8 @@
 import { Card, CardContent } from '../ui/card';
-import human1 from '../../assets/testimonials/human1.jpg';
-import human2 from '../../assets/testimonials/human2.jpg';
-import human3 from '../../assets/testimonials/human3.jpg';
+import { Pencil } from 'lucide-react';
+import human1 from '@/assets/testimonials/human1.jpg';
+import human2 from '@/assets/testimonials/human2.jpg';
+import human3 from '@/assets/testimonials/human3.jpg';
 
 const TestimonialsSection = () => {
 
@@ -15,7 +16,7 @@ const TestimonialsSection = () => {
         {
             name: 'Juan Perez',
             location: 'Carlos Paz, Córdoba',
-            text: 'El trabajo de la NEXA me ha llevado a construir una casa perfecta en mi barrio. La calidad de los materiales y el trabajo en equipo fuen los mejores que he experimentado en mi vida.',
+            text: 'Gracias a NEXA construí la casa perfecta en mi barrio. La calidad de los materiales y el profesionalismo del equipo fueron excepcionales.',
             image: human2
         },
         {
@@ -40,7 +41,7 @@ const TestimonialsSection = () => {
                         testimonials.map((testimonial, i) => (
                             <Card
                                 key={ i }
-                                className="group overflow-hidden rounded-xl shadow-md border border-[#e7dbf9] bg-[#f2ebfc] transform transition-all duration-300 hover:translate-y-[-8px] hover:shadow-lg"
+                                className="group overflow-hidden rounded-xl shadow-md border border-[#e7dbf9] bg-gradient-to-br from-[#f2ebfc] to-[#ebe2f9] transform transition-all duration-300 hover:translate-y-[-8px] hover:shadow-lg"
                             >
                                 <CardContent className="p-6">
                                     <div className="flex flex-col space-y-4">
@@ -55,6 +56,7 @@ const TestimonialsSection = () => {
                                                 <p className="text-sm text-muted-foreground">{ testimonial.location }</p>
                                             </div>
                                         </div>
+                                        <div className="text-3xl text-primary">“</div>
                                         <p className="text-[#241f19]/80 italic text-sm md:text-base">"{ testimonial.text }"</p>
                                         <div className="flex">
                                             {
@@ -68,7 +70,7 @@ const TestimonialsSection = () => {
                                                             height="20"
                                                             viewBox="0 0 24 24"
                                                             fill="currentColor"
-                                                            className="text-yellow-500"
+                                                            className="text-yellow-500 transition-colors duration-300 group-hover:text-yellow-400"
                                                         >
                                                             <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                                                         </svg>
@@ -84,8 +86,10 @@ const TestimonialsSection = () => {
                 <div className="text-center pt-8">
                     <button
                         onClick={ () => alert('aca podes escribir tu testimonio') }
-                        className="inline-flex items-center justify-center px-6 py-3 text-lg font-medium text-white bg-primary rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                        aria-label="Agregar un nuevo testimonio"
+                        className="inline-flex items-center justify-center gap-2 px-6 py-3 text-lg font-medium text-white bg-primary rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg"
                     >
+                        <Pencil className="w-5 h-5" />
                         Agregar Testimonio
                     </button>
                 </div>
