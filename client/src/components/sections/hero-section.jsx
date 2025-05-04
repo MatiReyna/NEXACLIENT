@@ -1,11 +1,10 @@
 import { ArrowRight } from 'lucide-react';
-import Button from '../ui/button';
 import heroImage from '../../assets/hero/image.png'
 
 const HeroSection = () => {
     return (
         <section id="inicio" className="relative">
-            <div className="absolute inset-0 z-0">
+            <div className="absolute inset-0 z-0" aria-hidden="true">
                 <img
                     src={ heroImage }
                     alt="Casa prefabricada moderna"
@@ -27,7 +26,7 @@ const HeroSection = () => {
                     <a
                         href="#modelos"
                         aria-label="Ver Modelos de casas"
-                        className="inline-flex items-center justify-center px-6 py-3 text-lg font-medium transition-all duration-300 bg-primary text-white rounded-xl hover:scale-105 hover:shadow-lg"
+                        className="inline-flex items-center justify-center px-6 py-3 text-lg font-medium transition-all duration-300 bg-primary text-white rounded-xl hover:scale-105 hover:shadow-lg group"
                     >
                         Ver Modelos
                         <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1.5" />
@@ -35,7 +34,7 @@ const HeroSection = () => {
                     <a
                         href="#proceso"
                         aria-label="Cómo Trabajamos"
-                        className="inline-flex items-center justify-center px-6 py-3 text-lg font-medium text-white border border-white rounded-xl transition-all duration-300 hover:bg-[#f2ebfc] hover:scale-105 hover:shadow-lg"
+                        className="inline-flex items-center justify-center px-6 py-3 text-lg font-medium border border-white dark:border-white text-white hover:bg-primary/10 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg"
                     >
                         Cómo Trabajamos
                     </a>
