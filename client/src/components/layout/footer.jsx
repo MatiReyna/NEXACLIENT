@@ -5,8 +5,6 @@ import animated1 from '../../assets/animated/animated1.jpg';
 import animated2 from '../../assets/animated/animated2.jpg';
 import animated3 from '../../assets/animated/animated3.jpg';
 import animated4 from '../../assets/animated/animated4.jpg';
-// import animated5 from '../../assets/animated/animated5.jpg';
-// import animated6 from '../../assets/animated/animated6.jpg';
 
 const Footer = () => {
 
@@ -34,30 +32,18 @@ const Footer = () => {
             name: 'Nicolás Sagario',
             designation: 'Sales Manager',
             image: animated4
-        },
-        // {
-        //     id: 5,
-        //     name: 'Jane Smith',
-        //     designation: 'Marketing Manager',
-        //     image: animated5
-        // },
-        // {
-        //     id: 6,
-        //     name: 'Dora',
-        //     designation: 'Data Scientist',
-        //     image: animated6
-        // }
+        }
     ];
 
     return (
-        <footer className="bg-background border-t border-neutral-200">
+        <footer className="bg-background border-t border-neutral-200" role="contentinfo">
             <div className="container py-8 md:py-12">
-                <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-4">
+                <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
                     <div className="space-y-4">
-                        <div className="flex items-center gap-2">
+                        <a href="#inicio" className="flex items-center gap-2" aria-label="Ir al inicio">
                             <Home className="h-6 w-6" />
                             <span className="text-xl font-bold text-primary">NEXA</span>
-                        </div>
+                        </a>
                         <p className="text-sm text-muted-foreground">
                             Construimos casa prefabricadas de alta calidad,
                             personalizadas y respetuosas con el medio ambiente.
@@ -254,7 +240,7 @@ const Footer = () => {
                 <div className="mt-4 flex justify-center md:justify-center">
                     <AnimatedTooltip items={ animatedTeam } />
                 </div>
-                <div className="mt-8 border-t pt-8 text-center">
+                <div className="mt-8 border-t pt-8 text-center max-w-prose mx-auto">
                     <p className="text-xs text-muted-foreground">
                         &copy; { new Date().getFullYear() } NEXA Constructora Desarrollista. Todos los derechos reservados.
                     </p>
