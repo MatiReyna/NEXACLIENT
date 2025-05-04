@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 // Importaciones para el Dashboard del administrador.
 import AdminLogin from './components/admin/AdminLogin';
@@ -35,6 +36,7 @@ const App = () => {
               <CtaSection />
             </main>
             <Footer />
+            <SpeedInsights />
           </div>
         }
       />

@@ -14,6 +14,7 @@ const ContactSection = () => {
                     <div className="space-y-6">
                         <div className="space-y-2">
                             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-primary">Contacta con Nosotros</h2>
+                            <div className="mx-auto h-1 w-24 bg-[#241f19]/80 rounded-full mt-4"></div>
                             <p className="mx-auto max-w-[700px] text-[#241f19]/80 md:text-xl">
                                 Estamos aquí para responder a todas tus preguntas y ayudarte a hacer realidad tu proyecto.
                             </p>
