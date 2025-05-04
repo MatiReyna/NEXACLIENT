@@ -18,7 +18,7 @@ const CtaSection = () => {
                             aria-label="Ir a sección de contacto para solicitar presupuesto"
                             className="inline-flex items-center justify-center px-6 py-3 text-lg font-medium text-white bg-primary rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg group"
                         >
-                            Solicitar Presupuesto
+                            Presupuesto
                             <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1.5" />
                         </a>
                         <a

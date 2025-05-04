@@ -44,7 +44,23 @@ const ContactSection = () => {
                         <h3 className="mb-4 text-xl font-bold">Solicita Información</h3>
                         <form className="space-y-4" onSubmit={ (e) => {
                             e.preventDefault();
-                            setShowConfirmation(true)
+                            const nombre = e.target.nombre.value.trim();
+                            const apellidos = e.target.apellidos.value.trim();
+                            const email = e.target.email.value.trim();
+                            const telefono = e.target.telefono.value.trim();
+                            const mensaje = e.target.mensaje.value.trim();
+                            const modelo = e.target.modelo.value;
+                            const privacidad = e.target.privacidad.checked;
+
+                            if (!nombre || !apellidos || !email || !telefono || !mensaje || !modelo || !privacidad || !email.includes('@')) {
+                                alert('Por favor, completá todos los campos correctamente.');
+                                return;
+                            }
+
+                            setShowConfirmation(true);
+                            setTimeout(() => {
+                              document.getElementById("confirmation-modal")?.scrollIntoView({ behavior: "smooth" });
+                            }, 100);
                         } }>
                             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                                 <div className="space-y-2">
@@ -151,7 +167,7 @@ const ContactSection = () => {
                             <Button type="submit" className="group w-full transition-transform duration-300 hover:scale-105">
                                 <span className="flex items-center">
                                     Enviar Solicitud
-                                    <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                                    <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:rotate-6" />
                                 </span>
                             </Button>
                         </form>
@@ -160,8 +176,8 @@ const ContactSection = () => {
             </div>
             {
                 showConfirmation && (
-                    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm">
-                        <div className="bg-background p-6 rounded-2xl shadow-lg max-w-md w-full text-center space-y-4 transition-all duration-300 transform scale-100 opacity-100">
+                    <div id="confirmation-modal" className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm">
+                        <div className="bg-background p-6 rounded-2xl shadow-lg max-w-md w-full text-center space-y-4 transition-all duration-500 ease-out transform scale-95 opacity-0 animate-fade-in">
                             <CheckCircle className="mx-auto h-10 w-10 text-green-500" />
                             <h4 className="text-lg font-semibold text-primary">¡Solicitud enviada!</h4>
                             <p className="text-sm text-muted-foreground">
