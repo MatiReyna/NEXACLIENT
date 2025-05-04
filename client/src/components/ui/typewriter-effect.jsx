@@ -38,7 +38,7 @@ export const TypewriterEffect = ({ words, className, cursorClassName }) => {
                                     word.text.map((char, index) => (
                                         <motion.span
                                             initial={ {} }
-                                            key={ `char-${ index }` }
+                                            key={ `char-${ idx }-${ index }` }
                                             className={ cn(`dark:text-white text-black opacity-0 hidden`, word.className) }>
                                             { char }
                                         </motion.span>
@@ -63,7 +63,8 @@ export const TypewriterEffect = ({ words, className, cursorClassName }) => {
                     repeat: Infinity,
                     repeatType: "reverse",
                 }}
-                className={ cn("inline-block rounded-sm w-[4px] h-4 md:h-6 lg:h-10 bg-blue-500", cursorClassName) }
+                aria-hidden="true"
+                className={ cn("inline-block rounded-sm w-[4px] h-4 sm:h-6 xl:h12 bg-primary", cursorClassName) }
             >
             </motion.span>
         </div>
@@ -126,7 +127,8 @@ export const TypewriterEffectSmooth = ({ words, className, cursorClassName }) =>
                     repeat: Infinity,
                     repeatType: "reverse",
                 }}
-                className={ cn("block rounded-sm w-[4px]  h-4 sm:h-6 xl:h-12 bg-blue-500", cursorClassName) }
+                aria-hidden="true"
+                className={ cn("block rounded-sm w-[4px] h-4 sm:h-6 xl:h-12 bg-primary", cursorClassName) }
             >
             </motion.span>
         </div>
