@@ -31,4 +31,11 @@ const CardFooter = forwardRef(({ className, ...props }, ref) => (
 ));
 CardFooter.displayName = 'CardFooter';
 
-export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };
+export {
+    Card,
+    CardHeader,
+    CardTitle, 
+    CardDescription, 
+    CardContent, 
+    CardFooter
+};
