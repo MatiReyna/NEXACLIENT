@@ -86,9 +86,13 @@ const Header = () => {
                     }
                 </nav>
 
-                <Button className="hidden md:inline-flex bg-[#592e83] text-white hover:bg-[#4b2670]">
-                    <a href="#contacto">Solicitar Presupuesto</a>
-                </Button>
+                <a
+                    href="#contacto"
+                    aria-label="Solicitar Presupuesto"
+                    className="hidden md:inline-flex items-center justify-center px-6 py-3 text-sm font-medium transition-all duration-300 bg-primary text-white rounded-xl hover:scale-105 hover:shadow-lg group"
+                >
+                    Solicitar Presupuesto
+                </a>
 
                 <button
                     onClick={ () => setIsMenuOpen(!isMenuOpen) }
@@ -115,11 +119,14 @@ const Header = () => {
                         ))
                     }
                     <div className="pt-2 pb-4">
-                        <Button className="w-full">
-                            <a href="#contacto" onClick={ handleLinkClick }>
-                                Solicitar Presupuesto
-                            </a>
-                        </Button>
+                        <a
+                            href="#contacto"
+                            onClick={ handleLinkClick }
+                            aria-label="Solicitar Presupuesto"
+                            className="inline-flex w-full items-center justify-center px-6 py-3 text-sm font-medium transition-all duration-300 bg-primary text-white rounded-xl hover:scale-105 hover:shadow-lg group"
+                        >
+                            Solicitar Presupuesto
+                        </a>
                     </div>
                 </nav>
             </div>
