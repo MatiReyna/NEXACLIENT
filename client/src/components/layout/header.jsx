@@ -3,6 +3,36 @@ import { Menu, X, Home } from 'lucide-react';
 import Button from '../ui/button';
 import { cn } from '../../lib/utils';
 
+const navLinks = [
+    { href: '#inicio', label: 'Inicio' },
+    { href: '#modelos', label: 'Modelos' },
+    { href: '#beneficios', label: 'Beneficios' },
+    { href: '#proceso', label: 'Proceso' },
+    { href: '#contacto', label: 'Contacto' }
+];
+
+const NavLink = ({ href, label }) => (
+    <a
+        href={ href }
+        className="group relative text-sm font-medium transition-colors text-neutral-700 hover:text-primary"
+        aria-current={ window.location.hash === href ? 'page' : undefined }
+    >
+        <span className="after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 group-hover:after:w-full relative">
+            { label }
+        </span>
+    </a>
+);
+
+const MobileNavLink = ({ href, label, onClick }) => (
+    <a
+        href={ href }
+        className="text-sm font-medium py-2 px-4 rounded-lg hover:bg-neutral-100 transition-colors"
+        onClick={ onClick }
+    >
+        { label }
+    </a>
+);
+
 const Header = () => {
 
     const [ isMenuOpen, setIsMenuOpen ] = useState(false);
@@ -16,17 +46,13 @@ const Header = () => {
         return () => window.removeEventListener('scroll', handleScroll)
     }, []);
 
+    useEffect(() => {
+        document.body.style.overflow = isMenuOpen ? 'hidden' : 'auto';
+    }, [isMenuOpen]);
+
     const handleLinkClick = () => {
         setIsMenuOpen(false)
     };
-
-    const navLinks = [
-        { href: '#inicio', label: 'Inicio' },
-        { href: '#modelos', label: 'Modelos' },
-        { href: '#beneficios', label: 'Beneficios' },
-        { href: '#proceso', label: 'Proceso' },
-        { href: '#contacto', label: 'Contacto' }
-    ];
 
     return (
         <header
@@ -38,31 +64,24 @@ const Header = () => {
         >
             <div className="container flex h-16 items-center justify-between py-4">
                 <div className="flex items-center gap-2">
-                    <div className={ cn(
-                        "flex h-8 w-8 items-center justify-center rounded-full border transition-colors duration-300",
-                        scrolled ? "bg-primary text-white border-primary" : "bg-transparent border-black text-black"
-                    ) }>
-                        <Home className="h-4 w-4" />
-                    </div>
-                    <div className="flex flex-col">
-                        <span className="text-xl font-bold leading-none">NEXA</span>
-                        <span className="text-xs text-muted-foreground">constructora desarrollista</span>
-                    </div>
+                    <a href="#inicio" aria-label="Inicio" className="flex items-center gap-2">
+                        <div className={ cn(
+                            "flex h-8 w-8 items-center justify-center rounded-full border transition-colors duration-300",
+                            scrolled ? "bg-primary text-white border-primary" : "bg-transparent border-black text-black"
+                        ) }>
+                            <Home className="h-4 w-4" />
+                        </div>
+                        <div className="flex flex-col">
+                            <span className="text-xl font-bold leading-none">NEXA</span>
+                            <span className="text-xs text-muted-foreground">constructora desarrollista</span>
+                        </div>
+                    </a>
                 </div>
 
-                <nav className="hidden md:flex gap-6">
+                <nav role="navigation" className="hidden md:flex gap-6">
                     {
                         navLinks.map((link) => (
-                            <a
-                                key={ link.href }
-                                href={ link.href }
-                                className="group relative text-sm font-medium transition-colors text-neutral-700 hover:text-primary"
-                                aria-current={ window.location.hash === link.href ? 'page' : undefined }
-                            >
-                                <span className="after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 group-hover:after:w-full relative">
-                                    { link.label }
-                                </span>
-                            </a>
+                            <NavLink key={ link.href } href={ link.href } label={ link.label } />
                         ))
                     }
                 </nav>
@@ -89,17 +108,10 @@ const Header = () => {
                 ) }
                 id="mobile-menu"
             >
-                <nav className="container py-4 flex flex-col space-y-4">
+                <nav role="navigation" className="container py-4 flex flex-col space-y-4">
                     {
                         navLinks.map((link) => (
-                            <a
-                                key={ link.href }
-                                href={ link.href }
-                                className="text-sm font-medium py-2 px-4 rounded-lg hover:bg-neutral-100 transition-colors"
-                                onClick={ handleLinkClick }
-                            >
-                                { link.label }
-                            </a>
+                            <MobileNavLink key={ link.href } href={ link.href } label={ link.label } onClick={ handleLinkClick } />
                         ))
                     }
                     <div className="pt-2 pb-4">
