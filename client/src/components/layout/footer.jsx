@@ -1,10 +1,9 @@
 import { Link } from 'react-router-dom';
 import { Home, Phone, Mail, MapPin } from 'lucide-react';
 import AnimatedTooltip from '../ui/animated-tooltip';
-import animated1 from '../../assets/animated/animated1.jpg';
-import animated2 from '../../assets/animated/animated2.jpg';
-import animated3 from '../../assets/animated/animated3.jpg';
-import animated4 from '../../assets/animated/animated4.jpg';
+import animated1 from '@/assets/animated/animated1.jpg';
+import animated2 from '@/assets/animated/animated2.jpg';
+import animated4 from '@/assets/animated/animated4.jpg';
 
 const Footer = () => {
 
@@ -22,12 +21,6 @@ const Footer = () => {
             image: animated2
         },
         {
-            id: 3,
-            name: 'Emily Davis',
-            designation: 'Logistics Manager',
-            image: animated3
-        },
-        {
             id: 4,
             name: 'Nicolás Sagario',
             designation: 'Sales Manager',
@@ -36,7 +29,7 @@ const Footer = () => {
     ];
 
     return (
-        <footer className="bg-background border-t border-neutral-200" role="contentinfo">
+        <footer className="bg-gradient-to-t from-background to-neutral-50 border-t border-neutral-200" role="contentinfo">
             <div className="container py-8 md:py-12">
                 <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
                     <div className="space-y-4">
