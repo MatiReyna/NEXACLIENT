@@ -107,6 +107,22 @@ const ModelDetails = ({ isOpen, onClose, model }) => {
 
                 <div className="lg:w-1/2 p-6 overflow-y-auto max-h-[70vh] lg:max-h-[90vh]">
                     <h2 className="text-2xl font-bold text-gray-900">{ model.title }</h2>
+                    <div className="mt-1 flex items-center gap-2">
+                        {
+                            model.tag === 'popular' && (
+                                <span className="px-3 py-0.5 text-sm font-semibold rounded-full bg-[#592e83]/10 text-[#592e83]">
+                                    Popular
+                                </span>
+                            )
+                        }
+                        {
+                            model.tag === 'mas-vendido' && (
+                                <span className="px-3 py-0.5 text-sm font-semibold rounded-full bg-green-100 text-green-700">
+                                    Más Vendido
+                                </span>
+                            )
+                        }
+                    </div>
                     <p className="text-sm text-[#241f19]/60 mt-1">Ref: NEXA-{ model.title.replace(/\s+/g, '').toLowerCase() }-{ Math.floor(Math.random() * 1000) }</p>
 
                     <div className="mt-6">
@@ -178,14 +194,14 @@ const ModelDetails = ({ isOpen, onClose, model }) => {
                             <p className="text-sm text-[#241f19]/80">Financiación disponible</p>
                         </div>
 
-                        <div className="flex flex-col sm:flex-row gap-3">
-                            <Button className="flex-1 transition-transform duration-300 hover:scale-105" aria-label="Solicitar Presupuesto">
+                        <div className="flex flex-col sm:flex-row gap-3 mt-2">
+                            <button className="mt-4 inline-flex items-center justify-center w-full px-6 py-3 text-lg font-medium transition-all duration-300 bg-primary text-white rounded-xl hover:scale-105 hover:shadow-lg group" aria-label="Solicitar Presupuesto">
                                 <span className="flex items-center group">
                                     Solicitar Presupuesto
                                     <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1.5" />
                                 </span>
-                            </Button>
-                            <Button variant="outline" className="flex-1 transition-transform duration-300 hover:scale-105" aria-label="Descargar Catálogo">
+                            </button>
+                            <Button variant="outline" className="flex-1 inline-flex items-center justify-center px-6 py-3 text-lg font-medium border border-[#592e83] text-[#592e83] hover:bg-[#592e83]/10 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg" aria-label="Descargar Catálogo">
                                 Descargar Catálogo
                             </Button>
                         </div>
