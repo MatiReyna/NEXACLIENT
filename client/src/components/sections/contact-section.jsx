@@ -37,7 +37,7 @@ const ContactSection = () => {
                                 <span>Pasaje San Ignacio 104 Bº Villa Esquiu, Provincia de Córdoba</span>
                             </div>
                         </div>
-                        <div className="aspect-video w-full overflow-hidden rounded-2xl">
+                        <div className="aspect-video w-full overflow-hidden rounded-2xl shadow-md border border-gray-200 transition-transform duration-300 hover:scale-105">
                             <img
                                 src={ mapa }
                                 alt="Ubicación"
@@ -77,7 +77,7 @@ const ContactSection = () => {
                                     </label>
                                     <input
                                         id="nombre"
-                                        className="flex h-10 w-full rounded-xl border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-300 hover:border-primary/50"
+                                        className="flex h-10 w-full rounded-2xl border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-300 hover:border-primary/50"
                                         placeholder="Tu nombre"
                                     />
                                 </div>
@@ -90,7 +90,7 @@ const ContactSection = () => {
                                     </label>
                                     <input
                                         id="apellidos"
-                                        className="flex h-10 w-full rounded-xl border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-300 hover:border-primary/50"
+                                        className="flex h-10 w-full rounded-2xl border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-300 hover:border-primary/50"
                                         placeholder="Tus apellidos"
                                     />
                                 </div>
@@ -105,7 +105,7 @@ const ContactSection = () => {
                                 <input
                                     id="email"
                                     type="email"
-                                    className="flex h-10 w-full rounded-xl border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-300 hover:border-primary/50"
+                                    className="flex h-10 w-full rounded-2xl border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-300 hover:border-primary/50"
                                     placeholder="tu@email.com"
                                 />
                             </div>
@@ -119,7 +119,7 @@ const ContactSection = () => {
                                 <input
                                     id="telefono"
                                     type="tel"
-                                    className="flex h-10 w-full rounded-xl border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-300 hover:border-primary/50"
+                                    className="flex h-10 w-full rounded-2xl border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-300 hover:border-primary/50"
                                     placeholder="Tu teléfono"
                                 />
                             </div>
@@ -132,7 +132,7 @@ const ContactSection = () => {
                                 </label>
                                 <select
                                     id="modelo"
-                                    className="flex h-12 w-full appearance-none rounded-xl border border-input bg-background px-4 py-3 pr-10 text-sm ring-offset-background focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 hover:border-primary/50 transition-all duration-300 bg-[url('data:image/svg+xml;utf8,<svg fill=\'%23592e83\' height=\'20\' viewBox=\'0 0 24 24\' width=\'20\' xmlns=\'http://www.w3.org/2000/svg\'><path d=\'M7 10l5 5 5-5z\'/></svg>')] bg-no-repeat bg-[right_1rem_center]"
+                                    className="flex h-12 w-full appearance-none rounded-2xl border border-input bg-background px-4 py-3 pr-10 text-sm ring-offset-background focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 hover:border-primary/50 transition-all duration-300 bg-[url('data:image/svg+xml;utf8,<svg fill=\'%23592e83\' height=\'20\' viewBox=\'0 0 24 24\' width=\'20\' xmlns=\'http://www.w3.org/2000/svg\'><path d=\'M7 10l5 5 5-5z\'/></svg>')] bg-no-repeat bg-[right_1rem_center]"
                                 >
                                     <option value="">Selecciona un modelo</option>
                                     <option value="Modelo Florida">Modelo Florida</option>
@@ -155,7 +155,7 @@ const ContactSection = () => {
                                 </label>
                                 <textarea
                                     id="mensaje"
-                                    className="flex min-h-[120px] w-full rounded-xl border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-300 hover:border-primary/50"
+                                    className="flex min-h-[120px] w-full rounded-2xl border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-300 hover:border-primary/50"
                                     placeholder="Cuéntanos sobre tu proyecto..."
                                 ></textarea>
                             </div>
@@ -183,7 +183,7 @@ const ContactSection = () => {
             {
                 showConfirmation && (
                     <div id="confirmation-modal" className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm">
-                        <div className="bg-background p-6 rounded-2xl shadow-lg max-w-md w-full text-center space-y-4 transition-all duration-500 ease-out transform scale-95 opacity-0 animate-fade-in">
+                        <div className="bg-background p-6 rounded-2xl shadow-lg max-w-md w-full text-center space-y-4 transition-all duration-500 ease-out transform scale-100 opacity-100 animate-scale-in">
                             <CheckCircle className="mx-auto h-10 w-10 text-green-500" />
                             <h4 className="text-lg font-semibold text-primary">¡Solicitud enviada!</h4>
                             <p className="text-sm text-muted-foreground">
