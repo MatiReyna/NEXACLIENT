@@ -1,4 +1,4 @@
-import TypewriteEffectSmooth from '../ui/typewriter-effect';
+import { TypewriterEffectSmooth } from '../ui/typewriter-effect';
 
 const WelcomeBanner = () => {
 
@@ -12,7 +12,7 @@ const WelcomeBanner = () => {
     return (
         <div className="flex flex-col items-center justify-center mb-8">
             <p className="text-muted-foreground text-sm mb-2">NEXA Constructora Desarrollista</p>
-            <TypewriteEffectSmooth words={ words } />
+            <TypewriterEffectSmooth words={ words } />
         </div>
     )
 };
