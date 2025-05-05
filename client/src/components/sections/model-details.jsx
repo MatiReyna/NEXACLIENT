@@ -50,10 +50,10 @@ const ModelDetails = ({ isOpen, onClose, model }) => {
     };
 
     return (
-        <Modal isOpen={ isOpen } onClose={ onClose } className="p-0 overflow-hidden">
-            <div className="flex flex-col h-full">
+        <Modal isOpen={ isOpen } onClose={ onClose } className="p-0 overflow-y-auto max-h-[90vh] sm:max-h-[95vh]">
+            <div className="flex flex-col h-full max-h-full overflow-y-auto">
                 <div className="w-full relative">
-                    <div className="aspect-video w-full overflow-hidden bg-gray-100">
+                    <div className="h-[220px] sm:h-[300px] w-full overflow-hidden bg-gray-100">
                         <img
                             src={ images[activeImage] || '/placeholder.svg' }
                             alt={ `${ model.title } - Vista ${ activeImage + 1 }` }
