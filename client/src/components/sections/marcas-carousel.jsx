@@ -1,14 +1,14 @@
 import { useEffect, useRef, useState } from 'react';
-import { cn } from '../../lib/utils';
+import { cn } from '@/lib/utils';
 
-import marca1 from '../../assets/logos/marca1.svg';
-import marca2 from '../../assets/logos/marca2.svg';
-import marca3 from '../../assets/logos/marca3.svg';
-import marca4 from '../../assets/logos/marca4.svg';
-import marca5 from '../../assets/logos/marca5.svg';
-import marca6 from '../../assets/logos/marca6.svg';
-import marca7 from '../../assets/logos/marca7.svg';
-import marca8 from '../../assets/logos/marca8.svg';
+import marca1 from '@/assets/logos/marca1.svg';
+import marca2 from '@/assets/logos/marca2.svg';
+import marca3 from '@/assets/logos/marca3.svg';
+import marca4 from '@/assets/logos/marca4.svg';
+import marca5 from '@/assets/logos/marca5.svg';
+import marca6 from '@/assets/logos/marca6.svg';
+import marca7 from '@/assets/logos/marca7.svg';
+import marca8 from '@/assets/logos/marca8.svg';
 
 const MarcasCarousel = ({ className }) => {
 
