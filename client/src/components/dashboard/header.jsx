@@ -1,6 +1,6 @@
 import { Bell, Search, Settings } from 'lucide-react';
 import { Button } from '../ui/button';
-import { Input } from '../ui/input';
+import Input from '../ui/input';
 
 const DashboardHeader = () => {
     return (
