@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
-import Button from '../ui/button';
 import { Card, CardContent } from '../ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../ui/tabs';
 import { ArrowRight, Bed, Ruler, Clock } from 'lucide-react';
 import ModelDetails from './model-details';
-import { modelos } from '../../lib/data/modelosData';
+import { modelos } from '@/lib/data/modelosData';
 
-const ModelCard = React.memo(({ title, description, area, rooms, imageSrc, imageAlt }) => {
+const ModelCard = React.memo(({ title, description, area, rooms, imageSrc, imageAlt, index }) => {
 
     const [ showDetails, setShowDetails ] = useState(false);
 
@@ -22,21 +21,23 @@ const ModelCard = React.memo(({ title, description, area, rooms, imageSrc, image
                     />
                 </div>
                 <CardContent className="p-6">
-                    {
-                        title.includes('ecologico') && (
-                            <span className="inline-block mb-2 rounded-full bg-violet-500 text-white px-3 py-1 text-xs font-semibold">
-                                Popular
-                            </span>
+                    <div className="flex items-center justify-between mb-2">
+                      <h3 className="text-xl font-bold">{ title }</h3>
+                      {
+                        index % 3 === 0 && (
+                          <span className="rounded-full bg-green-600 text-white px-3 py-1 text-xs font-semibold">
+                            Más Vendido
+                          </span>
                         )
-                    }
-                    {
-                        title.includes('tradicional') && (
-                            <span className="inline-block mb-2 rounded-full bg-green-600 text-white px-3 py-1 text-xs font-semibold">
-                                Más Vendido
-                            </span>
+                      }
+                      {
+                        index % 3 === 1 && (
+                          <span className="rounded-full bg-violet-500 text-white px-3 py-1 text-xs font-semibold">
+                            Popular
+                          </span>
                         )
-                    }
-                    <h3 className="text-xl font-bold">{ title }</h3>
+                      }
+                    </div>
                     <p className="mt-2 text-muted-foreground min-h-[80px]">{ description }</p>
                     <div className="mt-4 flex justify-between text-sm text-muted-foreground">
                         <span className="flex items-center gap-1">
@@ -53,8 +54,7 @@ const ModelCard = React.memo(({ title, description, area, rooms, imageSrc, image
                         <span>Construcción: 3-4 meses</span>
                     </div>
                     <button
-                        // className="mt-4 inline-flex items-center justify-center px-6 py-3 text-lg font-medium transition-all duration-300 bg-primary text-white rounded-xl hover:scale-105 hover:shadow-lg group w-full"
-                        className="inline-flex items-center justify-center w-full px-6 py-3 text-lg font-medium transition-all duration-300 bg-primary text-white rounded-xl hover:scale-105 hover:shadow-lg group"
+                        className="mt-4 inline-flex items-center justify-center w-full px-6 py-3 text-lg font-medium transition-all duration-300 bg-primary text-white rounded-xl hover:scale-105 hover:shadow-lg group"
                         onClick={ () => setShowDetails(true) }
                     >
                         <span className="flex items-center justify-center">
@@ -112,7 +112,7 @@ const ModelsSection = () => {
                         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
                             {
                                 modelos.filter(m => m.type === 'moderno').map((modelo, i) => (
-                                    <ModelCard key={ i } { ...modelo } />
+                                    <ModelCard key={ i } index={ i } { ...modelo } />
                                 ))
                             }
                         </div>
@@ -121,7 +121,7 @@ const ModelsSection = () => {
                         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
                             {
                                 modelos.filter(m => m.type === 'tradicional').map((modelo, i) => (
-                                    <ModelCard key={ i } { ...modelo } />
+                                    <ModelCard key={ i } index={ i } { ...modelo } />
                                 ))
                             }
                         </div>
@@ -130,7 +130,7 @@ const ModelsSection = () => {
                         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
                             {
                                 modelos.filter(m => m.type === 'ecologico').map((modelo, i) => (
-                                    <ModelCard key={ i } { ...modelo } />
+                                    <ModelCard key={ i } index={ i } { ...modelo } />
                                 ))
                             }
                         </div>
