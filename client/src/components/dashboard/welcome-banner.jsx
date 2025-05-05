@@ -1,4 +1,4 @@
-import { TypewriteEffectSmooth } from '../ui/typewriter-effect';
+import TypewriteEffectSmooth from '../ui/typewriter-effect';
 
 const WelcomeBanner = () => {
 
