@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Button from '../ui/button';
 import { Card, CardContent } from '../ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../ui/tabs';
-import { ArrowRight, Bed, Ruler } from 'lucide-react';
+import { ArrowRight, Bed, Ruler, Clock } from 'lucide-react';
 import ModelDetails from './model-details';
 import { modelos } from '../../lib/data/modelosData';
 
@@ -22,7 +22,22 @@ const ModelCard = React.memo(({ title, description, area, rooms, imageSrc, image
                     />
                 </div>
                 <CardContent className="p-6">
+                    {
+                        title.includes("Eco") && (
+                            <span className="inline-block mb-2 rounded-full bg-violet-500 text-white px-3 py-1 text-xs font-semibold">
+                                Popular
+                            </span>
+                        )
+                    }
+                    {
+                        title.includes("Tradicional") && (
+                            <span className="inline-block mb-2 rounded-full bg-green-600 text-white px-3 py-1 text-xs font-semibold">
+                                Más Vendido
+                            </span>
+                        )
+                    }
                     <h3 className="text-xl font-bold">{ title }</h3>
+                    <span className="text-sm text-primary font-semibold uppercase tracking-wide">Casa { title.includes("Eco") ? "Ecológica" : title.includes("Tradicional") ? "Tradicional" : "Moderna" }</span>
                     <p className="mt-2 text-muted-foreground min-h-[80px]">{ description }</p>
                     <div className="mt-4 flex justify-between text-sm text-muted-foreground">
                         <span className="flex items-center gap-1">
@@ -34,8 +49,12 @@ const ModelCard = React.memo(({ title, description, area, rooms, imageSrc, image
                             { rooms }
                         </span>
                     </div>
+                    <div className="mt-2 text-sm text-muted-foreground flex items-center gap-2">
+                        <Clock className="h-4 w-4" />
+                        <span>Construcción: 3-4 meses</span>
+                    </div>
                     <Button
-                        className="mt-4 w-full text-lg font-medium bg-primary text-white rounded-xl hover:scale-105 hover:shadow-lg transition-all duration-300 py-3 px-6 group"
+                        className="mt-4 inline-flex items-center justify-center px-6 py-3 text-lg font-medium transition-all duration-300 bg-primary text-white rounded-xl hover:scale-105 hover:shadow-lg group w-full"
                         onClick={ () => setShowDetails(true) }
                     >
                         <span className="flex items-center justify-center">
@@ -66,7 +85,7 @@ const ModelsSection = () => {
                     </p>
                 </div>
                 <Tabs defaultValue="modernos" className="w-full">
-                    <TabsList className="flex flex-wrap sm:grid sm:grid-cols-3 gap-2 justify-center">
+                    <TabsList className="flex flex-nowrap overflow-x-auto sm:grid sm:grid-cols-3 gap-2 justify-center">
                         <TabsTrigger
                             value="modernos"
                             aria-label="Ver modelos modernos"
