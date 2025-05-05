@@ -2,8 +2,8 @@ import { Routes, Route } from 'react-router-dom';
 import { SpeedInsights } from "@vercel/speed-insights/react"
 
 // Importaciones para el Dashboard del administrador.
-import AdminLogin from './components/admin/AdminLogin';
-import DashboardAdmin from './components/admin/DashboardAdmin';
+import AdminLogin from './components/dashboard/AdminLogin';
+import DashboardAdmin from './components/dashboard/DashboardAdmin';
 
 // Importaciones para la página principal.
 import Header from './components/layout/header';
