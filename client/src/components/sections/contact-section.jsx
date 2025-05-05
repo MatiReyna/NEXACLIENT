@@ -14,7 +14,6 @@ const ContactSection = () => {
                     <div className="space-y-6">
                         <div className="space-y-2">
                             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-primary">Contacta con Nosotros</h2>
-                            <div className="mx-auto h-1 w-24 bg-[#241f19]/80 rounded-full mt-4"></div>
                             <p className="mx-auto max-w-[700px] text-[#241f19]/80 md:text-xl">
                                 Estamos aquí para responder a todas tus preguntas y ayudarte a hacer realidad tu proyecto.
                             </p>
@@ -165,12 +164,13 @@ const ContactSection = () => {
                                     Acepto la política de privacidad y el tratamiento de mis datos.
                                 </label>
                             </div>
-                            <Button type="submit" className="group w-full transition-transform duration-300 hover:scale-105">
-                                <span className="flex items-center">
-                                    Enviar Solicitud
-                                    <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:rotate-6" />
-                                </span>
-                            </Button>
+                            <button
+                              type="submit"
+                              className="inline-flex items-center justify-center w-full px-6 py-3 text-lg font-medium transition-all duration-300 bg-primary text-white rounded-xl hover:scale-105 hover:shadow-lg group"
+                            >
+                              Enviar Solicitud
+                              <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1.5" />
+                            </button>
                         </form>
                     </div>
                 </div>
@@ -184,9 +184,12 @@ const ContactSection = () => {
                             <p className="text-sm text-muted-foreground">
                                 Gracias por contactarnos. Un asesor de NEXA Constructora se comunicará con vos a la brevedad
                             </p>
-                            <Button onClick={ () => setShowConfirmation(false) } className="mt-2 w-full">
-                                Cerrar
-                            </Button>
+                            <button
+                              onClick={ () => setShowConfirmation(false) }
+                              className="inline-flex items-center justify-center w-full px-6 py-3 text-lg font-medium transition-all duration-300 bg-primary text-white rounded-xl hover:scale-105 hover:shadow-lg"
+                            >
+                              Cerrar
+                            </button>
                         </div>
                     </div>
                 )
