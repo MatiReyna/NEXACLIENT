@@ -1,6 +1,5 @@
 import { Phone, Mail, MapPin, ArrowRight, CheckCircle } from 'lucide-react';
 import { useState } from 'react';
-import Button from '../ui/button';
 import mapa from '../../assets/contact/mapa.png';
 
 const ContactSection = () => {
@@ -20,15 +19,21 @@ const ContactSection = () => {
                         </div>
                         <div className="space-y-4">
                             <div className="flex items-center space-x-3">
-                                <Phone className="h-5 w-5 text-[#592e83]" />
+                                <span className="p-2 rounded-full bg-[#592e83]/10">
+                                    <Phone className="h-5 w-5 text-[#592e83]" />
+                                </span>
                                 <span>+54 9 351559-4819</span>
                             </div>
                             <div className="flex items-center space-x-3">
-                                <Mail className="h-5 w-5 text-[#592e83]" />
+                                <span className="p-2 rounded-full bg-[#592e83]/10">
+                                    <Mail className="h-5 w-5 text-[#592e83]" />
+                                </span>
                                 <span>hola@nexaconstructora.com</span>
                             </div>
                             <div className="flex items-center space-x-3">
-                                <MapPin className="h-5 w-5 text-[#592e83]" />
+                                <span className="p-2 rounded-full bg-[#592e83]/10">
+                                    <MapPin className="h-5 w-5 text-[#592e83]" />
+                                </span>
                                 <span>Pasaje San Ignacio 104 Bº Villa Esquiu, Provincia de Córdoba</span>
                             </div>
                         </div>
@@ -127,7 +132,7 @@ const ContactSection = () => {
                                 </label>
                                 <select
                                     id="modelo"
-                                    className="flex h-10 w-full rounded-xl border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-300 hover:border-primary/50"
+                                    className="flex h-12 w-full appearance-none rounded-xl border border-input bg-background px-4 py-3 pr-10 text-sm ring-offset-background focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 hover:border-primary/50 transition-all duration-300 bg-[url('data:image/svg+xml;utf8,<svg fill=\'%23592e83\' height=\'20\' viewBox=\'0 0 24 24\' width=\'20\' xmlns=\'http://www.w3.org/2000/svg\'><path d=\'M7 10l5 5 5-5z\'/></svg>')] bg-no-repeat bg-[right_1rem_center]"
                                 >
                                     <option value="">Selecciona un modelo</option>
                                     <option value="Modelo Florida">Modelo Florida</option>
