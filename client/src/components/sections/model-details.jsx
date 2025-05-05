@@ -51,8 +51,8 @@ const ModelDetails = ({ isOpen, onClose, model }) => {
 
     return (
         <Modal isOpen={ isOpen } onClose={ onClose } className="p-0 overflow-hidden">
-            <div className="flex flex-col lg:flex-row h-full">
-                <div className="relative lg:w-1/2">
+            <div className="flex flex-col h-full">
+                <div className="w-full relative">
                     <div className="aspect-video w-full overflow-hidden bg-gray-100">
                         <img
                             src={ images[activeImage] || '/placeholder.svg' }
@@ -105,24 +105,8 @@ const ModelDetails = ({ isOpen, onClose, model }) => {
                     </div>
                 </div>
 
-                <div className="lg:w-1/2 p-6 overflow-y-auto max-h-[70vh] lg:max-h-[90vh]">
+                <div className="w-full p-6">
                     <h2 className="text-2xl font-bold text-gray-900">{ model.title }</h2>
-                    <div className="mt-1 flex items-center gap-2">
-                        {
-                            model.tag === 'popular' && (
-                                <span className="px-3 py-0.5 text-sm font-semibold rounded-full bg-[#592e83]/10 text-[#592e83]">
-                                    Popular
-                                </span>
-                            )
-                        }
-                        {
-                            model.tag === 'mas-vendido' && (
-                                <span className="px-3 py-0.5 text-sm font-semibold rounded-full bg-green-100 text-green-700">
-                                    Más Vendido
-                                </span>
-                            )
-                        }
-                    </div>
                     <p className="text-sm text-[#241f19]/60 mt-1">Ref: NEXA-{ model.title.replace(/\s+/g, '').toLowerCase() }-{ Math.floor(Math.random() * 1000) }</p>
 
                     <div className="mt-6">
@@ -195,15 +179,15 @@ const ModelDetails = ({ isOpen, onClose, model }) => {
                         </div>
 
                         <div className="flex flex-col sm:flex-row gap-3 mt-2">
-                            <button className="mt-4 inline-flex items-center justify-center w-full px-6 py-3 text-lg font-medium transition-all duration-300 bg-primary text-white rounded-xl hover:scale-105 hover:shadow-lg group" aria-label="Solicitar Presupuesto">
+                            <button className="inline-flex items-center justify-center w-full px-6 py-3 text-lg font-medium transition-all duration-300 bg-primary text-white rounded-xl hover:scale-105 hover:shadow-lg group" aria-label="Solicitar Presupuesto">
                                 <span className="flex items-center group">
                                     Solicitar Presupuesto
                                     <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1.5" />
                                 </span>
                             </button>
-                            <Button variant="outline" className="flex-1 inline-flex items-center justify-center px-6 py-3 text-lg font-medium border border-[#592e83] text-[#592e83] hover:bg-[#592e83]/10 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg" aria-label="Descargar Catálogo">
+                            <button className="inline-flex items-center justify-center px-6 py-3 text-lg font-medium border border-white dark:border-white text-white hover:bg-primary/10 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg" aria-label="Descargar Catálogo">
                                 Descargar Catálogo
-                            </Button>
+                            </button>
                         </div>
                     </div>
                 </div>
