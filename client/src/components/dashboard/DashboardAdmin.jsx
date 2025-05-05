@@ -419,15 +419,20 @@ import React from 'react';
 
 // Importar componentes modularizados.
 import DashboardHeader from '@/components/dashboard/header';
+import WelcomeBanner from '@/components/dashboard/welcome-banner';
 
 const DashboardAdmin = () => {
-    return (
-      <>
+  return (
+    <>
       <div className="flex flex-col min-h-screen">
         <DashboardHeader />
+
+        <div className="container py-8">
+          <WelcomeBanner />
+        </div>
       </div>
-      </>
-    )
+    </>
+  )
 };
 
 export default DashboardAdmin;

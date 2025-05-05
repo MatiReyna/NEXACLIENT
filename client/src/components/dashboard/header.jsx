@@ -22,7 +22,6 @@ const DashboardHeader = () => {
                     <Button variant="ghost" size="icon">
                         <Settings className="h-5 w-5" />
                     </Button>
-                    <div orientation="vertical" className="mx-auto h-8 w-24 bg-primary rounded-full mt-4"></div>
                     <Button variant="ghost" className="gap-2">
                         <span className="font-medium">Facundo</span>
                     </Button>
