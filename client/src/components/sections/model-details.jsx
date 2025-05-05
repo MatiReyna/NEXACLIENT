@@ -51,9 +51,9 @@ const ModelDetails = ({ isOpen, onClose, model }) => {
 
     return (
         <Modal isOpen={ isOpen } onClose={ onClose } className="p-0 overflow-y-auto max-h-[90vh] sm:max-h-[95vh]">
-            <div className="flex flex-col h-full max-h-full overflow-y-auto">
+            <div className="flex flex-col h-full max-h-full overflow-y-auto bg-gray-50">
                 <div className="w-full relative">
-                    <div className="h-[220px] sm:h-[300px] w-full overflow-hidden bg-gray-100">
+                    <div className="h-[200px] sm:h-[260px] w-full overflow-hidden bg-gray-100">
                         <img
                             src={ images[activeImage] || '/placeholder.svg' }
                             alt={ `${ model.title } - Vista ${ activeImage + 1 }` }
@@ -105,7 +105,7 @@ const ModelDetails = ({ isOpen, onClose, model }) => {
                     </div>
                 </div>
 
-                <div className="w-full p-6">
+                <div className="w-full p-6 shadow-xl">
                     <h2 className="text-2xl font-bold text-gray-900">{ model.title }</h2>
                     <p className="text-sm text-[#241f19]/60 mt-1">Ref: NEXA-{ model.title.replace(/\s+/g, '').toLowerCase() }-{ Math.floor(Math.random() * 1000) }</p>
 
@@ -185,7 +185,7 @@ const ModelDetails = ({ isOpen, onClose, model }) => {
                                     <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1.5" />
                                 </span>
                             </button>
-                            <button className="inline-flex items-center justify-center px-6 py-3 text-lg font-medium border border-white dark:border-white text-white hover:bg-primary/10 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg" aria-label="Descargar Catálogo">
+                            <button className="inline-flex items-center justify-center px-6 py-3 text-lg font-medium border border-[#592e83] text-[#592e83] hover:bg-primary/10 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg" aria-label="Descargar Catálogo">
                                 Descargar Catálogo
                             </button>
                         </div>
