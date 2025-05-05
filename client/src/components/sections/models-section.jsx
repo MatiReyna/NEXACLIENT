@@ -23,21 +23,20 @@ const ModelCard = React.memo(({ title, description, area, rooms, imageSrc, image
                 </div>
                 <CardContent className="p-6">
                     {
-                        title.includes("Eco") && (
+                        title.includes('ecologico') && (
                             <span className="inline-block mb-2 rounded-full bg-violet-500 text-white px-3 py-1 text-xs font-semibold">
                                 Popular
                             </span>
                         )
                     }
                     {
-                        title.includes("Tradicional") && (
+                        title.includes('tradicional') && (
                             <span className="inline-block mb-2 rounded-full bg-green-600 text-white px-3 py-1 text-xs font-semibold">
                                 Más Vendido
                             </span>
                         )
                     }
                     <h3 className="text-xl font-bold">{ title }</h3>
-                    <span className="text-sm text-primary font-semibold uppercase tracking-wide">Casa { title.includes("Eco") ? "Ecológica" : title.includes("Tradicional") ? "Tradicional" : "Moderna" }</span>
                     <p className="mt-2 text-muted-foreground min-h-[80px]">{ description }</p>
                     <div className="mt-4 flex justify-between text-sm text-muted-foreground">
                         <span className="flex items-center gap-1">
@@ -53,15 +52,16 @@ const ModelCard = React.memo(({ title, description, area, rooms, imageSrc, image
                         <Clock className="h-4 w-4" />
                         <span>Construcción: 3-4 meses</span>
                     </div>
-                    <Button
-                        className="mt-4 inline-flex items-center justify-center px-6 py-3 text-lg font-medium transition-all duration-300 bg-primary text-white rounded-xl hover:scale-105 hover:shadow-lg group w-full"
+                    <button
+                        // className="mt-4 inline-flex items-center justify-center px-6 py-3 text-lg font-medium transition-all duration-300 bg-primary text-white rounded-xl hover:scale-105 hover:shadow-lg group w-full"
+                        className="inline-flex items-center justify-center px-6 py-3 text-lg font-medium transition-all duration-300 bg-primary text-white rounded-xl hover:scale-105 hover:shadow-lg group"
                         onClick={ () => setShowDetails(true) }
                     >
                         <span className="flex items-center justify-center">
                             Ver Detalles
                             <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1.5" />
                         </span>
-                    </Button>
+                    </button>
                 </CardContent>
             </Card>
 
