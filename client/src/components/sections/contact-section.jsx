@@ -37,6 +37,7 @@ const ContactSection = () => {
                                 <span>Pasaje San Ignacio 104 Bº Villa Esquiu, Provincia de Córdoba</span>
                             </div>
                         </div>
+                        <div className="mx-auto h-1 w-24 bg-primary rounded-full mt-4"></div>
                         <div className="aspect-video w-full overflow-hidden rounded-2xl shadow-md border border-gray-200 transition-transform duration-300 hover:scale-105">
                             <img
                                 src={ mapa }
@@ -77,7 +78,7 @@ const ContactSection = () => {
                                     </label>
                                     <input
                                         id="nombre"
-                                        className="flex h-10 w-full rounded-2xl border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-300 hover:border-primary/50"
+                                        className="flex h-10 w-full rounded-xl border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-300 hover:border-primary/50"
                                         placeholder="Tu nombre"
                                     />
                                 </div>
@@ -90,7 +91,7 @@ const ContactSection = () => {
                                     </label>
                                     <input
                                         id="apellidos"
-                                        className="flex h-10 w-full rounded-2xl border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-300 hover:border-primary/50"
+                                        className="flex h-10 w-full rounded-xl border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-all duration-300 hover:border-primary/50"
                                         placeholder="Tus apellidos"
                                     />
                                 </div>
