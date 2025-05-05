@@ -54,7 +54,7 @@ const ModelCard = React.memo(({ title, description, area, rooms, imageSrc, image
                     </div>
                     <button
                         // className="mt-4 inline-flex items-center justify-center px-6 py-3 text-lg font-medium transition-all duration-300 bg-primary text-white rounded-xl hover:scale-105 hover:shadow-lg group w-full"
-                        className="inline-flex items-center justify-center px-6 py-3 text-lg font-medium transition-all duration-300 bg-primary text-white rounded-xl hover:scale-105 hover:shadow-lg group"
+                        className="inline-flex items-center justify-center w-full px-6 py-3 text-lg font-medium transition-all duration-300 bg-primary text-white rounded-xl hover:scale-105 hover:shadow-lg group"
                         onClick={ () => setShowDetails(true) }
                     >
                         <span className="flex items-center justify-center">
