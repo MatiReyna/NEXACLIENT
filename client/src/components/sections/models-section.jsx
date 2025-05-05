@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import Button from '../ui/button';
 import { Card, CardContent } from '../ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../ui/tabs';
@@ -6,13 +6,13 @@ import { ArrowRight, Bed, Ruler } from 'lucide-react';
 import ModelDetails from './model-details';
 import { modelos } from '../../lib/data/modelosData';
 
-const ModelCard = ({ title, description, area, rooms, imageSrc, imageAlt }) => {
+const ModelCard = React.memo(({ title, description, area, rooms, imageSrc, imageAlt }) => {
 
     const [ showDetails, setShowDetails ] = useState(false);
 
     return (
         <>
-            <Card className="overflow-hidden rounded-xl shadow-md transition-all duration-300 hover:shadow-xl hover:scale-[1.02]">
+            <Card className="overflow-hidden rounded-xl shadow-md transition-all duration-300 hover:shadow-xl hover:scale-[1.02] hover:ring-2 hover:ring-primary/40">
                 <div className="aspect-video w-full overflow-hidden rounded-t-xl">
                     <img
                         src={ imageSrc || '/placeholder.svg' }
@@ -35,12 +35,12 @@ const ModelCard = ({ title, description, area, rooms, imageSrc, imageAlt }) => {
                         </span>
                     </div>
                     <Button
-                        className="mt-4 w-full text-white bg-primary hover:scale-105 hover:shadow-lg transition-all duration-300 rounded-xl py-3 px-6 text-center"
+                        className="mt-4 w-full text-lg font-medium bg-primary text-white rounded-xl hover:scale-105 hover:shadow-lg transition-all duration-300 py-3 px-6 group"
                         onClick={ () => setShowDetails(true) }
                     >
-                        <span className="flex items-center group">
+                        <span className="flex items-center justify-center">
                             Ver Detalles
-                            <ArrowRight className="ml-2 h-4 w-4 opacity-70 group-hover:opacity-100 transition-opacity duration-300 group-hover:translate-x-1" />
+                            <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1.5" />
                         </span>
                     </Button>
                 </CardContent>
@@ -53,7 +53,7 @@ const ModelCard = ({ title, description, area, rooms, imageSrc, imageAlt }) => {
             />
         </>
     )
-};
+});
 
 const ModelsSection = () => {
     return (
@@ -66,22 +66,25 @@ const ModelsSection = () => {
                     </p>
                 </div>
                 <Tabs defaultValue="modernos" className="w-full">
-                    <TabsList className="grid w-full grid-cols-3 sm:grid-cols-3 overflow-x-auto">
+                    <TabsList className="flex flex-wrap sm:grid sm:grid-cols-3 gap-2 justify-center">
                         <TabsTrigger
                             value="modernos"
-                            className="border border-[#241f19]/10 rounded-md data-[state=active]:bg-primary data-[state=active]:text-white min-w-[120px] hover:bg-primary/10 transition-colors duration-300"
+                            aria-label="Ver modelos modernos"
+                            className="border border-[#241f19]/10 rounded-md data-[state=active]:bg-primary data-[state=active]:text-white data-[state=active]:border-b-4 data-[state=active]:border-white min-w-[120px] hover:bg-primary/10 transition-colors duration-300"
                         >
                             Modernos
                         </TabsTrigger>
                         <TabsTrigger
                             value="tradicionales"
-                            className="border border-[#241f19]/10 rounded-md data-[state=active]:bg-primary data-[state=active]:text-white min-w-[120px] hover:bg-primary/10 transition-colors duration-300"
+                            aria-label="Ver modelos tradicionales"
+                            className="border border-[#241f19]/10 rounded-md data-[state=active]:bg-primary data-[state=active]:text-white data-[state=active]:border-b-4 data-[state=active]:border-white min-w-[120px] hover:bg-primary/10 transition-colors duration-300"
                         >
                             Tradicionales
                         </TabsTrigger>
                         <TabsTrigger
                             value="ecologicos"
-                            className="border border-[#241f19]/10 rounded-md data-[state=active]:bg-primary data-[state=active]:text-white min-w-[120px] hover:bg-primary/10 transition-colors duration-300"
+                            aria-label="Ver modelos ecológicos"
+                            className="border border-[#241f19]/10 rounded-md data-[state=active]:bg-primary data-[state=active]:text-white data-[state=active]:border-b-4 data-[state=active]:border-white min-w-[120px] hover:bg-primary/10 transition-colors duration-300"
                         >
                             Ecológicos
                         </TabsTrigger>
@@ -95,7 +98,7 @@ const ModelsSection = () => {
                             }
                         </div>
                     </TabsContent>
-                    <TabsContent value="tradicionales" className="mt-6">
+                    <TabsContent value="tradicionales" className="mt-6 animate-fade">
                         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
                             {
                                 modelos.filter(m => m.type === 'tradicional').map((modelo, i) => (
@@ -104,7 +107,7 @@ const ModelsSection = () => {
                             }
                         </div>
                     </TabsContent>
-                    <TabsContent value="ecologicos" className="mt-6">
+                    <TabsContent value="ecologicos" className="mt-6 animate-fade">
                         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
                             {
                                 modelos.filter(m => m.type === 'ecologico').map((modelo, i) => (
