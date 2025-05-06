@@ -455,7 +455,7 @@ const DashboardAdmin = () => {
               <TabsTrigger value="models">Modelos</TabsTrigger>
               <TabsTrigger value="contacts">Contactos</TabsTrigger>
             </TabsList>
-            <TabsContent value="overview" className="mt-6">
+            {/* <TabsContent value="overview" className="mt-6">
               <BentoGrid className="max-w-6xl mx-auto">
                 {
                   generateBentoItems().map((item, i) => (
@@ -470,6 +470,46 @@ const DashboardAdmin = () => {
                   ))
                 }
               </BentoGrid>
+            </TabsContent> */}
+            <TabsContent value="models" className="mt-6">
+              <Card>
+                <CardHeader>
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <CardTitle>Gestión de Modelos</CardTitle>
+                      <CardDescription>Administra todos los modelos de casas disponibles</CardDescription>
+                    </div>
+                    <Button onClick={ () => setShowCreateModelModal(true) } className="rounded-lg">
+                      <Plus className="mr-2 h-4 w-4" />
+                      Nuevo Modelo
+                    </Button>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {
+                      modelos.map((modelo, i) => (
+                        <div key={ i } className="bg-brand-50 p-4 rounded-xl shadow-sm border border-brand-200">
+                          <div className="flex items-center gap-2 mb-2">
+                            <div className="h-10 w-10 rounded-full bg-brand-200 flex items-center justify-center">
+                              <Plus className="h-5 w-5 text-primary" />
+                            </div>
+                            <div>
+                              <p className="font-bold">{ modelo.nombre }</p>
+                              <p className="text-xs text-muted-foreground">Categoría: { modelo.categoria || "General" }</p>
+                            </div>
+                          </div>
+                          <p className="text-sm text-muted-foreground mt-2">{ modelo.descripcion }</p>
+                          <div className="flex justify-end gap-2 mt-4">
+                            <Button variant="outline" size="sm" className="rounded-lg">Editar</Button>
+                            <Button variant="destructive" size="sm" className="rounded-lg">Eliminar</Button>
+                          </div>
+                        </div>
+                      ))
+                    }
+                  </div>
+                </CardContent>
+              </Card>
             </TabsContent>
           </Tabs>
         </div>
