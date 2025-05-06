@@ -427,6 +427,7 @@ import { Plus } from 'lucide-react';
 import DashboardHeader from '@/components/dashboard/header';
 import WelcomeBanner from '@/components/dashboard/welcome-banner';
 import ProfileCard from './cards/profile-card';
+import BrandsCard from './cards/brands-card';
 
 // Importar datos y utilidades.
 import {
@@ -447,6 +448,7 @@ const DashboardAdmin = () => {
   const generateBentoItems = () => {
     return [
       ProfileCard({ onEditProfile: () => alert('Editar perfil') }),
+      BrandsCard({ brands: marcas })
     ]
   };
 
