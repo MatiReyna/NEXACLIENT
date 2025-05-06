@@ -511,6 +511,44 @@ const DashboardAdmin = () => {
                 </CardContent>
               </Card>
             </TabsContent>
+            <TabsContent value="contacts" className="mt-6">
+              <Card>
+                <CardHeader>
+                  <CardTitle>Solicitudes de Contacto</CardTitle>
+                  <CardDescription>Gestiona las solicitudes de contacto de clientes potenciales</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="rounded-xl border">
+                    <div className="grid grid-cols-5 bg-muted/50 p-4 text-sm font-medium">
+                      <div>Cliente</div>
+                      <div>Email</div>
+                      <div>Modelo</div>
+                      <div>Estado</div>
+                      <div>Acciones</div>
+                    </div>
+                    {
+                      [ ...contactRequests, ...contactRequests ].map((request, i) => (
+                        <div key={ i } className="grid grid-cols-5 items-center p-4 text-sm border-t">
+                          <div className="font-medium">{ request.name }</div>
+                          <div className="text-muted-foreground">{ request.email }</div>
+                          {/* <div>
+                            <Badge variant="outline" className="bg-brand-100 text-brand-800 rounded-lg">{ request.modelo }</Badge>
+                          </div> */}
+                          <div className="flex items-center gap-2">
+                            <span className={ `w-2 h-2 rounded-full ${ getStatusColor(request.status) }` }></span>
+                            <span>{ getStatusText(request.status) }</span>
+                          </div>
+                          <div className="flex gap-2">
+                            <Button variant="outline" size="sm" className="rounded-lg">Ver</Button>
+                            <Button variant="outline" size="sm" className="rounded-lg">Responder</Button>
+                          </div>
+                        </div>
+                      ))
+                    }
+                  </div>
+                </CardContent>
+              </Card>
+            </TabsContent>
           </Tabs>
         </div>
       </div>
