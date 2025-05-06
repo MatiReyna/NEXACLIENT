@@ -455,6 +455,22 @@ const DashboardAdmin = () => {
               <TabsTrigger value="models">Modelos</TabsTrigger>
               <TabsTrigger value="contacts">Contactos</TabsTrigger>
             </TabsList>
+            <TabsContent value="overview" className="mt-6">
+              <BentoGrid className="max-w-6xl mx-auto">
+                {
+                  generateBentoItems().map((item, i) => (
+                    <BentoGridItem
+                      key={ i }
+                      title={ item.title }
+                      description={ item.description }
+                      header={ item.header }
+                      icon={ item.icon }
+                      className={ item.className }
+                    />
+                  ))
+                }
+              </BentoGrid>
+            </TabsContent>
           </Tabs>
         </div>
       </div>
