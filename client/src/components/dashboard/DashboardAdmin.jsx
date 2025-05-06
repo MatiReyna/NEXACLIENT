@@ -419,6 +419,7 @@ import React, { useState } from 'react';
 import { BentoGrid, BentoGridItem } from '../ui/bento-grid';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../ui/tabs';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
+import { Badge } from '../ui/badge';
 import Button from '../ui/button';
 import { Plus } from 'lucide-react';
 
@@ -531,9 +532,9 @@ const DashboardAdmin = () => {
                         <div key={ i } className="grid grid-cols-5 items-center p-4 text-sm border-t">
                           <div className="font-medium">{ request.name }</div>
                           <div className="text-muted-foreground">{ request.email }</div>
-                          {/* <div>
+                          <div>
                             <Badge variant="outline" className="bg-brand-100 text-brand-800 rounded-lg">{ request.modelo }</Badge>
-                          </div> */}
+                          </div>
                           <div className="flex items-center gap-2">
                             <span className={ `w-2 h-2 rounded-full ${ getStatusColor(request.status) }` }></span>
                             <span>{ getStatusText(request.status) }</span>
