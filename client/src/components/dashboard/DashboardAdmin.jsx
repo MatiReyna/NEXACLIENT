@@ -465,7 +465,7 @@ const DashboardAdmin = () => {
               <TabsTrigger value="contacts">Contactos</TabsTrigger>
             </TabsList>
             <TabsContent value="overview" className="mt-6">
-              <BentoGrid className="max-w-6xl mx-auto">
+              {/* <BentoGrid className="max-w-6xl mx-auto">
                 {
                   generateBentoItems().map((item, i) => (
                     <BentoGridItem
@@ -478,7 +478,7 @@ const DashboardAdmin = () => {
                     />
                   ))
                 }
-              </BentoGrid>
+              </BentoGrid> */}
             </TabsContent>
             <TabsContent value="models" className="mt-6">
               <Card>
