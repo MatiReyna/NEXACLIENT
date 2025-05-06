@@ -415,13 +415,32 @@
 
 // export default DashboardAdmin;
 
-import React from 'react';
+import React, { useState } from 'react';
+import { BentoGrid, BentoGridItem } from '../ui/bento-grid';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '../ui/tabs';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
+import Button from '../ui/button';
+import { Plus } from 'lucide-react';
 
 // Importar componentes modularizados.
 import DashboardHeader from '@/components/dashboard/header';
 import WelcomeBanner from '@/components/dashboard/welcome-banner';
 
+// Importar datos y utilidades.
+import {
+  marcas,
+  modelos,
+  equipoNexa,
+  contactRequests,
+  ratings,
+  getStatusColor,
+  getStatusText
+} from './data/sample-data';
+
 const DashboardAdmin = () => {
+
+  const [ activeTab, setActiveTab ] = useState('overview');
+
   return (
     <>
       <div className="flex flex-col min-h-screen">
@@ -429,6 +448,14 @@ const DashboardAdmin = () => {
 
         <div className="container py-8">
           <WelcomeBanner />
+
+          <Tabs defaultValue="overview" className="mb-8" onValueChange={ setActiveTab }>
+            <TabsList className="grid w-full max-w-md mx-auto grid-cols-3">
+              <TabsTrigger value="overview">Resumen</TabsTrigger>
+              <TabsTrigger value="models">Modelos</TabsTrigger>
+              <TabsTrigger value="contacts">Contactos</TabsTrigger>
+            </TabsList>
+          </Tabs>
         </div>
       </div>
     </>
