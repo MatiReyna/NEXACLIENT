@@ -428,6 +428,7 @@ import DashboardHeader from '@/components/dashboard/header';
 import WelcomeBanner from '@/components/dashboard/welcome-banner';
 import ProfileCard from './cards/profile-card';
 import BrandsCard from './cards/brands-card';
+import TeamCard from './cards/team-card';
 
 // Importar datos y utilidades.
 import {
@@ -448,7 +449,8 @@ const DashboardAdmin = () => {
   const generateBentoItems = () => {
     return [
       ProfileCard({ onEditProfile: () => alert('Editar perfil') }),
-      BrandsCard({ brands: marcas })
+      BrandsCard({ brands: marcas }),
+      TeamCard({ team: equipoNexa, onViewTeam: () => alert('Ver Equipo') }),
     ]
   };
 
