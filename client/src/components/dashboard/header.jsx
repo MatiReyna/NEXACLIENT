@@ -1,6 +1,8 @@
 import { Bell, Search, Settings } from 'lucide-react';
+import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar';
 import Button from '../ui/button';
 import Input from '../ui/input';
+import { Separator } from '../ui/separator';
 
 const DashboardHeader = () => {
     return (
@@ -22,7 +24,12 @@ const DashboardHeader = () => {
                     <Button variant="ghost" size="icon">
                         <Settings className="h-5 w-5" />
                     </Button>
+                    <Separator orientation="vertical" className="h-8" />
                     <Button variant="ghost" className="gap-2">
+                        <Avatar className="h-8 w-8">
+                            <AvatarImage src="/placeholder.svg?height=200&width=200" alt="Facundo Sagario" />
+                            <AvatarFallback>FS</AvatarFallback>
+                        </Avatar>
                         <span className="font-medium">Facundo</span>
                     </Button>
                 </div>
