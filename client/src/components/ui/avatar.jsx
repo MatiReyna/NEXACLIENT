@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { cn } from '@/lib/utils';
+import { User } from 'lucide-react';
 
 const Avatar =React.forwardRef(({ className, ...props }, ref) => (
     <div
@@ -19,12 +20,14 @@ const AvatarImage = React.forwardRef(({ className, ...props }, ref) => (
 ))
 AvatarImage.displayName = 'AvatarImage';
 
-const AvatarFallback = React.forwardRef(({ className, ...props }, ref) => (
+const AvatarFallback = React.forwardRef(({ className, children, ...props }, ref) => (
     <div
         ref={ ref }
         className={ cn("flex h-full w-full items-center justify-center rounded-full bg-muted", className) }
         { ...props }
-    />
+    >
+        { children || <User className="h-5 w-5 text-muted-foreground" /> }
+    </div>
 ))
 AvatarFallback.displayName = 'AvatarFallback';
 
