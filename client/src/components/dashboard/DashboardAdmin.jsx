@@ -426,6 +426,7 @@ import { Plus } from 'lucide-react';
 // Importar componentes modularizados.
 import DashboardHeader from '@/components/dashboard/header';
 import WelcomeBanner from '@/components/dashboard/welcome-banner';
+import ProfileCard from '@/components/dashboard/cards/profile-card';
 
 // Importar datos y utilidades.
 import {
@@ -442,6 +443,13 @@ const DashboardAdmin = () => {
 
   const [ activeTab, setActiveTab ] = useState('overview');
 
+  // Generar las etiquetas para el BentoGrid.
+  const generateBentoItems = () => {
+    return [
+      ProfileCard({ onEditProfile: () => alert('Editar perfil') }),
+    ]
+  };
+
   return (
     <>
       <div className="flex flex-col min-h-screen">
@@ -456,7 +464,7 @@ const DashboardAdmin = () => {
               <TabsTrigger value="models">Modelos</TabsTrigger>
               <TabsTrigger value="contacts">Contactos</TabsTrigger>
             </TabsList>
-            {/* <TabsContent value="overview" className="mt-6">
+            <TabsContent value="overview" className="mt-6">
               <BentoGrid className="max-w-6xl mx-auto">
                 {
                   generateBentoItems().map((item, i) => (
@@ -471,7 +479,7 @@ const DashboardAdmin = () => {
                   ))
                 }
               </BentoGrid>
-            </TabsContent> */}
+            </TabsContent>
             <TabsContent value="models" className="mt-6">
               <Card>
                 <CardHeader>
