@@ -442,6 +442,7 @@ import {
   getStatusColor,
   getStatusText
 } from './data/sample-data';
+import { renderStars } from './helpers/helpers';
 
 const DashboardAdmin = () => {
 
