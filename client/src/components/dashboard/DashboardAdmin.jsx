@@ -431,6 +431,7 @@ import BrandsCard from './cards/brands-card';
 import TeamCard from './cards/team-card';
 import ContactRequestsCard from './cards/contact-card';
 import RatingsCard from './cards/ratings-card';
+import ModelsManagementCard from './cards/models-management';
 
 // Importar datos y utilidades.
 import {
@@ -456,6 +457,7 @@ const DashboardAdmin = () => {
       TeamCard({ team: equipoNexa, onViewTeam: () => alert('Ver Equipo') }),
       ContactRequestsCard({ requests: contactRequests, getStatusColor }),
       RatingsCard({ ratings, renderStars, onViewAllRatings: () => alert('Ver todas las valoraciones') }),
+      ModelsManagementCard({ onCreateModel: () => alert('Crear Modelo') })
     ]
   };
 
