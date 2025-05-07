@@ -430,6 +430,7 @@ import ProfileCard from './cards/profile-card';
 import BrandsCard from './cards/brands-card';
 import TeamCard from './cards/team-card';
 import ContactRequestsCard from './cards/contact-card';
+import RatingsCard from './cards/ratings-card';
 
 // Importar datos y utilidades.
 import {
@@ -452,7 +453,8 @@ const DashboardAdmin = () => {
       ProfileCard({ onEditProfile: () => alert('Editar perfil') }),
       BrandsCard({ brands: marcas }),
       TeamCard({ team: equipoNexa, onViewTeam: () => alert('Ver Equipo') }),
-      ContactRequestsCard({ requests: contactRequests, getStatusColor })
+      ContactRequestsCard({ requests: contactRequests, getStatusColor }),
+      RatingsCard({ ratings, renderStars, onViewAllRatings: () => alert('Ver todas las valoraciones') }),
     ]
   };
 
