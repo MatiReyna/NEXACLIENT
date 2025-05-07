@@ -1,6 +1,6 @@
 import { Star } from 'lucide-react';
 import Button from '../../ui/button';
-// import { Progress } from '../ui/progress';
+import { Progress } from '../../ui/progress';
 
 const RatingsCard = ({ ratings, renderStars, onViewAllRatings }) => {
     return {
@@ -23,7 +23,7 @@ const RatingsCard = ({ ratings, renderStars, onViewAllRatings }) => {
                         <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
                     </div>
                     <span className="text-sm text-muted-foreground">Promedio de valoraciones</span>
-                    {/* <Progress value={84} className="h-2 mt-2" /> */}
+                    <Progress value={84} className="h-2 mt-2" />
                 </div>
 
                 <div className="space-y-3 w-full mb-3">
