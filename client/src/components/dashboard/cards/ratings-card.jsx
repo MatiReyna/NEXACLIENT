@@ -1,5 +1,5 @@
 import { Star } from 'lucide-react';
-import Button from '../ui/button';
+import Button from '../../ui/button';
 // import { Progress } from '../ui/progress';
 
 const RatingsCard = ({ ratings, renderStars, onViewAllRatings }) => {
