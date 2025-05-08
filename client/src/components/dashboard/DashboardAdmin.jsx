@@ -78,7 +78,7 @@ const DashboardAdmin = () => {
             </TabsContent>
             <TabsContent value="models" className="mt-6">
               <Card>
-                <CardHeader>
+                <CardHeader className="border-b pb-4">
                   <div className="flex items-center justify-between">
                     <div>
                       <CardTitle>Gestión de Modelos</CardTitle>
@@ -94,7 +94,7 @@ const DashboardAdmin = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     {
                       modelos.map((modelo, i) => (
-                        <div key={ i } className="bg-white p-4 rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition-all">
+                        <div key={ i } className="bg-white p-4 rounded-xl shadow-md border border-gray-200 hover:shadow-xl hover:translate-y-[-2px] transition-transform duration-300">
                           <div className="flex items-center gap-2 mb-2">
                             <div className="h-10 w-10 rounded-full bg-brand-200 flex items-center justify-center">
                               <Plus className="h-5 w-5 text-primary" />
@@ -106,10 +106,10 @@ const DashboardAdmin = () => {
                           </div>
                           <p className="text-sm text-muted-foreground mt-2">{ modelo.descripcion }</p>
                           <div className="flex justify-end gap-2 mt-4">
-                            <button variant="outline" size="sm" className="inline-flex items-center justify-center px-6 py-3 text-lg font-medium transition-all duration-300 bg-primary text-white rounded-xl hover:scale-105 hover:shadow-lg group">
+                            <button className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium border border-[#592e83] text-[#592e83] bg-white hover:bg-[#592e83]/10 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-md group">
                               <Pencil className="h-4 w-4 mr-1" /> Editar
                             </button>
-                            <button variant="destructive" size="sm" className="inline-flex items-center justify-center px-6 py-3 text-lg font-medium transition-all duration-300 bg-primary text-white rounded-xl hover:scale-105 hover:shadow-lg group">
+                            <button className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium border border-red-600 text-red-600 bg-white hover:bg-red-50 hover:ring-2 hover:ring-red-200 rounded-xl transition-all duration-300 hover:scale-105 group">
                               <Trash2 className="h-4 w-4 mr-1" /> Eliminar
                             </button>
                           </div>
@@ -122,7 +122,7 @@ const DashboardAdmin = () => {
             </TabsContent>
             <TabsContent value="contacts" className="mt-6">
               <Card>
-                <CardHeader>
+                <CardHeader className="border-b pb-4">
                   <CardTitle>Solicitudes de Contacto</CardTitle>
                   <CardDescription>Gestiona las solicitudes de contacto de clientes potenciales</CardDescription>
                 </CardHeader>
@@ -137,21 +137,21 @@ const DashboardAdmin = () => {
                     </div>
                     {
                       [ ...contactRequests, ...contactRequests ].map((request, i) => (
-                        <div key={ i } className="grid grid-cols-5 items-center p-4 text-sm border-t">
+                        <div key={ i } className="grid grid-cols-5 items-center p-4 text-sm border-t odd:bg-white even:bg-muted/50">
                           <div className="font-medium">{ request.name }</div>
                           <div className="text-muted-foreground">{ request.email }</div>
                           <div>
-                            <Badge variant="outline" className="bg-brand-100 text-brand-800 rounded-lg">{ request.modelo }</Badge>
+                            <Badge variant="outline" className="bg-[#f2ebfc] text-[#592e83] border-[#e3d7f6] rounded-lg">{ request.modelo }</Badge>
                           </div>
                           <div className="flex items-center gap-2">
                             <span className={ `w-2 h-2 rounded-full ${ getStatusColor(request.status) }` }></span>
                             <span>{ getStatusText(request.status) }</span>
                           </div>
                           <div className="flex gap-2">
-                            <button variant="outline" size="sm" className="inline-flex items-center justify-center px-6 py-3 text-lg font-medium transition-all duration-300 bg-primary text-white rounded-xl hover:scale-105 hover:shadow-lg group">
+                            <button className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium border border-[#592e83] text-[#592e83] bg-white hover:bg-[#592e83]/10 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-md group">
                               <Eye className="h-4 w-4 mr-1" /> Ver
                             </button>
-                            <button variant="outline" size="sm" className="inline-flex items-center justify-center px-6 py-3 text-lg font-medium transition-all duration-300 bg-primary text-white rounded-xl hover:scale-105 hover:shadow-lg group">
+                            <button className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium border border-[#592e83] text-[#592e83] bg-white hover:bg-[#592e83]/10 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-md group">
                               <Reply className="h-4 w-4 mr-1" /> Responder
                             </button>
                           </div>
