@@ -3,6 +3,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar';
 import Button from '../ui/button';
 import Input from '../ui/input';
 import { Separator } from '../ui/separator';
+import animated1 from '@/assets/animated/animated1.jpg';
 
 const DashboardHeader = () => {
     return (
@@ -27,7 +28,7 @@ const DashboardHeader = () => {
                     <Separator orientation="vertical" className="h-8" />
                     <Button variant="ghost" className="gap-2">
                         <Avatar className="h-8 w-8">
-                            <AvatarImage src="/placeholder.svg?height=200&width=200" alt="Facundo Sagario" />
+                            <AvatarImage src={ animated1 } alt="Facundo Sagario" />
                             <AvatarFallback>FS</AvatarFallback>
                         </Avatar>
                         <span className="font-medium hidden sm:inline">Facundo</span>
