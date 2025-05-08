@@ -18,7 +18,7 @@ const ProfileCard = ({ onEditProfile }) => {
         ),
         header: (
             <div className="flex flex-col items-center justify-center w-full h-full rounded-xl p-6 sm:p-7 bg-gradient-to-br from-[#f9f6fc] via-[#f2ebfc] to-white">
-                <Avatar className="h-20 w-20 border-4 border-background shadow-xl mb-3">
+                <Avatar className="h-24 w-24 shadow-xl mb-3">
                     <AvatarImage src={ animated1 } alt="Facundo Sagario" />
                     <AvatarFallback>FS</AvatarFallback>
                 </Avatar>
@@ -28,7 +28,7 @@ const ProfileCard = ({ onEditProfile }) => {
                 </div>
                 <button
                     onClick={ onEditProfile }
-                    className="px-6 py-3 text-sm font-medium transition-all duration-300 bg-white border border-[#592e83] text-[#592e83] hover:bg-[#592e83]/10 rounded-xl hover:scale-105 hover:shadow mb-2"
+                    className="px-4 py-2 text-sm font-medium transition-all duration-300 bg-white border border-[#592e83] text-[#592e83] hover:bg-[#592e83]/10 rounded-xl hover:scale-105 hover:shadow mb-2"
                     aria-label="Editar perfil del administrador"
                 >
                     Editar
