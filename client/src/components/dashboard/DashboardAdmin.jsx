@@ -106,12 +106,12 @@ const DashboardAdmin = () => {
                           </div>
                           <p className="text-sm text-muted-foreground mt-2">{ modelo.descripcion }</p>
                           <div className="flex justify-end gap-2 mt-4">
-                            <Button variant="outline" size="sm" className="inline-flex items-center justify-center w-full px-6 py-3 text-lg font-medium transition-all duration-300 bg-primary text-white rounded-xl hover:scale-105 hover:shadow-lg group">
+                            <button variant="outline" size="sm" className="inline-flex items-center justify-center px-6 py-3 text-lg font-medium transition-all duration-300 bg-primary text-white rounded-xl hover:scale-105 hover:shadow-lg group">
                               <Pencil className="h-4 w-4 mr-1" /> Editar
-                            </Button>
-                            <Button variant="destructive" size="sm" className="rounded-lg">
+                            </button>
+                            <button variant="destructive" size="sm" className="inline-flex items-center justify-center px-6 py-3 text-lg font-medium transition-all duration-300 bg-primary text-white rounded-xl hover:scale-105 hover:shadow-lg group">
                               <Trash2 className="h-4 w-4 mr-1" /> Eliminar
-                            </Button>
+                            </button>
                           </div>
                         </div>
                       ))
@@ -148,12 +148,12 @@ const DashboardAdmin = () => {
                             <span>{ getStatusText(request.status) }</span>
                           </div>
                           <div className="flex gap-2">
-                            <Button variant="outline" size="sm" className="rounded-lg">
+                            <button variant="outline" size="sm" className="inline-flex items-center justify-center px-6 py-3 text-lg font-medium transition-all duration-300 bg-primary text-white rounded-xl hover:scale-105 hover:shadow-lg group">
                               <Eye className="h-4 w-4 mr-1" /> Ver
-                            </Button>
-                            <Button variant="outline" size="sm" className="rounded-lg">
+                            </button>
+                            <button variant="outline" size="sm" className="inline-flex items-center justify-center px-6 py-3 text-lg font-medium transition-all duration-300 bg-primary text-white rounded-xl hover:scale-105 hover:shadow-lg group">
                               <Reply className="h-4 w-4 mr-1" /> Responder
-                            </Button>
+                            </button>
                           </div>
                         </div>
                       ))
