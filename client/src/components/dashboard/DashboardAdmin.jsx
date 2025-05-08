@@ -84,10 +84,10 @@ const DashboardAdmin = () => {
                       <CardTitle>Gestión de Modelos</CardTitle>
                       <CardDescription>Administra todos los modelos de casas disponibles</CardDescription>
                     </div>
-                    <Button onClick={ () => setShowCreateModelModal(true) } className="inline-flex items-center justify-center w-full px-6 py-3 text-lg font-medium transition-all duration-300 bg-primary text-white rounded-xl hover:scale-105 hover:shadow-lg group">
+                    <button onClick={ () => setShowCreateModelModal(true) } className="inline-flex items-center justify-center px-6 py-3 text-lg font-medium transition-all duration-300 bg-primary text-white rounded-xl hover:scale-105 hover:shadow-lg group">
                       <Plus className="mr-2 h-4 w-4" />
                       Nuevo Modelo
-                    </Button>
+                    </button>
                   </div>
                 </CardHeader>
                 <CardContent>
