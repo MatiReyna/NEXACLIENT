@@ -3,7 +3,7 @@ import { TypewriterEffectSmooth } from '../ui/typewriter-effect';
 const WelcomeBanner = () => {
 
     const words = [
-        { text: 'Hola, 👋 ' },
+        { text: 'Hola 👋, ' },
         { text: 'Facundo ' },
         { text: 'al ' },
         { text: 'Dashboard de NEXA.', className: "text-primary" },

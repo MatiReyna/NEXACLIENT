@@ -27,29 +27,28 @@ const ProfileCard = ({ onEditProfile }) => {
                 </div>
                 <Button
                     onClick={ onEditProfile }
-                    variant="outline"
-                    size="sm"
-                    className="rounded-full mb-3"
+                    className="px-6 py-3 text-sm font-medium transition-all duration-300 bg-white border border-[#592e83] text-[#592e83] hover:bg-[#592e83]/10 rounded-xl hover:scale-105 hover:shadow mb-3"
+                    aria-label="Editar perfil del administrador"
                 >
                     Editar
                 </Button>
                 <div className="grid grid-cols-3 w-full gap-2">
-                    <div className="flex flex-col items-center p-2 rounded-xl bg-background/80">
+                    <div className="flex flex-col items-center p-2 rounded-xl bg-background/80 transition-all hover:scale-105">
                         <span className="text-xl font-bold text-primary">9</span>
                         <span className="text-xs text-muted-foreground">Modelos</span>
                     </div>
-                    <div className="flex flex-col items-center p-2 rounded-xl bg-background/80">
+                    <div className="flex flex-col items-center p-2 rounded-xl bg-background/80 transition-all hover:scale-105">
                         <span className="text-xl font-bold text-primary">12</span>
                         <span className="text-xs text-muted-foreground">Marcas</span>
                     </div>
-                    <div className="flex flex-col items-center p-2 rounded-xl bg-background/80">
+                    <div className="flex flex-col items-center p-2 rounded-xl bg-background/80 transition-all hover:scale-105">
                         <span className="text-xl font-bold text-primary">24</span>
                         <span className="text-xs text-muted-foreground">Contactos</span>
                     </div>
                 </div>
             </div>
         ),
-        className: "md:col-span-1 hover:shadow-lg rounded-2xl transition-all duration-300"
+        className: "md:col-span-1 hover:shadow-lg hover:-translate-y-1 rounded-2xl transition-all duration-300"
     }
 };
 
