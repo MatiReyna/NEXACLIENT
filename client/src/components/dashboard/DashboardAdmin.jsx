@@ -78,7 +78,7 @@ const DashboardAdmin = () => {
             </TabsContent>
             <TabsContent value="models" className="mt-6">
               <Card>
-                <CardHeader className="border-b pb-4">
+                <CardHeader>
                   <div className="flex items-center justify-between">
                     <div>
                       <CardTitle>Gestión de Modelos</CardTitle>
@@ -122,7 +122,7 @@ const DashboardAdmin = () => {
             </TabsContent>
             <TabsContent value="contacts" className="mt-6">
               <Card>
-                <CardHeader className="border-b pb-4">
+                <CardHeader>
                   <CardTitle>Solicitudes de Contacto</CardTitle>
                   <CardDescription>Gestiona las solicitudes de contacto de clientes potenciales</CardDescription>
                 </CardHeader>
