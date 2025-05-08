@@ -56,9 +56,9 @@ const DashboardAdmin = () => {
 
           <Tabs defaultValue="overview" className="mb-8" onValueChange={ setActiveTab }>
             <TabsList className="grid w-full max-w-md mx-auto grid-cols-3">
-              <TabsTrigger value="overview" className="data-[state=active]:bg-primary/10 data-[state=active]:text-primary">Resumen</TabsTrigger>
-              <TabsTrigger value="models" className="data-[state=active]:bg-primary/10 data-[state=active]:text-primary">Modelos</TabsTrigger>
-              <TabsTrigger value="contacts" className="data-[state=active]:bg-primary/10 data-[state=active]:text-primary">Contactos</TabsTrigger>
+              <TabsTrigger value="overview" className="border border-[#241f19]/10 data-[state=active]:bg-primary/10 data-[state=active]:text-primary">Resumen</TabsTrigger>
+              <TabsTrigger value="models" className="border border-[#241f19]/10 data-[state=active]:bg-primary/10 data-[state=active]:text-primary">Modelos</TabsTrigger>
+              <TabsTrigger value="contacts" className="border border-[#241f19]/10 data-[state=active]:bg-primary/10 data-[state=active]:text-primary">Contactos</TabsTrigger>
             </TabsList>
             <TabsContent value="overview" className="mt-6">
               <BentoGrid className="max-w-6xl mx-auto">
@@ -84,7 +84,7 @@ const DashboardAdmin = () => {
                       <CardTitle>Gestión de Modelos</CardTitle>
                       <CardDescription>Administra todos los modelos de casas disponibles</CardDescription>
                     </div>
-                    <Button onClick={ () => setShowCreateModelModal(true) } className="rounded-lg">
+                    <Button onClick={ () => setShowCreateModelModal(true) } className="inline-flex items-center justify-center w-full px-6 py-3 text-lg font-medium transition-all duration-300 bg-primary text-white rounded-xl hover:scale-105 hover:shadow-lg group">
                       <Plus className="mr-2 h-4 w-4" />
                       Nuevo Modelo
                     </Button>
@@ -106,7 +106,7 @@ const DashboardAdmin = () => {
                           </div>
                           <p className="text-sm text-muted-foreground mt-2">{ modelo.descripcion }</p>
                           <div className="flex justify-end gap-2 mt-4">
-                            <Button variant="outline" size="sm" className="rounded-lg">
+                            <Button variant="outline" size="sm" className="inline-flex items-center justify-center w-full px-6 py-3 text-lg font-medium transition-all duration-300 bg-primary text-white rounded-xl hover:scale-105 hover:shadow-lg group">
                               <Pencil className="h-4 w-4 mr-1" /> Editar
                             </Button>
                             <Button variant="destructive" size="sm" className="rounded-lg">
