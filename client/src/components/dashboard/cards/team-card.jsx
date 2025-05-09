@@ -18,6 +18,7 @@ const TeamCard = ({ team, onViewTeam }) => {
                 <div className="text-center mb-4">
                     <h3 className="text-lg font-semibold text-primary mb-1">Nuestro Equipo</h3>
                     <p className="text-sm text-muted-foreground">Los profesionales detrás de NEXA</p>
+                    <div className="mx-auto h-1 w-20 bg-primary rounded-full my-2" />
                 </div>
                 <div className="flex justify-center mb-4">
                     <AnimatedTooltip
@@ -31,10 +32,11 @@ const TeamCard = ({ team, onViewTeam }) => {
                         }
                     />
                 </div>
-                <Button onClick={ onViewTeam } className="rounded-lg" size="sm">Ver Todos</Button>
+                <p className="text-xs text-muted-foreground mt-1">Equipo compuesto por { team.length } miembros</p>
+                <button onClick={ onViewTeam } className="px-4 py-2 text-sm font-medium text-primary border border-primary rounded-xl hover:scale-105 transition-all duration-300">Ver Todos</button>
             </div>
         ),
-        className: "md:col-span-1 hover:shadow-lg rounded-2xl transition-all duration-300"
+        className: "md:col-span-1 hover:shadow-lg rounded-2xl transition-all duration-300 bg-gradient-to-br from-[#fdfbff] via-[#f2ebfc] to-white"
     }
 };
 
