@@ -14,7 +14,7 @@ const ModelsManagementCard = ({ onCreateModel }) => {
             <p className="text-sm text-muted-foreground">Visualizá, creá o modificá modelos de casas de forma sencilla.</p>
         ),
         header: (
-            <div className="flex flex-col items-center justify-between w-full h-full rounded-xl p-6 sm:p-7 bg-gradient-to-br from-[#fef9f5] via-[#fceee3] to-white">
+            <div className="flex flex-col items-center justify-between w-full h-full rounded-xl p-6 sm:p-7 bg-gradient-to-br from-[#faf6fe] via-[#f2ebfc] to-white">
                 <div className="text-center w-full mb-3">
                     <Home className="h-8 w-8 text-primary mx-auto mb-1" />
                     <h3 className="text-lg font-semibold text-primary">Modelos</h3>
@@ -49,12 +49,12 @@ const ModelsManagementCard = ({ onCreateModel }) => {
                     </div>
                 </div>
 
-                <button onClick={ onCreateModel } className="px-4 py-2 text-sm font-medium transition-all duration-300 bg-white border border-[#592e83] text-[#592e83] hover:bg-[#592e83]/10 rounded-xl hover:scale-105 hover:shadow mb-2">
+                <button onClick={ onCreateModel } className="px-4 py-2 text-sm font-medium transition-all duration-300 bg-primary text-white rounded-xl hover:scale-105 hover:shadow-md">
                     <Plus className="mr-1 h-4 w-4" /> Crear Modelo
                 </button>
             </div>
         ),
-        className: "md:col-span-1 hover:shadow-lg rounded-2xl transition-all duration-300 bg-gradient-to-br from-[#fef9f5] via-[#fceee3] to-white"
+        className: "md:col-span-1 hover:shadow-lg rounded-2xl transition-all duration-300 bg-gradient-to-br from-[#faf6fe] via-[#f2ebfc] to-white"
     }
 };
 
