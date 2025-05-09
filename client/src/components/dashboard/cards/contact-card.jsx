@@ -19,7 +19,7 @@ const ContactRequestsCard = ({ requests, getStatusColor }) => {
                     <MessageSquare className="h-8 w-8 text-primary mx-auto mb-1" />
                     <h3 className="text-lg font-semibold text-primary">Solicitudes Recientes</h3>
                     <div className="mx-auto h-1 w-24 bg-primary rounded-full mt-4 mb-2"></div>
-                    <div className="text-sm text-muted-foreground text-center font-medium mb-2">
+                    <div className="text-xs text-muted-foreground text-center font-medium mb-2">
                       Total: { requests.length } | Pendientes: 2 | Nuevas: 1 | Cerradas: 1
                     </div>
                 </div>
