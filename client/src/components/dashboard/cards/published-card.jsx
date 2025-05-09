@@ -24,12 +24,12 @@ const PublishedModelsCard = ({ models, onViewAllModels }) => {
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 w-full mb-3">
                     {
                         models.slice(0, 3).map((modelo, i) => (
-                            <div key={ i } className="bg-background p-3 rounded-xl shadow-sm flex flex-col h-full">
+                            <div key={ i } className="bg-white border border-muted p-3 rounded-xl shadow-sm flex flex-col h-full hover:shadow-md transition-all">
                                 <div className="flex items-center gap-2 mb-2">
                                     <div className="h-8 w-8 rounded-full bg-brand-200 flex items-center justify-center flex-shrink-0">
                                         <Home className="h-4 w-4 text-primary" />
                                     </div>
-                                    <p className="font-bold text-sm line-clamp-1">{ modelo.nombre }</p>
+                                    <p className="font-bold text-sm text-brand-800 line-clamp-1">{ modelo.nombre }</p>
                                 </div>
                                 <p className="text-xs text-muted-foreground line-clamp-3 flex-grow">{ modelo.descripcion }</p>
                             </div>
@@ -42,7 +42,7 @@ const PublishedModelsCard = ({ models, onViewAllModels }) => {
                 </Button>
             </div>
         ),
-        className: "md:col-span-2 hover:shadow-lg rounded-2xl transition-all duration-300"
+        className: "md:col-span-2 hover:shadow-lg rounded-2xl transition-all duration-300 bg-gradient-to-br from-[#fefbff] via-[#f2ebfc] to-white"
     }
 };
 

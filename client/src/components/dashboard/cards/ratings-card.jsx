@@ -19,7 +19,7 @@ const RatingsCard = ({ ratings, renderStars, onViewAllRatings }) => {
             <div className="flex flex-col items-center justify-between w-full h-full rounded-xl p-5 bg-gradient-to-br from-brand-50 to-brand-100">
                 <div className="text-center w-full mb-3">
                     <div className="flex items-center justify-center gap-2 mb-1">
-                        <span className="text-3xl font-bold text-primary">4.2</span>
+                        <span className="text-2xl font-bold text-primary">4.2</span>
                         <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
                     </div>
                     <span className="text-sm text-muted-foreground">Promedio de valoraciones</span>
@@ -44,7 +44,9 @@ const RatingsCard = ({ ratings, renderStars, onViewAllRatings }) => {
                 </div>
 
                 <button onClick={ onViewAllRatings } className="px-4 py-2 text-sm font-medium transition-all duration-300 bg-white border border-[#592e83] text-[#592e83] hover:bg-[#592e83]/10 rounded-xl hover:scale-105 hover:shadow mb-2">
-                    <Star className="h-4 w-4" /> Ver todas las valoraciones
+                    <span className="flex items-center gap-1">
+                        <Star className="h-4 w-4" /> Ver todas las valoraciones
+                    </span>
                 </button>
             </div>
         ),
