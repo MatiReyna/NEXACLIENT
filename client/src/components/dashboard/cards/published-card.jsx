@@ -30,21 +30,25 @@ const PublishedModelsCard = ({ models, onViewAllModels }) => {
                                     <div className="h-8 w-8 rounded-full bg-brand-200 flex items-center justify-center flex-shrink-0">
                                         <Home className="h-4 w-4 text-primary" />
                                     </div>
-                                    <div className="flex items-center justify-between w-full">
-                                        <p className="font-bold text-sm text-brand-800 line-clamp-1">{ modelo.nombre }</p>
-                                        { i === 0 && (
-                                            <Badge className="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full">Más vendido</Badge>
-                                        ) }
-                                        { i === 1 && (
-                                            <Badge className="text-xs bg-brand-100 text-brand-700 px-2 py-0.5 rounded-full">Popular</Badge>
-                                        ) }
-                                        { i === 2 && (
-                                            <Badge className="text-xs bg-purple-100 text-purple-700 px-2 py-0.5 rounded-full">Recomendado</Badge>
-                                        ) }
-                                    </div>
+                                    <p className="font-bold text-sm text-brand-800 line-clamp-1">{ modelo.nombre }</p>
                                 </div>
                                 <p className="text-xs text-muted-foreground line-clamp-3 flex-grow">{ modelo.descripcion }</p>
                                 <p className="text-[11px] text-muted-foreground mt-2">⏱️ 6 meses | 🧭 132 visitas</p>
+                                {i === 0 && (
+                                    <Badge className="text-xs bg-green-100 text-green-700 hover:bg-green-200 hover:text-green-800 px-2 py-0.5 rounded-full mt-2 w-fit">
+                                        Más vendido
+                                    </Badge>
+                                )}
+                                {i === 1 && (
+                                    <Badge className="text-xs bg-brand-100 text-brand-700 hover:bg-brand-200 hover:text-brand-800 px-2 py-0.5 rounded-full mt-2 w-fit">
+                                        Popular
+                                    </Badge>
+                                )}
+                                {i === 2 && (
+                                    <Badge className="text-xs bg-yellow-100 text-yellow-700 hover:bg-yellow-200 hover:text-yellow-800 px-2 py-0.5 rounded-full mt-2 w-fit">
+                                        Recomendado
+                                    </Badge>
+                                )}
                                 <div className="mt-3 flex justify-end">
                                     <Eye className="h-4 w-4 text-muted-foreground hover:text-primary cursor-pointer" />
                                 </div>
