@@ -1,5 +1,6 @@
-import { Home, ChevronDown } from 'lucide-react';
+import { Home, ChevronDown, Eye } from 'lucide-react';
 import Button from '../../ui/button';
+import Badge from '../../ui/badge';
 
 const PublishedModelsCard = ({ models, onViewAllModels }) => {
     return {
@@ -24,14 +25,21 @@ const PublishedModelsCard = ({ models, onViewAllModels }) => {
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 w-full mb-3">
                     {
                         models.slice(0, 3).map((modelo, i) => (
-                            <div key={ i } className="bg-white border border-muted p-3 rounded-xl shadow-sm flex flex-col h-full hover:shadow-md transition-all">
+                            <div key={ i } className="bg-white border border-muted p-3 rounded-xl shadow-sm flex flex-col h-full hover:shadow-md transition-all relative group">
                                 <div className="flex items-center gap-2 mb-2">
                                     <div className="h-8 w-8 rounded-full bg-brand-200 flex items-center justify-center flex-shrink-0">
                                         <Home className="h-4 w-4 text-primary" />
                                     </div>
-                                    <p className="font-bold text-sm text-brand-800 line-clamp-1">{ modelo.nombre }</p>
+                                    <div className="flex items-center justify-between w-full">
+                                        <p className="font-bold text-sm text-brand-800 line-clamp-1">{ modelo.nombre }</p>
+                                        <Badge className="text-xs bg-brand-100 text-brand-700 px-2 py-0.5 rounded-full">Popular</Badge>
+                                    </div>
                                 </div>
                                 <p className="text-xs text-muted-foreground line-clamp-3 flex-grow">{ modelo.descripcion }</p>
+                                <p className="text-[11px] text-muted-foreground mt-2">⏱️ 6 meses | 🧭 132 visitas</p>
+                                <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition">
+                                    <Eye className="h-4 w-4 text-muted-foreground hover:text-primary cursor-pointer" />
+                                </div>
                             </div>
                         ))
                     }
