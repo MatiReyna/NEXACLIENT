@@ -48,8 +48,8 @@ const DashboardAdmin = () => {
   };
 
   return (
-    <HeroHighlight className="min-h-screen w-full overflow-x-hidden overflow-y-auto">
-      <div className="flex flex-col min-h-full relative z-10">
+    <>
+      <div className="flex flex-col min-h-screen">
         <DashboardHeader />
 
         <div className="container py-8">
@@ -166,7 +166,7 @@ const DashboardAdmin = () => {
           </Tabs>
         </div>
       </div>
-    </HeroHighlight>
+    </>
   )
 };
 
