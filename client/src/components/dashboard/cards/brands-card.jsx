@@ -20,16 +20,17 @@ const BrandsCard = ({ brands }) => {
                 <div className="text-center mb-4">
                     <Building className="h-10 w-10 text-primary mx-auto mb-2" />
                     <h3 className="text-lg font-semibold text-primary">Marcas Asociadas</h3>
+                    <div className="mx-auto h-1 w-20 bg-primary rounded-full my-2" />
                 </div>
                 <div className="w-full">
                     <AnimatedBrand brands={ brands } className="object-contain max-h-20 mx-auto" />
                 </div>
                 <div className="mt-4 text-center">
-                    <Badge className="bg-brand-100 text-brand-800 rounded-lg">Total: { brands.length } marcas</Badge>
+                    <Badge className="bg-brand-100 text-brand-800 hover:bg-brand-200 hover:text-brand-900 transition-colors rounded-xl text-sm px-3 py-1">Total: { brands.length } marcas</Badge>
                 </div>
             </div>
         ),
-        className: "md:col-span-1 hover:shadow-lg rounded-2xl transition-all duration-300"
+        className: "md:col-span-1 hover:shadow-lg rounded-2xl transition-all duration-300 bg-gradient-to-br from-[#fdfbff] via-[#f2ebfc] to-white"
     }
 };
 

@@ -17,11 +17,11 @@ const ContactRequestsCard = ({ requests, getStatusColor }) => {
             <div className="flex flex-col items-center justify-between w-full h-full rounded-xl p-5">
                 <div className="text-center w-full mb-3">
                     <MessageSquare className="h-8 w-8 text-primary mx-auto mb-1" />
-                    <h3 className="text-lg font-semibold text-primary">Solicitudes Recientes</h3>
-                    <div className="mx-auto h-1 w-24 bg-primary rounded-full mt-4 mb-2"></div>
+                    <h3 className="text-lg font-semibold text-primary">Solicitudes Recientes</h3>  
                     <div className="text-xs text-muted-foreground text-center font-medium mb-2">
                       Total: { requests.length } | Pendientes: 2 | Nuevas: 1 | Cerradas: 1
                     </div>
+                    <div className="mx-auto h-1 w-24 bg-primary rounded-full mt-4 mb-2"></div>
                 </div>
                 <div className="w-full flex flex-col gap-3 mb-3">
                     {
