@@ -50,7 +50,9 @@ const ModelsManagementCard = ({ onCreateModel }) => {
                 </div>
 
                 <button onClick={ onCreateModel } className="px-4 py-2 text-sm font-medium transition-all duration-300 bg-primary text-white rounded-xl hover:scale-105 hover:shadow-md">
-                    <Plus className="mr-1 h-4 w-4" /> Crear Modelo
+                    <span className="flex items-center justify-center">
+                        <Plus className="mr-1 h-4 w-4" /> Crear Modelo
+                    </span>
                 </button>
             </div>
         ),

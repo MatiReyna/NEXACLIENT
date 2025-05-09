@@ -14,7 +14,7 @@ const ContactRequestsCard = ({ requests, getStatusColor }) => {
             <p className="text-sm text-muted-foreground">Gestiona fácilmente las solicitudes de contacto recibidas por modelos de casas.</p>
         ),
         header: (
-            <div className="flex flex-col items-center justify-between w-full h-full rounded-xl p-5 bg-gradient-to-br from-brand-50 to-brand-100">
+            <div className="flex flex-col items-center justify-between w-full h-full rounded-xl p-5 bg-gradient-to-br from-[#fdfbff] via-[#f2ebfc] to-white">
                 <div className="text-center w-full mb-3">
                     <MessageSquare className="h-8 w-8 text-primary mx-auto mb-1" />
                     <h3 className="text-lg font-semibold text-primary">Solicitudes Recientes</h3>
@@ -24,23 +24,22 @@ const ContactRequestsCard = ({ requests, getStatusColor }) => {
                         requests.map((request, i) => (
                             <div
                                 key={ i }
-                                className="flex items-center justify-between bg-background rounded-xl px-4 py-3 shadow-sm text-sm gap-2"
+                                className="grid grid-cols-4 items-center bg-white border border-muted rounded-xl px-4 py-3 shadow-sm text-sm gap-2 hover:shadow-md transition-all"
                             >
-                                <div className="flex flex-col">
-                                    <span className="font-medium">{ request.name }</span>
-                                    <span className="text-xs text-muted-foreground">{ request.email }</span>
-                                </div>
-                                <div className="flex items-center gap-2">
-                                    <Badge variant="outline" className="bg-brand-100 text-brand-800 rounded-lg">
-                                        { request.modelo }
-                                    </Badge>
+                                <span className="font-medium truncate">{ request.name }</span>
+                                <span className="text-xs text-muted-foreground truncate">{ request.email }</span>
+                                <Badge variant="outline" className="bg-brand-100 text-brand-800 rounded-lg w-fit">
+                                    { request.modelo }
+                                </Badge>
+                                <div className="flex items-center gap-1">
                                     <span className={ `w-2 h-2 rounded-full ${ getStatusColor(request.status) }` }></span>
+                                    <span className="text-xs text-muted-foreground capitalize">{ request.status }</span>
                                 </div>
                             </div>
                         ))
                     }
                 </div>
-                <Button variant="ghost" size="sm" className="self-center">
+                <Button className="self-center px-4 py-2 text-sm font-medium text-primary hover:bg-primary/10 rounded-xl transition-all">
                     Ver todas <ChevronDown className="ml-1 h-4 w-4" />
                 </Button>
             </div>
