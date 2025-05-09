@@ -1,6 +1,6 @@
 import { Home, ChevronDown, Eye } from 'lucide-react';
 import Button from '../../ui/button';
-import Badge from '../../ui/badge';
+import { Badge } from '../../ui/badge';
 
 const PublishedModelsCard = ({ models, onViewAllModels }) => {
     return {
