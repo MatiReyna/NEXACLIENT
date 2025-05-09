@@ -25,19 +25,27 @@ const PublishedModelsCard = ({ models, onViewAllModels }) => {
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 w-full mb-3">
                     {
                         models.slice(0, 3).map((modelo, i) => (
-                            <div key={ i } className="bg-white border border-muted p-3 rounded-xl shadow-sm flex flex-col h-full hover:shadow-md transition-all relative group">
+                            <div key={ i } className="bg-white border border-muted p-3 rounded-xl shadow-sm flex flex-col h-full hover:shadow-md transition-all group">
                                 <div className="flex items-center gap-2 mb-2">
                                     <div className="h-8 w-8 rounded-full bg-brand-200 flex items-center justify-center flex-shrink-0">
                                         <Home className="h-4 w-4 text-primary" />
                                     </div>
                                     <div className="flex items-center justify-between w-full">
                                         <p className="font-bold text-sm text-brand-800 line-clamp-1">{ modelo.nombre }</p>
-                                        <Badge className="text-xs bg-brand-100 text-brand-700 px-2 py-0.5 rounded-full">Popular</Badge>
+                                        { i === 0 && (
+                                            <Badge className="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full">Más vendido</Badge>
+                                        ) }
+                                        { i === 1 && (
+                                            <Badge className="text-xs bg-brand-100 text-brand-700 px-2 py-0.5 rounded-full">Popular</Badge>
+                                        ) }
+                                        { i === 2 && (
+                                            <Badge className="text-xs bg-purple-100 text-purple-700 px-2 py-0.5 rounded-full">Recomendado</Badge>
+                                        ) }
                                     </div>
                                 </div>
                                 <p className="text-xs text-muted-foreground line-clamp-3 flex-grow">{ modelo.descripcion }</p>
                                 <p className="text-[11px] text-muted-foreground mt-2">⏱️ 6 meses | 🧭 132 visitas</p>
-                                <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition">
+                                <div className="mt-3 flex justify-end">
                                     <Eye className="h-4 w-4 text-muted-foreground hover:text-primary cursor-pointer" />
                                 </div>
                             </div>
