@@ -48,8 +48,8 @@ const DashboardAdmin = () => {
   };
 
   return (
-    <HeroHighlight className="min-h-screen">
-      <div className="flex flex-col min-h-screen relative z-10">
+    <HeroHighlight className="min-h-screen w-full overflow-x-hidden overflow-y-auto">
+      <div className="flex flex-col min-h-full relative z-10">
         <DashboardHeader />
 
         <div className="container py-8">
