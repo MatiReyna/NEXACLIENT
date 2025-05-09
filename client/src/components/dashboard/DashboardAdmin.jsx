@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui
 import { Badge } from '../ui/badge';
 import Button from '../ui/button';
 import { Plus, Pencil, Trash2, Eye, Reply } from 'lucide-react';
+import { HeroHighlight } from '../ui/hero-highlight';
 
 // Importar componentes modularizados.
 import DashboardHeader from '@/components/dashboard/header';
@@ -47,8 +48,8 @@ const DashboardAdmin = () => {
   };
 
   return (
-    <>
-      <div className="flex flex-col min-h-screen">
+    <HeroHighlight className="min-h-screen">
+      <div className="flex flex-col min-h-screen relative z-10">
         <DashboardHeader />
 
         <div className="container py-8">
@@ -165,7 +166,7 @@ const DashboardAdmin = () => {
           </Tabs>
         </div>
       </div>
-    </>
+    </HeroHighlight>
   )
 };
 
