@@ -23,7 +23,6 @@ const RatingsCard = ({ ratings, renderStars, onViewAllRatings }) => {
                         <Star className="h-5 w-5 fill-yellow-400 text-yellow-400" />
                     </div>
                     <span className="text-sm text-muted-foreground">Promedio de valoraciones</span>
-                    <span className="text-xs text-muted-foreground mt-1 block">Basado en {ratings.length} valoraciones</span>
                     <Progress value={84} className="h-2 mt-2" />
                 </div>
 
@@ -44,7 +43,7 @@ const RatingsCard = ({ ratings, renderStars, onViewAllRatings }) => {
                     }
                 </div>
 
-                <button onClick={ onViewAllRatings } className="mt-2 px-4 py-2 text-sm font-medium text-primary hover:scale-105 transition-transform duration-300 rounded-xl border border-primary flex items-center gap-1">
+                <button onClick={ onViewAllRatings } className="px-4 py-2 text-sm font-medium transition-all duration-300 bg-white border border-[#592e83] text-[#592e83] hover:bg-[#592e83]/10 rounded-xl hover:scale-105 hover:shadow mb-2">
                     <Star className="h-4 w-4" /> Ver todas las valoraciones
                 </button>
             </div>
