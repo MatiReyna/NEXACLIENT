@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
-import { cn } from '../../lib/utils';
+import { cn } from '@/lib/utils';
 
 const Modal = ({ isOpen, onClose, children, className }) => {
 
@@ -44,7 +44,7 @@ const Modal = ({ isOpen, onClose, children, className }) => {
                     >
                         <motion.div
                             ref={ modalRef }
-                            className={ cn("bg-white rounded-2xl shadow-xl w-[95%] sm:max-w-2xl md:max-w-3xl lg:max-w-4xl max-h-[90vh] overflow-auto transform transition-transform duration-300 scale-100 opacity-100", className) }
+                            className={ cn("bg-white rounded-2xl shadow-xl w-[95%] sm:max-w-2xl md:max-w-3xl lg:max-w-4xl max-h-[90vh] sm:h-auto overflow-auto overscroll-contain scroll-smooth transform transition-transform duration-300 scale-100 opacity-100", className) }
                             onClick={ (e) => e.stopPropagation() }
                             initial={{ scale: 0.95, opacity: 0 }}
                             animate={{ scale: 1, opacity: 1 }}
@@ -53,7 +53,7 @@ const Modal = ({ isOpen, onClose, children, className }) => {
                         >
                             <button
                                 onClick={ onClose }
-                                className="absolute top-4 right-4 p-2 rounded-full bg-white/90 text-gray-500 hover:text-gray-900 hover:bg-gray-100 transition-colors"
+                                className="absolute top-4 right-4 p-2 rounded-full bg-primary/10 text-primary hover:bg-primary/20 hover:text-primary-foreground transition-colors"
                                 aria-label="Cerrar"
                             >
                                 <X className="h-5 w-5" />
