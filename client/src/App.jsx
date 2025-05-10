@@ -41,7 +41,18 @@ const App = () => {
         }
       />
       <Route path="/administrador" element={<AdminLogin />} />
-      <Route path="/administrador/dashboard" element={<DashboardAdmin />} />
+      <Route path="/administrador/dashboard" element={
+        localStorage.getItem('isAdmin') === 'true' ? (
+          <DashboardAdmin />
+        ) : (
+          <div className="min-h-screen flex items-center justify-center text-center p-4">
+            <div className="max-w-md">
+              <h1 className="text-2xl font-semibold text-red-600">Acceso denegado</h1>
+              <p className="mt-2 text-muted-foreground">No tienes credenciales para acceder a esta sección.</p>
+            </div>
+          </div>
+        )
+      } />
     </Routes>
   )
 };
