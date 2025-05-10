@@ -9,6 +9,11 @@ export default {
             center: true,
             padding: '2rem',
             screens: {
+                'xs': '375px',
+                'sm': '640px',
+                'md': '768px',
+                'lg': '1024px',
+                'xl': '1280px',
                 '2xl': '1400px'
             }
         },
@@ -44,6 +49,15 @@ export default {
                 xl: '20px',
                 '2xl': '24px',
             },
+            keyframes: {
+                fadeIn: {
+                    '0%': { opacity: '0' },
+                    '100%': { opacity: '1' },
+                },
+            },
+            animation: {
+                fadeIn: 'fadeIn 0.5s ease-in-out',
+            }
         }
     },
     plugins: [require('tailwindcss-animate')],
