@@ -39,14 +39,14 @@ const ProcessSection = () => {
                     {
                         steps.map((item) => (
                             <div key={ item.step } className="group relative flex flex-col items-center space-y-4 p-6">
-                                <div aria-label={`Número de paso ${item.step}`} className="flex h-16 w-16 items-center justify-center rounded-full bg-primary text-2xl font-bold text-white shadow-md transform transition-transform duration-300 hover:scale-110 hover:shadow-lg">
+                                <div aria-label={`Número de paso ${ item.step }`} className="flex h-14 w-14 sm:h-16 sm:w-16 items-center justify-center rounded-full bg-primary text-2xl font-bold text-white shadow-md transform transition-transform duration-300 hover:scale-110 hover:shadow-lg">
                                     { item.step }
                                 </div>
                                 <h3 className="text-xl font-bold text-center text-primary">{ item.title }</h3>
                                 <p className="mx-auto max-w-[700px] text-[#3b3b3b] md:text-xl text-[#241f19]">{ item.description }</p>
                                 {
                                     item.step < 4 && (
-                                        <ChevronRight aria-hidden="true" className="absolute -right-4 top-12 hidden h-8 w-8 text-[#592e83] lg:block transition-transform duration-300 group-hover:translate-x-1" />
+                                        <ChevronRight aria-hidden="true" className="absolute right-2 lg:right-4 top-12 hidden h-8 w-8 text-[#592e83] lg:block transition-transform duration-300 group-hover:translate-x-1" />
                                     )
                                 }
                             </div>

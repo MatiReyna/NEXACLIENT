@@ -8,7 +8,7 @@ const HeroSection = () => {
                 <img
                     src={ heroImage }
                     alt="Casa prefabricada moderna"
-                    className="object-cover object-[center_top] w-full h-full brightness-[0.7]"
+                    className="object-cover object-center w-full h-full brightness-[0.7]"
                     loading="lazy"
                 />
             </div>
