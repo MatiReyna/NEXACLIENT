@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Home, Phone, Mail, MapPin } from 'lucide-react';
-import AnimatedTooltip from '@/ui/animated-tooltip';
+import AnimatedTooltip from '../ui/animated-tooltip';
 import animated1 from '@/assets/animated/animated1.jpg';
 import animated2 from '@/assets/animated/animated2.jpg';
 import animated4 from '@/assets/animated/animated4.jpg';
