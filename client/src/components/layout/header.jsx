@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, Home } from 'lucide-react';
-import { cn } from '../../lib/utils';
+import { cn } from '@/lib/utils';
 
 const navLinks = [
     { href: '#inicio', label: 'Inicio' },
@@ -95,13 +95,13 @@ const Header = () => {
 
                 <button
                     onClick={ () => setIsMenuOpen(!isMenuOpen) }
-                    className="md:hidden flex items-center justify-center h-10 w-10 rounded-lg border border-neutral-200 text-neutral-700 transition-colors hover:bg-neutral-100"
+                    className="md:hidden flex items-center justify-center h-10 w-10 rounded-lg border border-primary/20 text-primary transition-colors hover:bg-primary/10"
                     aria-label={ isMenuOpen ? 'Cerrar menú' : 'Abrir menú' }
                     aria-controls="mobile-menu"
                     aria-expanded={ isMenuOpen }
                 >
                     {
-                        isMenuOpen ? (<X className="h-5 w-5" />) : (<Menu className="h-5 w-5" />)
+                        isMenuOpen ? (<X className="h-5 w-5 transition-transform duration-300" />) : (<Menu className="h-5 w-5 transition-transform duration-300" />)
                     }
                 </button>
             </div>
