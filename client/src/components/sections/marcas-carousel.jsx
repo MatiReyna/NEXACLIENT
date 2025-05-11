@@ -69,7 +69,7 @@ const MarcasCarousel = ({ className }) => {
                     allMarcas.map((marca, index) => (
                         <div
                             key={ `${ marca.nombre }-${ index }` }
-                            className="flex-shrink-0 w-[160px] sm:w[180px] px-4 transform transition-transform duration-500 hover:scale-105"
+                            className="flex-shrink-0 w-[160px] sm:w-[180px] px-4 transform transition-transform duration-500 hover:scale-105"
                         >
                             <div className="h-20 bg-[#faf6fe] rounded-xl shadow-sm p-3 flex items-center justify-center border border-[#e7dbf9]">
                                 <img

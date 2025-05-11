@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import Modal from '../ui/modal';
-import Button from '../ui/button';
 import { Check, ArrowRight, ArrowLeft, Home, Maximize2, Leaf, Zap, Droplets } from 'lucide-react';
 
 const ModelDetails = ({ isOpen, onClose, model }) => {
@@ -59,20 +58,20 @@ const ModelDetails = ({ isOpen, onClose, model }) => {
                             alt={ `${ model.title } - Vista ${ activeImage + 1 }` }
                             className="w-full h-full object-cover rounded-t-xl"
                         />
-                        <Button
+                        <button
                             onClick={ prevImage }
                             className="absolute left-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/80 text-gray-800 hover:bg-white transition-colors"
                             aria-label="Imagen anterior"
                         >
                             <ArrowLeft className="h-5 w-5" />
-                        </Button>
-                        <Button
+                        </button>
+                        <button
                             onClick={ nextImage }
                             className="absolute right-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/80 text-gray-800 hover:bg-white transition-colors"
                             aria-label="Imagen siguiente"
                         >
                             <ArrowRight className="h-5 w-5" />
-                        </Button>
+                        </button>
                         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
                             {
                                 images.map((_, index) => (
@@ -89,7 +88,7 @@ const ModelDetails = ({ isOpen, onClose, model }) => {
                     <div className="flex p-2 gap-2 bg-gray-50">
                         {
                             images.map((img, index) => (
-                                <Button
+                                <button
                                     key={ index }
                                     onClick={ () => setActiveImage(index) }
                                     aria-current={ index === activeImage }
@@ -100,7 +99,7 @@ const ModelDetails = ({ isOpen, onClose, model }) => {
                                         alt={ `Miniatura ${ index + 1 }` }
                                         className="w-full h-full object-cover"
                                     />
-                                </Button>
+                                </button>
                             ))
                         }
                     </div>
@@ -180,15 +179,15 @@ const ModelDetails = ({ isOpen, onClose, model }) => {
                         </div>
 
                         <div className="flex flex-col sm:flex-row gap-3 mt-2">
-                            <Button className="inline-flex items-center justify-center w-full px-6 py-3 text-lg font-medium transition-all duration-300 bg-primary text-white rounded-xl hover:scale-105 hover:shadow-lg group" aria-label="Solicitar Presupuesto">
+                            <button className="inline-flex items-center justify-center w-full px-6 py-3 text-lg font-medium transition-all duration-300 bg-primary text-white rounded-xl hover:scale-105 hover:shadow-lg group" aria-label="Solicitar Presupuesto">
                                 <span className="flex items-center group">
                                     Solicitar Presupuesto
                                     <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1.5" />
                                 </span>
-                            </Button>
-                            <Button className="inline-flex items-center justify-center px-6 py-3 text-lg font-medium border border-[#592e83] text-[#592e83] hover:bg-primary/10 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg" aria-label="Descargar Catálogo">
+                            </button>
+                            <button className="inline-flex items-center justify-center px-6 py-3 text-lg font-medium border border-[#592e83] text-[#592e83] hover:bg-primary/10 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg" aria-label="Descargar Catálogo">
                                 Descargar Catálogo
-                            </Button>
+                            </button>
                         </div>
                     </div>
                 </div>
