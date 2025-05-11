@@ -1,10 +1,14 @@
 import { Card, CardContent } from '../ui/card';
 import { Pencil } from 'lucide-react';
+import Modal from '../ui/modal';
+import { useState } from 'react';
 import human1 from '@/assets/testimonials/human1.jpg';
 import human2 from '@/assets/testimonials/human2.jpg';
 import human3 from '@/assets/testimonials/human3.jpg';
 
 const TestimonialsSection = () => {
+
+    const [ open, setOpen ] = useState(false);
 
     const testimonials = [
         {
@@ -84,13 +88,19 @@ const TestimonialsSection = () => {
                 </div>
                 <div className="text-center pt-8">
                     <button
-                        onClick={ () => alert('aca podes escribir tu testimonio') }
+                        onClick={ () => setOpen(true) }
                         aria-label="Agregar un nuevo testimonio"
                         className="inline-flex items-center justify-center gap-2 px-6 py-3 text-lg font-medium text-white bg-primary rounded-xl transition-transform duration-300 hover:scale-105 hover:shadow-lg hover:animate-bounce-slow"
                     >
                         <Pencil className="w-5 h-5" />
                         Agregar Testimonio
                     </button>
+                    <Modal open={ open } onClose={ () => setOpen(false) }>
+                        <div className="text-center space-y-4 p-6">
+                            <h3 className="text-2xl font-semibold text-primary">¡Muy pronto!</h3>
+                            <p className="text-muted-foreground">Pronto vas a poder escribirnos tu comentario directamente desde aquí.</p>
+                        </div>
+                    </Modal>
                 </div>
             </div>
         </section>
