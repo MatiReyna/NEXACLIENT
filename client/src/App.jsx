@@ -41,7 +41,8 @@ const App = () => {
         }
       />
       <Route path="/administrador" element={<AdminLogin />} />
-      <Route path="/administrador/dashboard" element={
+      <Route path="/administrador/dashboard" element={ <DashboardAdmin /> } />
+      {/* <Route path="/administrador/dashboard" element={
         localStorage.getItem('isAdmin') === 'true' ? (
           <DashboardAdmin />
         ) : (
@@ -52,7 +53,7 @@ const App = () => {
             </div>
           </div>
         )
-      } />
+      } /> */}
     </Routes>
   )
 };
