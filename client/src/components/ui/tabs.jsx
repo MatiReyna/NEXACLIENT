@@ -19,7 +19,7 @@ Tabs.displayName = 'Tabs';
 const TabsList = forwardRef(({ className, ...props }, ref) => (
     <div
         ref={ ref }
-        className={ cn("inline-flex h-10 items-center justify-center rounded-md bg-muted p-1 text-muted-foreground gap-1", className) } { ...props }
+        className={ cn("flex h-10 flex-wrap items-center justify-center rounded-md bg-muted p-1 text-muted-foreground gap-1", className) } { ...props }
     />
 ));
 TabsList.displayName = 'TabsList';
