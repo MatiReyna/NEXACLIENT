@@ -54,7 +54,7 @@ const ModelCard = React.memo(({ title, description, area, rooms, imageSrc, image
                         <span>Construcción: 3-4 meses</span>
                     </div>
                     <button
-                        className="mt-4 inline-flex items-center justify-center w-full px-6 py-3 text-lg font-medium transition-all duration-300 bg-primary text-white rounded-xl hover:scale-105 hover:shadow-lg group"
+                        className="mt-4 inline-flex items-center justify-center w-full px-6 py-3 text-lg font-medium text-white bg-primary rounded-xl transition-transform duration-300 hover:scale-105 hover:shadow-lg hover:animate-bounce-slow group"
                         onClick={ () => setShowDetails(true) }
                     >
                         <span className="flex items-center justify-center">
@@ -85,7 +85,7 @@ const ModelsSection = () => {
                     </p>
                 </div>
                 <Tabs defaultValue="modernos" className="w-full">
-                    <TabsList className="flex flex-nowrap overflow-x-auto sm:grid sm:grid-cols-3 gap-2 justify-center">
+                    <TabsList className="flex flex-wrap justify-center gap-2">
                         <TabsTrigger
                             value="modernos"
                             aria-label="Ver modelos modernos"
