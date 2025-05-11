@@ -95,7 +95,7 @@ const TestimonialsSection = () => {
                         <Pencil className="w-5 h-5" />
                         Agregar Testimonio
                     </button>
-                    <Modal open={ open } onClose={ () => setOpen(false) }>
+                    <Modal isOpen={ open } onClose={ () => setOpen(false) }>
                         <div className="text-center space-y-4 p-6">
                             <h3 className="text-2xl font-semibold text-primary">¡Muy pronto!</h3>
                             <p className="text-muted-foreground">Pronto vas a poder escribirnos tu comentario directamente desde aquí.</p>
