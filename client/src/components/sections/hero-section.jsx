@@ -3,18 +3,18 @@ import heroImage from '../../assets/hero/image.png'
 
 const HeroSection = () => {
     return (
-        <section id="inicio" className="relative">
+        <section id="inicio" className="relative scroll-mt-[80px]">
             <div className="absolute inset-0 z-0" aria-hidden="true">
                 <img
                     src={ heroImage }
                     alt="Casa prefabricada moderna"
-                    className="object-cover object-center w-full h-full brightness-[0.7]"
+                    className="object-cover object-[center_top] w-full h-full brightness-[0.7]"
                     loading="lazy"
                 />
             </div>
             <div className="container relative z-10 flex flex-col items-center justify-center space-y-4 py-24 text-center md:py-32 lg:py-40">
                 <div className="space-y-3">
-                    <h1 className="text-3xl font-bold tracking-tighter text-white leading-tight sm:text-4xl md:text-5xl lg:text-6xl">
+                    <h1 className="text-2xl font-bold tracking-tighter text-white leading-tight sm:text-4xl md:text-5xl lg:text-6xl">
                         NEXA Constructora Desarrollista
                     </h1>
                     <p className="mx-auto max-w-[700px] text-white md:text-xl">
