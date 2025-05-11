@@ -85,25 +85,25 @@ const ModelsSection = () => {
                     </p>
                 </div>
                 <Tabs defaultValue="modernos" className="w-full">
-                    <TabsList className="flex flex-wrap justify-center gap-2">
+                    <TabsList className="flex flex-wrap justify-center gap-2 sm:flex-nowrap sm:overflow-x-auto sm:no-scrollbar">
                         <TabsTrigger
                             value="modernos"
                             aria-label="Ver modelos modernos"
-                            className="border border-[#241f19]/10 rounded-md data-[state=active]:bg-primary data-[state=active]:text-white data-[state=active]:border-b-4 data-[state=active]:border-white min-w-[120px] hover:bg-primary/10 transition-colors duration-300"
+                            className="border border-[#241f19]/10 rounded-md data-[state=active]:bg-primary data-[state=active]:text-white data-[state=active]:border-b-4 data-[state=active]:border-white min-w-[100px] text-sm px-3 py-2 hover:bg-primary/10 transition-colors duration-300"
                         >
                             Modernos
                         </TabsTrigger>
                         <TabsTrigger
                             value="tradicionales"
                             aria-label="Ver modelos tradicionales"
-                            className="border border-[#241f19]/10 rounded-md data-[state=active]:bg-primary data-[state=active]:text-white data-[state=active]:border-b-4 data-[state=active]:border-white min-w-[120px] hover:bg-primary/10 transition-colors duration-300"
+                            className="border border-[#241f19]/10 rounded-md data-[state=active]:bg-primary data-[state=active]:text-white data-[state=active]:border-b-4 data-[state=active]:border-white min-w-[100px] text-sm px-3 py-2 hover:bg-primary/10 transition-colors duration-300"
                         >
                             Tradicionales
                         </TabsTrigger>
                         <TabsTrigger
                             value="ecologicos"
                             aria-label="Ver modelos ecológicos"
-                            className="border border-[#241f19]/10 rounded-md data-[state=active]:bg-primary data-[state=active]:text-white data-[state=active]:border-b-4 data-[state=active]:border-white min-w-[120px] hover:bg-primary/10 transition-colors duration-300"
+                            className="border border-[#241f19]/10 rounded-md data-[state=active]:bg-primary data-[state=active]:text-white data-[state=active]:border-b-4 data-[state=active]:border-white min-w-[100px] text-sm px-3 py-2 hover:bg-primary/10 transition-colors duration-300"
                         >
                             Ecológicos
                         </TabsTrigger>
