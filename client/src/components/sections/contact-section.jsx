@@ -1,6 +1,6 @@
 import { Phone, Mail, MapPin, ArrowRight, CheckCircle } from 'lucide-react';
 import { useState } from 'react';
-import mapa from '../../assets/contact/mapa.png';
+import mapa from '@/assets/contact/mapa.png';
 
 const ContactSection = () => {
 
@@ -58,10 +58,10 @@ const ContactSection = () => {
                             const modelo = e.target.modelo.value;
                             const privacidad = e.target.privacidad.checked;
 
-                            if (!nombre || !apellidos || !email || !telefono || !mensaje || !modelo || !privacidad || !email.includes('@')) {
-                                alert('Por favor, completá todos los campos correctamente.');
-                                return;
-                            }
+                            // if (!nombre || !apellidos || !email || !telefono || !mensaje || !modelo || !privacidad || !email.includes('@')) {
+                            //     alert('Por favor, completá todos los campos correctamente.');
+                            //     return;
+                            // }
 
                             setShowConfirmation(true);
                             setTimeout(() => {
