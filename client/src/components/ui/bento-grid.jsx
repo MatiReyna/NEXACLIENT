@@ -13,7 +13,7 @@ const BentoGrid = ({ className, children }) => {
 const BentoGridItem = ({ className, title, description, header, icon, children, rowSpan = 1, colSpan = 1, ...props }) => {
     return (
         <div className={ cn(
-            "row-span-1 rounded-xl group/bento overflow-hidden border bg-background shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1",
+            "row-span-1 rounded-[2rem] group/bento overflow-hidden border border-border bg-white shadow-md transition-all duration-300 hover:shadow-lg hover:-translate-y-1",
             rowSpan > 1 && `md:row-span-${ rowSpan }`,
             colSpan > 1 && `md:col-span-${ colSpan }`,
             className

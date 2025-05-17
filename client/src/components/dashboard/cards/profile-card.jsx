@@ -5,11 +5,11 @@ import animated1 from '@/assets/animated/animated1.jpg';
 const ProfileCard = () => {
   return {
     header: (
-      <div className="max-w-xs w-full bg-white rounded-[2rem] shadow-md overflow-hidden border border-border mx-auto">
+      <div className="w-full overflow-hidden">
         <img
           src={animated1}
           alt="Facundo Sagario"
-          className="w-full h-64 object-cover rounded-t-[2rem]"
+          className="w-full h-64 object-cover"
         />
         <div className="p-6 text-center space-y-2">
           <h3 className="text-lg font-semibold text-primary flex items-center justify-center gap-1">
