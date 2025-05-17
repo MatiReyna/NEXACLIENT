@@ -6,14 +6,11 @@ const ProfileCard = () => {
   return {
     header: (
       <div className="max-w-xs w-full bg-white rounded-[2rem] shadow-md overflow-hidden border border-border mx-auto">
-        <Avatar className="w-full h-64 rounded-t-[2rem] overflow-hidden">
-          <AvatarImage
-            src={animated1}
-            alt="Facundo Sagario"
-            className="object-cover w-full h-full"
-          />
-          <AvatarFallback>FS</AvatarFallback>
-        </Avatar>
+        <img
+          src={animated1}
+          alt="Facundo Sagario"
+          className="w-full h-64 object-cover rounded-t-[2rem]"
+        />
         <div className="p-6 text-center space-y-2">
           <h3 className="text-lg font-semibold text-primary flex items-center justify-center gap-1">
             Facundo Sagario <CheckCircle className="w-4 h-4 text-green-500" />
