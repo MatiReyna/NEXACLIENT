@@ -5,12 +5,14 @@ import animated1 from '@/assets/animated/animated1.jpg';
 const ProfileCard = () => {
   return {
     header: (
-      <div className="flex flex-col items-center w-full bg-white rounded-[2rem] shadow-md border border-border p-6">
-        <div className="w-full -mt-16 flex justify-center">
-          <Avatar className="h-40 w-40 rounded-[2rem] shadow-md border-4 border-white">
-            <AvatarImage src={animated1} alt="Facundo Sagario" />
-            <AvatarFallback>FS</AvatarFallback>
-          </Avatar>
+      <div className="flex flex-col items-center w-full bg-white rounded-[2rem] shadow-md border border-border pt-24 pb-6 px-6">
+        <div className="relative w-full flex justify-center">
+          <div className="absolute -top-20 z-10">
+            <Avatar className="h-40 w-40 rounded-[2rem] shadow-lg border-4 border-white bg-white">
+              <AvatarImage src={animated1} alt="Facundo Sagario" />
+              <AvatarFallback>FS</AvatarFallback>
+            </Avatar>
+          </div>
         </div>
         <div className="text-center mt-4 space-y-1">
           <h3 className="text-xl font-semibold text-primary">Facundo Sagario</h3>
