@@ -1,36 +1,46 @@
-import { Users, Home, Building2 } from 'lucide-react';
+import { Users, Home, Building2, CheckCircle, UserCog } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from '../../ui/avatar';
 import animated1 from '@/assets/animated/animated1.jpg';
 
 const ProfileCard = () => {
   return {
     header: (
-      <div className="flex flex-col items-center w-full bg-white rounded-[2rem] shadow-md border border-border pt-24 pb-6 px-6">
-        <div className="relative w-full flex justify-center">
-          <div className="absolute -top-20 z-10">
-            <Avatar className="h-40 w-40 rounded-[2rem] shadow-lg border-4 border-white bg-white">
-              <AvatarImage src={animated1} alt="Facundo Sagario" />
-              <AvatarFallback>FS</AvatarFallback>
-            </Avatar>
+      <div className="max-w-xs w-full bg-white rounded-[2rem] shadow-md overflow-hidden border border-border mx-auto">
+        <Avatar className="w-full h-64 rounded-t-[2rem] overflow-hidden">
+          <AvatarImage
+            src={animated1}
+            alt="Facundo Sagario"
+            className="object-cover w-full h-full"
+          />
+          <AvatarFallback>FS</AvatarFallback>
+        </Avatar>
+        <div className="p-6 text-center space-y-2">
+          <h3 className="text-lg font-semibold text-primary flex items-center justify-center gap-1">
+            Facundo Sagario <CheckCircle className="w-4 h-4 text-green-500" />
+          </h3>
+          <p className="text-sm text-muted-foreground">
+            Administrador general del panel de NEXA.
+          </p>
+          <div className="flex justify-center gap-6 text-sm text-primary mt-2">
+            <div className="flex items-center gap-1">
+              <Home className="w-4 h-4" />
+              <span>9</span>
+            </div>
+            <div className="flex items-center gap-1">
+              <Building2 className="w-4 h-4" />
+              <span>12</span>
+            </div>
+            <div className="flex items-center gap-1">
+              <Users className="w-4 h-4" />
+              <span>24</span>
+            </div>
           </div>
-        </div>
-        <div className="text-center mt-4 space-y-1">
-          <h3 className="text-xl font-semibold text-primary">Facundo Sagario</h3>
-          <p className="text-muted-foreground text-sm">Administrador</p>
-        </div>
-        <div className="flex justify-center gap-6 mt-4">
-          <div className="flex items-center gap-1 text-primary">
-            <Home className="h-4 w-4" />
-            <span className="font-medium">9</span>
-          </div>
-          <div className="flex items-center gap-1 text-primary">
-            <Building2 className="h-4 w-4" />
-            <span className="font-medium">12</span>
-          </div>
-          <div className="flex items-center gap-1 text-primary">
-            <Users className="h-4 w-4" />
-            <span className="font-medium">24</span>
-          </div>
+          <button
+            className="mt-4 px-6 py-2 rounded-full bg-primary text-white hover:bg-primary/90 text-sm font-medium flex items-center justify-center gap-2 transition"
+          >
+            <UserCog className="w-4 h-4" />
+            Editar
+          </button>
         </div>
       </div>
     ),
