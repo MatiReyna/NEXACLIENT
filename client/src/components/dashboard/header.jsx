@@ -26,7 +26,7 @@ const DashboardHeader = () => {
                         <Settings className="h-5 w-5 transition-transform hover:scale-105" />
                     </Button>
                     <Separator orientation="vertical" className="h-8 hidden sm:block" />
-                    <Button variant="ghost" className="gap-2">
+                    <Button variant="ghost" className="gap-2 hover:bg-brand-50 text-brand-800">
                         <Avatar className="h-8 w-8">
                             <AvatarImage src={ animated1 } alt="Facundo Sagario" />
                             <AvatarFallback>FS</AvatarFallback>
