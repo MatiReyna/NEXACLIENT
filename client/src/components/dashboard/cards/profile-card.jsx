@@ -11,7 +11,7 @@ const ProfileCard = () => {
             <img
               src={animated1}
               alt="Facundo Sagario"
-              className="w-full h-72 object-cover rounded-[2.5rem]"
+              className="w-full h-72 object-cover rounded-[2rem]"
             />
           </div>
         </div>
