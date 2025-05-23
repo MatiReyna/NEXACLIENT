@@ -26,14 +26,14 @@ const App = () => {
           <div className="flex min-h-screen flex-col">
             <Header />
             <main className="flex-1">
-              <HeroSection />
-              <BenefitsSection />
-              <MarcasSection />
-              <ModelsSection />
-              <ProcessSection />
-              <TestimonialsSection />
-              <ContactSection />
-              <CtaSection />
+              <section id="inicio"><HeroSection /></section>
+              <section id="beneficios"><BenefitsSection /></section>
+              <section id="marcas"><MarcasSection /></section>
+              <section id="modelos"><ModelsSection /></section>
+              <section id="proceso"><ProcessSection /></section>
+              <section id="testimonios"><TestimonialsSection /></section>
+              <section id="contacto"><ContactSection /></section>
+              <section id="cta"><CtaSection /></section>
             </main>
             <Footer />
             <SpeedInsights />
@@ -41,19 +41,11 @@ const App = () => {
         }
       />
       <Route path="/administrador" element={<AdminLogin />} />
-      <Route path="/administrador/dashboard" element={ <DashboardAdmin /> } />
-      {/* <Route path="/administrador/dashboard" element={
-        localStorage.getItem('isAdmin') === 'true' ? (
+      <Route path="/administrador/dashboard" element={
+        <RequireAuth>
           <DashboardAdmin />
-        ) : (
-          <div className="min-h-screen flex items-center justify-center text-center p-4">
-            <div className="max-w-md">
-              <h1 className="text-2xl font-semibold text-red-600">Acceso denegado</h1>
-              <p className="mt-2 text-muted-foreground">No tienes credenciales para acceder a esta sección.</p>
-            </div>
-          </div>
-        )
-      } /> */}
+        </RequireAuth>
+        } />
     </Routes>
   )
 };
