@@ -4,6 +4,7 @@ import { SpeedInsights } from "@vercel/speed-insights/react"
 // Importaciones para el Dashboard del administrador.
 import AdminLogin from '@/components/dashboard/AdminLogin';
 import DashboardAdmin from '@/components/dashboard/DashboardAdmin';
+import RequireAuth from '@/components/dashboard/RequireAuth';
 
 // Importaciones para la página principal.
 import Header from '@/components/layout/header';
