@@ -13,7 +13,6 @@ export default defineConfig({
       '@dashboard': path.resolve(__dirname, './src/dashboard'),
       '@layout': path.resolve(__dirname, './src/layout'),
       '@sections': path.resolve(__dirname, './src/sections'),
-      '@ui': path.resolve(__dirname, './src/components/ui'),
       '@lib': path.resolve(__dirname, './src/lib'),
     }
   }
